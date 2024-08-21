@@ -3,6 +3,7 @@ package example;
 import io.swagger.client.ApiClient;
 import io.swagger.client.ApiException;
 import io.swagger.client.api.AccountMembersApi;
+import io.swagger.client.model.AccountMember;
 import io.swagger.client.model.AccountMemberPaginationResponse;
 import io.swagger.client.model.AccountMemberSummary;
 
@@ -19,6 +20,11 @@ public class AccountMemberExample {
         AccountMemberPaginationResponse accountMemberPaginationResponse = accountMembersApi.accountMemberSearch(new ArrayList<>(), "", 1, 10, "");
         for (AccountMemberSummary item : accountMemberPaginationResponse.getItems()) {
             System.out.println(item);
+
+            AccountMember accountMember = accountMembersApi.accountMemberGet(String.valueOf(item.getId()));
+            System.out.println(accountMember);
         }
+
+
     }
 }

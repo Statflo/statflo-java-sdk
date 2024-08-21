@@ -21,7 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.Carrier;
 import io.swagger.client.model.DealerFeature;
-import io.swagger.client.model.Permission2;
+import io.swagger.client.model.Permission;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import java.util.List;
  * Dealer
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-08-21T09:34:43.221254-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-08-21T15:24:44.515981-04:00[America/Toronto]")
 
 public class Dealer {
   @SerializedName("id")
@@ -46,7 +46,7 @@ public class Dealer {
   private Carrier carrier = null;
 
   @SerializedName("permissions")
-  private List<Permission2> permissions = new ArrayList<Permission2>();
+  private List<Permission> permissions = null;
 
   @SerializedName("dealerFeatures")
   private List<DealerFeature> dealerFeatures = null;
@@ -123,12 +123,15 @@ public class Dealer {
     this.carrier = carrier;
   }
 
-  public Dealer permissions(List<Permission2> permissions) {
+  public Dealer permissions(List<Permission> permissions) {
     this.permissions = permissions;
     return this;
   }
 
-  public Dealer addPermissionsItem(Permission2 permissionsItem) {
+  public Dealer addPermissionsItem(Permission permissionsItem) {
+    if (this.permissions == null) {
+      this.permissions = new ArrayList<Permission>();
+    }
     this.permissions.add(permissionsItem);
     return this;
   }
@@ -137,12 +140,12 @@ public class Dealer {
    * Get permissions
    * @return permissions
   **/
-  @Schema(required = true, description = "")
-  public List<Permission2> getPermissions() {
+  @Schema(description = "")
+  public List<Permission> getPermissions() {
     return permissions;
   }
 
-  public void setPermissions(List<Permission2> permissions) {
+  public void setPermissions(List<Permission> permissions) {
     this.permissions = permissions;
   }
 
