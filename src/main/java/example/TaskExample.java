@@ -7,6 +7,7 @@ import io.swagger.client.model.TaskPaginationResponse;
 import io.swagger.client.model.TaskSummary;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TaskExample {
     public static void main(String[] args) throws ApiException {
@@ -15,8 +16,9 @@ public class TaskExample {
         apiClient.setAccessToken(Config.accessToken);
 
         TasksApi tasksApi = new TasksApi(apiClient);
+        List<String> filters = new ArrayList<>();
 
-        TaskPaginationResponse taskPaginationResponse = tasksApi.taskSearch(new ArrayList<>(), "", 1, 10, "");
+        TaskPaginationResponse taskPaginationResponse = tasksApi.taskSearch(filters, "", 1, 10, "");
         for (TaskSummary item : taskPaginationResponse.getItems()) {
             System.out.println(item);
         }

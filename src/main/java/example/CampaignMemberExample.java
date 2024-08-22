@@ -7,6 +7,7 @@ import io.swagger.client.model.CampaignMemberPaginationResponse;
 import io.swagger.client.model.CampaignMemberSummary;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CampaignMemberExample {
     public static void main(String[] args) throws ApiException {
@@ -15,7 +16,9 @@ public class CampaignMemberExample {
         apiClient.setAccessToken(Config.accessToken);
 
         CampaignMemberApi campaignMemberApi = new CampaignMemberApi(apiClient);
-        CampaignMemberPaginationResponse campaignMemberPaginationResponse = campaignMemberApi.campaignMemberSearch(new ArrayList<>(), "", 1, 10, "");
+
+        List<String> filters = new ArrayList<>();
+        CampaignMemberPaginationResponse campaignMemberPaginationResponse = campaignMemberApi.campaignMemberSearch(filters, "", 1, 10, "");
         for (CampaignMemberSummary campaignMember : campaignMemberPaginationResponse.getItems()) {
             System.out.println(campaignMember);
         }

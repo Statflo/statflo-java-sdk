@@ -8,6 +8,7 @@ import io.swagger.client.model.CampaignMetadataPaginationResponse;
 import io.swagger.client.model.CampaignMetadataSummary;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CampaignMetaExample {
     public static void main(String[] args) throws ApiException {
@@ -17,7 +18,8 @@ public class CampaignMetaExample {
 
         CampaignMetadataApi campaignMetadataApi = new CampaignMetadataApi(apiClient);
 
-        CampaignMetadataPaginationResponse campaignMetadataPaginationResponse = campaignMetadataApi.campaignMetadataSearch(new ArrayList<>(), "", 1, 1, "");
+        List<String> filters = new ArrayList<>();
+        CampaignMetadataPaginationResponse campaignMetadataPaginationResponse = campaignMetadataApi.campaignMetadataSearch(filters, "", 1, 1, "");
         for (CampaignMetadataSummary item : campaignMetadataPaginationResponse.getItems()) {
             System.out.println(item);
         }

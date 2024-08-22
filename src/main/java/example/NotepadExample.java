@@ -7,6 +7,7 @@ import io.swagger.client.model.NotepadPaginationResponse;
 import io.swagger.client.model.NotepadSummary;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NotepadExample {
     public static void main(String[] args) throws ApiException {
@@ -15,8 +16,9 @@ public class NotepadExample {
         apiClient.setAccessToken(Config.accessToken);
 
         NotepadsApi notepadsApi = new NotepadsApi(apiClient);
+        List<String> filters = new ArrayList<>();
 
-        NotepadPaginationResponse notepadPaginationResponse = notepadsApi.notepadSearch(new ArrayList<>(), "", 1, 10, "");
+        NotepadPaginationResponse notepadPaginationResponse = notepadsApi.notepadSearch(filters, "", 1, 10, "");
         for (NotepadSummary item : notepadPaginationResponse.getItems()) {
             System.out.println(item);
         }

@@ -7,6 +7,7 @@ import io.swagger.client.model.RegionPaginationResponse;
 import io.swagger.client.model.RegionSummary;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RegionExample {
     public static void main(String[] args) throws ApiException {
@@ -15,8 +16,9 @@ public class RegionExample {
         apiClient.setAccessToken(Config.accessToken);
 
         RegionsApi regionsApi = new RegionsApi(apiClient);
+        List<String> filters = new ArrayList<>();
 
-        RegionPaginationResponse regionPaginationResponse = regionsApi.regionSearch(new ArrayList<>(), "", 1, 10, "");
+        RegionPaginationResponse regionPaginationResponse = regionsApi.regionSearch(filters, "", 1, 10, "");
         for (RegionSummary item : regionPaginationResponse.getItems()) {
             System.out.println(item);
         }
