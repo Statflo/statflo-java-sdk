@@ -8,6 +8,7 @@ import io.swagger.client.model.AccountMemberPaginationResponse;
 import io.swagger.client.model.AccountMemberSummary;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AccountMemberExample {
     public static void main(String[] args) throws ApiException {
@@ -16,7 +17,6 @@ public class AccountMemberExample {
         apiClient.setAccessToken(Config.accessToken);
 
         AccountMembersApi accountMembersApi = new AccountMembersApi(apiClient);
-
         AccountMemberPaginationResponse accountMemberPaginationResponse = accountMembersApi.accountMemberSearch(new ArrayList<>(), "", 1, 10, "");
         for (AccountMemberSummary item : accountMemberPaginationResponse.getItems()) {
             System.out.println(item);
