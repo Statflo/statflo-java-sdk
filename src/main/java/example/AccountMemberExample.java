@@ -17,7 +17,9 @@ public class AccountMemberExample {
         apiClient.setAccessToken(Config.accessToken);
 
         AccountMembersApi accountMembersApi = new AccountMembersApi(apiClient);
-        AccountMemberPaginationResponse accountMemberPaginationResponse = accountMembersApi.accountMemberSearch(new ArrayList<>(), "", 1, 10, "");
+
+        List<String> filters = new ArrayList<>();
+        AccountMemberPaginationResponse accountMemberPaginationResponse = accountMembersApi.accountMemberSearch(filters, "", 1, 10, "");
         for (AccountMemberSummary item : accountMemberPaginationResponse.getItems()) {
             System.out.println(item);
 

@@ -7,6 +7,7 @@ import io.swagger.client.model.DistrictPaginationResponse;
 import io.swagger.client.model.DistrictSummary;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DistrictExample {
     public static void main(String[] args) throws ApiException {
@@ -15,8 +16,9 @@ public class DistrictExample {
         apiClient.setAccessToken(Config.accessToken);
 
         DistrictsApi districtsApi = new DistrictsApi(apiClient);
+        List<String> filters = new ArrayList<>();
 
-        DistrictPaginationResponse districtPaginationResponse = districtsApi.districtSearch(new ArrayList<>(), "", 1, 10, "");
+        DistrictPaginationResponse districtPaginationResponse = districtsApi.districtSearch(filters, "", 1, 10, "");
         for (DistrictSummary item : districtPaginationResponse.getItems()) {
             System.out.println(item);
         }

@@ -7,6 +7,7 @@ import io.swagger.client.model.CampaignPropertyPaginationResponse;
 import io.swagger.client.model.CampaignPropertySummary;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CampaignPropertyExample {
     public static void main(String[] args) throws ApiException {
@@ -15,7 +16,9 @@ public class CampaignPropertyExample {
         apiClient.setAccessToken(Config.accessToken);
 
         CampaignPropertiesApi campaignPropertiesApi = new CampaignPropertiesApi(apiClient);
-        CampaignPropertyPaginationResponse campaignPropertyPaginationResponse = campaignPropertiesApi.campaignPropertySearch(new ArrayList<>(), "", 1, 1, "");
+        List<String> filters = new ArrayList<>();
+
+        CampaignPropertyPaginationResponse campaignPropertyPaginationResponse = campaignPropertiesApi.campaignPropertySearch(filters, "", 1, 1, "");
         for (CampaignPropertySummary item : campaignPropertyPaginationResponse.getItems()) {
             System.out.println(item);
         }
