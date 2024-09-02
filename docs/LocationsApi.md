@@ -20,11 +20,11 @@ Retrieve a location.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.LocationsApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.LocationsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -70,11 +70,11 @@ Retrieve a location.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.LocationsApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.LocationsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -120,11 +120,11 @@ Search locations.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.LocationsApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.LocationsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -178,11 +178,11 @@ Search locations.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.LocationsApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.LocationsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
