@@ -434,7 +434,7 @@ public class CampaignMemberApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call campaignMemberSearchCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call campaignMemberSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -443,7 +443,7 @@ public class CampaignMemberApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (filter != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "filter", filter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
         if (query != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
         if (page != null)
@@ -486,7 +486,7 @@ public class CampaignMemberApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call campaignMemberSearchValidateBeforeCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call campaignMemberSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = campaignMemberSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -508,7 +508,7 @@ public class CampaignMemberApi {
      * @return CampaignMemberPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public CampaignMemberPaginationResponse campaignMemberSearch(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public CampaignMemberPaginationResponse campaignMemberSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<CampaignMemberPaginationResponse> resp = campaignMemberSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -524,7 +524,7 @@ public class CampaignMemberApi {
      * @return ApiResponse&lt;CampaignMemberPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<CampaignMemberPaginationResponse> campaignMemberSearchWithHttpInfo(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<CampaignMemberPaginationResponse> campaignMemberSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = campaignMemberSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<CampaignMemberPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -542,7 +542,7 @@ public class CampaignMemberApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call campaignMemberSearchAsync(List<String> filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<CampaignMemberPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call campaignMemberSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<CampaignMemberPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

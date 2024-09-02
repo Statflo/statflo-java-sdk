@@ -29,7 +29,6 @@ import java.io.IOException;
 import io.swagger.client.model.AccountAction;
 import io.swagger.client.model.AccountActionCreate;
 import io.swagger.client.model.AccountActionPaginationResponse;
-import io.swagger.client.model.AccountActionUpdate;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -313,7 +312,7 @@ public class AccountActionsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call accountActionSearchCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call accountActionSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -322,7 +321,7 @@ public class AccountActionsApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (filter != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "filter", filter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
         if (query != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
         if (page != null)
@@ -365,7 +364,7 @@ public class AccountActionsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call accountActionSearchValidateBeforeCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call accountActionSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = accountActionSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -387,7 +386,7 @@ public class AccountActionsApi {
      * @return AccountActionPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AccountActionPaginationResponse accountActionSearch(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public AccountActionPaginationResponse accountActionSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<AccountActionPaginationResponse> resp = accountActionSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -403,7 +402,7 @@ public class AccountActionsApi {
      * @return ApiResponse&lt;AccountActionPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AccountActionPaginationResponse> accountActionSearchWithHttpInfo(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<AccountActionPaginationResponse> accountActionSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = accountActionSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<AccountActionPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -421,7 +420,7 @@ public class AccountActionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call accountActionSearchAsync(List<String> filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<AccountActionPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call accountActionSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<AccountActionPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -444,135 +443,6 @@ public class AccountActionsApi {
 
         com.squareup.okhttp.Call call = accountActionSearchValidateBeforeCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<AccountActionPaginationResponse>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
-        return call;
-    }
-    /**
-     * Build call for accountActionUpdate
-     * @param id  (required)
-     * @param body  (optional)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call accountActionUpdateCall(String id, AccountActionUpdate body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = body;
-        
-        // create path and map variables
-        String localVarPath = "/v4/api/account-action/{id}"
-            .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "Bearer" };
-        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-    
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call accountActionUpdateValidateBeforeCall(String id, AccountActionUpdate body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'id' is set
-        if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling accountActionUpdate(Async)");
-        }
-        
-        com.squareup.okhttp.Call call = accountActionUpdateCall(id, body, progressListener, progressRequestListener);
-        return call;
-
-        
-        
-        
-        
-    }
-
-    /**
-     * 
-     * Update an account action.
-     * @param id  (required)
-     * @param body  (optional)
-     * @return AccountAction
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public AccountAction accountActionUpdate(String id, AccountActionUpdate body) throws ApiException {
-        ApiResponse<AccountAction> resp = accountActionUpdateWithHttpInfo(id, body);
-        return resp.getData();
-    }
-
-    /**
-     * 
-     * Update an account action.
-     * @param id  (required)
-     * @param body  (optional)
-     * @return ApiResponse&lt;AccountAction&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<AccountAction> accountActionUpdateWithHttpInfo(String id, AccountActionUpdate body) throws ApiException {
-        com.squareup.okhttp.Call call = accountActionUpdateValidateBeforeCall(id, body, null, null);
-        Type localVarReturnType = new TypeToken<AccountAction>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
-    }
-
-    /**
-     *  (asynchronously)
-     * Update an account action.
-     * @param id  (required)
-     * @param body  (optional)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call accountActionUpdateAsync(String id, AccountActionUpdate body, final ApiCallback<AccountAction> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = accountActionUpdateValidateBeforeCall(id, body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<AccountAction>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

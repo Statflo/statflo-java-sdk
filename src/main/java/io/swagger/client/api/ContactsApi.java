@@ -559,7 +559,7 @@ public class ContactsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call contactSearchCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call contactSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -568,7 +568,7 @@ public class ContactsApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (filter != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "filter", filter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
         if (query != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
         if (page != null)
@@ -611,7 +611,7 @@ public class ContactsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call contactSearchValidateBeforeCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call contactSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = contactSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -633,7 +633,7 @@ public class ContactsApi {
      * @return ContactPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ContactPaginationResponse contactSearch(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ContactPaginationResponse contactSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<ContactPaginationResponse> resp = contactSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -649,7 +649,7 @@ public class ContactsApi {
      * @return ApiResponse&lt;ContactPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<ContactPaginationResponse> contactSearchWithHttpInfo(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<ContactPaginationResponse> contactSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = contactSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<ContactPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -667,7 +667,7 @@ public class ContactsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call contactSearchAsync(List<String> filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<ContactPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call contactSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<ContactPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -705,7 +705,7 @@ public class ContactsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call contactSearch_0Call(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call contactSearch_0Call(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -714,7 +714,7 @@ public class ContactsApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (filter != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "filter", filter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
         if (query != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
         if (page != null)
@@ -757,7 +757,7 @@ public class ContactsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call contactSearch_0ValidateBeforeCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call contactSearch_0ValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = contactSearch_0Call(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -779,7 +779,7 @@ public class ContactsApi {
      * @return ContactPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ContactPaginationResponse contactSearch_0(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ContactPaginationResponse contactSearch_0(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<ContactPaginationResponse> resp = contactSearch_0WithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -795,7 +795,7 @@ public class ContactsApi {
      * @return ApiResponse&lt;ContactPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<ContactPaginationResponse> contactSearch_0WithHttpInfo(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<ContactPaginationResponse> contactSearch_0WithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = contactSearch_0ValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<ContactPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -813,7 +813,7 @@ public class ContactsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call contactSearch_0Async(List<String> filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<ContactPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call contactSearch_0Async(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<ContactPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

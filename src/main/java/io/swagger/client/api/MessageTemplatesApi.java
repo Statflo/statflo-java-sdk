@@ -434,7 +434,7 @@ public class MessageTemplatesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call messageTemplateSearchCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call messageTemplateSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -443,7 +443,7 @@ public class MessageTemplatesApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (filter != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "filter", filter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
         if (query != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
         if (page != null)
@@ -486,7 +486,7 @@ public class MessageTemplatesApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call messageTemplateSearchValidateBeforeCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call messageTemplateSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = messageTemplateSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -508,7 +508,7 @@ public class MessageTemplatesApi {
      * @return MessageTemplatePaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public MessageTemplatePaginationResponse messageTemplateSearch(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public MessageTemplatePaginationResponse messageTemplateSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<MessageTemplatePaginationResponse> resp = messageTemplateSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -524,7 +524,7 @@ public class MessageTemplatesApi {
      * @return ApiResponse&lt;MessageTemplatePaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<MessageTemplatePaginationResponse> messageTemplateSearchWithHttpInfo(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<MessageTemplatePaginationResponse> messageTemplateSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = messageTemplateSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<MessageTemplatePaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -542,7 +542,7 @@ public class MessageTemplatesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call messageTemplateSearchAsync(List<String> filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<MessageTemplatePaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call messageTemplateSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<MessageTemplatePaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

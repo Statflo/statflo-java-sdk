@@ -434,7 +434,7 @@ public class AccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call accountSearchCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call accountSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -443,7 +443,7 @@ public class AccountsApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (filter != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "filter", filter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
         if (query != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
         if (page != null)
@@ -486,7 +486,7 @@ public class AccountsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call accountSearchValidateBeforeCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call accountSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = accountSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -508,7 +508,7 @@ public class AccountsApi {
      * @return AccountPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AccountPaginationResponse accountSearch(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public AccountPaginationResponse accountSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<AccountPaginationResponse> resp = accountSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -524,7 +524,7 @@ public class AccountsApi {
      * @return ApiResponse&lt;AccountPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AccountPaginationResponse> accountSearchWithHttpInfo(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<AccountPaginationResponse> accountSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = accountSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<AccountPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -542,7 +542,7 @@ public class AccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call accountSearchAsync(List<String> filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<AccountPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call accountSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<AccountPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

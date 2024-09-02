@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**accountActionCreate**](AccountActionsApi.md#accountActionCreate) | **POST** /v4/api/account-action | 
 [**accountActionGet**](AccountActionsApi.md#accountActionGet) | **GET** /v4/api/account-action/{id} | 
 [**accountActionSearch**](AccountActionsApi.md#accountActionSearch) | **GET** /v4/api/account-action | 
-[**accountActionUpdate**](AccountActionsApi.md#accountActionUpdate) | **PUT** /v4/api/account-action/{id} | 
 
 <a name="accountActionCreate"></a>
 # **accountActionCreate**
@@ -130,7 +129,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 AccountActionsApi apiInstance = new AccountActionsApi();
-List<String> filter = Arrays.asList("filter_example"); // List<String> | 
+String filter = "filter_example"; // String | 
 String query = "query_example"; // String | 
 Integer page = 56; // Integer | 
 Integer perPage = 56; // Integer | 
@@ -148,7 +147,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**List&lt;String&gt;**](String.md)|  | [optional]
+ **filter** | **String**|  | [optional]
  **query** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **perPage** | **Integer**|  | [optional]
@@ -165,57 +164,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="accountActionUpdate"></a>
-# **accountActionUpdate**
-> AccountAction accountActionUpdate(id, body)
-
-
-
-Update an account action.
-
-### Example
-```java
-// Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.AccountActionsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-AccountActionsApi apiInstance = new AccountActionsApi();
-String id = "id_example"; // String | 
-AccountActionUpdate body = new AccountActionUpdate(); // AccountActionUpdate | 
-try {
-    AccountAction result = apiInstance.accountActionUpdate(id, body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountActionsApi#accountActionUpdate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **body** | [**AccountActionUpdate**](AccountActionUpdate.md)|  | [optional]
-
-### Return type
-
-[**AccountAction**](AccountAction.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 

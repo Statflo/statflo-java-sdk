@@ -25,7 +25,7 @@ import java.io.IOException;
  * AccountUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-08-21T15:24:44.515981-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-01T23:29:38.928030-04:00[America/Toronto]")
 
 public class AccountUpdate {
   @SerializedName("name")
@@ -94,6 +94,9 @@ public class AccountUpdate {
 
   @SerializedName("city")
   private String city = null;
+
+  @SerializedName("status")
+  private Integer status = 0;
 
   public AccountUpdate name(String name) {
     this.name = name;
@@ -203,6 +206,24 @@ public class AccountUpdate {
     this.city = city;
   }
 
+  public AccountUpdate status(Integer status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @Schema(required = true, description = "")
+  public Integer getStatus() {
+    return status;
+  }
+
+  public void setStatus(Integer status) {
+    this.status = status;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -218,12 +239,13 @@ public class AccountUpdate {
         Objects.equals(this.accountType, accountUpdate.accountType) &&
         Objects.equals(this.externalUserId, accountUpdate.externalUserId) &&
         Objects.equals(this.externalLocationId, accountUpdate.externalLocationId) &&
-        Objects.equals(this.city, accountUpdate.city);
+        Objects.equals(this.city, accountUpdate.city) &&
+        Objects.equals(this.status, accountUpdate.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, accountId, accountType, externalUserId, externalLocationId, city);
+    return Objects.hash(name, accountId, accountType, externalUserId, externalLocationId, city, status);
   }
 
 
@@ -238,6 +260,7 @@ public class AccountUpdate {
     sb.append("    externalUserId: ").append(toIndentedString(externalUserId)).append("\n");
     sb.append("    externalLocationId: ").append(toIndentedString(externalLocationId)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

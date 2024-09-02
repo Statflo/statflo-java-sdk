@@ -25,95 +25,11 @@ import java.io.IOException;
  * AccountActionUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-08-21T15:24:44.515981-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-01T23:29:38.928030-04:00[America/Toronto]")
 
 public class AccountActionUpdate {
-  @SerializedName("description")
-  private String description = null;
-
-  @SerializedName("actionTaken")
-  private String actionTaken = "Reassignment";
-
-  @SerializedName("assignedTo")
-  private String assignedTo = null;
-
-  @SerializedName("assignedFrom")
-  private String assignedFrom = null;
-
   @SerializedName("id")
   private Integer id = null;
-
-  public AccountActionUpdate description(String description) {
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * Get description
-   * @return description
-  **/
-  @Schema(description = "")
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public AccountActionUpdate actionTaken(String actionTaken) {
-    this.actionTaken = actionTaken;
-    return this;
-  }
-
-   /**
-   * Get actionTaken
-   * @return actionTaken
-  **/
-  @Schema(description = "")
-  public String getActionTaken() {
-    return actionTaken;
-  }
-
-  public void setActionTaken(String actionTaken) {
-    this.actionTaken = actionTaken;
-  }
-
-  public AccountActionUpdate assignedTo(String assignedTo) {
-    this.assignedTo = assignedTo;
-    return this;
-  }
-
-   /**
-   * Get assignedTo
-   * @return assignedTo
-  **/
-  @Schema(description = "")
-  public String getAssignedTo() {
-    return assignedTo;
-  }
-
-  public void setAssignedTo(String assignedTo) {
-    this.assignedTo = assignedTo;
-  }
-
-  public AccountActionUpdate assignedFrom(String assignedFrom) {
-    this.assignedFrom = assignedFrom;
-    return this;
-  }
-
-   /**
-   * Get assignedFrom
-   * @return assignedFrom
-  **/
-  @Schema(description = "")
-  public String getAssignedFrom() {
-    return assignedFrom;
-  }
-
-  public void setAssignedFrom(String assignedFrom) {
-    this.assignedFrom = assignedFrom;
-  }
 
   public AccountActionUpdate id(Integer id) {
     this.id = id;
@@ -143,16 +59,12 @@ public class AccountActionUpdate {
       return false;
     }
     AccountActionUpdate accountActionUpdate = (AccountActionUpdate) o;
-    return Objects.equals(this.description, accountActionUpdate.description) &&
-        Objects.equals(this.actionTaken, accountActionUpdate.actionTaken) &&
-        Objects.equals(this.assignedTo, accountActionUpdate.assignedTo) &&
-        Objects.equals(this.assignedFrom, accountActionUpdate.assignedFrom) &&
-        Objects.equals(this.id, accountActionUpdate.id);
+    return Objects.equals(this.id, accountActionUpdate.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, actionTaken, assignedTo, assignedFrom, id);
+    return Objects.hash(id);
   }
 
 
@@ -161,10 +73,6 @@ public class AccountActionUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountActionUpdate {\n");
     
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    actionTaken: ").append(toIndentedString(actionTaken)).append("\n");
-    sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
-    sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();

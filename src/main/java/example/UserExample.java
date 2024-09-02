@@ -6,9 +6,6 @@ import io.swagger.client.api.UsersApi;
 import io.swagger.client.model.UserPaginationResponse;
 import io.swagger.client.model.UserSummary;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class UserExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -16,9 +13,8 @@ public class UserExample {
         apiClient.setAccessToken(Config.accessToken);
 
         UsersApi usersApi = new UsersApi(apiClient);
-        List<String> filters = new ArrayList<>();
 
-        UserPaginationResponse userPaginationResponse = usersApi.userSearch(filters, "", 1, 10, "");
+        UserPaginationResponse userPaginationResponse = usersApi.userSearch("", "", 1, 10, "");
         for (UserSummary item : userPaginationResponse.getItems()) {
             System.out.println(item);
         }

@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
  * ContactSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-08-21T15:24:44.515981-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-01T23:29:38.928030-04:00[America/Toronto]")
 
 public class ContactSummary {
   @SerializedName("id")
@@ -101,6 +101,9 @@ public class ContactSummary {
 
   @SerializedName("firstName")
   private String firstName = null;
+
+  @SerializedName("preferredLanguage")
+  private String preferredLanguage = null;
 
   public ContactSummary id(Integer id) {
     this.id = id;
@@ -534,6 +537,24 @@ public class ContactSummary {
     this.firstName = firstName;
   }
 
+  public ContactSummary preferredLanguage(String preferredLanguage) {
+    this.preferredLanguage = preferredLanguage;
+    return this;
+  }
+
+   /**
+   * Get preferredLanguage
+   * @return preferredLanguage
+  **/
+  @Schema(description = "")
+  public String getPreferredLanguage() {
+    return preferredLanguage;
+  }
+
+  public void setPreferredLanguage(String preferredLanguage) {
+    this.preferredLanguage = preferredLanguage;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -567,12 +588,13 @@ public class ContactSummary {
         Objects.equals(this.oldBan, contactSummary.oldBan) &&
         Objects.equals(this.smsCapable, contactSummary.smsCapable) &&
         Objects.equals(this.flag, contactSummary.flag) &&
-        Objects.equals(this.firstName, contactSummary.firstName);
+        Objects.equals(this.firstName, contactSummary.firstName) &&
+        Objects.equals(this.preferredLanguage, contactSummary.preferredLanguage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountName, accountId, contactName, streetNumber, streetName, city, province, country, zipCode, phoneNumber, phoneExtension, email, primaryContact, dealer, dateAdded, jobTitle, source, sourceId, customerId, oldBan, smsCapable, flag, firstName);
+    return Objects.hash(id, accountName, accountId, contactName, streetNumber, streetName, city, province, country, zipCode, phoneNumber, phoneExtension, email, primaryContact, dealer, dateAdded, jobTitle, source, sourceId, customerId, oldBan, smsCapable, flag, firstName, preferredLanguage);
   }
 
 
@@ -605,6 +627,7 @@ public class ContactSummary {
     sb.append("    smsCapable: ").append(toIndentedString(smsCapable)).append("\n");
     sb.append("    flag: ").append(toIndentedString(flag)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    preferredLanguage: ").append(toIndentedString(preferredLanguage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

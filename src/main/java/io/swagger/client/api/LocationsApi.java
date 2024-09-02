@@ -316,7 +316,7 @@ public class LocationsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call locationSearchCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call locationSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -325,7 +325,7 @@ public class LocationsApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (filter != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "filter", filter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
         if (query != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
         if (page != null)
@@ -368,7 +368,7 @@ public class LocationsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call locationSearchValidateBeforeCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call locationSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = locationSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -390,7 +390,7 @@ public class LocationsApi {
      * @return LocationPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public LocationPaginationResponse locationSearch(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public LocationPaginationResponse locationSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<LocationPaginationResponse> resp = locationSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -406,7 +406,7 @@ public class LocationsApi {
      * @return ApiResponse&lt;LocationPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<LocationPaginationResponse> locationSearchWithHttpInfo(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<LocationPaginationResponse> locationSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = locationSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<LocationPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -424,7 +424,7 @@ public class LocationsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call locationSearchAsync(List<String> filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<LocationPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call locationSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<LocationPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -462,7 +462,7 @@ public class LocationsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call locationSearch_0Call(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call locationSearch_0Call(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -471,7 +471,7 @@ public class LocationsApi {
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (filter != null)
-        localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "filter", filter));
+        localVarQueryParams.addAll(apiClient.parameterToPair("filter", filter));
         if (query != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("query", query));
         if (page != null)
@@ -514,7 +514,7 @@ public class LocationsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call locationSearch_0ValidateBeforeCall(List<String> filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call locationSearch_0ValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = locationSearch_0Call(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -536,7 +536,7 @@ public class LocationsApi {
      * @return LocationPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public LocationPaginationResponse locationSearch_0(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public LocationPaginationResponse locationSearch_0(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<LocationPaginationResponse> resp = locationSearch_0WithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -552,7 +552,7 @@ public class LocationsApi {
      * @return ApiResponse&lt;LocationPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<LocationPaginationResponse> locationSearch_0WithHttpInfo(List<String> filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<LocationPaginationResponse> locationSearch_0WithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = locationSearch_0ValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<LocationPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -570,7 +570,7 @@ public class LocationsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call locationSearch_0Async(List<String> filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<LocationPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call locationSearch_0Async(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<LocationPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

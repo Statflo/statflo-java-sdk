@@ -7,9 +7,6 @@ import io.swagger.client.model.Team;
 import io.swagger.client.model.TeamPaginationResponse;
 import io.swagger.client.model.TeamSummary;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TeamExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -17,9 +14,8 @@ public class TeamExample {
         apiClient.setAccessToken(Config.accessToken);
 
         TeamsApi teamsApi = new TeamsApi(apiClient);
-        List<String> filters = new ArrayList<>();
 
-        TeamPaginationResponse teamPaginationResponse = teamsApi.teamSearch(filters, "", 1, 10, "");
+        TeamPaginationResponse teamPaginationResponse = teamsApi.teamSearch("", "", 1, 10, "");
         for (TeamSummary item : teamPaginationResponse.getItems()) {
             System.out.println(item);
         }

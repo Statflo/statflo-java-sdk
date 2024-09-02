@@ -18,8 +18,7 @@ public class CampaignMetaExample {
 
         CampaignMetadataApi campaignMetadataApi = new CampaignMetadataApi(apiClient);
 
-        List<String> filters = new ArrayList<>();
-        CampaignMetadataPaginationResponse campaignMetadataPaginationResponse = campaignMetadataApi.campaignMetadataSearch(filters, "", 1, 1, "");
+        CampaignMetadataPaginationResponse campaignMetadataPaginationResponse = campaignMetadataApi.campaignMetadataSearch("", "", 1, 1, "");
         for (CampaignMetadataSummary item : campaignMetadataPaginationResponse.getItems()) {
             System.out.println(item);
         }

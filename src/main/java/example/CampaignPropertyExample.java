@@ -16,9 +16,8 @@ public class CampaignPropertyExample {
         apiClient.setAccessToken(Config.accessToken);
 
         CampaignPropertiesApi campaignPropertiesApi = new CampaignPropertiesApi(apiClient);
-        List<String> filters = new ArrayList<>();
 
-        CampaignPropertyPaginationResponse campaignPropertyPaginationResponse = campaignPropertiesApi.campaignPropertySearch(filters, "", 1, 1, "");
+        CampaignPropertyPaginationResponse campaignPropertyPaginationResponse = campaignPropertiesApi.campaignPropertySearch("", "", 1, 1, "");
         for (CampaignPropertySummary item : campaignPropertyPaginationResponse.getItems()) {
             System.out.println(item);
         }

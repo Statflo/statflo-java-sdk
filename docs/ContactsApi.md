@@ -232,7 +232,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 ContactsApi apiInstance = new ContactsApi();
-List<String> filter = Arrays.asList("filter_example"); // List<String> | 
+String filter = "filter_example"; // String | 
 String query = "query_example"; // String | 
 Integer page = 56; // Integer | 
 Integer perPage = 56; // Integer | 
@@ -250,7 +250,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**List&lt;String&gt;**](String.md)|  | [optional]
+ **filter** | **String**|  | [optional]
  **query** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **perPage** | **Integer**|  | [optional]
@@ -290,7 +290,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 ContactsApi apiInstance = new ContactsApi();
-List<String> filter = Arrays.asList("filter_example"); // List<String> | 
+String filter = "filter_example"; // String | 
 String query = "query_example"; // String | 
 Integer page = 56; // Integer | 
 Integer perPage = 56; // Integer | 
@@ -308,7 +308,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**List&lt;String&gt;**](String.md)|  | [optional]
+ **filter** | **String**|  | [optional]
  **query** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **perPage** | **Integer**|  | [optional]

@@ -6,9 +6,6 @@ import io.swagger.client.api.AccountActionsApi;
 import io.swagger.client.model.AccountActionPaginationResponse;
 import io.swagger.client.model.AccountActionSummary;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class AccountActionExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -17,8 +14,9 @@ public class AccountActionExample {
 
         AccountActionsApi accountActionsApi = new AccountActionsApi(apiClient);
 
-        List<String> filters = new ArrayList<>();
-        AccountActionPaginationResponse accountActionPaginationResponse = accountActionsApi.accountActionSearch(filters, "", 1, 10, "");
+        String filter = "{\"accountId\": \"59298\"}";
+
+        AccountActionPaginationResponse accountActionPaginationResponse = accountActionsApi.accountActionSearch(filter, "", 1, 10, "");
         for (AccountActionSummary item : accountActionPaginationResponse.getItems()) {
             System.out.println(item);
         }

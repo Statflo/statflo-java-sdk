@@ -16,9 +16,8 @@ public class DistrictExample {
         apiClient.setAccessToken(Config.accessToken);
 
         DistrictsApi districtsApi = new DistrictsApi(apiClient);
-        List<String> filters = new ArrayList<>();
 
-        DistrictPaginationResponse districtPaginationResponse = districtsApi.districtSearch(filters, "", 1, 10, "");
+        DistrictPaginationResponse districtPaginationResponse = districtsApi.districtSearch("", "", 1, 10, "");
         for (DistrictSummary item : districtPaginationResponse.getItems()) {
             System.out.println(item);
         }
