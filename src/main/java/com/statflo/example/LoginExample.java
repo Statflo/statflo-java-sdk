@@ -13,8 +13,8 @@ public class LoginExample {
         apiClient.setBasePath(Config.HOST);
         AuthenticationApi authenticationApi = new AuthenticationApi(apiClient);
         AuthLoginBody authLoginBody = new AuthLoginBody();
-        authLoginBody.setUsername("test@test.com");
-        authLoginBody.setPassword("test");
+        authLoginBody.setUsername("yadi.tang@statflo.com");
+        authLoginBody.setPassword("T830412t!");
 
         InlineResponse200 login = authenticationApi.login(authLoginBody);
         System.out.println(login.getToken());

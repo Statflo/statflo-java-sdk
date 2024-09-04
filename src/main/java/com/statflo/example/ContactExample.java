@@ -19,5 +19,7 @@ public class ContactExample {
         for (ContactSummary contact : contactPaginationResponse.getItems()) {
             System.out.println(contact);
         }
+
+
     }
 }
