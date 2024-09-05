@@ -7,6 +7,8 @@ import com.statflo.client.api.UsersApi;
 import com.statflo.client.model.UserPaginationResponse;
 import com.statflo.client.model.UserSummary;
 
+import java.util.HashMap;
+
 public class UserExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -14,8 +16,9 @@ public class UserExample {
         apiClient.setAccessToken(Config.accessToken);
 
         UsersApi usersApi = new UsersApi(apiClient);
+        HashMap<String, String> filter = new HashMap<>();
 
-        UserPaginationResponse userPaginationResponse = usersApi.userSearch("", "", 1, 10, "");
+        UserPaginationResponse userPaginationResponse = usersApi.userSearch(filter, "", 1, 10, "");
         for (UserSummary item : userPaginationResponse.getItems()) {
             System.out.println(item);
         }

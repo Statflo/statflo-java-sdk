@@ -7,6 +7,8 @@ import com.statflo.client.api.AccountActionsApi;
 import com.statflo.client.model.AccountActionPaginationResponse;
 import com.statflo.client.model.AccountActionSummary;
 
+import java.util.HashMap;
+
 public class AccountActionExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -15,8 +17,7 @@ public class AccountActionExample {
 
         AccountActionsApi accountActionsApi = new AccountActionsApi(apiClient);
 
-        String filter = "{\"accountId\": \"59298\"}";
-
+        HashMap<String, String> filter = new HashMap<>();
         AccountActionPaginationResponse accountActionPaginationResponse = accountActionsApi.accountActionSearch(filter, "", 1, 10, "");
         for (AccountActionSummary item : accountActionPaginationResponse.getItems()) {
             System.out.println(item);

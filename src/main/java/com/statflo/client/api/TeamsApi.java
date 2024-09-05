@@ -434,7 +434,7 @@ public class TeamsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call teamSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call teamSearchCall(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -486,7 +486,7 @@ public class TeamsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call teamSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call teamSearchValidateBeforeCall(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = teamSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -508,7 +508,7 @@ public class TeamsApi {
      * @return TeamPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public TeamPaginationResponse teamSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public TeamPaginationResponse teamSearch(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<TeamPaginationResponse> resp = teamSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -524,7 +524,7 @@ public class TeamsApi {
      * @return ApiResponse&lt;TeamPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<TeamPaginationResponse> teamSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<TeamPaginationResponse> teamSearchWithHttpInfo(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = teamSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<TeamPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -542,7 +542,7 @@ public class TeamsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call teamSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<TeamPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call teamSearchAsync(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<TeamPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

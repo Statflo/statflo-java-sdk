@@ -6,13 +6,16 @@ import com.statflo.client.ApiException;
 import com.statflo.client.api.AccountsApi;
 import com.statflo.client.model.AccountPaginationResponse;
 
+import java.util.HashMap;
+
 public class AccountExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
         apiClient.setBasePath(Config.HOST);
         apiClient.setAccessToken(Config.accessToken);
 
-        String filter = "{\"accountId\": \"59298\"}";
+        HashMap<String, String> filter = new HashMap<>();
+        filter.put("accountId", "59298");
 
         AccountsApi accountsApi = new AccountsApi(apiClient);
         AccountPaginationResponse accountPaginationResponse =

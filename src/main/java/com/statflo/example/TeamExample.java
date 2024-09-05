@@ -8,6 +8,8 @@ import com.statflo.client.model.Team;
 import com.statflo.client.model.TeamPaginationResponse;
 import com.statflo.client.model.TeamSummary;
 
+import java.util.HashMap;
+
 public class TeamExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -15,8 +17,9 @@ public class TeamExample {
         apiClient.setAccessToken(Config.accessToken);
 
         TeamsApi teamsApi = new TeamsApi(apiClient);
+        HashMap<String, String> filter = new HashMap<>();
 
-        TeamPaginationResponse teamPaginationResponse = teamsApi.teamSearch("", "", 1, 10, "");
+        TeamPaginationResponse teamPaginationResponse = teamsApi.teamSearch(filter, "", 1, 10, "");
         for (TeamSummary item : teamPaginationResponse.getItems()) {
             System.out.println(item);
         }

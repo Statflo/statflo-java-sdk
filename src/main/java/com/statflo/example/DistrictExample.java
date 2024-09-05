@@ -7,6 +7,8 @@ import com.statflo.client.api.DistrictsApi;
 import com.statflo.client.model.DistrictPaginationResponse;
 import com.statflo.client.model.DistrictSummary;
 
+import java.util.HashMap;
+
 public class DistrictExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -14,8 +16,9 @@ public class DistrictExample {
         apiClient.setAccessToken(Config.accessToken);
 
         DistrictsApi districtsApi = new DistrictsApi(apiClient);
+        HashMap<String, String> filter = new HashMap<>();
 
-        DistrictPaginationResponse districtPaginationResponse = districtsApi.districtSearch("", "", 1, 10, "");
+        DistrictPaginationResponse districtPaginationResponse = districtsApi.districtSearch(filter, "", 1, 10, "");
         for (DistrictSummary item : districtPaginationResponse.getItems()) {
             System.out.println(item);
         }

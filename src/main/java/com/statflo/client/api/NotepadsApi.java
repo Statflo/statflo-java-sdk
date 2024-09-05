@@ -443,7 +443,7 @@ public class NotepadsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call notepadSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call notepadSearchCall(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -495,7 +495,7 @@ public class NotepadsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call notepadSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call notepadSearchValidateBeforeCall(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = notepadSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -517,7 +517,7 @@ public class NotepadsApi {
      * @return NotepadPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public NotepadPaginationResponse notepadSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public NotepadPaginationResponse notepadSearch(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<NotepadPaginationResponse> resp = notepadSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -533,7 +533,7 @@ public class NotepadsApi {
      * @return ApiResponse&lt;NotepadPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<NotepadPaginationResponse> notepadSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<NotepadPaginationResponse> notepadSearchWithHttpInfo(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = notepadSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<NotepadPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -551,7 +551,7 @@ public class NotepadsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call notepadSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<NotepadPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call notepadSearchAsync(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<NotepadPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

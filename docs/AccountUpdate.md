@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **externalUserId** | **String** |  |  [optional]
 **externalLocationId** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]
-**status** | **Integer** |  | 
 
 <a name="AccountTypeEnum"></a>
 ## Enum: AccountTypeEnum

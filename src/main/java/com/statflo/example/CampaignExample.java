@@ -7,6 +7,8 @@ import com.statflo.client.api.CampaignsApi;
 import com.statflo.client.model.CampaignPaginationResponse;
 import com.statflo.client.model.CampaignSummary;
 
+import java.util.HashMap;
+
 public class CampaignExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -14,8 +16,9 @@ public class CampaignExample {
         apiClient.setAccessToken(Config.accessToken);
 
         CampaignsApi campaignsApi = new CampaignsApi(apiClient);
+        HashMap<String, String> filter = new HashMap<>();
 
-        CampaignPaginationResponse campaignPaginationResponse = campaignsApi.campaignSearch("", "", 1, 10, "");
+        CampaignPaginationResponse campaignPaginationResponse = campaignsApi.campaignSearch(filter, "", 1, 10, "");
         for (CampaignSummary campaignSummary : campaignPaginationResponse.getItems()) {
             System.out.println(campaignSummary);
         }

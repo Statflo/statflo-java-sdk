@@ -7,6 +7,8 @@ import com.statflo.client.api.LocationsApi;
 import com.statflo.client.model.LocationPaginationResponse;
 import com.statflo.client.model.LocationSummary;
 
+import java.util.HashMap;
+
 public class LocationExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -14,8 +16,9 @@ public class LocationExample {
         apiClient.setAccessToken(Config.accessToken);
 
         LocationsApi locationsApi = new LocationsApi(apiClient);
+        HashMap<String, String> filter = new HashMap<>();
 
-        LocationPaginationResponse locationPaginationResponse = locationsApi.locationSearch("", "", 1, 10, "");
+        LocationPaginationResponse locationPaginationResponse = locationsApi.locationSearch(filter, "", 1, 10, "");
         for (LocationSummary item : locationPaginationResponse.getItems()) {
             System.out.println(item);
         }

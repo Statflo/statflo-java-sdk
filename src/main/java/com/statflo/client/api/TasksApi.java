@@ -434,7 +434,7 @@ public class TasksApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call taskSearchCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call taskSearchCall(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -486,7 +486,7 @@ public class TasksApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call taskSearchValidateBeforeCall(String filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call taskSearchValidateBeforeCall(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = taskSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -508,7 +508,7 @@ public class TasksApi {
      * @return TaskPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public TaskPaginationResponse taskSearch(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public TaskPaginationResponse taskSearch(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<TaskPaginationResponse> resp = taskSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -524,7 +524,7 @@ public class TasksApi {
      * @return ApiResponse&lt;TaskPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<TaskPaginationResponse> taskSearchWithHttpInfo(String filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<TaskPaginationResponse> taskSearchWithHttpInfo(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = taskSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<TaskPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -542,7 +542,7 @@ public class TasksApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call taskSearchAsync(String filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<TaskPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call taskSearchAsync(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<TaskPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

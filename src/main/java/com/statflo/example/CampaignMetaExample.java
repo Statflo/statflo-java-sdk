@@ -8,6 +8,8 @@ import com.statflo.client.model.CampaignMetadata;
 import com.statflo.client.model.CampaignMetadataPaginationResponse;
 import com.statflo.client.model.CampaignMetadataSummary;
 
+import java.util.HashMap;
+
 public class CampaignMetaExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -15,8 +17,9 @@ public class CampaignMetaExample {
         apiClient.setAccessToken(Config.accessToken);
 
         CampaignMetadataApi campaignMetadataApi = new CampaignMetadataApi(apiClient);
+        HashMap<String, String> filter = new HashMap<>();
 
-        CampaignMetadataPaginationResponse campaignMetadataPaginationResponse = campaignMetadataApi.campaignMetadataSearch("", "", 1, 1, "");
+        CampaignMetadataPaginationResponse campaignMetadataPaginationResponse = campaignMetadataApi.campaignMetadataSearch(filter, "", 1, 1, "");
         for (CampaignMetadataSummary item : campaignMetadataPaginationResponse.getItems()) {
             System.out.println(item);
         }

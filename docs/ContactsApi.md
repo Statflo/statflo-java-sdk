@@ -232,7 +232,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 ContactsApi apiInstance = new ContactsApi();
-String filter = "filter_example"; // String | 
+java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
 String query = "query_example"; // String | 
 Integer page = 56; // Integer | 
 Integer perPage = 56; // Integer | 
@@ -250,7 +250,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**|  | [optional]
+ **filter** | [**java.util.HashMap**](.md)|  | [optional]
  **query** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **perPage** | **Integer**|  | [optional]
@@ -290,7 +290,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 ContactsApi apiInstance = new ContactsApi();
-String filter = "filter_example"; // String | 
+java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
 String query = "query_example"; // String | 
 Integer page = 56; // Integer | 
 Integer perPage = 56; // Integer | 
@@ -308,7 +308,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**|  | [optional]
+ **filter** | [**java.util.HashMap**](.md)|  | [optional]
  **query** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **perPage** | **Integer**|  | [optional]

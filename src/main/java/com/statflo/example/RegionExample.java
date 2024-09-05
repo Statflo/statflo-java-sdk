@@ -7,6 +7,8 @@ import com.statflo.client.api.RegionsApi;
 import com.statflo.client.model.RegionPaginationResponse;
 import com.statflo.client.model.RegionSummary;
 
+import java.util.HashMap;
+
 public class RegionExample {
     public static void main(String[] args) throws ApiException {
         ApiClient apiClient = new ApiClient();
@@ -14,8 +16,9 @@ public class RegionExample {
         apiClient.setAccessToken(Config.accessToken);
 
         RegionsApi regionsApi = new RegionsApi(apiClient);
+        HashMap<String, String> filter = new HashMap<>();
 
-        RegionPaginationResponse regionPaginationResponse = regionsApi.regionSearch("", "", 1, 10, "");
+        RegionPaginationResponse regionPaginationResponse = regionsApi.regionSearch(filter, "", 1, 10, "");
         for (RegionSummary item : regionPaginationResponse.getItems()) {
             System.out.println(item);
         }
