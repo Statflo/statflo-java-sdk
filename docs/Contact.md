@@ -27,3 +27,4 @@ Name | Type | Description | Notes
 **smsCapable** | **Boolean** |  |  [optional]
 **flag** | **String** |  |  [optional]
 **firstName** | **String** |  |  [optional]
+**preferredLanguage** | **String** |  |  [optional]

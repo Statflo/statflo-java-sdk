@@ -21,11 +21,11 @@ Create an message template.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.MessageTemplatesApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -71,11 +71,11 @@ Remove an message template.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.MessageTemplatesApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -120,11 +120,11 @@ Retrieve an message template.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.MessageTemplatesApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -170,17 +170,17 @@ Search message templates.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.MessageTemplatesApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 MessageTemplatesApi apiInstance = new MessageTemplatesApi();
-List<String> filter = Arrays.asList("filter_example"); // List<String> | 
+java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
 String query = "query_example"; // String | 
 Integer page = 56; // Integer | 
 Integer perPage = 56; // Integer | 
@@ -198,7 +198,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**List&lt;String&gt;**](String.md)|  | [optional]
+ **filter** | [**java.util.HashMap**](.md)|  | [optional]
  **query** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **perPage** | **Integer**|  | [optional]
@@ -228,11 +228,11 @@ Update an message template.
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.MessageTemplatesApi;
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
