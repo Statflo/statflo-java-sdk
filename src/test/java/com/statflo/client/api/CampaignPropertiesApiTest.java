@@ -87,7 +87,7 @@ public class CampaignPropertiesApiTest {
      */
     @Test
     public void campaignPropertySearchTest() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;

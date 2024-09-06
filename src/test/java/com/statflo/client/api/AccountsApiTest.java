@@ -15,7 +15,6 @@ package com.statflo.client.api;
 import com.statflo.client.model.Account;
 import com.statflo.client.model.AccountCreate;
 import com.statflo.client.model.AccountPaginationResponse;
-import com.statflo.client.model.AccountUpdate;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -89,7 +88,7 @@ public class AccountsApiTest {
      */
     @Test
     public void accountSearchTest() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;
@@ -109,7 +108,7 @@ public class AccountsApiTest {
     @Test
     public void accountUpdateTest() throws Exception {
         String id = null;
-        AccountUpdate body = null;
+        Account body = null;
         Account response = api.accountUpdate(id, body);
 
         // TODO: test validations

@@ -89,7 +89,7 @@ public class DistrictsApiTest {
      */
     @Test
     public void districtSearchTest() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;

@@ -15,7 +15,7 @@ public class AccountExample {
         apiClient.setAccessToken(Config.accessToken);
 
         HashMap<String, String> filter = new HashMap<>();
-        filter.put("accountId", "59298");
+        filter.put("accountId", "6075");
 
         AccountsApi accountsApi = new AccountsApi(apiClient);
         AccountPaginationResponse accountPaginationResponse =

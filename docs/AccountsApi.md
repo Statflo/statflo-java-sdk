@@ -239,7 +239,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 AccountsApi apiInstance = new AccountsApi();
 String id = "id_example"; // String | 
-AccountUpdate body = new AccountUpdate(); // AccountUpdate | 
+Account body = new Account(); // Account | 
 try {
     Account result = apiInstance.accountUpdate(id, body);
     System.out.println(result);
@@ -254,7 +254,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
- **body** | [**AccountUpdate**](AccountUpdate.md)|  | [optional]
+ **body** | [**Account**](Account.md)|  | [optional]
 
 ### Return type
 

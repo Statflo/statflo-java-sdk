@@ -57,7 +57,7 @@ public class DealersApiTest {
      */
     @Test
     public void dealerSearchTest() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;

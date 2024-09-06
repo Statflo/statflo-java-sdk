@@ -72,7 +72,7 @@ public class LocationsApiTest {
      */
     @Test
     public void locationSearchTest() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;
@@ -91,7 +91,7 @@ public class LocationsApiTest {
      */
     @Test
     public void locationSearch_0Test() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;
