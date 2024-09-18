@@ -3,10 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
 **templateName** | **String** |  | 
 **language** | [**LanguageEnum**](#LanguageEnum) |  |  [optional]
 **metadata** | **Object** |  |  [optional]
 **template** | **Object** |  | 
+**callListId** | **Integer** |  |  [optional]
+**priority** | **Integer** |  |  [optional]
+**dateDeleted** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 
 <a name="LanguageEnum"></a>
 ## Enum: LanguageEnum

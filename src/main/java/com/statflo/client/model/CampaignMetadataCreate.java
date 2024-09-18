@@ -21,13 +21,17 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * CampaignMetadataCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class CampaignMetadataCreate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("campaignId")
   private Integer campaignId = null;
 
@@ -92,6 +96,27 @@ public class CampaignMetadataCreate {
   @SerializedName("value")
   private Object value = null;
 
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  public CampaignMetadataCreate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
   public CampaignMetadataCreate campaignId(Integer campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -146,6 +171,24 @@ public class CampaignMetadataCreate {
     this.value = value;
   }
 
+  public CampaignMetadataCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -156,14 +199,16 @@ public class CampaignMetadataCreate {
       return false;
     }
     CampaignMetadataCreate campaignMetadataCreate = (CampaignMetadataCreate) o;
-    return Objects.equals(this.campaignId, campaignMetadataCreate.campaignId) &&
+    return Objects.equals(this.id, campaignMetadataCreate.id) &&
+        Objects.equals(this.campaignId, campaignMetadataCreate.campaignId) &&
         Objects.equals(this.metadata, campaignMetadataCreate.metadata) &&
-        Objects.equals(this.value, campaignMetadataCreate.value);
+        Objects.equals(this.value, campaignMetadataCreate.value) &&
+        Objects.equals(this.dateAdded, campaignMetadataCreate.dateAdded);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, metadata, value);
+    return Objects.hash(id, campaignId, metadata, value, dateAdded);
   }
 
 
@@ -172,9 +217,11 @@ public class CampaignMetadataCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class CampaignMetadataCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("}");
     return sb.toString();
   }

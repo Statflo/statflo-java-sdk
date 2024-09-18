@@ -9,3 +9,6 @@ Name | Type | Description | Notes
 **assignedFrom** | **String** |  |  [optional]
 **id** | **Integer** |  | 
 **accountId** | **String** |  | 
+**dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

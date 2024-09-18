@@ -25,7 +25,7 @@ import java.io.IOException;
  * FeatureSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class FeatureSummary {
   @SerializedName("id")

@@ -21,11 +21,12 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * UserTeamCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class UserTeamCreate {
   @SerializedName("userId")
@@ -33,6 +34,15 @@ public class UserTeamCreate {
 
   @SerializedName("teamId")
   private Integer teamId = null;
+
+  @SerializedName("createdAt")
+  private OffsetDateTime createdAt = null;
+
+  @SerializedName("updatedAt")
+  private OffsetDateTime updatedAt = null;
+
+  @SerializedName("deletedAt")
+  private OffsetDateTime deletedAt = null;
 
   public UserTeamCreate userId(Integer userId) {
     this.userId = userId;
@@ -70,6 +80,60 @@ public class UserTeamCreate {
     this.teamId = teamId;
   }
 
+  public UserTeamCreate createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+  public UserTeamCreate updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Get updatedAt
+   * @return updatedAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
+  public UserTeamCreate deletedAt(OffsetDateTime deletedAt) {
+    this.deletedAt = deletedAt;
+    return this;
+  }
+
+   /**
+   * Get deletedAt
+   * @return deletedAt
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDeletedAt() {
+    return deletedAt;
+  }
+
+  public void setDeletedAt(OffsetDateTime deletedAt) {
+    this.deletedAt = deletedAt;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -81,12 +145,15 @@ public class UserTeamCreate {
     }
     UserTeamCreate userTeamCreate = (UserTeamCreate) o;
     return Objects.equals(this.userId, userTeamCreate.userId) &&
-        Objects.equals(this.teamId, userTeamCreate.teamId);
+        Objects.equals(this.teamId, userTeamCreate.teamId) &&
+        Objects.equals(this.createdAt, userTeamCreate.createdAt) &&
+        Objects.equals(this.updatedAt, userTeamCreate.updatedAt) &&
+        Objects.equals(this.deletedAt, userTeamCreate.deletedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, teamId);
+    return Objects.hash(userId, teamId, createdAt, updatedAt, deletedAt);
   }
 
 
@@ -97,6 +164,9 @@ public class UserTeamCreate {
     
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    teamId: ").append(toIndentedString(teamId)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    deletedAt: ").append(toIndentedString(deletedAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }

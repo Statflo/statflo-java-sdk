@@ -26,9 +26,12 @@ import org.threeten.bp.OffsetDateTime;
  * AccountCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class AccountCreate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("name")
   private String name = null;
 
@@ -102,14 +105,50 @@ public class AccountCreate {
   @SerializedName("dealValue")
   private String dealValue = null;
 
+  @SerializedName("potentialRenewals")
+  private Integer potentialRenewals = 0;
+
+  @SerializedName("totalResiduals")
+  private String totalResiduals = null;
+
+  @SerializedName("totalEligibleRevenue")
+  private String totalEligibleRevenue = null;
+
   @SerializedName("lastSpokenDate")
   private OffsetDateTime lastSpokenDate = null;
 
   @SerializedName("lastActivityDate")
   private OffsetDateTime lastActivityDate = null;
 
+  @SerializedName("additionsInYear")
+  private Integer additionsInYear = null;
+
+  @SerializedName("ineligibles")
+  private Integer ineligibles = null;
+
+  @SerializedName("subsGps")
+  private Integer subsGps = null;
+
+  @SerializedName("subsHspa")
+  private Integer subsHspa = null;
+
+  @SerializedName("subsCdma")
+  private Integer subsCdma = null;
+
+  @SerializedName("subsMike")
+  private Integer subsMike = null;
+
+  @SerializedName("subsModems")
+  private Integer subsModems = null;
+
   @SerializedName("prevExternalUserId")
   private String prevExternalUserId = null;
+
+  @SerializedName("carrierStatistics")
+  private Integer carrierStatistics = null;
+
+  @SerializedName("notClient")
+  private Integer notClient = null;
 
   @SerializedName("status")
   private Integer status = 0;
@@ -126,8 +165,20 @@ public class AccountCreate {
   @SerializedName("originalExternalUserId")
   private String originalExternalUserId = null;
 
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  @SerializedName("proposedAccountId")
+  private Integer proposedAccountId = null;
+
   @SerializedName("website")
   private String website = null;
+
+  @SerializedName("businessHours")
+  private String businessHours = null;
+
+  @SerializedName("vertical")
+  private String vertical = null;
 
   @SerializedName("sourceId")
   private Integer sourceId = null;
@@ -137,6 +188,21 @@ public class AccountCreate {
 
   @SerializedName("customerExternalId")
   private String customerExternalId = null;
+
+  @SerializedName("couponCode")
+  private String couponCode = null;
+
+  @SerializedName("currentCarrierId")
+  private Integer currentCarrierId = null;
+
+  @SerializedName("preferredCarrierId")
+  private Integer preferredCarrierId = null;
+
+  @SerializedName("oldBan")
+  private String oldBan = null;
+
+  @SerializedName("customerBusinessUnitCustomerId")
+  private String customerBusinessUnitCustomerId = null;
 
   @SerializedName("brandId")
   private Integer brandId = null;
@@ -152,6 +218,30 @@ public class AccountCreate {
 
   @SerializedName("accountSubtype")
   private String accountSubtype = null;
+
+  @SerializedName("dateCreated")
+  private OffsetDateTime dateCreated = null;
+
+  @SerializedName("dateUpdated")
+  private OffsetDateTime dateUpdated = null;
+
+  public AccountCreate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public AccountCreate name(String name) {
     this.name = name;
@@ -297,6 +387,60 @@ public class AccountCreate {
     this.dealValue = dealValue;
   }
 
+  public AccountCreate potentialRenewals(Integer potentialRenewals) {
+    this.potentialRenewals = potentialRenewals;
+    return this;
+  }
+
+   /**
+   * Get potentialRenewals
+   * @return potentialRenewals
+  **/
+  @Schema(description = "")
+  public Integer getPotentialRenewals() {
+    return potentialRenewals;
+  }
+
+  public void setPotentialRenewals(Integer potentialRenewals) {
+    this.potentialRenewals = potentialRenewals;
+  }
+
+  public AccountCreate totalResiduals(String totalResiduals) {
+    this.totalResiduals = totalResiduals;
+    return this;
+  }
+
+   /**
+   * Get totalResiduals
+   * @return totalResiduals
+  **/
+  @Schema(description = "")
+  public String getTotalResiduals() {
+    return totalResiduals;
+  }
+
+  public void setTotalResiduals(String totalResiduals) {
+    this.totalResiduals = totalResiduals;
+  }
+
+  public AccountCreate totalEligibleRevenue(String totalEligibleRevenue) {
+    this.totalEligibleRevenue = totalEligibleRevenue;
+    return this;
+  }
+
+   /**
+   * Get totalEligibleRevenue
+   * @return totalEligibleRevenue
+  **/
+  @Schema(description = "")
+  public String getTotalEligibleRevenue() {
+    return totalEligibleRevenue;
+  }
+
+  public void setTotalEligibleRevenue(String totalEligibleRevenue) {
+    this.totalEligibleRevenue = totalEligibleRevenue;
+  }
+
   public AccountCreate lastSpokenDate(OffsetDateTime lastSpokenDate) {
     this.lastSpokenDate = lastSpokenDate;
     return this;
@@ -333,6 +477,132 @@ public class AccountCreate {
     this.lastActivityDate = lastActivityDate;
   }
 
+  public AccountCreate additionsInYear(Integer additionsInYear) {
+    this.additionsInYear = additionsInYear;
+    return this;
+  }
+
+   /**
+   * Get additionsInYear
+   * @return additionsInYear
+  **/
+  @Schema(description = "")
+  public Integer getAdditionsInYear() {
+    return additionsInYear;
+  }
+
+  public void setAdditionsInYear(Integer additionsInYear) {
+    this.additionsInYear = additionsInYear;
+  }
+
+  public AccountCreate ineligibles(Integer ineligibles) {
+    this.ineligibles = ineligibles;
+    return this;
+  }
+
+   /**
+   * Get ineligibles
+   * @return ineligibles
+  **/
+  @Schema(description = "")
+  public Integer getIneligibles() {
+    return ineligibles;
+  }
+
+  public void setIneligibles(Integer ineligibles) {
+    this.ineligibles = ineligibles;
+  }
+
+  public AccountCreate subsGps(Integer subsGps) {
+    this.subsGps = subsGps;
+    return this;
+  }
+
+   /**
+   * Get subsGps
+   * @return subsGps
+  **/
+  @Schema(description = "")
+  public Integer getSubsGps() {
+    return subsGps;
+  }
+
+  public void setSubsGps(Integer subsGps) {
+    this.subsGps = subsGps;
+  }
+
+  public AccountCreate subsHspa(Integer subsHspa) {
+    this.subsHspa = subsHspa;
+    return this;
+  }
+
+   /**
+   * Get subsHspa
+   * @return subsHspa
+  **/
+  @Schema(description = "")
+  public Integer getSubsHspa() {
+    return subsHspa;
+  }
+
+  public void setSubsHspa(Integer subsHspa) {
+    this.subsHspa = subsHspa;
+  }
+
+  public AccountCreate subsCdma(Integer subsCdma) {
+    this.subsCdma = subsCdma;
+    return this;
+  }
+
+   /**
+   * Get subsCdma
+   * @return subsCdma
+  **/
+  @Schema(description = "")
+  public Integer getSubsCdma() {
+    return subsCdma;
+  }
+
+  public void setSubsCdma(Integer subsCdma) {
+    this.subsCdma = subsCdma;
+  }
+
+  public AccountCreate subsMike(Integer subsMike) {
+    this.subsMike = subsMike;
+    return this;
+  }
+
+   /**
+   * Get subsMike
+   * @return subsMike
+  **/
+  @Schema(description = "")
+  public Integer getSubsMike() {
+    return subsMike;
+  }
+
+  public void setSubsMike(Integer subsMike) {
+    this.subsMike = subsMike;
+  }
+
+  public AccountCreate subsModems(Integer subsModems) {
+    this.subsModems = subsModems;
+    return this;
+  }
+
+   /**
+   * Get subsModems
+   * @return subsModems
+  **/
+  @Schema(description = "")
+  public Integer getSubsModems() {
+    return subsModems;
+  }
+
+  public void setSubsModems(Integer subsModems) {
+    this.subsModems = subsModems;
+  }
+
   public AccountCreate prevExternalUserId(String prevExternalUserId) {
     this.prevExternalUserId = prevExternalUserId;
     return this;
@@ -349,6 +619,42 @@ public class AccountCreate {
 
   public void setPrevExternalUserId(String prevExternalUserId) {
     this.prevExternalUserId = prevExternalUserId;
+  }
+
+  public AccountCreate carrierStatistics(Integer carrierStatistics) {
+    this.carrierStatistics = carrierStatistics;
+    return this;
+  }
+
+   /**
+   * Get carrierStatistics
+   * @return carrierStatistics
+  **/
+  @Schema(description = "")
+  public Integer getCarrierStatistics() {
+    return carrierStatistics;
+  }
+
+  public void setCarrierStatistics(Integer carrierStatistics) {
+    this.carrierStatistics = carrierStatistics;
+  }
+
+  public AccountCreate notClient(Integer notClient) {
+    this.notClient = notClient;
+    return this;
+  }
+
+   /**
+   * Get notClient
+   * @return notClient
+  **/
+  @Schema(description = "")
+  public Integer getNotClient() {
+    return notClient;
+  }
+
+  public void setNotClient(Integer notClient) {
+    this.notClient = notClient;
   }
 
   public AccountCreate status(Integer status) {
@@ -442,6 +748,42 @@ public class AccountCreate {
     this.originalExternalUserId = originalExternalUserId;
   }
 
+  public AccountCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
+  public AccountCreate proposedAccountId(Integer proposedAccountId) {
+    this.proposedAccountId = proposedAccountId;
+    return this;
+  }
+
+   /**
+   * Get proposedAccountId
+   * @return proposedAccountId
+  **/
+  @Schema(description = "")
+  public Integer getProposedAccountId() {
+    return proposedAccountId;
+  }
+
+  public void setProposedAccountId(Integer proposedAccountId) {
+    this.proposedAccountId = proposedAccountId;
+  }
+
   public AccountCreate website(String website) {
     this.website = website;
     return this;
@@ -458,6 +800,42 @@ public class AccountCreate {
 
   public void setWebsite(String website) {
     this.website = website;
+  }
+
+  public AccountCreate businessHours(String businessHours) {
+    this.businessHours = businessHours;
+    return this;
+  }
+
+   /**
+   * Get businessHours
+   * @return businessHours
+  **/
+  @Schema(description = "")
+  public String getBusinessHours() {
+    return businessHours;
+  }
+
+  public void setBusinessHours(String businessHours) {
+    this.businessHours = businessHours;
+  }
+
+  public AccountCreate vertical(String vertical) {
+    this.vertical = vertical;
+    return this;
+  }
+
+   /**
+   * Get vertical
+   * @return vertical
+  **/
+  @Schema(description = "")
+  public String getVertical() {
+    return vertical;
+  }
+
+  public void setVertical(String vertical) {
+    this.vertical = vertical;
   }
 
   public AccountCreate sourceId(Integer sourceId) {
@@ -512,6 +890,96 @@ public class AccountCreate {
 
   public void setCustomerExternalId(String customerExternalId) {
     this.customerExternalId = customerExternalId;
+  }
+
+  public AccountCreate couponCode(String couponCode) {
+    this.couponCode = couponCode;
+    return this;
+  }
+
+   /**
+   * Get couponCode
+   * @return couponCode
+  **/
+  @Schema(description = "")
+  public String getCouponCode() {
+    return couponCode;
+  }
+
+  public void setCouponCode(String couponCode) {
+    this.couponCode = couponCode;
+  }
+
+  public AccountCreate currentCarrierId(Integer currentCarrierId) {
+    this.currentCarrierId = currentCarrierId;
+    return this;
+  }
+
+   /**
+   * Get currentCarrierId
+   * @return currentCarrierId
+  **/
+  @Schema(description = "")
+  public Integer getCurrentCarrierId() {
+    return currentCarrierId;
+  }
+
+  public void setCurrentCarrierId(Integer currentCarrierId) {
+    this.currentCarrierId = currentCarrierId;
+  }
+
+  public AccountCreate preferredCarrierId(Integer preferredCarrierId) {
+    this.preferredCarrierId = preferredCarrierId;
+    return this;
+  }
+
+   /**
+   * Get preferredCarrierId
+   * @return preferredCarrierId
+  **/
+  @Schema(description = "")
+  public Integer getPreferredCarrierId() {
+    return preferredCarrierId;
+  }
+
+  public void setPreferredCarrierId(Integer preferredCarrierId) {
+    this.preferredCarrierId = preferredCarrierId;
+  }
+
+  public AccountCreate oldBan(String oldBan) {
+    this.oldBan = oldBan;
+    return this;
+  }
+
+   /**
+   * Get oldBan
+   * @return oldBan
+  **/
+  @Schema(description = "")
+  public String getOldBan() {
+    return oldBan;
+  }
+
+  public void setOldBan(String oldBan) {
+    this.oldBan = oldBan;
+  }
+
+  public AccountCreate customerBusinessUnitCustomerId(String customerBusinessUnitCustomerId) {
+    this.customerBusinessUnitCustomerId = customerBusinessUnitCustomerId;
+    return this;
+  }
+
+   /**
+   * Get customerBusinessUnitCustomerId
+   * @return customerBusinessUnitCustomerId
+  **/
+  @Schema(description = "")
+  public String getCustomerBusinessUnitCustomerId() {
+    return customerBusinessUnitCustomerId;
+  }
+
+  public void setCustomerBusinessUnitCustomerId(String customerBusinessUnitCustomerId) {
+    this.customerBusinessUnitCustomerId = customerBusinessUnitCustomerId;
   }
 
   public AccountCreate brandId(Integer brandId) {
@@ -604,6 +1072,42 @@ public class AccountCreate {
     this.accountSubtype = accountSubtype;
   }
 
+  public AccountCreate dateCreated(OffsetDateTime dateCreated) {
+    this.dateCreated = dateCreated;
+    return this;
+  }
+
+   /**
+   * Get dateCreated
+   * @return dateCreated
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateCreated() {
+    return dateCreated;
+  }
+
+  public void setDateCreated(OffsetDateTime dateCreated) {
+    this.dateCreated = dateCreated;
+  }
+
+  public AccountCreate dateUpdated(OffsetDateTime dateUpdated) {
+    this.dateUpdated = dateUpdated;
+    return this;
+  }
+
+   /**
+   * Get dateUpdated
+   * @return dateUpdated
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateUpdated() {
+    return dateUpdated;
+  }
+
+  public void setDateUpdated(OffsetDateTime dateUpdated) {
+    this.dateUpdated = dateUpdated;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -614,7 +1118,8 @@ public class AccountCreate {
       return false;
     }
     AccountCreate accountCreate = (AccountCreate) o;
-    return Objects.equals(this.name, accountCreate.name) &&
+    return Objects.equals(this.id, accountCreate.id) &&
+        Objects.equals(this.name, accountCreate.name) &&
         Objects.equals(this.accountId, accountCreate.accountId) &&
         Objects.equals(this.accountType, accountCreate.accountType) &&
         Objects.equals(this.externalUserId, accountCreate.externalUserId) &&
@@ -622,28 +1127,51 @@ public class AccountCreate {
         Objects.equals(this.city, accountCreate.city) &&
         Objects.equals(this.numberOfCampaignMembers, accountCreate.numberOfCampaignMembers) &&
         Objects.equals(this.dealValue, accountCreate.dealValue) &&
+        Objects.equals(this.potentialRenewals, accountCreate.potentialRenewals) &&
+        Objects.equals(this.totalResiduals, accountCreate.totalResiduals) &&
+        Objects.equals(this.totalEligibleRevenue, accountCreate.totalEligibleRevenue) &&
         Objects.equals(this.lastSpokenDate, accountCreate.lastSpokenDate) &&
         Objects.equals(this.lastActivityDate, accountCreate.lastActivityDate) &&
+        Objects.equals(this.additionsInYear, accountCreate.additionsInYear) &&
+        Objects.equals(this.ineligibles, accountCreate.ineligibles) &&
+        Objects.equals(this.subsGps, accountCreate.subsGps) &&
+        Objects.equals(this.subsHspa, accountCreate.subsHspa) &&
+        Objects.equals(this.subsCdma, accountCreate.subsCdma) &&
+        Objects.equals(this.subsMike, accountCreate.subsMike) &&
+        Objects.equals(this.subsModems, accountCreate.subsModems) &&
         Objects.equals(this.prevExternalUserId, accountCreate.prevExternalUserId) &&
+        Objects.equals(this.carrierStatistics, accountCreate.carrierStatistics) &&
+        Objects.equals(this.notClient, accountCreate.notClient) &&
         Objects.equals(this.status, accountCreate.status) &&
         Objects.equals(this.attempt, accountCreate.attempt) &&
         Objects.equals(this.callType, accountCreate.callType) &&
         Objects.equals(this.callDate, accountCreate.callDate) &&
         Objects.equals(this.originalExternalUserId, accountCreate.originalExternalUserId) &&
+        Objects.equals(this.dateAdded, accountCreate.dateAdded) &&
+        Objects.equals(this.proposedAccountId, accountCreate.proposedAccountId) &&
         Objects.equals(this.website, accountCreate.website) &&
+        Objects.equals(this.businessHours, accountCreate.businessHours) &&
+        Objects.equals(this.vertical, accountCreate.vertical) &&
         Objects.equals(this.sourceId, accountCreate.sourceId) &&
         Objects.equals(this.source, accountCreate.source) &&
         Objects.equals(this.customerExternalId, accountCreate.customerExternalId) &&
+        Objects.equals(this.couponCode, accountCreate.couponCode) &&
+        Objects.equals(this.currentCarrierId, accountCreate.currentCarrierId) &&
+        Objects.equals(this.preferredCarrierId, accountCreate.preferredCarrierId) &&
+        Objects.equals(this.oldBan, accountCreate.oldBan) &&
+        Objects.equals(this.customerBusinessUnitCustomerId, accountCreate.customerBusinessUnitCustomerId) &&
         Objects.equals(this.brandId, accountCreate.brandId) &&
         Objects.equals(this.seatType, accountCreate.seatType) &&
         Objects.equals(this.rptBu, accountCreate.rptBu) &&
         Objects.equals(this.recordOwned, accountCreate.recordOwned) &&
-        Objects.equals(this.accountSubtype, accountCreate.accountSubtype);
+        Objects.equals(this.accountSubtype, accountCreate.accountSubtype) &&
+        Objects.equals(this.dateCreated, accountCreate.dateCreated) &&
+        Objects.equals(this.dateUpdated, accountCreate.dateUpdated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, accountId, accountType, externalUserId, externalLocationId, city, numberOfCampaignMembers, dealValue, lastSpokenDate, lastActivityDate, prevExternalUserId, status, attempt, callType, callDate, originalExternalUserId, website, sourceId, source, customerExternalId, brandId, seatType, rptBu, recordOwned, accountSubtype);
+    return Objects.hash(id, name, accountId, accountType, externalUserId, externalLocationId, city, numberOfCampaignMembers, dealValue, potentialRenewals, totalResiduals, totalEligibleRevenue, lastSpokenDate, lastActivityDate, additionsInYear, ineligibles, subsGps, subsHspa, subsCdma, subsMike, subsModems, prevExternalUserId, carrierStatistics, notClient, status, attempt, callType, callDate, originalExternalUserId, dateAdded, proposedAccountId, website, businessHours, vertical, sourceId, source, customerExternalId, couponCode, currentCarrierId, preferredCarrierId, oldBan, customerBusinessUnitCustomerId, brandId, seatType, rptBu, recordOwned, accountSubtype, dateCreated, dateUpdated);
   }
 
 
@@ -652,6 +1180,7 @@ public class AccountCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountType: ").append(toIndentedString(accountType)).append("\n");
@@ -660,23 +1189,46 @@ public class AccountCreate {
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
     sb.append("    numberOfCampaignMembers: ").append(toIndentedString(numberOfCampaignMembers)).append("\n");
     sb.append("    dealValue: ").append(toIndentedString(dealValue)).append("\n");
+    sb.append("    potentialRenewals: ").append(toIndentedString(potentialRenewals)).append("\n");
+    sb.append("    totalResiduals: ").append(toIndentedString(totalResiduals)).append("\n");
+    sb.append("    totalEligibleRevenue: ").append(toIndentedString(totalEligibleRevenue)).append("\n");
     sb.append("    lastSpokenDate: ").append(toIndentedString(lastSpokenDate)).append("\n");
     sb.append("    lastActivityDate: ").append(toIndentedString(lastActivityDate)).append("\n");
+    sb.append("    additionsInYear: ").append(toIndentedString(additionsInYear)).append("\n");
+    sb.append("    ineligibles: ").append(toIndentedString(ineligibles)).append("\n");
+    sb.append("    subsGps: ").append(toIndentedString(subsGps)).append("\n");
+    sb.append("    subsHspa: ").append(toIndentedString(subsHspa)).append("\n");
+    sb.append("    subsCdma: ").append(toIndentedString(subsCdma)).append("\n");
+    sb.append("    subsMike: ").append(toIndentedString(subsMike)).append("\n");
+    sb.append("    subsModems: ").append(toIndentedString(subsModems)).append("\n");
     sb.append("    prevExternalUserId: ").append(toIndentedString(prevExternalUserId)).append("\n");
+    sb.append("    carrierStatistics: ").append(toIndentedString(carrierStatistics)).append("\n");
+    sb.append("    notClient: ").append(toIndentedString(notClient)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    attempt: ").append(toIndentedString(attempt)).append("\n");
     sb.append("    callType: ").append(toIndentedString(callType)).append("\n");
     sb.append("    callDate: ").append(toIndentedString(callDate)).append("\n");
     sb.append("    originalExternalUserId: ").append(toIndentedString(originalExternalUserId)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
+    sb.append("    proposedAccountId: ").append(toIndentedString(proposedAccountId)).append("\n");
     sb.append("    website: ").append(toIndentedString(website)).append("\n");
+    sb.append("    businessHours: ").append(toIndentedString(businessHours)).append("\n");
+    sb.append("    vertical: ").append(toIndentedString(vertical)).append("\n");
     sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    customerExternalId: ").append(toIndentedString(customerExternalId)).append("\n");
+    sb.append("    couponCode: ").append(toIndentedString(couponCode)).append("\n");
+    sb.append("    currentCarrierId: ").append(toIndentedString(currentCarrierId)).append("\n");
+    sb.append("    preferredCarrierId: ").append(toIndentedString(preferredCarrierId)).append("\n");
+    sb.append("    oldBan: ").append(toIndentedString(oldBan)).append("\n");
+    sb.append("    customerBusinessUnitCustomerId: ").append(toIndentedString(customerBusinessUnitCustomerId)).append("\n");
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    seatType: ").append(toIndentedString(seatType)).append("\n");
     sb.append("    rptBu: ").append(toIndentedString(rptBu)).append("\n");
     sb.append("    recordOwned: ").append(toIndentedString(recordOwned)).append("\n");
     sb.append("    accountSubtype: ").append(toIndentedString(accountSubtype)).append("\n");
+    sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
+    sb.append("    dateUpdated: ").append(toIndentedString(dateUpdated)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -7,3 +7,6 @@ Name | Type | Description | Notes
 **subject** | **String** |  |  [optional]
 **id** | **Integer** |  | 
 **accountId** | **String** |  | 
+**dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

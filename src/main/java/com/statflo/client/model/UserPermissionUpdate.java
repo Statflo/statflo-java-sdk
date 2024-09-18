@@ -14,13 +14,41 @@ package com.statflo.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
 /**
  * UserPermissionUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class UserPermissionUpdate {
+  @SerializedName("blacklisted")
+  private Boolean blacklisted = false;
+
+  public UserPermissionUpdate blacklisted(Boolean blacklisted) {
+    this.blacklisted = blacklisted;
+    return this;
+  }
+
+   /**
+   * Get blacklisted
+   * @return blacklisted
+  **/
+  @Schema(description = "")
+  public Boolean isBlacklisted() {
+    return blacklisted;
+  }
+
+  public void setBlacklisted(Boolean blacklisted) {
+    this.blacklisted = blacklisted;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +58,13 @@ public class UserPermissionUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    UserPermissionUpdate userPermissionUpdate = (UserPermissionUpdate) o;
+    return Objects.equals(this.blacklisted, userPermissionUpdate.blacklisted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(blacklisted);
   }
 
 
@@ -44,6 +73,7 @@ public class UserPermissionUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPermissionUpdate {\n");
     
+    sb.append("    blacklisted: ").append(toIndentedString(blacklisted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

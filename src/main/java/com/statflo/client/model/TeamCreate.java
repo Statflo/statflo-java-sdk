@@ -23,13 +23,17 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.threeten.bp.OffsetDateTime;
 /**
  * TeamCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class TeamCreate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("name")
   private String name = null;
 
@@ -41,6 +45,30 @@ public class TeamCreate {
 
   @SerializedName("ownerId")
   private Integer ownerId = null;
+
+  @SerializedName("createdAt")
+  private OffsetDateTime createdAt = null;
+
+  @SerializedName("updatedAt")
+  private OffsetDateTime updatedAt = null;
+
+  public TeamCreate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public TeamCreate name(String name) {
     this.name = name;
@@ -122,6 +150,42 @@ public class TeamCreate {
     this.ownerId = ownerId;
   }
 
+  public TeamCreate createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+  public TeamCreate updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Get updatedAt
+   * @return updatedAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -132,15 +196,18 @@ public class TeamCreate {
       return false;
     }
     TeamCreate teamCreate = (TeamCreate) o;
-    return Objects.equals(this.name, teamCreate.name) &&
+    return Objects.equals(this.id, teamCreate.id) &&
+        Objects.equals(this.name, teamCreate.name) &&
         Objects.equals(this.permissionIds, teamCreate.permissionIds) &&
         Objects.equals(this.parentId, teamCreate.parentId) &&
-        Objects.equals(this.ownerId, teamCreate.ownerId);
+        Objects.equals(this.ownerId, teamCreate.ownerId) &&
+        Objects.equals(this.createdAt, teamCreate.createdAt) &&
+        Objects.equals(this.updatedAt, teamCreate.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, permissionIds, parentId, ownerId);
+    return Objects.hash(id, name, permissionIds, parentId, ownerId, createdAt, updatedAt);
   }
 
 
@@ -149,10 +216,13 @@ public class TeamCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class TeamCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    permissionIds: ").append(toIndentedString(permissionIds)).append("\n");
     sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
     sb.append("    ownerId: ").append(toIndentedString(ownerId)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }

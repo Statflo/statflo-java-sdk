@@ -25,9 +25,12 @@ import java.io.IOException;
  * LocationUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class LocationUpdate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("externalDealerId")
   private String externalDealerId = null;
 
@@ -36,6 +39,9 @@ public class LocationUpdate {
 
   @SerializedName("externalLocationId")
   private String externalLocationId = null;
+
+  @SerializedName("salesforceLocationId")
+  private String salesforceLocationId = null;
 
   @SerializedName("name")
   private String name = null;
@@ -78,6 +84,33 @@ public class LocationUpdate {
 
   @SerializedName("locator")
   private String locator = null;
+
+  @SerializedName("address")
+  private String address = null;
+
+  @SerializedName("outlet")
+  private String outlet = null;
+
+  @SerializedName("fullAddress")
+  private String fullAddress = null;
+
+  public LocationUpdate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public LocationUpdate externalDealerId(String externalDealerId) {
     this.externalDealerId = externalDealerId;
@@ -131,6 +164,24 @@ public class LocationUpdate {
 
   public void setExternalLocationId(String externalLocationId) {
     this.externalLocationId = externalLocationId;
+  }
+
+  public LocationUpdate salesforceLocationId(String salesforceLocationId) {
+    this.salesforceLocationId = salesforceLocationId;
+    return this;
+  }
+
+   /**
+   * Get salesforceLocationId
+   * @return salesforceLocationId
+  **/
+  @Schema(description = "")
+  public String getSalesforceLocationId() {
+    return salesforceLocationId;
+  }
+
+  public void setSalesforceLocationId(String salesforceLocationId) {
+    this.salesforceLocationId = salesforceLocationId;
   }
 
   public LocationUpdate name(String name) {
@@ -385,6 +436,60 @@ public class LocationUpdate {
     this.locator = locator;
   }
 
+  public LocationUpdate address(String address) {
+    this.address = address;
+    return this;
+  }
+
+   /**
+   * Get address
+   * @return address
+  **/
+  @Schema(description = "")
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public LocationUpdate outlet(String outlet) {
+    this.outlet = outlet;
+    return this;
+  }
+
+   /**
+   * Get outlet
+   * @return outlet
+  **/
+  @Schema(description = "")
+  public String getOutlet() {
+    return outlet;
+  }
+
+  public void setOutlet(String outlet) {
+    this.outlet = outlet;
+  }
+
+  public LocationUpdate fullAddress(String fullAddress) {
+    this.fullAddress = fullAddress;
+    return this;
+  }
+
+   /**
+   * Get fullAddress
+   * @return fullAddress
+  **/
+  @Schema(required = true, description = "")
+  public String getFullAddress() {
+    return fullAddress;
+  }
+
+  public void setFullAddress(String fullAddress) {
+    this.fullAddress = fullAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -395,9 +500,11 @@ public class LocationUpdate {
       return false;
     }
     LocationUpdate locationUpdate = (LocationUpdate) o;
-    return Objects.equals(this.externalDealerId, locationUpdate.externalDealerId) &&
+    return Objects.equals(this.id, locationUpdate.id) &&
+        Objects.equals(this.externalDealerId, locationUpdate.externalDealerId) &&
         Objects.equals(this.districtId, locationUpdate.districtId) &&
         Objects.equals(this.externalLocationId, locationUpdate.externalLocationId) &&
+        Objects.equals(this.salesforceLocationId, locationUpdate.salesforceLocationId) &&
         Objects.equals(this.name, locationUpdate.name) &&
         Objects.equals(this.addressLine1, locationUpdate.addressLine1) &&
         Objects.equals(this.addressLine2, locationUpdate.addressLine2) &&
@@ -411,12 +518,15 @@ public class LocationUpdate {
         Objects.equals(this.manager, locationUpdate.manager) &&
         Objects.equals(this.managerPhone, locationUpdate.managerPhone) &&
         Objects.equals(this.managerEmail, locationUpdate.managerEmail) &&
-        Objects.equals(this.locator, locationUpdate.locator);
+        Objects.equals(this.locator, locationUpdate.locator) &&
+        Objects.equals(this.address, locationUpdate.address) &&
+        Objects.equals(this.outlet, locationUpdate.outlet) &&
+        Objects.equals(this.fullAddress, locationUpdate.fullAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(externalDealerId, districtId, externalLocationId, name, addressLine1, addressLine2, city, state, zipCode, country, phone, fax, website, manager, managerPhone, managerEmail, locator);
+    return Objects.hash(id, externalDealerId, districtId, externalLocationId, salesforceLocationId, name, addressLine1, addressLine2, city, state, zipCode, country, phone, fax, website, manager, managerPhone, managerEmail, locator, address, outlet, fullAddress);
   }
 
 
@@ -425,9 +535,11 @@ public class LocationUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocationUpdate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    externalDealerId: ").append(toIndentedString(externalDealerId)).append("\n");
     sb.append("    districtId: ").append(toIndentedString(districtId)).append("\n");
     sb.append("    externalLocationId: ").append(toIndentedString(externalLocationId)).append("\n");
+    sb.append("    salesforceLocationId: ").append(toIndentedString(salesforceLocationId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    addressLine1: ").append(toIndentedString(addressLine1)).append("\n");
     sb.append("    addressLine2: ").append(toIndentedString(addressLine2)).append("\n");
@@ -442,6 +554,9 @@ public class LocationUpdate {
     sb.append("    managerPhone: ").append(toIndentedString(managerPhone)).append("\n");
     sb.append("    managerEmail: ").append(toIndentedString(managerEmail)).append("\n");
     sb.append("    locator: ").append(toIndentedString(locator)).append("\n");
+    sb.append("    address: ").append(toIndentedString(address)).append("\n");
+    sb.append("    outlet: ").append(toIndentedString(outlet)).append("\n");
+    sb.append("    fullAddress: ").append(toIndentedString(fullAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

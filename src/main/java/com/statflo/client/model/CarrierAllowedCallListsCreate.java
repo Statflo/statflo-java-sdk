@@ -14,13 +14,62 @@ package com.statflo.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
 /**
  * CarrierAllowedCallListsCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class CarrierAllowedCallListsCreate {
+  @SerializedName("carrierId")
+  private Integer carrierId = null;
+
+  @SerializedName("callListId")
+  private Integer callListId = null;
+
+  public CarrierAllowedCallListsCreate carrierId(Integer carrierId) {
+    this.carrierId = carrierId;
+    return this;
+  }
+
+   /**
+   * Get carrierId
+   * @return carrierId
+  **/
+  @Schema(required = true, description = "")
+  public Integer getCarrierId() {
+    return carrierId;
+  }
+
+  public void setCarrierId(Integer carrierId) {
+    this.carrierId = carrierId;
+  }
+
+  public CarrierAllowedCallListsCreate callListId(Integer callListId) {
+    this.callListId = callListId;
+    return this;
+  }
+
+   /**
+   * Get callListId
+   * @return callListId
+  **/
+  @Schema(required = true, description = "")
+  public Integer getCallListId() {
+    return callListId;
+  }
+
+  public void setCallListId(Integer callListId) {
+    this.callListId = callListId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +79,14 @@ public class CarrierAllowedCallListsCreate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    CarrierAllowedCallListsCreate carrierAllowedCallListsCreate = (CarrierAllowedCallListsCreate) o;
+    return Objects.equals(this.carrierId, carrierAllowedCallListsCreate.carrierId) &&
+        Objects.equals(this.callListId, carrierAllowedCallListsCreate.callListId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(carrierId, callListId);
   }
 
 
@@ -44,6 +95,8 @@ public class CarrierAllowedCallListsCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class CarrierAllowedCallListsCreate {\n");
     
+    sb.append("    carrierId: ").append(toIndentedString(carrierId)).append("\n");
+    sb.append("    callListId: ").append(toIndentedString(callListId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

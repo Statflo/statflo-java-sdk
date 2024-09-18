@@ -3,9 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | 
 **campaignId** | **Integer** |  |  [optional]
 **metadata** | [**MetadataEnum**](#MetadataEnum) |  |  [optional]
 **value** | **Object** |  |  [optional]
+**dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 
 <a name="MetadataEnum"></a>
 ## Enum: MetadataEnum

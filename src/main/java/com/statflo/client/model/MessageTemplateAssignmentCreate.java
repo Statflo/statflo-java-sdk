@@ -21,13 +21,17 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * MessageTemplateAssignmentCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class MessageTemplateAssignmentCreate {
+  @SerializedName("id")
+  private String id = null;
+
   @SerializedName("propertyId")
   private Integer propertyId = null;
 
@@ -36,6 +40,33 @@ public class MessageTemplateAssignmentCreate {
 
   @SerializedName("priority")
   private Integer priority = 100;
+
+  @SerializedName("assignDate")
+  private OffsetDateTime assignDate = null;
+
+  @SerializedName("dateUpdate")
+  private OffsetDateTime dateUpdate = null;
+
+  @SerializedName("unassignDate")
+  private OffsetDateTime unassignDate = null;
+
+  public MessageTemplateAssignmentCreate id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
 
   public MessageTemplateAssignmentCreate propertyId(Integer propertyId) {
     this.propertyId = propertyId;
@@ -91,6 +122,60 @@ public class MessageTemplateAssignmentCreate {
     this.priority = priority;
   }
 
+  public MessageTemplateAssignmentCreate assignDate(OffsetDateTime assignDate) {
+    this.assignDate = assignDate;
+    return this;
+  }
+
+   /**
+   * Get assignDate
+   * @return assignDate
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getAssignDate() {
+    return assignDate;
+  }
+
+  public void setAssignDate(OffsetDateTime assignDate) {
+    this.assignDate = assignDate;
+  }
+
+  public MessageTemplateAssignmentCreate dateUpdate(OffsetDateTime dateUpdate) {
+    this.dateUpdate = dateUpdate;
+    return this;
+  }
+
+   /**
+   * Get dateUpdate
+   * @return dateUpdate
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateUpdate() {
+    return dateUpdate;
+  }
+
+  public void setDateUpdate(OffsetDateTime dateUpdate) {
+    this.dateUpdate = dateUpdate;
+  }
+
+  public MessageTemplateAssignmentCreate unassignDate(OffsetDateTime unassignDate) {
+    this.unassignDate = unassignDate;
+    return this;
+  }
+
+   /**
+   * Get unassignDate
+   * @return unassignDate
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getUnassignDate() {
+    return unassignDate;
+  }
+
+  public void setUnassignDate(OffsetDateTime unassignDate) {
+    this.unassignDate = unassignDate;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -101,14 +186,18 @@ public class MessageTemplateAssignmentCreate {
       return false;
     }
     MessageTemplateAssignmentCreate messageTemplateAssignmentCreate = (MessageTemplateAssignmentCreate) o;
-    return Objects.equals(this.propertyId, messageTemplateAssignmentCreate.propertyId) &&
+    return Objects.equals(this.id, messageTemplateAssignmentCreate.id) &&
+        Objects.equals(this.propertyId, messageTemplateAssignmentCreate.propertyId) &&
         Objects.equals(this.templateId, messageTemplateAssignmentCreate.templateId) &&
-        Objects.equals(this.priority, messageTemplateAssignmentCreate.priority);
+        Objects.equals(this.priority, messageTemplateAssignmentCreate.priority) &&
+        Objects.equals(this.assignDate, messageTemplateAssignmentCreate.assignDate) &&
+        Objects.equals(this.dateUpdate, messageTemplateAssignmentCreate.dateUpdate) &&
+        Objects.equals(this.unassignDate, messageTemplateAssignmentCreate.unassignDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(propertyId, templateId, priority);
+    return Objects.hash(id, propertyId, templateId, priority, assignDate, dateUpdate, unassignDate);
   }
 
 
@@ -117,9 +206,13 @@ public class MessageTemplateAssignmentCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessageTemplateAssignmentCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    propertyId: ").append(toIndentedString(propertyId)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    sb.append("    assignDate: ").append(toIndentedString(assignDate)).append("\n");
+    sb.append("    dateUpdate: ").append(toIndentedString(dateUpdate)).append("\n");
+    sb.append("    unassignDate: ").append(toIndentedString(unassignDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

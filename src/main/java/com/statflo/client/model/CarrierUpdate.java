@@ -14,13 +14,104 @@ package com.statflo.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
 /**
  * CarrierUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class CarrierUpdate {
+  @SerializedName("id")
+  private Integer id = null;
+
+  @SerializedName("name")
+  private String name = null;
+
+  @SerializedName("country")
+  private String country = null;
+
+  @SerializedName("logo")
+  private String logo = null;
+
+  public CarrierUpdate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  public CarrierUpdate name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @Schema(required = true, description = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public CarrierUpdate country(String country) {
+    this.country = country;
+    return this;
+  }
+
+   /**
+   * Get country
+   * @return country
+  **/
+  @Schema(required = true, description = "")
+  public String getCountry() {
+    return country;
+  }
+
+  public void setCountry(String country) {
+    this.country = country;
+  }
+
+  public CarrierUpdate logo(String logo) {
+    this.logo = logo;
+    return this;
+  }
+
+   /**
+   * Get logo
+   * @return logo
+  **/
+  @Schema(description = "")
+  public String getLogo() {
+    return logo;
+  }
+
+  public void setLogo(String logo) {
+    this.logo = logo;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +121,16 @@ public class CarrierUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    CarrierUpdate carrierUpdate = (CarrierUpdate) o;
+    return Objects.equals(this.id, carrierUpdate.id) &&
+        Objects.equals(this.name, carrierUpdate.name) &&
+        Objects.equals(this.country, carrierUpdate.country) &&
+        Objects.equals(this.logo, carrierUpdate.logo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(id, name, country, logo);
   }
 
 
@@ -44,6 +139,10 @@ public class CarrierUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class CarrierUpdate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    country: ").append(toIndentedString(country)).append("\n");
+    sb.append("    logo: ").append(toIndentedString(logo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

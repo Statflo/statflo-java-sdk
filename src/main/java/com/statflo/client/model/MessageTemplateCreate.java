@@ -21,13 +21,17 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * MessageTemplateCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class MessageTemplateCreate {
+  @SerializedName("id")
+  private String id = null;
+
   @SerializedName("templateName")
   private String templateName = null;
 
@@ -98,6 +102,33 @@ public class MessageTemplateCreate {
 
   @SerializedName("template")
   private Object template = null;
+
+  @SerializedName("callListId")
+  private Integer callListId = null;
+
+  @SerializedName("priority")
+  private Integer priority = 100;
+
+  @SerializedName("dateDeleted")
+  private OffsetDateTime dateDeleted = null;
+
+  public MessageTemplateCreate id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
 
   public MessageTemplateCreate templateName(String templateName) {
     this.templateName = templateName;
@@ -171,6 +202,60 @@ public class MessageTemplateCreate {
     this.template = template;
   }
 
+  public MessageTemplateCreate callListId(Integer callListId) {
+    this.callListId = callListId;
+    return this;
+  }
+
+   /**
+   * Get callListId
+   * @return callListId
+  **/
+  @Schema(description = "")
+  public Integer getCallListId() {
+    return callListId;
+  }
+
+  public void setCallListId(Integer callListId) {
+    this.callListId = callListId;
+  }
+
+  public MessageTemplateCreate priority(Integer priority) {
+    this.priority = priority;
+    return this;
+  }
+
+   /**
+   * Get priority
+   * @return priority
+  **/
+  @Schema(description = "")
+  public Integer getPriority() {
+    return priority;
+  }
+
+  public void setPriority(Integer priority) {
+    this.priority = priority;
+  }
+
+  public MessageTemplateCreate dateDeleted(OffsetDateTime dateDeleted) {
+    this.dateDeleted = dateDeleted;
+    return this;
+  }
+
+   /**
+   * Get dateDeleted
+   * @return dateDeleted
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateDeleted() {
+    return dateDeleted;
+  }
+
+  public void setDateDeleted(OffsetDateTime dateDeleted) {
+    this.dateDeleted = dateDeleted;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -181,15 +266,19 @@ public class MessageTemplateCreate {
       return false;
     }
     MessageTemplateCreate messageTemplateCreate = (MessageTemplateCreate) o;
-    return Objects.equals(this.templateName, messageTemplateCreate.templateName) &&
+    return Objects.equals(this.id, messageTemplateCreate.id) &&
+        Objects.equals(this.templateName, messageTemplateCreate.templateName) &&
         Objects.equals(this.language, messageTemplateCreate.language) &&
         Objects.equals(this.metadata, messageTemplateCreate.metadata) &&
-        Objects.equals(this.template, messageTemplateCreate.template);
+        Objects.equals(this.template, messageTemplateCreate.template) &&
+        Objects.equals(this.callListId, messageTemplateCreate.callListId) &&
+        Objects.equals(this.priority, messageTemplateCreate.priority) &&
+        Objects.equals(this.dateDeleted, messageTemplateCreate.dateDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(templateName, language, metadata, template);
+    return Objects.hash(id, templateName, language, metadata, template, callListId, priority, dateDeleted);
   }
 
 
@@ -198,10 +287,14 @@ public class MessageTemplateCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessageTemplateCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
+    sb.append("    callListId: ").append(toIndentedString(callListId)).append("\n");
+    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    sb.append("    dateDeleted: ").append(toIndentedString(dateDeleted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

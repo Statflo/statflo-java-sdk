@@ -14,13 +14,83 @@ package com.statflo.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
 /**
  * DealerMetaDataUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class DealerMetaDataUpdate {
+  @SerializedName("id")
+  private Integer id = null;
+
+  @SerializedName("metadata")
+  private String metadata = null;
+
+  @SerializedName("value")
+  private String value = null;
+
+  public DealerMetaDataUpdate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  public DealerMetaDataUpdate metadata(String metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+   /**
+   * Get metadata
+   * @return metadata
+  **/
+  @Schema(description = "")
+  public String getMetadata() {
+    return metadata;
+  }
+
+  public void setMetadata(String metadata) {
+    this.metadata = metadata;
+  }
+
+  public DealerMetaDataUpdate value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Get value
+   * @return value
+  **/
+  @Schema(description = "")
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +100,15 @@ public class DealerMetaDataUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    DealerMetaDataUpdate dealerMetaDataUpdate = (DealerMetaDataUpdate) o;
+    return Objects.equals(this.id, dealerMetaDataUpdate.id) &&
+        Objects.equals(this.metadata, dealerMetaDataUpdate.metadata) &&
+        Objects.equals(this.value, dealerMetaDataUpdate.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(id, metadata, value);
   }
 
 
@@ -44,6 +117,9 @@ public class DealerMetaDataUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class DealerMetaDataUpdate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -26,7 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * TaskUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class TaskUpdate {
   @SerializedName("name")
@@ -96,6 +96,18 @@ public class TaskUpdate {
 
   @SerializedName("id")
   private Integer id = null;
+
+  @SerializedName("accountId")
+  private String accountId = null;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  @SerializedName("createdAt")
+  private OffsetDateTime createdAt = null;
+
+  @SerializedName("updatedAt")
+  private OffsetDateTime updatedAt = null;
 
   public TaskUpdate name(String name) {
     this.name = name;
@@ -225,6 +237,78 @@ public class TaskUpdate {
     this.id = id;
   }
 
+  public TaskUpdate accountId(String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+   /**
+   * Get accountId
+   * @return accountId
+  **/
+  @Schema(required = true, description = "")
+  public String getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public TaskUpdate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
+  public TaskUpdate createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+  public TaskUpdate updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Get updatedAt
+   * @return updatedAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -241,12 +325,16 @@ public class TaskUpdate {
         Objects.equals(this.userIdAssigned, taskUpdate.userIdAssigned) &&
         Objects.equals(this.priority, taskUpdate.priority) &&
         Objects.equals(this.dueDate, taskUpdate.dueDate) &&
-        Objects.equals(this.id, taskUpdate.id);
+        Objects.equals(this.id, taskUpdate.id) &&
+        Objects.equals(this.accountId, taskUpdate.accountId) &&
+        Objects.equals(this.dateAdded, taskUpdate.dateAdded) &&
+        Objects.equals(this.createdAt, taskUpdate.createdAt) &&
+        Objects.equals(this.updatedAt, taskUpdate.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, status, userIdAssigned, priority, dueDate, id);
+    return Objects.hash(name, description, status, userIdAssigned, priority, dueDate, id, accountId, dateAdded, createdAt, updatedAt);
   }
 
 
@@ -262,6 +350,10 @@ public class TaskUpdate {
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }

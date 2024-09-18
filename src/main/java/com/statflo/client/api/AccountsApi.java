@@ -29,6 +29,7 @@ import java.io.IOException;
 import com.statflo.client.model.Account;
 import com.statflo.client.model.AccountCreate;
 import com.statflo.client.model.AccountPaginationResponse;
+import com.statflo.client.model.AccountUpdate;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -576,7 +577,7 @@ public class AccountsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call accountUpdateCall(String id, Account body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call accountUpdateCall(String id, AccountUpdate body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -619,7 +620,7 @@ public class AccountsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call accountUpdateValidateBeforeCall(String id, Account body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call accountUpdateValidateBeforeCall(String id, AccountUpdate body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling accountUpdate(Async)");
@@ -642,7 +643,7 @@ public class AccountsApi {
      * @return Account
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public Account accountUpdate(String id, Account body) throws ApiException {
+    public Account accountUpdate(String id, AccountUpdate body) throws ApiException {
         ApiResponse<Account> resp = accountUpdateWithHttpInfo(id, body);
         return resp.getData();
     }
@@ -655,7 +656,7 @@ public class AccountsApi {
      * @return ApiResponse&lt;Account&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Account> accountUpdateWithHttpInfo(String id, Account body) throws ApiException {
+    public ApiResponse<Account> accountUpdateWithHttpInfo(String id, AccountUpdate body) throws ApiException {
         com.squareup.okhttp.Call call = accountUpdateValidateBeforeCall(id, body, null, null);
         Type localVarReturnType = new TypeToken<Account>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -670,7 +671,7 @@ public class AccountsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call accountUpdateAsync(String id, Account body, final ApiCallback<Account> callback) throws ApiException {
+    public com.squareup.okhttp.Call accountUpdateAsync(String id, AccountUpdate body, final ApiCallback<Account> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

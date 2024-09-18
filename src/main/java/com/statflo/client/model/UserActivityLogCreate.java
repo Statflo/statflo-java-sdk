@@ -21,15 +21,40 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * UserActivityLogCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class UserActivityLogCreate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("activityPerformed")
   private String activityPerformed = null;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  public UserActivityLogCreate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public UserActivityLogCreate activityPerformed(String activityPerformed) {
     this.activityPerformed = activityPerformed;
@@ -49,6 +74,24 @@ public class UserActivityLogCreate {
     this.activityPerformed = activityPerformed;
   }
 
+  public UserActivityLogCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -59,12 +102,14 @@ public class UserActivityLogCreate {
       return false;
     }
     UserActivityLogCreate userActivityLogCreate = (UserActivityLogCreate) o;
-    return Objects.equals(this.activityPerformed, userActivityLogCreate.activityPerformed);
+    return Objects.equals(this.id, userActivityLogCreate.id) &&
+        Objects.equals(this.activityPerformed, userActivityLogCreate.activityPerformed) &&
+        Objects.equals(this.dateAdded, userActivityLogCreate.dateAdded);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(activityPerformed);
+    return Objects.hash(id, activityPerformed, dateAdded);
   }
 
 
@@ -73,7 +118,9 @@ public class UserActivityLogCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserActivityLogCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    activityPerformed: ").append(toIndentedString(activityPerformed)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("}");
     return sb.toString();
   }

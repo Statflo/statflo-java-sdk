@@ -21,11 +21,12 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * ContactCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T21:23:30.303929-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
 
 public class ContactCreate {
   @SerializedName("id")
@@ -70,8 +71,35 @@ public class ContactCreate {
   @SerializedName("primaryContact")
   private Boolean primaryContact = true;
 
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
   @SerializedName("jobTitle")
   private String jobTitle = null;
+
+  @SerializedName("source")
+  private String source = "api";
+
+  @SerializedName("sourceId")
+  private Integer sourceId = null;
+
+  @SerializedName("customerId")
+  private String customerId = null;
+
+  @SerializedName("oldBan")
+  private String oldBan = null;
+
+  @SerializedName("smsCapable")
+  private Boolean smsCapable = null;
+
+  @SerializedName("flag")
+  private String flag = null;
+
+  @SerializedName("firstName")
+  private String firstName = null;
+
+  @SerializedName("preferredLanguage")
+  private String preferredLanguage = null;
 
   public ContactCreate id(Integer id) {
     this.id = id;
@@ -325,6 +353,24 @@ public class ContactCreate {
     this.primaryContact = primaryContact;
   }
 
+  public ContactCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
   public ContactCreate jobTitle(String jobTitle) {
     this.jobTitle = jobTitle;
     return this;
@@ -341,6 +387,150 @@ public class ContactCreate {
 
   public void setJobTitle(String jobTitle) {
     this.jobTitle = jobTitle;
+  }
+
+  public ContactCreate source(String source) {
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * Get source
+   * @return source
+  **/
+  @Schema(description = "")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
+  public ContactCreate sourceId(Integer sourceId) {
+    this.sourceId = sourceId;
+    return this;
+  }
+
+   /**
+   * Get sourceId
+   * @return sourceId
+  **/
+  @Schema(description = "")
+  public Integer getSourceId() {
+    return sourceId;
+  }
+
+  public void setSourceId(Integer sourceId) {
+    this.sourceId = sourceId;
+  }
+
+  public ContactCreate customerId(String customerId) {
+    this.customerId = customerId;
+    return this;
+  }
+
+   /**
+   * Get customerId
+   * @return customerId
+  **/
+  @Schema(description = "")
+  public String getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(String customerId) {
+    this.customerId = customerId;
+  }
+
+  public ContactCreate oldBan(String oldBan) {
+    this.oldBan = oldBan;
+    return this;
+  }
+
+   /**
+   * Get oldBan
+   * @return oldBan
+  **/
+  @Schema(description = "")
+  public String getOldBan() {
+    return oldBan;
+  }
+
+  public void setOldBan(String oldBan) {
+    this.oldBan = oldBan;
+  }
+
+  public ContactCreate smsCapable(Boolean smsCapable) {
+    this.smsCapable = smsCapable;
+    return this;
+  }
+
+   /**
+   * Get smsCapable
+   * @return smsCapable
+  **/
+  @Schema(description = "")
+  public Boolean isSmsCapable() {
+    return smsCapable;
+  }
+
+  public void setSmsCapable(Boolean smsCapable) {
+    this.smsCapable = smsCapable;
+  }
+
+  public ContactCreate flag(String flag) {
+    this.flag = flag;
+    return this;
+  }
+
+   /**
+   * Get flag
+   * @return flag
+  **/
+  @Schema(description = "")
+  public String getFlag() {
+    return flag;
+  }
+
+  public void setFlag(String flag) {
+    this.flag = flag;
+  }
+
+  public ContactCreate firstName(String firstName) {
+    this.firstName = firstName;
+    return this;
+  }
+
+   /**
+   * Get firstName
+   * @return firstName
+  **/
+  @Schema(description = "")
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public ContactCreate preferredLanguage(String preferredLanguage) {
+    this.preferredLanguage = preferredLanguage;
+    return this;
+  }
+
+   /**
+   * Get preferredLanguage
+   * @return preferredLanguage
+  **/
+  @Schema(description = "")
+  public String getPreferredLanguage() {
+    return preferredLanguage;
+  }
+
+  public void setPreferredLanguage(String preferredLanguage) {
+    this.preferredLanguage = preferredLanguage;
   }
 
 
@@ -367,12 +557,21 @@ public class ContactCreate {
         Objects.equals(this.phoneExtension, contactCreate.phoneExtension) &&
         Objects.equals(this.email, contactCreate.email) &&
         Objects.equals(this.primaryContact, contactCreate.primaryContact) &&
-        Objects.equals(this.jobTitle, contactCreate.jobTitle);
+        Objects.equals(this.dateAdded, contactCreate.dateAdded) &&
+        Objects.equals(this.jobTitle, contactCreate.jobTitle) &&
+        Objects.equals(this.source, contactCreate.source) &&
+        Objects.equals(this.sourceId, contactCreate.sourceId) &&
+        Objects.equals(this.customerId, contactCreate.customerId) &&
+        Objects.equals(this.oldBan, contactCreate.oldBan) &&
+        Objects.equals(this.smsCapable, contactCreate.smsCapable) &&
+        Objects.equals(this.flag, contactCreate.flag) &&
+        Objects.equals(this.firstName, contactCreate.firstName) &&
+        Objects.equals(this.preferredLanguage, contactCreate.preferredLanguage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountName, accountId, contactName, streetNumber, streetName, city, province, country, zipCode, phoneNumber, phoneExtension, email, primaryContact, jobTitle);
+    return Objects.hash(id, accountName, accountId, contactName, streetNumber, streetName, city, province, country, zipCode, phoneNumber, phoneExtension, email, primaryContact, dateAdded, jobTitle, source, sourceId, customerId, oldBan, smsCapable, flag, firstName, preferredLanguage);
   }
 
 
@@ -395,7 +594,16 @@ public class ContactCreate {
     sb.append("    phoneExtension: ").append(toIndentedString(phoneExtension)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    primaryContact: ").append(toIndentedString(primaryContact)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    jobTitle: ").append(toIndentedString(jobTitle)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    sourceId: ").append(toIndentedString(sourceId)).append("\n");
+    sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
+    sb.append("    oldBan: ").append(toIndentedString(oldBan)).append("\n");
+    sb.append("    smsCapable: ").append(toIndentedString(smsCapable)).append("\n");
+    sb.append("    flag: ").append(toIndentedString(flag)).append("\n");
+    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    preferredLanguage: ").append(toIndentedString(preferredLanguage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
