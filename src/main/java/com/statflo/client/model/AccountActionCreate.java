@@ -26,7 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * AccountActionCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class AccountActionCreate {
   @SerializedName("description")
@@ -55,6 +55,9 @@ public class AccountActionCreate {
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
+
+  @SerializedName("recordSource")
+  private String recordSource = null;
 
   public AccountActionCreate description(String description) {
     this.description = description;
@@ -218,6 +221,24 @@ public class AccountActionCreate {
     this.updatedAt = updatedAt;
   }
 
+  public AccountActionCreate recordSource(String recordSource) {
+    this.recordSource = recordSource;
+    return this;
+  }
+
+   /**
+   * Get recordSource
+   * @return recordSource
+  **/
+  @Schema(description = "")
+  public String getRecordSource() {
+    return recordSource;
+  }
+
+  public void setRecordSource(String recordSource) {
+    this.recordSource = recordSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -236,12 +257,13 @@ public class AccountActionCreate {
         Objects.equals(this.accountId, accountActionCreate.accountId) &&
         Objects.equals(this.dateAdded, accountActionCreate.dateAdded) &&
         Objects.equals(this.createdAt, accountActionCreate.createdAt) &&
-        Objects.equals(this.updatedAt, accountActionCreate.updatedAt);
+        Objects.equals(this.updatedAt, accountActionCreate.updatedAt) &&
+        Objects.equals(this.recordSource, accountActionCreate.recordSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, actionTaken, assignedTo, assignedFrom, id, accountId, dateAdded, createdAt, updatedAt);
+    return Objects.hash(description, actionTaken, assignedTo, assignedFrom, id, accountId, dateAdded, createdAt, updatedAt, recordSource);
   }
 
 
@@ -259,6 +281,7 @@ public class AccountActionCreate {
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    recordSource: ").append(toIndentedString(recordSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

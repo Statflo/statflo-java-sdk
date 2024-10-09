@@ -21,3 +21,4 @@ Name | Type | Description | Notes
 **transactionEarliest** | **String** |  |  [optional]
 **transactionLatest** | **String** |  |  [optional]
 **productTypes** | **String** |  |  [optional]
+**source** | **String** |  |  [optional]

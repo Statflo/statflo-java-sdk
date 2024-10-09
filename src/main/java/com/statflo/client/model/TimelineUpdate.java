@@ -26,7 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * TimelineUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class TimelineUpdate {
   @SerializedName("id")
@@ -43,6 +43,9 @@ public class TimelineUpdate {
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
+
+  @SerializedName("recordSource")
+  private String recordSource = null;
 
   public TimelineUpdate id(Integer id) {
     this.id = id;
@@ -134,6 +137,24 @@ public class TimelineUpdate {
     this.updatedAt = updatedAt;
   }
 
+  public TimelineUpdate recordSource(String recordSource) {
+    this.recordSource = recordSource;
+    return this;
+  }
+
+   /**
+   * Get recordSource
+   * @return recordSource
+  **/
+  @Schema(description = "")
+  public String getRecordSource() {
+    return recordSource;
+  }
+
+  public void setRecordSource(String recordSource) {
+    this.recordSource = recordSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -148,12 +169,13 @@ public class TimelineUpdate {
         Objects.equals(this.accountId, timelineUpdate.accountId) &&
         Objects.equals(this.dateAdded, timelineUpdate.dateAdded) &&
         Objects.equals(this.createdAt, timelineUpdate.createdAt) &&
-        Objects.equals(this.updatedAt, timelineUpdate.updatedAt);
+        Objects.equals(this.updatedAt, timelineUpdate.updatedAt) &&
+        Objects.equals(this.recordSource, timelineUpdate.recordSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountId, dateAdded, createdAt, updatedAt);
+    return Objects.hash(id, accountId, dateAdded, createdAt, updatedAt, recordSource);
   }
 
 
@@ -167,6 +189,7 @@ public class TimelineUpdate {
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    recordSource: ").append(toIndentedString(recordSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

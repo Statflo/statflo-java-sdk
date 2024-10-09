@@ -26,7 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * CampaignMetadataCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class CampaignMetadataCreate {
   @SerializedName("id")
@@ -55,7 +55,9 @@ public class CampaignMetadataCreate {
     @SerializedName("visibility_campaign_widget")
     VISIBILITY_CAMPAIGN_WIDGET("visibility_campaign_widget"),
     @SerializedName("default_start_end_date")
-    DEFAULT_START_END_DATE("default_start_end_date");
+    DEFAULT_START_END_DATE("default_start_end_date"),
+    @SerializedName("salesforce_campaign_id")
+    SALESFORCE_CAMPAIGN_ID("salesforce_campaign_id");
 
     private String value;
 

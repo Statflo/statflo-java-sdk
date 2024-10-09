@@ -21,12 +21,14 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 /**
  * ContactCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-16T03:54:20.683408-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class ContactCreate {
   @SerializedName("id")
@@ -94,6 +96,9 @@ public class ContactCreate {
 
   @SerializedName("flag")
   private String flag = null;
+
+  @SerializedName("optedOut")
+  private List<Object> optedOut = null;
 
   @SerializedName("firstName")
   private String firstName = null;
@@ -497,6 +502,32 @@ public class ContactCreate {
     this.flag = flag;
   }
 
+  public ContactCreate optedOut(List<Object> optedOut) {
+    this.optedOut = optedOut;
+    return this;
+  }
+
+  public ContactCreate addOptedOutItem(Object optedOutItem) {
+    if (this.optedOut == null) {
+      this.optedOut = new ArrayList<Object>();
+    }
+    this.optedOut.add(optedOutItem);
+    return this;
+  }
+
+   /**
+   * Get optedOut
+   * @return optedOut
+  **/
+  @Schema(description = "")
+  public List<Object> getOptedOut() {
+    return optedOut;
+  }
+
+  public void setOptedOut(List<Object> optedOut) {
+    this.optedOut = optedOut;
+  }
+
   public ContactCreate firstName(String firstName) {
     this.firstName = firstName;
     return this;
@@ -565,13 +596,14 @@ public class ContactCreate {
         Objects.equals(this.oldBan, contactCreate.oldBan) &&
         Objects.equals(this.smsCapable, contactCreate.smsCapable) &&
         Objects.equals(this.flag, contactCreate.flag) &&
+        Objects.equals(this.optedOut, contactCreate.optedOut) &&
         Objects.equals(this.firstName, contactCreate.firstName) &&
         Objects.equals(this.preferredLanguage, contactCreate.preferredLanguage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountName, accountId, contactName, streetNumber, streetName, city, province, country, zipCode, phoneNumber, phoneExtension, email, primaryContact, dateAdded, jobTitle, source, sourceId, customerId, oldBan, smsCapable, flag, firstName, preferredLanguage);
+    return Objects.hash(id, accountName, accountId, contactName, streetNumber, streetName, city, province, country, zipCode, phoneNumber, phoneExtension, email, primaryContact, dateAdded, jobTitle, source, sourceId, customerId, oldBan, smsCapable, flag, optedOut, firstName, preferredLanguage);
   }
 
 
@@ -602,6 +634,7 @@ public class ContactCreate {
     sb.append("    oldBan: ").append(toIndentedString(oldBan)).append("\n");
     sb.append("    smsCapable: ").append(toIndentedString(smsCapable)).append("\n");
     sb.append("    flag: ").append(toIndentedString(flag)).append("\n");
+    sb.append("    optedOut: ").append(toIndentedString(optedOut)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    preferredLanguage: ").append(toIndentedString(preferredLanguage)).append("\n");
     sb.append("}");

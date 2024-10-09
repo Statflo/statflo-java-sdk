@@ -13,3 +13,4 @@ Name | Type | Description | Notes
 **callListId** | **Integer** |  |  [optional]
 **priority** | **Integer** |  |  [optional]
 **dateDeleted** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**messageTemplateAssignments** | [**List&lt;MessageTemplateAssignment&gt;**](MessageTemplateAssignment.md) |  |  [optional]

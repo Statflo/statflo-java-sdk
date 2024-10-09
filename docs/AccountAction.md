@@ -14,3 +14,4 @@ Name | Type | Description | Notes
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**recordSource** | **String** |  |  [optional]

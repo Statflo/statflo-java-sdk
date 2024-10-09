@@ -25,5 +25,6 @@ Name | Type | Description | Notes
 **oldBan** | **String** |  |  [optional]
 **smsCapable** | **Boolean** |  |  [optional]
 **flag** | **String** |  |  [optional]
+**optedOut** | **List&lt;Object&gt;** |  |  [optional]
 **firstName** | **String** |  |  [optional]
 **preferredLanguage** | **String** |  |  [optional]
