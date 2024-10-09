@@ -104,7 +104,7 @@ public class ContactsApiTest {
      */
     @Test
     public void contactSearchTest() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;
@@ -123,7 +123,7 @@ public class ContactsApiTest {
      */
     @Test
     public void contactSearch_0Test() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;

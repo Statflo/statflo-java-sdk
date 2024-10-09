@@ -21,15 +21,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * CampaignPropertyUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class CampaignPropertyUpdate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("campaignId")
   private Integer campaignId = null;
+
+  @SerializedName("campaignTerminationDate")
+  private OffsetDateTime campaignTerminationDate = null;
 
   @SerializedName("campaignPriority")
   private Integer campaignPriority = null;
@@ -39,6 +46,9 @@ public class CampaignPropertyUpdate {
 
   @SerializedName("carryoverUnattempted")
   private Boolean carryoverUnattempted = false;
+
+  @SerializedName("visibility")
+  private Integer visibility = 0;
 
   /**
    * Gets or Sets visibilityCrm
@@ -136,6 +146,24 @@ public class CampaignPropertyUpdate {
   }  @SerializedName("visibilityReport")
   private VisibilityReportEnum visibilityReport = VisibilityReportEnum.NUMBER_30;
 
+  public CampaignPropertyUpdate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
   public CampaignPropertyUpdate campaignId(Integer campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -152,6 +180,24 @@ public class CampaignPropertyUpdate {
 
   public void setCampaignId(Integer campaignId) {
     this.campaignId = campaignId;
+  }
+
+  public CampaignPropertyUpdate campaignTerminationDate(OffsetDateTime campaignTerminationDate) {
+    this.campaignTerminationDate = campaignTerminationDate;
+    return this;
+  }
+
+   /**
+   * Get campaignTerminationDate
+   * @return campaignTerminationDate
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getCampaignTerminationDate() {
+    return campaignTerminationDate;
+  }
+
+  public void setCampaignTerminationDate(OffsetDateTime campaignTerminationDate) {
+    this.campaignTerminationDate = campaignTerminationDate;
   }
 
   public CampaignPropertyUpdate campaignPriority(Integer campaignPriority) {
@@ -208,6 +254,24 @@ public class CampaignPropertyUpdate {
     this.carryoverUnattempted = carryoverUnattempted;
   }
 
+  public CampaignPropertyUpdate visibility(Integer visibility) {
+    this.visibility = visibility;
+    return this;
+  }
+
+   /**
+   * Get visibility
+   * @return visibility
+  **/
+  @Schema(description = "")
+  public Integer getVisibility() {
+    return visibility;
+  }
+
+  public void setVisibility(Integer visibility) {
+    this.visibility = visibility;
+  }
+
   public CampaignPropertyUpdate visibilityCrm(VisibilityCrmEnum visibilityCrm) {
     this.visibilityCrm = visibilityCrm;
     return this;
@@ -254,17 +318,20 @@ public class CampaignPropertyUpdate {
       return false;
     }
     CampaignPropertyUpdate campaignPropertyUpdate = (CampaignPropertyUpdate) o;
-    return Objects.equals(this.campaignId, campaignPropertyUpdate.campaignId) &&
+    return Objects.equals(this.id, campaignPropertyUpdate.id) &&
+        Objects.equals(this.campaignId, campaignPropertyUpdate.campaignId) &&
+        Objects.equals(this.campaignTerminationDate, campaignPropertyUpdate.campaignTerminationDate) &&
         Objects.equals(this.campaignPriority, campaignPropertyUpdate.campaignPriority) &&
         Objects.equals(this.displayPriority, campaignPropertyUpdate.displayPriority) &&
         Objects.equals(this.carryoverUnattempted, campaignPropertyUpdate.carryoverUnattempted) &&
+        Objects.equals(this.visibility, campaignPropertyUpdate.visibility) &&
         Objects.equals(this.visibilityCrm, campaignPropertyUpdate.visibilityCrm) &&
         Objects.equals(this.visibilityReport, campaignPropertyUpdate.visibilityReport);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, campaignPriority, displayPriority, carryoverUnattempted, visibilityCrm, visibilityReport);
+    return Objects.hash(id, campaignId, campaignTerminationDate, campaignPriority, displayPriority, carryoverUnattempted, visibility, visibilityCrm, visibilityReport);
   }
 
 
@@ -273,10 +340,13 @@ public class CampaignPropertyUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class CampaignPropertyUpdate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
+    sb.append("    campaignTerminationDate: ").append(toIndentedString(campaignTerminationDate)).append("\n");
     sb.append("    campaignPriority: ").append(toIndentedString(campaignPriority)).append("\n");
     sb.append("    displayPriority: ").append(toIndentedString(displayPriority)).append("\n");
     sb.append("    carryoverUnattempted: ").append(toIndentedString(carryoverUnattempted)).append("\n");
+    sb.append("    visibility: ").append(toIndentedString(visibility)).append("\n");
     sb.append("    visibilityCrm: ").append(toIndentedString(visibilityCrm)).append("\n");
     sb.append("    visibilityReport: ").append(toIndentedString(visibilityReport)).append("\n");
     sb.append("}");

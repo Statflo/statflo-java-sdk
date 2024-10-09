@@ -3,9 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | 
 **externalDealerId** | **String** |  |  [optional]
 **districtId** | **Integer** |  | 
 **externalLocationId** | **String** |  | 
+**salesforceLocationId** | **String** |  |  [optional]
 **name** | **String** |  | 
 **addressLine1** | **String** |  | 
 **addressLine2** | **String** |  |  [optional]
@@ -20,3 +22,6 @@ Name | Type | Description | Notes
 **managerPhone** | **String** |  |  [optional]
 **managerEmail** | **String** |  |  [optional]
 **locator** | **String** |  | 
+**address** | **String** |  |  [optional]
+**outlet** | **String** |  |  [optional]
+**fullAddress** | **String** |  | 

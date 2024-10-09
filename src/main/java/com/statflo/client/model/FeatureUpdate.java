@@ -14,13 +14,83 @@ package com.statflo.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
 /**
  * FeatureUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class FeatureUpdate {
+  @SerializedName("id")
+  private Integer id = null;
+
+  @SerializedName("name")
+  private String name = null;
+
+  @SerializedName("category")
+  private String category = null;
+
+  public FeatureUpdate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  public FeatureUpdate name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @Schema(required = true, description = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public FeatureUpdate category(String category) {
+    this.category = category;
+    return this;
+  }
+
+   /**
+   * Get category
+   * @return category
+  **/
+  @Schema(description = "")
+  public String getCategory() {
+    return category;
+  }
+
+  public void setCategory(String category) {
+    this.category = category;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +100,15 @@ public class FeatureUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    FeatureUpdate featureUpdate = (FeatureUpdate) o;
+    return Objects.equals(this.id, featureUpdate.id) &&
+        Objects.equals(this.name, featureUpdate.name) &&
+        Objects.equals(this.category, featureUpdate.category);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(id, name, category);
   }
 
 
@@ -44,6 +117,9 @@ public class FeatureUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class FeatureUpdate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("}");
     return sb.toString();
   }

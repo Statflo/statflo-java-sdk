@@ -26,17 +26,41 @@ import org.threeten.bp.OffsetDateTime;
  * CampaignMemberUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class CampaignMemberUpdate {
+  @SerializedName("id")
+  private Integer id = null;
+
+  @SerializedName("accountId")
+  private String accountId = null;
+
   @SerializedName("phoneNumber")
   private String phoneNumber = null;
+
+  @SerializedName("accountName")
+  private String accountName = null;
+
+  @SerializedName("campaignId")
+  private Integer campaignId = null;
 
   @SerializedName("startDate")
   private OffsetDateTime startDate = null;
 
   @SerializedName("endDate")
   private OffsetDateTime endDate = null;
+
+  @SerializedName("secondaryDealerId")
+  private String secondaryDealerId = null;
+
+  @SerializedName("campaignNickname")
+  private String campaignNickname = null;
+
+  @SerializedName("source")
+  private String source = "api";
+
+  @SerializedName("dateCreated")
+  private OffsetDateTime dateCreated = null;
 
   @SerializedName("excludeDnc")
   private String excludeDnc = null;
@@ -68,6 +92,42 @@ public class CampaignMemberUpdate {
   @SerializedName("excludeLegacy")
   private String excludeLegacy = null;
 
+  public CampaignMemberUpdate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  public CampaignMemberUpdate accountId(String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+   /**
+   * Get accountId
+   * @return accountId
+  **/
+  @Schema(description = "")
+  public String getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
   public CampaignMemberUpdate phoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
     return this;
@@ -84,6 +144,42 @@ public class CampaignMemberUpdate {
 
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
+  }
+
+  public CampaignMemberUpdate accountName(String accountName) {
+    this.accountName = accountName;
+    return this;
+  }
+
+   /**
+   * Get accountName
+   * @return accountName
+  **/
+  @Schema(description = "")
+  public String getAccountName() {
+    return accountName;
+  }
+
+  public void setAccountName(String accountName) {
+    this.accountName = accountName;
+  }
+
+  public CampaignMemberUpdate campaignId(Integer campaignId) {
+    this.campaignId = campaignId;
+    return this;
+  }
+
+   /**
+   * Get campaignId
+   * @return campaignId
+  **/
+  @Schema(required = true, description = "")
+  public Integer getCampaignId() {
+    return campaignId;
+  }
+
+  public void setCampaignId(Integer campaignId) {
+    this.campaignId = campaignId;
   }
 
   public CampaignMemberUpdate startDate(OffsetDateTime startDate) {
@@ -120,6 +216,78 @@ public class CampaignMemberUpdate {
 
   public void setEndDate(OffsetDateTime endDate) {
     this.endDate = endDate;
+  }
+
+  public CampaignMemberUpdate secondaryDealerId(String secondaryDealerId) {
+    this.secondaryDealerId = secondaryDealerId;
+    return this;
+  }
+
+   /**
+   * Get secondaryDealerId
+   * @return secondaryDealerId
+  **/
+  @Schema(description = "")
+  public String getSecondaryDealerId() {
+    return secondaryDealerId;
+  }
+
+  public void setSecondaryDealerId(String secondaryDealerId) {
+    this.secondaryDealerId = secondaryDealerId;
+  }
+
+  public CampaignMemberUpdate campaignNickname(String campaignNickname) {
+    this.campaignNickname = campaignNickname;
+    return this;
+  }
+
+   /**
+   * Get campaignNickname
+   * @return campaignNickname
+  **/
+  @Schema(description = "")
+  public String getCampaignNickname() {
+    return campaignNickname;
+  }
+
+  public void setCampaignNickname(String campaignNickname) {
+    this.campaignNickname = campaignNickname;
+  }
+
+  public CampaignMemberUpdate source(String source) {
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * Get source
+   * @return source
+  **/
+  @Schema(description = "")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
+  public CampaignMemberUpdate dateCreated(OffsetDateTime dateCreated) {
+    this.dateCreated = dateCreated;
+    return this;
+  }
+
+   /**
+   * Get dateCreated
+   * @return dateCreated
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateCreated() {
+    return dateCreated;
+  }
+
+  public void setDateCreated(OffsetDateTime dateCreated) {
+    this.dateCreated = dateCreated;
   }
 
   public CampaignMemberUpdate excludeDnc(String excludeDnc) {
@@ -312,9 +480,17 @@ public class CampaignMemberUpdate {
       return false;
     }
     CampaignMemberUpdate campaignMemberUpdate = (CampaignMemberUpdate) o;
-    return Objects.equals(this.phoneNumber, campaignMemberUpdate.phoneNumber) &&
+    return Objects.equals(this.id, campaignMemberUpdate.id) &&
+        Objects.equals(this.accountId, campaignMemberUpdate.accountId) &&
+        Objects.equals(this.phoneNumber, campaignMemberUpdate.phoneNumber) &&
+        Objects.equals(this.accountName, campaignMemberUpdate.accountName) &&
+        Objects.equals(this.campaignId, campaignMemberUpdate.campaignId) &&
         Objects.equals(this.startDate, campaignMemberUpdate.startDate) &&
         Objects.equals(this.endDate, campaignMemberUpdate.endDate) &&
+        Objects.equals(this.secondaryDealerId, campaignMemberUpdate.secondaryDealerId) &&
+        Objects.equals(this.campaignNickname, campaignMemberUpdate.campaignNickname) &&
+        Objects.equals(this.source, campaignMemberUpdate.source) &&
+        Objects.equals(this.dateCreated, campaignMemberUpdate.dateCreated) &&
         Objects.equals(this.excludeDnc, campaignMemberUpdate.excludeDnc) &&
         Objects.equals(this.excludeDncDate, campaignMemberUpdate.excludeDncDate) &&
         Objects.equals(this.excludeKill, campaignMemberUpdate.excludeKill) &&
@@ -329,7 +505,7 @@ public class CampaignMemberUpdate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(phoneNumber, startDate, endDate, excludeDnc, excludeDncDate, excludeKill, excludeDuplicate, excludeTerminated, excludeTerminatedDate, excludePrepaid, excludeNoDealerMatch, excludeArchived, excludeLegacy);
+    return Objects.hash(id, accountId, phoneNumber, accountName, campaignId, startDate, endDate, secondaryDealerId, campaignNickname, source, dateCreated, excludeDnc, excludeDncDate, excludeKill, excludeDuplicate, excludeTerminated, excludeTerminatedDate, excludePrepaid, excludeNoDealerMatch, excludeArchived, excludeLegacy);
   }
 
 
@@ -338,9 +514,17 @@ public class CampaignMemberUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class CampaignMemberUpdate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
+    sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
+    sb.append("    secondaryDealerId: ").append(toIndentedString(secondaryDealerId)).append("\n");
+    sb.append("    campaignNickname: ").append(toIndentedString(campaignNickname)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("    excludeDnc: ").append(toIndentedString(excludeDnc)).append("\n");
     sb.append("    excludeDncDate: ").append(toIndentedString(excludeDncDate)).append("\n");
     sb.append("    excludeKill: ").append(toIndentedString(excludeKill)).append("\n");

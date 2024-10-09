@@ -21,11 +21,12 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * NotepadCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class NotepadCreate {
   @SerializedName("message")
@@ -39,6 +40,18 @@ public class NotepadCreate {
 
   @SerializedName("accountId")
   private String accountId = null;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  @SerializedName("createdAt")
+  private OffsetDateTime createdAt = null;
+
+  @SerializedName("updatedAt")
+  private OffsetDateTime updatedAt = null;
+
+  @SerializedName("recordSource")
+  private String recordSource = null;
 
   public NotepadCreate message(String message) {
     this.message = message;
@@ -112,6 +125,78 @@ public class NotepadCreate {
     this.accountId = accountId;
   }
 
+  public NotepadCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
+  public NotepadCreate createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+  public NotepadCreate updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Get updatedAt
+   * @return updatedAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
+  public NotepadCreate recordSource(String recordSource) {
+    this.recordSource = recordSource;
+    return this;
+  }
+
+   /**
+   * Get recordSource
+   * @return recordSource
+  **/
+  @Schema(description = "")
+  public String getRecordSource() {
+    return recordSource;
+  }
+
+  public void setRecordSource(String recordSource) {
+    this.recordSource = recordSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -125,12 +210,16 @@ public class NotepadCreate {
     return Objects.equals(this.message, notepadCreate.message) &&
         Objects.equals(this.subject, notepadCreate.subject) &&
         Objects.equals(this.id, notepadCreate.id) &&
-        Objects.equals(this.accountId, notepadCreate.accountId);
+        Objects.equals(this.accountId, notepadCreate.accountId) &&
+        Objects.equals(this.dateAdded, notepadCreate.dateAdded) &&
+        Objects.equals(this.createdAt, notepadCreate.createdAt) &&
+        Objects.equals(this.updatedAt, notepadCreate.updatedAt) &&
+        Objects.equals(this.recordSource, notepadCreate.recordSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(message, subject, id, accountId);
+    return Objects.hash(message, subject, id, accountId, dateAdded, createdAt, updatedAt, recordSource);
   }
 
 
@@ -143,6 +232,10 @@ public class NotepadCreate {
     sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    recordSource: ").append(toIndentedString(recordSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

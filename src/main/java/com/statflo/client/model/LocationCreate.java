@@ -25,9 +25,12 @@ import java.io.IOException;
  * LocationCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class LocationCreate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("externalDealerId")
   private String externalDealerId = null;
 
@@ -36,6 +39,9 @@ public class LocationCreate {
 
   @SerializedName("externalLocationId")
   private String externalLocationId = null;
+
+  @SerializedName("salesforceLocationId")
+  private String salesforceLocationId = null;
 
   @SerializedName("name")
   private String name = null;
@@ -78,6 +84,33 @@ public class LocationCreate {
 
   @SerializedName("locator")
   private String locator = null;
+
+  @SerializedName("address")
+  private String address = null;
+
+  @SerializedName("outlet")
+  private String outlet = null;
+
+  @SerializedName("fullAddress")
+  private String fullAddress = null;
+
+  public LocationCreate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public LocationCreate externalDealerId(String externalDealerId) {
     this.externalDealerId = externalDealerId;
@@ -131,6 +164,24 @@ public class LocationCreate {
 
   public void setExternalLocationId(String externalLocationId) {
     this.externalLocationId = externalLocationId;
+  }
+
+  public LocationCreate salesforceLocationId(String salesforceLocationId) {
+    this.salesforceLocationId = salesforceLocationId;
+    return this;
+  }
+
+   /**
+   * Get salesforceLocationId
+   * @return salesforceLocationId
+  **/
+  @Schema(description = "")
+  public String getSalesforceLocationId() {
+    return salesforceLocationId;
+  }
+
+  public void setSalesforceLocationId(String salesforceLocationId) {
+    this.salesforceLocationId = salesforceLocationId;
   }
 
   public LocationCreate name(String name) {
@@ -385,6 +436,60 @@ public class LocationCreate {
     this.locator = locator;
   }
 
+  public LocationCreate address(String address) {
+    this.address = address;
+    return this;
+  }
+
+   /**
+   * Get address
+   * @return address
+  **/
+  @Schema(description = "")
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public LocationCreate outlet(String outlet) {
+    this.outlet = outlet;
+    return this;
+  }
+
+   /**
+   * Get outlet
+   * @return outlet
+  **/
+  @Schema(description = "")
+  public String getOutlet() {
+    return outlet;
+  }
+
+  public void setOutlet(String outlet) {
+    this.outlet = outlet;
+  }
+
+  public LocationCreate fullAddress(String fullAddress) {
+    this.fullAddress = fullAddress;
+    return this;
+  }
+
+   /**
+   * Get fullAddress
+   * @return fullAddress
+  **/
+  @Schema(required = true, description = "")
+  public String getFullAddress() {
+    return fullAddress;
+  }
+
+  public void setFullAddress(String fullAddress) {
+    this.fullAddress = fullAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -395,9 +500,11 @@ public class LocationCreate {
       return false;
     }
     LocationCreate locationCreate = (LocationCreate) o;
-    return Objects.equals(this.externalDealerId, locationCreate.externalDealerId) &&
+    return Objects.equals(this.id, locationCreate.id) &&
+        Objects.equals(this.externalDealerId, locationCreate.externalDealerId) &&
         Objects.equals(this.districtId, locationCreate.districtId) &&
         Objects.equals(this.externalLocationId, locationCreate.externalLocationId) &&
+        Objects.equals(this.salesforceLocationId, locationCreate.salesforceLocationId) &&
         Objects.equals(this.name, locationCreate.name) &&
         Objects.equals(this.addressLine1, locationCreate.addressLine1) &&
         Objects.equals(this.addressLine2, locationCreate.addressLine2) &&
@@ -411,12 +518,15 @@ public class LocationCreate {
         Objects.equals(this.manager, locationCreate.manager) &&
         Objects.equals(this.managerPhone, locationCreate.managerPhone) &&
         Objects.equals(this.managerEmail, locationCreate.managerEmail) &&
-        Objects.equals(this.locator, locationCreate.locator);
+        Objects.equals(this.locator, locationCreate.locator) &&
+        Objects.equals(this.address, locationCreate.address) &&
+        Objects.equals(this.outlet, locationCreate.outlet) &&
+        Objects.equals(this.fullAddress, locationCreate.fullAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(externalDealerId, districtId, externalLocationId, name, addressLine1, addressLine2, city, state, zipCode, country, phone, fax, website, manager, managerPhone, managerEmail, locator);
+    return Objects.hash(id, externalDealerId, districtId, externalLocationId, salesforceLocationId, name, addressLine1, addressLine2, city, state, zipCode, country, phone, fax, website, manager, managerPhone, managerEmail, locator, address, outlet, fullAddress);
   }
 
 
@@ -425,9 +535,11 @@ public class LocationCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocationCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    externalDealerId: ").append(toIndentedString(externalDealerId)).append("\n");
     sb.append("    districtId: ").append(toIndentedString(districtId)).append("\n");
     sb.append("    externalLocationId: ").append(toIndentedString(externalLocationId)).append("\n");
+    sb.append("    salesforceLocationId: ").append(toIndentedString(salesforceLocationId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    addressLine1: ").append(toIndentedString(addressLine1)).append("\n");
     sb.append("    addressLine2: ").append(toIndentedString(addressLine2)).append("\n");
@@ -442,6 +554,9 @@ public class LocationCreate {
     sb.append("    managerPhone: ").append(toIndentedString(managerPhone)).append("\n");
     sb.append("    managerEmail: ").append(toIndentedString(managerEmail)).append("\n");
     sb.append("    locator: ").append(toIndentedString(locator)).append("\n");
+    sb.append("    address: ").append(toIndentedString(address)).append("\n");
+    sb.append("    outlet: ").append(toIndentedString(outlet)).append("\n");
+    sb.append("    fullAddress: ").append(toIndentedString(fullAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

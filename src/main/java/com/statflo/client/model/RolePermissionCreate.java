@@ -14,13 +14,62 @@ package com.statflo.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
 /**
  * RolePermissionCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class RolePermissionCreate {
+  @SerializedName("dealerSpecific")
+  private Boolean dealerSpecific = null;
+
+  @SerializedName("dealerBlacklisted")
+  private Boolean dealerBlacklisted = null;
+
+  public RolePermissionCreate dealerSpecific(Boolean dealerSpecific) {
+    this.dealerSpecific = dealerSpecific;
+    return this;
+  }
+
+   /**
+   * Get dealerSpecific
+   * @return dealerSpecific
+  **/
+  @Schema(required = true, description = "")
+  public Boolean isDealerSpecific() {
+    return dealerSpecific;
+  }
+
+  public void setDealerSpecific(Boolean dealerSpecific) {
+    this.dealerSpecific = dealerSpecific;
+  }
+
+  public RolePermissionCreate dealerBlacklisted(Boolean dealerBlacklisted) {
+    this.dealerBlacklisted = dealerBlacklisted;
+    return this;
+  }
+
+   /**
+   * Get dealerBlacklisted
+   * @return dealerBlacklisted
+  **/
+  @Schema(required = true, description = "")
+  public Boolean isDealerBlacklisted() {
+    return dealerBlacklisted;
+  }
+
+  public void setDealerBlacklisted(Boolean dealerBlacklisted) {
+    this.dealerBlacklisted = dealerBlacklisted;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +79,14 @@ public class RolePermissionCreate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    RolePermissionCreate rolePermissionCreate = (RolePermissionCreate) o;
+    return Objects.equals(this.dealerSpecific, rolePermissionCreate.dealerSpecific) &&
+        Objects.equals(this.dealerBlacklisted, rolePermissionCreate.dealerBlacklisted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(dealerSpecific, dealerBlacklisted);
   }
 
 
@@ -44,6 +95,8 @@ public class RolePermissionCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class RolePermissionCreate {\n");
     
+    sb.append("    dealerSpecific: ").append(toIndentedString(dealerSpecific)).append("\n");
+    sb.append("    dealerBlacklisted: ").append(toIndentedString(dealerBlacklisted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

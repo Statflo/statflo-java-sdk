@@ -21,11 +21,12 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * TimelineCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class TimelineCreate {
   @SerializedName("id")
@@ -33,6 +34,18 @@ public class TimelineCreate {
 
   @SerializedName("accountId")
   private String accountId = null;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  @SerializedName("createdAt")
+  private OffsetDateTime createdAt = null;
+
+  @SerializedName("updatedAt")
+  private OffsetDateTime updatedAt = null;
+
+  @SerializedName("recordSource")
+  private String recordSource = null;
 
   public TimelineCreate id(Integer id) {
     this.id = id;
@@ -70,6 +83,78 @@ public class TimelineCreate {
     this.accountId = accountId;
   }
 
+  public TimelineCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
+  public TimelineCreate createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+  public TimelineCreate updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Get updatedAt
+   * @return updatedAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
+  public TimelineCreate recordSource(String recordSource) {
+    this.recordSource = recordSource;
+    return this;
+  }
+
+   /**
+   * Get recordSource
+   * @return recordSource
+  **/
+  @Schema(description = "")
+  public String getRecordSource() {
+    return recordSource;
+  }
+
+  public void setRecordSource(String recordSource) {
+    this.recordSource = recordSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -81,12 +166,16 @@ public class TimelineCreate {
     }
     TimelineCreate timelineCreate = (TimelineCreate) o;
     return Objects.equals(this.id, timelineCreate.id) &&
-        Objects.equals(this.accountId, timelineCreate.accountId);
+        Objects.equals(this.accountId, timelineCreate.accountId) &&
+        Objects.equals(this.dateAdded, timelineCreate.dateAdded) &&
+        Objects.equals(this.createdAt, timelineCreate.createdAt) &&
+        Objects.equals(this.updatedAt, timelineCreate.updatedAt) &&
+        Objects.equals(this.recordSource, timelineCreate.recordSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountId);
+    return Objects.hash(id, accountId, dateAdded, createdAt, updatedAt, recordSource);
   }
 
 
@@ -97,6 +186,10 @@ public class TimelineCreate {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    recordSource: ").append(toIndentedString(recordSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

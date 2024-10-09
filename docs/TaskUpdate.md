@@ -10,6 +10,11 @@ Name | Type | Description | Notes
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **id** | **Integer** |  | 
+**accountId** | **String** |  | 
+**dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**recordSource** | **String** |  |  [optional]
 
 <a name="StatusEnum"></a>
 ## Enum: StatusEnum

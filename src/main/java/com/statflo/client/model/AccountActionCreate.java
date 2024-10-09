@@ -21,11 +21,12 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * AccountActionCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class AccountActionCreate {
   @SerializedName("description")
@@ -45,6 +46,18 @@ public class AccountActionCreate {
 
   @SerializedName("accountId")
   private String accountId = null;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  @SerializedName("createdAt")
+  private OffsetDateTime createdAt = null;
+
+  @SerializedName("updatedAt")
+  private OffsetDateTime updatedAt = null;
+
+  @SerializedName("recordSource")
+  private String recordSource = null;
 
   public AccountActionCreate description(String description) {
     this.description = description;
@@ -154,6 +167,78 @@ public class AccountActionCreate {
     this.accountId = accountId;
   }
 
+  public AccountActionCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
+  public AccountActionCreate createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+  public AccountActionCreate updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Get updatedAt
+   * @return updatedAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
+  public AccountActionCreate recordSource(String recordSource) {
+    this.recordSource = recordSource;
+    return this;
+  }
+
+   /**
+   * Get recordSource
+   * @return recordSource
+  **/
+  @Schema(description = "")
+  public String getRecordSource() {
+    return recordSource;
+  }
+
+  public void setRecordSource(String recordSource) {
+    this.recordSource = recordSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -169,12 +254,16 @@ public class AccountActionCreate {
         Objects.equals(this.assignedTo, accountActionCreate.assignedTo) &&
         Objects.equals(this.assignedFrom, accountActionCreate.assignedFrom) &&
         Objects.equals(this.id, accountActionCreate.id) &&
-        Objects.equals(this.accountId, accountActionCreate.accountId);
+        Objects.equals(this.accountId, accountActionCreate.accountId) &&
+        Objects.equals(this.dateAdded, accountActionCreate.dateAdded) &&
+        Objects.equals(this.createdAt, accountActionCreate.createdAt) &&
+        Objects.equals(this.updatedAt, accountActionCreate.updatedAt) &&
+        Objects.equals(this.recordSource, accountActionCreate.recordSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, actionTaken, assignedTo, assignedFrom, id, accountId);
+    return Objects.hash(description, actionTaken, assignedTo, assignedFrom, id, accountId, dateAdded, createdAt, updatedAt, recordSource);
   }
 
 
@@ -189,6 +278,10 @@ public class AccountActionCreate {
     sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    recordSource: ").append(toIndentedString(recordSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

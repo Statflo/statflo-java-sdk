@@ -25,7 +25,7 @@ import java.io.IOException;
  * CampaignSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class CampaignSummary {
   @SerializedName("title")
@@ -81,6 +81,9 @@ public class CampaignSummary {
 
   @SerializedName("productTypes")
   private String productTypes = null;
+
+  @SerializedName("source")
+  private String source = "api";
 
   public CampaignSummary title(String title) {
     this.title = title;
@@ -406,6 +409,24 @@ public class CampaignSummary {
     this.productTypes = productTypes;
   }
 
+  public CampaignSummary source(String source) {
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * Get source
+   * @return source
+  **/
+  @Schema(description = "")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -433,12 +454,13 @@ public class CampaignSummary {
         Objects.equals(this.reportingPeriodAfter, campaignSummary.reportingPeriodAfter) &&
         Objects.equals(this.transactionEarliest, campaignSummary.transactionEarliest) &&
         Objects.equals(this.transactionLatest, campaignSummary.transactionLatest) &&
-        Objects.equals(this.productTypes, campaignSummary.productTypes);
+        Objects.equals(this.productTypes, campaignSummary.productTypes) &&
+        Objects.equals(this.source, campaignSummary.source);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, description, id, campaignNickname, totangoName, type, frequency, lifetime, method, carrierAllowed, accountType, dncScrub, reportingPeriodType, reportingPeriodBefore, reportingPeriodAfter, transactionEarliest, transactionLatest, productTypes);
+    return Objects.hash(title, description, id, campaignNickname, totangoName, type, frequency, lifetime, method, carrierAllowed, accountType, dncScrub, reportingPeriodType, reportingPeriodBefore, reportingPeriodAfter, transactionEarliest, transactionLatest, productTypes, source);
   }
 
 
@@ -465,6 +487,7 @@ public class CampaignSummary {
     sb.append("    transactionEarliest: ").append(toIndentedString(transactionEarliest)).append("\n");
     sb.append("    transactionLatest: ").append(toIndentedString(transactionLatest)).append("\n");
     sb.append("    productTypes: ").append(toIndentedString(productTypes)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -21,13 +21,17 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * ReassignRepCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class ReassignRepCreate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("newExternalUserId")
   private String newExternalUserId = null;
 
@@ -45,6 +49,33 @@ public class ReassignRepCreate {
 
   @SerializedName("accountId")
   private String accountId = null;
+
+  @SerializedName("dateChanged")
+  private OffsetDateTime dateChanged = null;
+
+  @SerializedName("reason")
+  private String reason = "api";
+
+  @SerializedName("oldBan")
+  private String oldBan = null;
+
+  public ReassignRepCreate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public ReassignRepCreate newExternalUserId(String newExternalUserId) {
     this.newExternalUserId = newExternalUserId;
@@ -154,6 +185,60 @@ public class ReassignRepCreate {
     this.accountId = accountId;
   }
 
+  public ReassignRepCreate dateChanged(OffsetDateTime dateChanged) {
+    this.dateChanged = dateChanged;
+    return this;
+  }
+
+   /**
+   * Get dateChanged
+   * @return dateChanged
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateChanged() {
+    return dateChanged;
+  }
+
+  public void setDateChanged(OffsetDateTime dateChanged) {
+    this.dateChanged = dateChanged;
+  }
+
+  public ReassignRepCreate reason(String reason) {
+    this.reason = reason;
+    return this;
+  }
+
+   /**
+   * Get reason
+   * @return reason
+  **/
+  @Schema(description = "")
+  public String getReason() {
+    return reason;
+  }
+
+  public void setReason(String reason) {
+    this.reason = reason;
+  }
+
+  public ReassignRepCreate oldBan(String oldBan) {
+    this.oldBan = oldBan;
+    return this;
+  }
+
+   /**
+   * Get oldBan
+   * @return oldBan
+  **/
+  @Schema(description = "")
+  public String getOldBan() {
+    return oldBan;
+  }
+
+  public void setOldBan(String oldBan) {
+    this.oldBan = oldBan;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -164,17 +249,21 @@ public class ReassignRepCreate {
       return false;
     }
     ReassignRepCreate reassignRepCreate = (ReassignRepCreate) o;
-    return Objects.equals(this.newExternalUserId, reassignRepCreate.newExternalUserId) &&
+    return Objects.equals(this.id, reassignRepCreate.id) &&
+        Objects.equals(this.newExternalUserId, reassignRepCreate.newExternalUserId) &&
         Objects.equals(this.oldExternalUserId, reassignRepCreate.oldExternalUserId) &&
         Objects.equals(this.newExternalLocationId, reassignRepCreate.newExternalLocationId) &&
         Objects.equals(this.oldExternalLocationId, reassignRepCreate.oldExternalLocationId) &&
         Objects.equals(this.accountName, reassignRepCreate.accountName) &&
-        Objects.equals(this.accountId, reassignRepCreate.accountId);
+        Objects.equals(this.accountId, reassignRepCreate.accountId) &&
+        Objects.equals(this.dateChanged, reassignRepCreate.dateChanged) &&
+        Objects.equals(this.reason, reassignRepCreate.reason) &&
+        Objects.equals(this.oldBan, reassignRepCreate.oldBan);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(newExternalUserId, oldExternalUserId, newExternalLocationId, oldExternalLocationId, accountName, accountId);
+    return Objects.hash(id, newExternalUserId, oldExternalUserId, newExternalLocationId, oldExternalLocationId, accountName, accountId, dateChanged, reason, oldBan);
   }
 
 
@@ -183,12 +272,16 @@ public class ReassignRepCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReassignRepCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    newExternalUserId: ").append(toIndentedString(newExternalUserId)).append("\n");
     sb.append("    oldExternalUserId: ").append(toIndentedString(oldExternalUserId)).append("\n");
     sb.append("    newExternalLocationId: ").append(toIndentedString(newExternalLocationId)).append("\n");
     sb.append("    oldExternalLocationId: ").append(toIndentedString(oldExternalLocationId)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    dateChanged: ").append(toIndentedString(dateChanged)).append("\n");
+    sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
+    sb.append("    oldBan: ").append(toIndentedString(oldBan)).append("\n");
     sb.append("}");
     return sb.toString();
   }

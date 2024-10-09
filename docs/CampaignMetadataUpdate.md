@@ -3,9 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | 
 **campaignId** | **Integer** |  |  [optional]
 **metadata** | [**MetadataEnum**](#MetadataEnum) |  |  [optional]
 **value** | **Object** |  |  [optional]
+**dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 
 <a name="MetadataEnum"></a>
 ## Enum: MetadataEnum
@@ -19,3 +21,4 @@ OVERRIDE_DEFAULT_VISIBILITY | &quot;override_default_visibility&quot;
 VISIBILITY_LEAD_SELECTION | &quot;visibility_lead_selection&quot;
 VISIBILITY_CAMPAIGN_WIDGET | &quot;visibility_campaign_widget&quot;
 DEFAULT_START_END_DATE | &quot;default_start_end_date&quot;
+SALESFORCE_CAMPAIGN_ID | &quot;salesforce_campaign_id&quot;

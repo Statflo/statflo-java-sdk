@@ -19,6 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.statflo.client.model.Campaign;
 import com.statflo.client.model.Carrier;
 import com.statflo.client.model.Dealer;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -28,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * CampaignMetadataSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class CampaignMetadataSummary {
   @SerializedName("id")
@@ -39,6 +40,9 @@ public class CampaignMetadataSummary {
 
   @SerializedName("dealer")
   private Dealer dealer = null;
+
+  @SerializedName("campaign")
+  private Campaign campaign = null;
 
   @SerializedName("metadata")
   private String metadata = null;
@@ -101,6 +105,24 @@ public class CampaignMetadataSummary {
 
   public void setDealer(Dealer dealer) {
     this.dealer = dealer;
+  }
+
+  public CampaignMetadataSummary campaign(Campaign campaign) {
+    this.campaign = campaign;
+    return this;
+  }
+
+   /**
+   * Get campaign
+   * @return campaign
+  **/
+  @Schema(description = "")
+  public Campaign getCampaign() {
+    return campaign;
+  }
+
+  public void setCampaign(Campaign campaign) {
+    this.campaign = campaign;
   }
 
   public CampaignMetadataSummary metadata(String metadata) {
@@ -170,6 +192,7 @@ public class CampaignMetadataSummary {
     return Objects.equals(this.id, campaignMetadataSummary.id) &&
         Objects.equals(this.carrier, campaignMetadataSummary.carrier) &&
         Objects.equals(this.dealer, campaignMetadataSummary.dealer) &&
+        Objects.equals(this.campaign, campaignMetadataSummary.campaign) &&
         Objects.equals(this.metadata, campaignMetadataSummary.metadata) &&
         Objects.equals(this.value, campaignMetadataSummary.value) &&
         Objects.equals(this.dateAdded, campaignMetadataSummary.dateAdded);
@@ -177,7 +200,7 @@ public class CampaignMetadataSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, carrier, dealer, metadata, value, dateAdded);
+    return Objects.hash(id, carrier, dealer, campaign, metadata, value, dateAdded);
   }
 
 
@@ -189,6 +212,7 @@ public class CampaignMetadataSummary {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    carrier: ").append(toIndentedString(carrier)).append("\n");
     sb.append("    dealer: ").append(toIndentedString(dealer)).append("\n");
+    sb.append("    campaign: ").append(toIndentedString(campaign)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");

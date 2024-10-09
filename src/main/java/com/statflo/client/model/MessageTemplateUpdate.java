@@ -26,9 +26,12 @@ import org.threeten.bp.OffsetDateTime;
  * MessageTemplateUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class MessageTemplateUpdate {
+  @SerializedName("id")
+  private String id = null;
+
   @SerializedName("templateName")
   private String templateName = null;
 
@@ -100,8 +103,32 @@ public class MessageTemplateUpdate {
   @SerializedName("template")
   private Object template = null;
 
+  @SerializedName("callListId")
+  private Integer callListId = null;
+
+  @SerializedName("priority")
+  private Integer priority = 100;
+
   @SerializedName("dateDeleted")
   private OffsetDateTime dateDeleted = null;
+
+  public MessageTemplateUpdate id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
 
   public MessageTemplateUpdate templateName(String templateName) {
     this.templateName = templateName;
@@ -175,6 +202,42 @@ public class MessageTemplateUpdate {
     this.template = template;
   }
 
+  public MessageTemplateUpdate callListId(Integer callListId) {
+    this.callListId = callListId;
+    return this;
+  }
+
+   /**
+   * Get callListId
+   * @return callListId
+  **/
+  @Schema(description = "")
+  public Integer getCallListId() {
+    return callListId;
+  }
+
+  public void setCallListId(Integer callListId) {
+    this.callListId = callListId;
+  }
+
+  public MessageTemplateUpdate priority(Integer priority) {
+    this.priority = priority;
+    return this;
+  }
+
+   /**
+   * Get priority
+   * @return priority
+  **/
+  @Schema(description = "")
+  public Integer getPriority() {
+    return priority;
+  }
+
+  public void setPriority(Integer priority) {
+    this.priority = priority;
+  }
+
   public MessageTemplateUpdate dateDeleted(OffsetDateTime dateDeleted) {
     this.dateDeleted = dateDeleted;
     return this;
@@ -203,16 +266,19 @@ public class MessageTemplateUpdate {
       return false;
     }
     MessageTemplateUpdate messageTemplateUpdate = (MessageTemplateUpdate) o;
-    return Objects.equals(this.templateName, messageTemplateUpdate.templateName) &&
+    return Objects.equals(this.id, messageTemplateUpdate.id) &&
+        Objects.equals(this.templateName, messageTemplateUpdate.templateName) &&
         Objects.equals(this.language, messageTemplateUpdate.language) &&
         Objects.equals(this.metadata, messageTemplateUpdate.metadata) &&
         Objects.equals(this.template, messageTemplateUpdate.template) &&
+        Objects.equals(this.callListId, messageTemplateUpdate.callListId) &&
+        Objects.equals(this.priority, messageTemplateUpdate.priority) &&
         Objects.equals(this.dateDeleted, messageTemplateUpdate.dateDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(templateName, language, metadata, template, dateDeleted);
+    return Objects.hash(id, templateName, language, metadata, template, callListId, priority, dateDeleted);
   }
 
 
@@ -221,10 +287,13 @@ public class MessageTemplateUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class MessageTemplateUpdate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
+    sb.append("    callListId: ").append(toIndentedString(callListId)).append("\n");
+    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    dateDeleted: ").append(toIndentedString(dateDeleted)).append("\n");
     sb.append("}");
     return sb.toString();

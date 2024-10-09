@@ -26,7 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * TaskCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class TaskCreate {
   @SerializedName("name")
@@ -99,6 +99,18 @@ public class TaskCreate {
 
   @SerializedName("accountId")
   private String accountId = null;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  @SerializedName("createdAt")
+  private OffsetDateTime createdAt = null;
+
+  @SerializedName("updatedAt")
+  private OffsetDateTime updatedAt = null;
+
+  @SerializedName("recordSource")
+  private String recordSource = null;
 
   public TaskCreate name(String name) {
     this.name = name;
@@ -246,6 +258,78 @@ public class TaskCreate {
     this.accountId = accountId;
   }
 
+  public TaskCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
+  public TaskCreate createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+   /**
+   * Get createdAt
+   * @return createdAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+  public TaskCreate updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+   /**
+   * Get updatedAt
+   * @return updatedAt
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
+  public TaskCreate recordSource(String recordSource) {
+    this.recordSource = recordSource;
+    return this;
+  }
+
+   /**
+   * Get recordSource
+   * @return recordSource
+  **/
+  @Schema(description = "")
+  public String getRecordSource() {
+    return recordSource;
+  }
+
+  public void setRecordSource(String recordSource) {
+    this.recordSource = recordSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -263,12 +347,16 @@ public class TaskCreate {
         Objects.equals(this.priority, taskCreate.priority) &&
         Objects.equals(this.dueDate, taskCreate.dueDate) &&
         Objects.equals(this.id, taskCreate.id) &&
-        Objects.equals(this.accountId, taskCreate.accountId);
+        Objects.equals(this.accountId, taskCreate.accountId) &&
+        Objects.equals(this.dateAdded, taskCreate.dateAdded) &&
+        Objects.equals(this.createdAt, taskCreate.createdAt) &&
+        Objects.equals(this.updatedAt, taskCreate.updatedAt) &&
+        Objects.equals(this.recordSource, taskCreate.recordSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, status, userIdAssigned, priority, dueDate, id, accountId);
+    return Objects.hash(name, description, status, userIdAssigned, priority, dueDate, id, accountId, dateAdded, createdAt, updatedAt, recordSource);
   }
 
 
@@ -285,6 +373,10 @@ public class TaskCreate {
     sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
+    sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    recordSource: ").append(toIndentedString(recordSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

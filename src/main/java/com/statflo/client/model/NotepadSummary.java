@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * NotepadSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class NotepadSummary {
   @SerializedName("message")
@@ -57,6 +57,9 @@ public class NotepadSummary {
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
+
+  @SerializedName("recordSource")
+  private String recordSource = null;
 
   public NotepadSummary message(String message) {
     this.message = message;
@@ -220,6 +223,24 @@ public class NotepadSummary {
     this.updatedAt = updatedAt;
   }
 
+  public NotepadSummary recordSource(String recordSource) {
+    this.recordSource = recordSource;
+    return this;
+  }
+
+   /**
+   * Get recordSource
+   * @return recordSource
+  **/
+  @Schema(description = "")
+  public String getRecordSource() {
+    return recordSource;
+  }
+
+  public void setRecordSource(String recordSource) {
+    this.recordSource = recordSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -238,12 +259,13 @@ public class NotepadSummary {
         Objects.equals(this.accountId, notepadSummary.accountId) &&
         Objects.equals(this.dateAdded, notepadSummary.dateAdded) &&
         Objects.equals(this.createdAt, notepadSummary.createdAt) &&
-        Objects.equals(this.updatedAt, notepadSummary.updatedAt);
+        Objects.equals(this.updatedAt, notepadSummary.updatedAt) &&
+        Objects.equals(this.recordSource, notepadSummary.recordSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(message, subject, id, user, dealer, accountId, dateAdded, createdAt, updatedAt);
+    return Objects.hash(message, subject, id, user, dealer, accountId, dateAdded, createdAt, updatedAt, recordSource);
   }
 
 
@@ -261,6 +283,7 @@ public class NotepadSummary {
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    recordSource: ").append(toIndentedString(recordSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

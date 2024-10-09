@@ -25,14 +25,35 @@ import java.io.IOException;
  * DistrictCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class DistrictCreate {
+  @SerializedName("id")
+  private Integer id = null;
+
   @SerializedName("name")
   private String name = null;
 
   @SerializedName("regionId")
   private Integer regionId = null;
+
+  public DistrictCreate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
   public DistrictCreate name(String name) {
     this.name = name;
@@ -80,13 +101,14 @@ public class DistrictCreate {
       return false;
     }
     DistrictCreate districtCreate = (DistrictCreate) o;
-    return Objects.equals(this.name, districtCreate.name) &&
+    return Objects.equals(this.id, districtCreate.id) &&
+        Objects.equals(this.name, districtCreate.name) &&
         Objects.equals(this.regionId, districtCreate.regionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, regionId);
+    return Objects.hash(id, name, regionId);
   }
 
 
@@ -95,6 +117,7 @@ public class DistrictCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class DistrictCreate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    regionId: ").append(toIndentedString(regionId)).append("\n");
     sb.append("}");

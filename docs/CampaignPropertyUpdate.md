@@ -3,10 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | 
 **campaignId** | **Integer** |  | 
+**campaignTerminationDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **campaignPriority** | **Integer** |  |  [optional]
 **displayPriority** | **Integer** |  |  [optional]
 **carryoverUnattempted** | **Boolean** |  |  [optional]
+**visibility** | **Integer** |  |  [optional]
 **visibilityCrm** | [**VisibilityCrmEnum**](#VisibilityCrmEnum) |  |  [optional]
 **visibilityReport** | [**VisibilityReportEnum**](#VisibilityReportEnum) |  |  [optional]
 

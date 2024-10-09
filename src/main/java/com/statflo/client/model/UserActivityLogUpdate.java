@@ -14,13 +14,84 @@ package com.statflo.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 /**
  * UserActivityLogUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class UserActivityLogUpdate {
+  @SerializedName("id")
+  private Integer id = null;
+
+  @SerializedName("activityPerformed")
+  private String activityPerformed = null;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
+
+  public UserActivityLogUpdate id(Integer id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  public UserActivityLogUpdate activityPerformed(String activityPerformed) {
+    this.activityPerformed = activityPerformed;
+    return this;
+  }
+
+   /**
+   * Get activityPerformed
+   * @return activityPerformed
+  **/
+  @Schema(description = "")
+  public String getActivityPerformed() {
+    return activityPerformed;
+  }
+
+  public void setActivityPerformed(String activityPerformed) {
+    this.activityPerformed = activityPerformed;
+  }
+
+  public UserActivityLogUpdate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(required = true, description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +101,15 @@ public class UserActivityLogUpdate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    UserActivityLogUpdate userActivityLogUpdate = (UserActivityLogUpdate) o;
+    return Objects.equals(this.id, userActivityLogUpdate.id) &&
+        Objects.equals(this.activityPerformed, userActivityLogUpdate.activityPerformed) &&
+        Objects.equals(this.dateAdded, userActivityLogUpdate.dateAdded);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(id, activityPerformed, dateAdded);
   }
 
 
@@ -44,6 +118,9 @@ public class UserActivityLogUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserActivityLogUpdate {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    activityPerformed: ").append(toIndentedString(activityPerformed)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("}");
     return sb.toString();
   }

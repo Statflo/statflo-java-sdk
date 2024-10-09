@@ -22,12 +22,14 @@ import com.google.gson.stream.JsonWriter;
 import com.statflo.client.model.Dealer;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 /**
  * Contact
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class Contact {
   @SerializedName("id")
@@ -98,6 +100,9 @@ public class Contact {
 
   @SerializedName("flag")
   private String flag = null;
+
+  @SerializedName("optedOut")
+  private List<Object> optedOut = null;
 
   @SerializedName("firstName")
   private String firstName = null;
@@ -519,6 +524,32 @@ public class Contact {
     this.flag = flag;
   }
 
+  public Contact optedOut(List<Object> optedOut) {
+    this.optedOut = optedOut;
+    return this;
+  }
+
+  public Contact addOptedOutItem(Object optedOutItem) {
+    if (this.optedOut == null) {
+      this.optedOut = new ArrayList<Object>();
+    }
+    this.optedOut.add(optedOutItem);
+    return this;
+  }
+
+   /**
+   * Get optedOut
+   * @return optedOut
+  **/
+  @Schema(description = "")
+  public List<Object> getOptedOut() {
+    return optedOut;
+  }
+
+  public void setOptedOut(List<Object> optedOut) {
+    this.optedOut = optedOut;
+  }
+
   public Contact firstName(String firstName) {
     this.firstName = firstName;
     return this;
@@ -588,13 +619,14 @@ public class Contact {
         Objects.equals(this.oldBan, contact.oldBan) &&
         Objects.equals(this.smsCapable, contact.smsCapable) &&
         Objects.equals(this.flag, contact.flag) &&
+        Objects.equals(this.optedOut, contact.optedOut) &&
         Objects.equals(this.firstName, contact.firstName) &&
         Objects.equals(this.preferredLanguage, contact.preferredLanguage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, accountName, accountId, contactName, streetNumber, streetName, city, province, country, zipCode, phoneNumber, phoneExtension, email, primaryContact, dealer, dateAdded, jobTitle, source, sourceId, customerId, oldBan, smsCapable, flag, firstName, preferredLanguage);
+    return Objects.hash(id, accountName, accountId, contactName, streetNumber, streetName, city, province, country, zipCode, phoneNumber, phoneExtension, email, primaryContact, dealer, dateAdded, jobTitle, source, sourceId, customerId, oldBan, smsCapable, flag, optedOut, firstName, preferredLanguage);
   }
 
 
@@ -626,6 +658,7 @@ public class Contact {
     sb.append("    oldBan: ").append(toIndentedString(oldBan)).append("\n");
     sb.append("    smsCapable: ").append(toIndentedString(smsCapable)).append("\n");
     sb.append("    flag: ").append(toIndentedString(flag)).append("\n");
+    sb.append("    optedOut: ").append(toIndentedString(optedOut)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    preferredLanguage: ").append(toIndentedString(preferredLanguage)).append("\n");
     sb.append("}");

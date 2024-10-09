@@ -87,7 +87,7 @@ public class MessageTemplateAssignmentsApiTest {
      */
     @Test
     public void messageTemplateAssignmentSearchTest() throws Exception {
-        String filter = null;
+        java.util.HashMap filter = null;
         String query = null;
         Integer page = null;
         Integer perPage = null;

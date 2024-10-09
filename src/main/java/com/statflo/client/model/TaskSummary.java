@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * TaskSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class TaskSummary {
   @SerializedName("name")
@@ -69,6 +69,9 @@ public class TaskSummary {
 
   @SerializedName("updatedAt")
   private OffsetDateTime updatedAt = null;
+
+  @SerializedName("recordSource")
+  private String recordSource = null;
 
   public TaskSummary name(String name) {
     this.name = name;
@@ -304,6 +307,24 @@ public class TaskSummary {
     this.updatedAt = updatedAt;
   }
 
+  public TaskSummary recordSource(String recordSource) {
+    this.recordSource = recordSource;
+    return this;
+  }
+
+   /**
+   * Get recordSource
+   * @return recordSource
+  **/
+  @Schema(description = "")
+  public String getRecordSource() {
+    return recordSource;
+  }
+
+  public void setRecordSource(String recordSource) {
+    this.recordSource = recordSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -326,12 +347,13 @@ public class TaskSummary {
         Objects.equals(this.accountId, taskSummary.accountId) &&
         Objects.equals(this.dateAdded, taskSummary.dateAdded) &&
         Objects.equals(this.createdAt, taskSummary.createdAt) &&
-        Objects.equals(this.updatedAt, taskSummary.updatedAt);
+        Objects.equals(this.updatedAt, taskSummary.updatedAt) &&
+        Objects.equals(this.recordSource, taskSummary.recordSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, status, userAssigned, priority, dueDate, id, user, dealer, accountId, dateAdded, createdAt, updatedAt);
+    return Objects.hash(name, description, status, userAssigned, priority, dueDate, id, user, dealer, accountId, dateAdded, createdAt, updatedAt, recordSource);
   }
 
 
@@ -353,6 +375,7 @@ public class TaskSummary {
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+    sb.append("    recordSource: ").append(toIndentedString(recordSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

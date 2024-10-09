@@ -21,14 +21,17 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.statflo.client.model.Carrier;
 import com.statflo.client.model.Dealer;
+import com.statflo.client.model.MessageTemplateAssignment;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 /**
  * MessageTemplateSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-09-05T14:23:39.893836-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
 
 public class MessageTemplateSummary {
   @SerializedName("id")
@@ -60,6 +63,9 @@ public class MessageTemplateSummary {
 
   @SerializedName("dateDeleted")
   private OffsetDateTime dateDeleted = null;
+
+  @SerializedName("messageTemplateAssignments")
+  private List<MessageTemplateAssignment> messageTemplateAssignments = null;
 
   public MessageTemplateSummary id(String id) {
     this.id = id;
@@ -241,6 +247,32 @@ public class MessageTemplateSummary {
     this.dateDeleted = dateDeleted;
   }
 
+  public MessageTemplateSummary messageTemplateAssignments(List<MessageTemplateAssignment> messageTemplateAssignments) {
+    this.messageTemplateAssignments = messageTemplateAssignments;
+    return this;
+  }
+
+  public MessageTemplateSummary addMessageTemplateAssignmentsItem(MessageTemplateAssignment messageTemplateAssignmentsItem) {
+    if (this.messageTemplateAssignments == null) {
+      this.messageTemplateAssignments = new ArrayList<MessageTemplateAssignment>();
+    }
+    this.messageTemplateAssignments.add(messageTemplateAssignmentsItem);
+    return this;
+  }
+
+   /**
+   * Get messageTemplateAssignments
+   * @return messageTemplateAssignments
+  **/
+  @Schema(description = "")
+  public List<MessageTemplateAssignment> getMessageTemplateAssignments() {
+    return messageTemplateAssignments;
+  }
+
+  public void setMessageTemplateAssignments(List<MessageTemplateAssignment> messageTemplateAssignments) {
+    this.messageTemplateAssignments = messageTemplateAssignments;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -260,12 +292,13 @@ public class MessageTemplateSummary {
         Objects.equals(this.template, messageTemplateSummary.template) &&
         Objects.equals(this.callListId, messageTemplateSummary.callListId) &&
         Objects.equals(this.priority, messageTemplateSummary.priority) &&
-        Objects.equals(this.dateDeleted, messageTemplateSummary.dateDeleted);
+        Objects.equals(this.dateDeleted, messageTemplateSummary.dateDeleted) &&
+        Objects.equals(this.messageTemplateAssignments, messageTemplateSummary.messageTemplateAssignments);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, carrier, dealer, templateName, language, metadata, template, callListId, priority, dateDeleted);
+    return Objects.hash(id, carrier, dealer, templateName, language, metadata, template, callListId, priority, dateDeleted, messageTemplateAssignments);
   }
 
 
@@ -284,6 +317,7 @@ public class MessageTemplateSummary {
     sb.append("    callListId: ").append(toIndentedString(callListId)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    dateDeleted: ").append(toIndentedString(dateDeleted)).append("\n");
+    sb.append("    messageTemplateAssignments: ").append(toIndentedString(messageTemplateAssignments)).append("\n");
     sb.append("}");
     return sb.toString();
   }
