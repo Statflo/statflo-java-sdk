@@ -15,10 +15,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SLEEP_DURATION: 120s
+      SWAGGER_URL: https://app.statflo.com/api/doc.json
+
     steps:
       # Even though the release is handled by the webapp deploy action, the webapp still requires a significant amount of time to reflect changes on app.statflo.com
-      - name: Wait for 120 seconds # Set to 2 mins for testing
-        run: sleep 120s
+      - name: Wait for environment-defined duration
+        run: sleep $SLEEP_DURATION
         shell: bash
 
       # This step is used to pull the client info from the Dispatcher
@@ -36,7 +40,7 @@ jobs:
 
       - name: Generate code from Swagger file
         run: |
-          java -jar ./bin/swagger-codegen-cli-3.0.29.jar generate -i https://app.statflo.com/api/doc.json -l java -o . \
+          java -jar ./bin/swagger-codegen-cli-3.0.29.jar generate -i $SWAGGER_URL -l java -o . \
           --invoker-package com.statflo.client \
           --model-package com.statflo.client.model \
           --api-package com.statflo.client.api \
