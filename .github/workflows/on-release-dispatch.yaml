@@ -1,16 +1,13 @@
 name: Codegen automate generation
 
 on:
-  # Manually trigger the workflow for testing purposes
   workflow_dispatch:
     inputs:
       release_version:
         type: string
         required: true
- 
-  # Listen for the release-created event which is triggered by the webapp deploy action. https://github.com/peter-evans/repository-dispatch helps to implement Event-based communication between workflows.
-  # repository_dispatch:
-  #     types: [release-created]
+  repository_dispatch:
+      types: [release-created]
 
 jobs:
   build:
@@ -18,6 +15,7 @@ jobs:
     env:
       SLEEP_DURATION: 120s
       SWAGGER_URL: https://app.statflo.com/api/doc.json
+      RELEASE_VERSION: ${{ inputs.release_version }} 
 
     steps:
       # Even though the release is handled by the webapp deploy action, the webapp still requires a significant amount of time to reflect changes on app.statflo.com
@@ -25,11 +23,9 @@ jobs:
         run: sleep $SLEEP_DURATION
         shell: bash
 
-      # This step is used to pull the client info from the Dispatcher
-      # - name: Pull client info 
-      #   env:
-      #     PAYLOAD_CONTEXT: ${{ toJson(github.event.client_payload) }}
-      #   run: echo "$PAYLOAD_CONTEXT"
+      - name: Set release version from webapp's release
+        if: github.event.client_payload.release_version != ''
+        run: echo "RELEASE_VERSION=${{ github.event.client_payload.release_version }}" >> $GITHUB_ENV
 
       - uses: actions/checkout@v3
         with:
@@ -60,7 +56,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           # Create new tag and push
-          git tag ${{ inputs.release_version }}
-          git push origin ${{ inputs.release_version }}
+          git tag ${{ env.RELEASE_VERSION }}
+          git push origin ${{ env.RELEASE_VERSION }}
 
-          gh release create ${{ inputs.release_version }} --title "Release ${{ inputs.release_version }}" --notes "Auto-generated release for ${{ inputs.release_version }}"
+          gh release create ${{ env.RELEASE_VERSION }} --title "Release ${{ env.RELEASE_VERSION }}" --notes "Auto-generated release for ${{ env.RELEASE_VERSION }}"
