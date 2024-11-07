@@ -1,6 +1,6 @@
 # UserTeamsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

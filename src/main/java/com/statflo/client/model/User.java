@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.statflo.client.model.Dealer;
-import com.statflo.client.model.Role;
 import com.statflo.client.model.UserPermission;
 import com.statflo.client.model.UserTeam;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -31,8 +30,7 @@ import java.util.List;
  * User
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-07T16:44:11.708118Z[Etc/UTC]")
 public class User {
   @SerializedName("id")
   private Integer id = null;
@@ -69,9 +67,6 @@ public class User {
 
   @SerializedName("dealer")
   private Dealer dealer = null;
-
-  @SerializedName("role")
-  private Role role = null;
 
   @SerializedName("userPermissions")
   private List<UserPermission> userPermissions = null;
@@ -298,24 +293,6 @@ public class User {
     this.dealer = dealer;
   }
 
-  public User role(Role role) {
-    this.role = role;
-    return this;
-  }
-
-   /**
-   * Get role
-   * @return role
-  **/
-  @Schema(description = "")
-  public Role getRole() {
-    return role;
-  }
-
-  public void setRole(Role role) {
-    this.role = role;
-  }
-
   public User userPermissions(List<UserPermission> userPermissions) {
     this.userPermissions = userPermissions;
     return this;
@@ -413,7 +390,6 @@ public class User {
         Objects.equals(this.regionId, user.regionId) &&
         Objects.equals(this.userActive, user.userActive) &&
         Objects.equals(this.dealer, user.dealer) &&
-        Objects.equals(this.role, user.role) &&
         Objects.equals(this.userPermissions, user.userPermissions) &&
         Objects.equals(this.userTeams, user.userTeams) &&
         Objects.equals(this.permissions, user.permissions);
@@ -421,7 +397,7 @@ public class User {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, userActive, dealer, role, userPermissions, userTeams, permissions);
+    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, userActive, dealer, userPermissions, userTeams, permissions);
   }
 
 
@@ -442,7 +418,6 @@ public class User {
     sb.append("    regionId: ").append(toIndentedString(regionId)).append("\n");
     sb.append("    userActive: ").append(toIndentedString(userActive)).append("\n");
     sb.append("    dealer: ").append(toIndentedString(dealer)).append("\n");
-    sb.append("    role: ").append(toIndentedString(role)).append("\n");
     sb.append("    userPermissions: ").append(toIndentedString(userPermissions)).append("\n");
     sb.append("    userTeams: ").append(toIndentedString(userTeams)).append("\n");
     sb.append("    permissions: ").append(toIndentedString(permissions)).append("\n");

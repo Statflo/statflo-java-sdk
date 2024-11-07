@@ -14,40 +14,14 @@ package com.statflo.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.v3.oas.annotations.media.Schema;
-import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 /**
- * InlineResponse200
+ * HashMap
  */
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-07T16:44:11.708118Z[Etc/UTC]")
-public class InlineResponse200 {
-  @SerializedName("token")
-  private String token = null;
-
-  public InlineResponse200 token(String token) {
-    this.token = token;
-    return this;
-  }
-
-   /**
-   * Get token
-   * @return token
-  **/
-  @Schema(description = "")
-  public String getToken() {
-    return token;
-  }
-
-  public void setToken(String token) {
-    this.token = token;
-  }
-
+public class HashMap extends HashMap<String, Object> {
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -57,22 +31,20 @@ public class InlineResponse200 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse200 inlineResponse200 = (InlineResponse200) o;
-    return Objects.equals(this.token, inlineResponse200.token);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(token);
+    return Objects.hash(super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse200 {\n");
-    
-    sb.append("    token: ").append(toIndentedString(token)).append("\n");
+    sb.append("class HashMap {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }

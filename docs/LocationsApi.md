@@ -1,6 +1,6 @@
 # LocationsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -130,7 +130,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 LocationsApi apiInstance = new LocationsApi();
-java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
+HashMap filter = new HashMap(); // HashMap | 
 String query = "query_example"; // String | 
 Integer page = 56; // Integer | 
 Integer perPage = 56; // Integer | 
@@ -148,7 +148,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**java.util.HashMap**](.md)|  | [optional]
+ **filter** | [**HashMap**](.md)|  | [optional]
  **query** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **perPage** | **Integer**|  | [optional]
@@ -188,7 +188,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 LocationsApi apiInstance = new LocationsApi();
-java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
+HashMap filter = new HashMap(); // HashMap | 
 String query = "query_example"; // String | 
 Integer page = 56; // Integer | 
 Integer perPage = 56; // Integer | 
@@ -206,7 +206,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**java.util.HashMap**](.md)|  | [optional]
+ **filter** | [**HashMap**](.md)|  | [optional]
  **query** | **String**|  | [optional]
  **page** | **Integer**|  | [optional]
  **perPage** | **Integer**|  | [optional]

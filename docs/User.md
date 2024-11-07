@@ -15,7 +15,6 @@ Name | Type | Description | Notes
 **regionId** | **Integer** |  |  [optional]
 **userActive** | **Boolean** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**role** | [**Role**](Role.md) |  |  [optional]
 **userPermissions** | [**List&lt;UserPermission&gt;**](UserPermission.md) |  |  [optional]
 **userTeams** | [**List&lt;UserTeam&gt;**](UserTeam.md) |  |  [optional]
 **permissions** | **List&lt;Object&gt;** |  | 

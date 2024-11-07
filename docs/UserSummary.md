@@ -15,4 +15,3 @@ Name | Type | Description | Notes
 **regionId** | **Integer** |  |  [optional]
 **userActive** | **Boolean** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**role** | [**Role**](Role.md) |  |  [optional]

@@ -26,8 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * TaskCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-07T16:44:11.708118Z[Etc/UTC]")
 public class TaskCreate {
   @SerializedName("name")
   private String name = null;
@@ -40,13 +39,9 @@ public class TaskCreate {
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
-    @SerializedName("To Do")
     TO_DO("To Do"),
-    @SerializedName("In Progress")
     IN_PROGRESS("In Progress"),
-    @SerializedName("Blocked")
     BLOCKED("Blocked"),
-    @SerializedName("Completed")
     COMPLETED("Completed");
 
     private String value;
@@ -62,9 +57,9 @@ public class TaskCreate {
     public String toString() {
       return String.valueOf(value);
     }
-    public static StatusEnum fromValue(String input) {
+    public static StatusEnum fromValue(String text) {
       for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(input)) {
+        if (String.valueOf(b.value).equals(text)) {
           return b;
         }
       }
@@ -73,13 +68,13 @@ public class TaskCreate {
     public static class Adapter extends TypeAdapter<StatusEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(String.valueOf(enumeration.getValue()));
+        jsonWriter.value(enumeration.getValue());
       }
 
       @Override
       public StatusEnum read(final JsonReader jsonReader) throws IOException {
         Object value = jsonReader.nextString();
-        return StatusEnum.fromValue((String)(value));
+        return StatusEnum.fromValue(String.valueOf(value));
       }
     }
   }  @SerializedName("status")

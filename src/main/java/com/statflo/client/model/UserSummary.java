@@ -20,15 +20,13 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.statflo.client.model.Dealer;
-import com.statflo.client.model.Role;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
  * UserSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-07T16:44:11.708118Z[Etc/UTC]")
 public class UserSummary {
   @SerializedName("id")
   private Integer id = null;
@@ -65,9 +63,6 @@ public class UserSummary {
 
   @SerializedName("dealer")
   private Dealer dealer = null;
-
-  @SerializedName("role")
-  private Role role = null;
 
   public UserSummary id(Integer id) {
     this.id = id;
@@ -285,24 +280,6 @@ public class UserSummary {
     this.dealer = dealer;
   }
 
-  public UserSummary role(Role role) {
-    this.role = role;
-    return this;
-  }
-
-   /**
-   * Get role
-   * @return role
-  **/
-  @Schema(description = "")
-  public Role getRole() {
-    return role;
-  }
-
-  public void setRole(Role role) {
-    this.role = role;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -324,13 +301,12 @@ public class UserSummary {
         Objects.equals(this.districtId, userSummary.districtId) &&
         Objects.equals(this.regionId, userSummary.regionId) &&
         Objects.equals(this.userActive, userSummary.userActive) &&
-        Objects.equals(this.dealer, userSummary.dealer) &&
-        Objects.equals(this.role, userSummary.role);
+        Objects.equals(this.dealer, userSummary.dealer);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, userActive, dealer, role);
+    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, userActive, dealer);
   }
 
 
@@ -351,7 +327,6 @@ public class UserSummary {
     sb.append("    regionId: ").append(toIndentedString(regionId)).append("\n");
     sb.append("    userActive: ").append(toIndentedString(userActive)).append("\n");
     sb.append("    dealer: ").append(toIndentedString(dealer)).append("\n");
-    sb.append("    role: ").append(toIndentedString(role)).append("\n");
     sb.append("}");
     return sb.toString();
   }

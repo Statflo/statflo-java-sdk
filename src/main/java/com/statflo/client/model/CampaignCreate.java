@@ -25,8 +25,7 @@ import java.io.IOException;
  * CampaignCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-07T16:44:11.708118Z[Etc/UTC]")
 public class CampaignCreate {
   @SerializedName("title")
   private String title = null;
@@ -48,13 +47,9 @@ public class CampaignCreate {
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
-    @SerializedName("add")
     ADD("add"),
-    @SerializedName("monthly")
     MONTHLY("monthly"),
-    @SerializedName("once")
     ONCE("once"),
-    @SerializedName("daily")
     DAILY("daily");
 
     private String value;
@@ -70,9 +65,9 @@ public class CampaignCreate {
     public String toString() {
       return String.valueOf(value);
     }
-    public static TypeEnum fromValue(String input) {
+    public static TypeEnum fromValue(String text) {
       for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(input)) {
+        if (String.valueOf(b.value).equals(text)) {
           return b;
         }
       }
@@ -81,13 +76,13 @@ public class CampaignCreate {
     public static class Adapter extends TypeAdapter<TypeEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final TypeEnum enumeration) throws IOException {
-        jsonWriter.value(String.valueOf(enumeration.getValue()));
+        jsonWriter.value(enumeration.getValue());
       }
 
       @Override
       public TypeEnum read(final JsonReader jsonReader) throws IOException {
         Object value = jsonReader.nextString();
-        return TypeEnum.fromValue((String)(value));
+        return TypeEnum.fromValue(String.valueOf(value));
       }
     }
   }  @SerializedName("type")
@@ -98,11 +93,8 @@ public class CampaignCreate {
    */
   @JsonAdapter(FrequencyEnum.Adapter.class)
   public enum FrequencyEnum {
-    @SerializedName("monthly")
     MONTHLY("monthly"),
-    @SerializedName("once")
     ONCE("once"),
-    @SerializedName("daily")
     DAILY("daily");
 
     private String value;
@@ -118,9 +110,9 @@ public class CampaignCreate {
     public String toString() {
       return String.valueOf(value);
     }
-    public static FrequencyEnum fromValue(String input) {
+    public static FrequencyEnum fromValue(String text) {
       for (FrequencyEnum b : FrequencyEnum.values()) {
-        if (b.value.equals(input)) {
+        if (String.valueOf(b.value).equals(text)) {
           return b;
         }
       }
@@ -129,13 +121,13 @@ public class CampaignCreate {
     public static class Adapter extends TypeAdapter<FrequencyEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final FrequencyEnum enumeration) throws IOException {
-        jsonWriter.value(String.valueOf(enumeration.getValue()));
+        jsonWriter.value(enumeration.getValue());
       }
 
       @Override
       public FrequencyEnum read(final JsonReader jsonReader) throws IOException {
         Object value = jsonReader.nextString();
-        return FrequencyEnum.fromValue((String)(value));
+        return FrequencyEnum.fromValue(String.valueOf(value));
       }
     }
   }  @SerializedName("frequency")
@@ -155,15 +147,10 @@ public class CampaignCreate {
    */
   @JsonAdapter(AccountTypeEnum.Adapter.class)
   public enum AccountTypeEnum {
-    @SerializedName("I")
     I("I"),
-    @SerializedName("D")
     D("D"),
-    @SerializedName("C")
     C("C"),
-    @SerializedName("B")
     B("B"),
-    @SerializedName("L")
     L("L");
 
     private String value;
@@ -179,9 +166,9 @@ public class CampaignCreate {
     public String toString() {
       return String.valueOf(value);
     }
-    public static AccountTypeEnum fromValue(String input) {
+    public static AccountTypeEnum fromValue(String text) {
       for (AccountTypeEnum b : AccountTypeEnum.values()) {
-        if (b.value.equals(input)) {
+        if (String.valueOf(b.value).equals(text)) {
           return b;
         }
       }
@@ -190,13 +177,13 @@ public class CampaignCreate {
     public static class Adapter extends TypeAdapter<AccountTypeEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final AccountTypeEnum enumeration) throws IOException {
-        jsonWriter.value(String.valueOf(enumeration.getValue()));
+        jsonWriter.value(enumeration.getValue());
       }
 
       @Override
       public AccountTypeEnum read(final JsonReader jsonReader) throws IOException {
         Object value = jsonReader.nextString();
-        return AccountTypeEnum.fromValue((String)(value));
+        return AccountTypeEnum.fromValue(String.valueOf(value));
       }
     }
   }  @SerializedName("accountType")

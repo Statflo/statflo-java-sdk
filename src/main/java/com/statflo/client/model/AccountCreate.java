@@ -26,8 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * AccountCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-07T16:44:11.708118Z[Etc/UTC]")
 public class AccountCreate {
   @SerializedName("id")
   private Integer id = null;
@@ -43,15 +42,10 @@ public class AccountCreate {
    */
   @JsonAdapter(AccountTypeEnum.Adapter.class)
   public enum AccountTypeEnum {
-    @SerializedName("B")
     B("B"),
-    @SerializedName("I")
     I("I"),
-    @SerializedName("L")
     L("L"),
-    @SerializedName("C")
     C("C"),
-    @SerializedName("D")
     D("D");
 
     private String value;
@@ -67,9 +61,9 @@ public class AccountCreate {
     public String toString() {
       return String.valueOf(value);
     }
-    public static AccountTypeEnum fromValue(String input) {
+    public static AccountTypeEnum fromValue(String text) {
       for (AccountTypeEnum b : AccountTypeEnum.values()) {
-        if (b.value.equals(input)) {
+        if (String.valueOf(b.value).equals(text)) {
           return b;
         }
       }
@@ -78,13 +72,13 @@ public class AccountCreate {
     public static class Adapter extends TypeAdapter<AccountTypeEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final AccountTypeEnum enumeration) throws IOException {
-        jsonWriter.value(String.valueOf(enumeration.getValue()));
+        jsonWriter.value(enumeration.getValue());
       }
 
       @Override
       public AccountTypeEnum read(final JsonReader jsonReader) throws IOException {
         Object value = jsonReader.nextString();
-        return AccountTypeEnum.fromValue((String)(value));
+        return AccountTypeEnum.fromValue(String.valueOf(value));
       }
     }
   }  @SerializedName("accountType")

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
+**dealerId** | **Integer** |  |  [optional]
 **campaignId** | **Integer** |  | 
 **campaignTerminationDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **campaignPriority** | **Integer** |  |  [optional]

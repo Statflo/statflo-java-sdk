@@ -312,7 +312,7 @@ public class AccountActionsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call accountActionSearchCall(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call accountActionSearchCall(HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -364,7 +364,7 @@ public class AccountActionsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call accountActionSearchValidateBeforeCall(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call accountActionSearchValidateBeforeCall(HashMap filter, String query, Integer page, Integer perPage, String sort, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = accountActionSearchCall(filter, query, page, perPage, sort, progressListener, progressRequestListener);
         return call;
@@ -386,7 +386,7 @@ public class AccountActionsApi {
      * @return AccountActionPaginationResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AccountActionPaginationResponse accountActionSearch(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public AccountActionPaginationResponse accountActionSearch(HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         ApiResponse<AccountActionPaginationResponse> resp = accountActionSearchWithHttpInfo(filter, query, page, perPage, sort);
         return resp.getData();
     }
@@ -402,7 +402,7 @@ public class AccountActionsApi {
      * @return ApiResponse&lt;AccountActionPaginationResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AccountActionPaginationResponse> accountActionSearchWithHttpInfo(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
+    public ApiResponse<AccountActionPaginationResponse> accountActionSearchWithHttpInfo(HashMap filter, String query, Integer page, Integer perPage, String sort) throws ApiException {
         com.squareup.okhttp.Call call = accountActionSearchValidateBeforeCall(filter, query, page, perPage, sort, null, null);
         Type localVarReturnType = new TypeToken<AccountActionPaginationResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -420,7 +420,7 @@ public class AccountActionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call accountActionSearchAsync(java.util.HashMap filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<AccountActionPaginationResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call accountActionSearchAsync(HashMap filter, String query, Integer page, Integer perPage, String sort, final ApiCallback<AccountActionPaginationResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

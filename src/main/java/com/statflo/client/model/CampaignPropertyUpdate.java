@@ -26,11 +26,13 @@ import org.threeten.bp.OffsetDateTime;
  * CampaignPropertyUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-10-09T23:48:52.683271+08:00[Asia/Shanghai]")
-
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-07T16:44:11.708118Z[Etc/UTC]")
 public class CampaignPropertyUpdate {
   @SerializedName("id")
   private Integer id = null;
+
+  @SerializedName("dealerId")
+  private Integer dealerId = null;
 
   @SerializedName("campaignId")
   private Integer campaignId = null;
@@ -55,11 +57,8 @@ public class CampaignPropertyUpdate {
    */
   @JsonAdapter(VisibilityCrmEnum.Adapter.class)
   public enum VisibilityCrmEnum {
-    @SerializedName("0")
     NUMBER_0(0),
-    @SerializedName("10")
     NUMBER_10(10),
-    @SerializedName("30")
     NUMBER_30(30);
 
     private Integer value;
@@ -75,9 +74,9 @@ public class CampaignPropertyUpdate {
     public String toString() {
       return String.valueOf(value);
     }
-    public static VisibilityCrmEnum fromValue(Integer input) {
+    public static VisibilityCrmEnum fromValue(String text) {
       for (VisibilityCrmEnum b : VisibilityCrmEnum.values()) {
-        if (b.value.equals(input)) {
+        if (String.valueOf(b.value).equals(text)) {
           return b;
         }
       }
@@ -86,13 +85,13 @@ public class CampaignPropertyUpdate {
     public static class Adapter extends TypeAdapter<VisibilityCrmEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final VisibilityCrmEnum enumeration) throws IOException {
-        jsonWriter.value(String.valueOf(enumeration.getValue()));
+        jsonWriter.value(enumeration.getValue());
       }
 
       @Override
       public VisibilityCrmEnum read(final JsonReader jsonReader) throws IOException {
         Object value = jsonReader.nextInt();
-        return VisibilityCrmEnum.fromValue((Integer)(value));
+        return VisibilityCrmEnum.fromValue(String.valueOf(value));
       }
     }
   }  @SerializedName("visibilityCrm")
@@ -103,11 +102,8 @@ public class CampaignPropertyUpdate {
    */
   @JsonAdapter(VisibilityReportEnum.Adapter.class)
   public enum VisibilityReportEnum {
-    @SerializedName("0")
     NUMBER_0(0),
-    @SerializedName("10")
     NUMBER_10(10),
-    @SerializedName("30")
     NUMBER_30(30);
 
     private Integer value;
@@ -123,9 +119,9 @@ public class CampaignPropertyUpdate {
     public String toString() {
       return String.valueOf(value);
     }
-    public static VisibilityReportEnum fromValue(Integer input) {
+    public static VisibilityReportEnum fromValue(String text) {
       for (VisibilityReportEnum b : VisibilityReportEnum.values()) {
-        if (b.value.equals(input)) {
+        if (String.valueOf(b.value).equals(text)) {
           return b;
         }
       }
@@ -134,13 +130,13 @@ public class CampaignPropertyUpdate {
     public static class Adapter extends TypeAdapter<VisibilityReportEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final VisibilityReportEnum enumeration) throws IOException {
-        jsonWriter.value(String.valueOf(enumeration.getValue()));
+        jsonWriter.value(enumeration.getValue());
       }
 
       @Override
       public VisibilityReportEnum read(final JsonReader jsonReader) throws IOException {
         Object value = jsonReader.nextInt();
-        return VisibilityReportEnum.fromValue((Integer)(value));
+        return VisibilityReportEnum.fromValue(String.valueOf(value));
       }
     }
   }  @SerializedName("visibilityReport")
@@ -162,6 +158,24 @@ public class CampaignPropertyUpdate {
 
   public void setId(Integer id) {
     this.id = id;
+  }
+
+  public CampaignPropertyUpdate dealerId(Integer dealerId) {
+    this.dealerId = dealerId;
+    return this;
+  }
+
+   /**
+   * Get dealerId
+   * @return dealerId
+  **/
+  @Schema(description = "")
+  public Integer getDealerId() {
+    return dealerId;
+  }
+
+  public void setDealerId(Integer dealerId) {
+    this.dealerId = dealerId;
   }
 
   public CampaignPropertyUpdate campaignId(Integer campaignId) {
@@ -319,6 +333,7 @@ public class CampaignPropertyUpdate {
     }
     CampaignPropertyUpdate campaignPropertyUpdate = (CampaignPropertyUpdate) o;
     return Objects.equals(this.id, campaignPropertyUpdate.id) &&
+        Objects.equals(this.dealerId, campaignPropertyUpdate.dealerId) &&
         Objects.equals(this.campaignId, campaignPropertyUpdate.campaignId) &&
         Objects.equals(this.campaignTerminationDate, campaignPropertyUpdate.campaignTerminationDate) &&
         Objects.equals(this.campaignPriority, campaignPropertyUpdate.campaignPriority) &&
@@ -331,7 +346,7 @@ public class CampaignPropertyUpdate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, campaignId, campaignTerminationDate, campaignPriority, displayPriority, carryoverUnattempted, visibility, visibilityCrm, visibilityReport);
+    return Objects.hash(id, dealerId, campaignId, campaignTerminationDate, campaignPriority, displayPriority, carryoverUnattempted, visibility, visibilityCrm, visibilityReport);
   }
 
 
@@ -341,6 +356,7 @@ public class CampaignPropertyUpdate {
     sb.append("class CampaignPropertyUpdate {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    dealerId: ").append(toIndentedString(dealerId)).append("\n");
     sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
     sb.append("    campaignTerminationDate: ").append(toIndentedString(campaignTerminationDate)).append("\n");
     sb.append("    campaignPriority: ").append(toIndentedString(campaignPriority)).append("\n");
