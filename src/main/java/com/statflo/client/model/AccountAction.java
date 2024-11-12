@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * AccountAction
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-07T16:48:07.668133Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-12T16:36:58.380507Z[Etc/UTC]")
 public class AccountAction {
   @SerializedName("description")
   private String description = null;
