@@ -27,7 +27,7 @@ import org.threeten.bp.OffsetDateTime;
  * CarrierStatistics
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-12T16:36:58.380507Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-12T18:19:09.653356Z[Etc/UTC]")
 public class CarrierStatistics {
   @SerializedName("id")
   private Integer id = null;
