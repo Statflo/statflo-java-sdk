@@ -27,7 +27,7 @@ import java.io.IOException;
  * Location
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-12T16:24:49.446464Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-12T16:36:58.380507Z[Etc/UTC]")
 public class Location {
   @SerializedName("id")
   private Integer id = null;

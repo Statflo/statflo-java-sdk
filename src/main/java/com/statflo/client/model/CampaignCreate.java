@@ -25,7 +25,7 @@ import java.io.IOException;
  * CampaignCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-12T16:24:49.446464Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-12T16:36:58.380507Z[Etc/UTC]")
 public class CampaignCreate {
   @SerializedName("title")
   private String title = null;
