@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * Task
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T18:56:35.057169Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T19:00:21.019833Z[Etc/UTC]")
 
 public class Task {
   @SerializedName("name")
