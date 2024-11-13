@@ -29,7 +29,8 @@ import java.util.List;
  * MessageTemplatePaginationResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-12T18:19:09.653356Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T16:37:34.697746Z[Etc/UTC]")
+
 public class MessageTemplatePaginationResponse {
   @SerializedName("items")
   private List<MessageTemplateSummary> items = null;
