@@ -25,7 +25,7 @@ import java.io.IOException;
  * CarrierSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T16:37:34.697746Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T18:56:35.057169Z[Etc/UTC]")
 
 public class CarrierSummary {
   @SerializedName("id")
@@ -67,7 +67,7 @@ public class CarrierSummary {
    * Get name
    * @return name
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -85,7 +85,7 @@ public class CarrierSummary {
    * Get country
    * @return country
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public String getCountry() {
     return country;
   }

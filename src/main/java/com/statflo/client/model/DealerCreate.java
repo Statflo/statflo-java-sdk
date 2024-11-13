@@ -25,7 +25,7 @@ import java.io.IOException;
  * DealerCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T16:37:34.697746Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T18:56:35.057169Z[Etc/UTC]")
 
 public class DealerCreate {
   @SerializedName("id")

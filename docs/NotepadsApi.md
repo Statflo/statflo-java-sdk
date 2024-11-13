@@ -4,13 +4,163 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**crmMessageCreate**](NotepadsApi.md#crmMessageCreate) | **POST** /v4/api/crm/message | 
+[**crmMessageGetLatest**](NotepadsApi.md#crmMessageGetLatest) | **GET** /v4/api/crm/message/notepad/latest/{accountId} | 
+[**notepadCreate**](NotepadsApi.md#notepadCreate) | **POST** /v4/api/notepad | 
 [**notepadGet**](NotepadsApi.md#notepadGet) | **GET** /v4/api/notepad/{id} | 
 [**notepadGetLatest**](NotepadsApi.md#notepadGetLatest) | **GET** /v4/api/notepad/latest/{accountId} | 
-[**notepadGetLatest_0**](NotepadsApi.md#notepadGetLatest_0) | **GET** /v4/api/crm/message/notepad/latest/{accountId} | 
 [**notepadSearch**](NotepadsApi.md#notepadSearch) | **GET** /v4/api/notepad | 
-[**notepadSearch_0**](NotepadsApi.md#notepadSearch_0) | **POST** /v4/api/notepad | 
-[**notepadSearch_1**](NotepadsApi.md#notepadSearch_1) | **POST** /v4/api/crm/message | 
 [**notepadUpdate**](NotepadsApi.md#notepadUpdate) | **PUT** /v4/api/notepad/{id} | 
+
+<a name="crmMessageCreate"></a>
+# **crmMessageCreate**
+> Notepad crmMessageCreate(body)
+
+
+
+Create a notepad.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.NotepadsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+NotepadsApi apiInstance = new NotepadsApi();
+NotepadCreate body = new NotepadCreate(); // NotepadCreate | 
+try {
+    Notepad result = apiInstance.crmMessageCreate(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling NotepadsApi#crmMessageCreate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**NotepadCreate**](NotepadCreate.md)|  | [optional]
+
+### Return type
+
+[**Notepad**](Notepad.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="crmMessageGetLatest"></a>
+# **crmMessageGetLatest**
+> Notepad crmMessageGetLatest(accountId)
+
+
+
+Retrieve the latest notepad for an account.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.NotepadsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+NotepadsApi apiInstance = new NotepadsApi();
+String accountId = "accountId_example"; // String | 
+try {
+    Notepad result = apiInstance.crmMessageGetLatest(accountId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling NotepadsApi#crmMessageGetLatest");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **String**|  |
+
+### Return type
+
+[**Notepad**](Notepad.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="notepadCreate"></a>
+# **notepadCreate**
+> Notepad notepadCreate(body)
+
+
+
+Create a notepad.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.NotepadsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+NotepadsApi apiInstance = new NotepadsApi();
+NotepadCreate body = new NotepadCreate(); // NotepadCreate | 
+try {
+    Notepad result = apiInstance.notepadCreate(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling NotepadsApi#notepadCreate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**NotepadCreate**](NotepadCreate.md)|  | [optional]
+
+### Return type
+
+[**Notepad**](Notepad.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="notepadGet"></a>
 # **notepadGet**
@@ -112,56 +262,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="notepadGetLatest_0"></a>
-# **notepadGetLatest_0**
-> Notepad notepadGetLatest_0(accountId)
-
-
-
-Retrieve the latest notepad for an account.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.NotepadsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-NotepadsApi apiInstance = new NotepadsApi();
-String accountId = "accountId_example"; // String | 
-try {
-    Notepad result = apiInstance.notepadGetLatest_0(accountId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling NotepadsApi#notepadGetLatest_0");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountId** | **String**|  |
-
-### Return type
-
-[**Notepad**](Notepad.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
 <a name="notepadSearch"></a>
 # **notepadSearch**
 > NotepadPaginationResponse notepadSearch(filter, query, page, perPage, sort)
@@ -218,106 +318,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="notepadSearch_0"></a>
-# **notepadSearch_0**
-> Notepad notepadSearch_0(body)
-
-
-
-Create a notepad.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.NotepadsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-NotepadsApi apiInstance = new NotepadsApi();
-NotepadCreate body = new NotepadCreate(); // NotepadCreate | 
-try {
-    Notepad result = apiInstance.notepadSearch_0(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling NotepadsApi#notepadSearch_0");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**NotepadCreate**](NotepadCreate.md)|  | [optional]
-
-### Return type
-
-[**Notepad**](Notepad.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="notepadSearch_1"></a>
-# **notepadSearch_1**
-> Notepad notepadSearch_1(body)
-
-
-
-Create a notepad.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.NotepadsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-NotepadsApi apiInstance = new NotepadsApi();
-NotepadCreate body = new NotepadCreate(); // NotepadCreate | 
-try {
-    Notepad result = apiInstance.notepadSearch_1(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling NotepadsApi#notepadSearch_1");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**NotepadCreate**](NotepadCreate.md)|  | [optional]
-
-### Return type
-
-[**Notepad**](Notepad.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="notepadUpdate"></a>
