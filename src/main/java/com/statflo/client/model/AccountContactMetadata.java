@@ -27,7 +27,7 @@ import java.io.IOException;
  * AccountContactMetadata
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-05T20:48:31.566453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-05T21:12:18.799388Z[Etc/UTC]")
 
 public class AccountContactMetadata {
   @SerializedName("id")
