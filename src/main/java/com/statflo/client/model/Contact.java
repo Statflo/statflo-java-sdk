@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Contact
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T19:00:21.019833Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-05T20:48:31.566453Z[Etc/UTC]")
 
 public class Contact {
   @SerializedName("id")
@@ -299,7 +299,7 @@ public class Contact {
    * Get phoneNumber
    * @return phoneNumber
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public String getPhoneNumber() {
     return phoneNumber;
   }

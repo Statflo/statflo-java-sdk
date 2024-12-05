@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * CampaignMetadataSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-11-13T19:00:21.019833Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-05T20:48:31.566453Z[Etc/UTC]")
 
 public class CampaignMetadataSummary {
   @SerializedName("id")
