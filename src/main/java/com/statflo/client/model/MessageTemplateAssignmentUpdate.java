@@ -26,7 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * MessageTemplateAssignmentUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-05T21:12:18.799388Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-06T15:36:46.949215Z[Etc/UTC]")
 
 public class MessageTemplateAssignmentUpdate {
   @SerializedName("id")
