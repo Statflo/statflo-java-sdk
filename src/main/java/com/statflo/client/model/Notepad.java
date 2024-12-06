@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * Notepad
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-06T15:36:46.949215Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-06T16:47:03.436364Z[Etc/UTC]")
 
 public class Notepad {
   @SerializedName("message")
