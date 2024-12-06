@@ -6,6 +6,7 @@ on:
       release_version:
         type: string
         required: true
+        description: "Release version (e.g., VX.X.X)"
   repository_dispatch:
       types: [release-created]
 
@@ -20,6 +21,17 @@ jobs:
       - name: Set release version from webapp's release
         if: github.event.client_payload.release_version != ''
         run: echo "RELEASE_VERSION=${{ github.event.client_payload.release_version }}" >> $GITHUB_ENV
+
+      - name: Validate and extract Release Version
+        run: |
+          version="${{ env.RELEASE_VERSION }}"
+
+          if [[ "$version" =~ (^|[^a-zA-Z0-9])V?[0-9]+\.[0-9]+\.[0-9]+($|[^a-zA-Z0-9]) ]]; then
+            echo "RELEASE_VERSION=$(echo "$version" | grep -oE 'V?[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_ENV
+          else
+            echo "Error: Input does not contain a valid version format (X.X.X or VX.X.X)."
+            exit 1
+          fi
 
       - uses: actions/checkout@v3
         with:
