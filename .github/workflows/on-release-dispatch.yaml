@@ -24,12 +24,12 @@ jobs:
 
       - name: Validate and extract Release Version
         run: |
-          version="${{ env.RELEASE_VERSION }}"
-
-          if [[ "$version" =~ (^|[^a-zA-Z0-9])V?[0-9]+\.[0-9]+\.[0-9]+($|[^a-zA-Z0-9]) ]]; then
-            echo "RELEASE_VERSION=$(echo "$version" | grep -oE 'V?[0-9]+\.[0-9]+\.[0-9]+')" >> $GITHUB_ENV
+          clean_version=$(echo "${{ env.RELEASE_VERSION }}" | grep -oE 'V?[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+)?' || true)
+      
+          if [ -n "$clean_version" ]; then
+            echo "RELEASE_VERSION=$clean_version" >> $GITHUB_ENV
           else
-            echo "Error: Input does not contain a valid version format (X.X.X or VX.X.X)."
+            echo "Error: Input does not contain a valid version format (X.X.X, VX.X.X, or VX.X.X-suffix)."
             exit 1
           fi
 
