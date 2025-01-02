@@ -27,7 +27,7 @@ import java.util.List;
  * UserCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-06T16:47:03.436364Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-02T20:03:55.393689Z[Etc/UTC]")
 
 public class UserCreate {
   @SerializedName("id")
@@ -46,7 +46,7 @@ public class UserCreate {
   private String email = null;
 
   @SerializedName("language")
-  private String language = null;
+  private String language = "en";
 
   @SerializedName("salesRepId")
   private String salesRepId = null;

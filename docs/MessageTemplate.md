@@ -14,3 +14,4 @@ Name | Type | Description | Notes
 **priority** | **Integer** |  |  [optional]
 **dateDeleted** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **messageTemplateAssignments** | [**List&lt;MessageTemplateAssignment&gt;**](MessageTemplateAssignment.md) |  |  [optional]
+**dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

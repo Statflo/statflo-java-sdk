@@ -26,7 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * MessageTemplateUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-06T16:47:03.436364Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-02T20:03:55.393689Z[Etc/UTC]")
 
 public class MessageTemplateUpdate {
   @SerializedName("id")
@@ -108,6 +108,9 @@ public class MessageTemplateUpdate {
 
   @SerializedName("dateDeleted")
   private OffsetDateTime dateDeleted = null;
+
+  @SerializedName("dateCreated")
+  private OffsetDateTime dateCreated = null;
 
   public MessageTemplateUpdate id(String id) {
     this.id = id;
@@ -235,6 +238,24 @@ public class MessageTemplateUpdate {
     this.dateDeleted = dateDeleted;
   }
 
+  public MessageTemplateUpdate dateCreated(OffsetDateTime dateCreated) {
+    this.dateCreated = dateCreated;
+    return this;
+  }
+
+   /**
+   * Get dateCreated
+   * @return dateCreated
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateCreated() {
+    return dateCreated;
+  }
+
+  public void setDateCreated(OffsetDateTime dateCreated) {
+    this.dateCreated = dateCreated;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -251,12 +272,13 @@ public class MessageTemplateUpdate {
         Objects.equals(this.metadata, messageTemplateUpdate.metadata) &&
         Objects.equals(this.template, messageTemplateUpdate.template) &&
         Objects.equals(this.priority, messageTemplateUpdate.priority) &&
-        Objects.equals(this.dateDeleted, messageTemplateUpdate.dateDeleted);
+        Objects.equals(this.dateDeleted, messageTemplateUpdate.dateDeleted) &&
+        Objects.equals(this.dateCreated, messageTemplateUpdate.dateCreated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, templateName, language, metadata, template, priority, dateDeleted);
+    return Objects.hash(id, templateName, language, metadata, template, priority, dateDeleted, dateCreated);
   }
 
 
@@ -272,6 +294,7 @@ public class MessageTemplateUpdate {
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    dateDeleted: ").append(toIndentedString(dateDeleted)).append("\n");
+    sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("}");
     return sb.toString();
   }

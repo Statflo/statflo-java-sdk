@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **template** | **Object** |  | 
 **priority** | **Integer** |  |  [optional]
 **dateDeleted** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 
 <a name="LanguageEnum"></a>
 ## Enum: LanguageEnum
