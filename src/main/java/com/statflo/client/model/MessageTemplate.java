@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * MessageTemplate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-02T20:03:55.393689Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-14T14:53:34.839132Z[Etc/UTC]")
 
 public class MessageTemplate {
   @SerializedName("id")
@@ -61,9 +61,6 @@ public class MessageTemplate {
 
   @SerializedName("priority")
   private Integer priority = 100;
-
-  @SerializedName("dateDeleted")
-  private OffsetDateTime dateDeleted = null;
 
   @SerializedName("messageTemplateAssignments")
   private List<MessageTemplateAssignment> messageTemplateAssignments = null;
@@ -233,24 +230,6 @@ public class MessageTemplate {
     this.priority = priority;
   }
 
-  public MessageTemplate dateDeleted(OffsetDateTime dateDeleted) {
-    this.dateDeleted = dateDeleted;
-    return this;
-  }
-
-   /**
-   * Get dateDeleted
-   * @return dateDeleted
-  **/
-  @Schema(description = "")
-  public OffsetDateTime getDateDeleted() {
-    return dateDeleted;
-  }
-
-  public void setDateDeleted(OffsetDateTime dateDeleted) {
-    this.dateDeleted = dateDeleted;
-  }
-
   public MessageTemplate messageTemplateAssignments(List<MessageTemplateAssignment> messageTemplateAssignments) {
     this.messageTemplateAssignments = messageTemplateAssignments;
     return this;
@@ -286,7 +265,7 @@ public class MessageTemplate {
    * Get dateCreated
    * @return dateCreated
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -314,14 +293,13 @@ public class MessageTemplate {
         Objects.equals(this.template, messageTemplate.template) &&
         Objects.equals(this.campaign, messageTemplate.campaign) &&
         Objects.equals(this.priority, messageTemplate.priority) &&
-        Objects.equals(this.dateDeleted, messageTemplate.dateDeleted) &&
         Objects.equals(this.messageTemplateAssignments, messageTemplate.messageTemplateAssignments) &&
         Objects.equals(this.dateCreated, messageTemplate.dateCreated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, carrier, dealer, templateName, language, metadata, template, campaign, priority, dateDeleted, messageTemplateAssignments, dateCreated);
+    return Objects.hash(id, carrier, dealer, templateName, language, metadata, template, campaign, priority, messageTemplateAssignments, dateCreated);
   }
 
 
@@ -339,7 +317,6 @@ public class MessageTemplate {
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    campaign: ").append(toIndentedString(campaign)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
-    sb.append("    dateDeleted: ").append(toIndentedString(dateDeleted)).append("\n");
     sb.append("    messageTemplateAssignments: ").append(toIndentedString(messageTemplateAssignments)).append("\n");
     sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("}");
