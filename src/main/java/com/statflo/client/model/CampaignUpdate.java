@@ -25,15 +25,9 @@ import java.io.IOException;
  * CampaignUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-14T14:53:34.839132Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-31T17:10:49.902167468Z[Etc/UTC]")
 
 public class CampaignUpdate {
-  @SerializedName("title")
-  private String title = null;
-
-  @SerializedName("description")
-  private String description = null;
-
   @SerializedName("id")
   private Integer id = null;
 
@@ -225,42 +219,6 @@ public class CampaignUpdate {
 
   @SerializedName("source")
   private String source = "api";
-
-  public CampaignUpdate title(String title) {
-    this.title = title;
-    return this;
-  }
-
-   /**
-   * Get title
-   * @return title
-  **/
-  @Schema(description = "")
-  public String getTitle() {
-    return title;
-  }
-
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
-  public CampaignUpdate description(String description) {
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * Get description
-   * @return description
-  **/
-  @Schema(description = "")
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
 
   public CampaignUpdate id(Integer id) {
     this.id = id;
@@ -578,9 +536,7 @@ public class CampaignUpdate {
       return false;
     }
     CampaignUpdate campaignUpdate = (CampaignUpdate) o;
-    return Objects.equals(this.title, campaignUpdate.title) &&
-        Objects.equals(this.description, campaignUpdate.description) &&
-        Objects.equals(this.id, campaignUpdate.id) &&
+    return Objects.equals(this.id, campaignUpdate.id) &&
         Objects.equals(this.campaignNickname, campaignUpdate.campaignNickname) &&
         Objects.equals(this.totangoName, campaignUpdate.totangoName) &&
         Objects.equals(this.type, campaignUpdate.type) &&
@@ -601,7 +557,7 @@ public class CampaignUpdate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, description, id, campaignNickname, totangoName, type, frequency, lifetime, method, carrierAllowed, accountType, dncScrub, reportingPeriodType, reportingPeriodBefore, reportingPeriodAfter, transactionEarliest, transactionLatest, productTypes, source);
+    return Objects.hash(id, campaignNickname, totangoName, type, frequency, lifetime, method, carrierAllowed, accountType, dncScrub, reportingPeriodType, reportingPeriodBefore, reportingPeriodAfter, transactionEarliest, transactionLatest, productTypes, source);
   }
 
 
@@ -610,8 +566,6 @@ public class CampaignUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class CampaignUpdate {\n");
     
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    campaignNickname: ").append(toIndentedString(campaignNickname)).append("\n");
     sb.append("    totangoName: ").append(toIndentedString(totangoName)).append("\n");

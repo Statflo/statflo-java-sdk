@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.statflo.client.model.Carrier;
-import com.statflo.client.model.DealerFeature;
+import com.statflo.client.model.DealerAllowedFeature;
 import com.statflo.client.model.Permission;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -30,7 +30,7 @@ import java.util.List;
  * Dealer
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-14T14:53:34.839132Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-31T17:10:49.902167468Z[Etc/UTC]")
 
 public class Dealer {
   @SerializedName("id")
@@ -49,7 +49,7 @@ public class Dealer {
   private List<Permission> permissions = null;
 
   @SerializedName("dealerFeatures")
-  private List<DealerFeature> dealerFeatures = null;
+  private List<DealerAllowedFeature> dealerFeatures = null;
 
   public Dealer id(Integer id) {
     this.id = id;
@@ -149,14 +149,14 @@ public class Dealer {
     this.permissions = permissions;
   }
 
-  public Dealer dealerFeatures(List<DealerFeature> dealerFeatures) {
+  public Dealer dealerFeatures(List<DealerAllowedFeature> dealerFeatures) {
     this.dealerFeatures = dealerFeatures;
     return this;
   }
 
-  public Dealer addDealerFeaturesItem(DealerFeature dealerFeaturesItem) {
+  public Dealer addDealerFeaturesItem(DealerAllowedFeature dealerFeaturesItem) {
     if (this.dealerFeatures == null) {
-      this.dealerFeatures = new ArrayList<DealerFeature>();
+      this.dealerFeatures = new ArrayList<DealerAllowedFeature>();
     }
     this.dealerFeatures.add(dealerFeaturesItem);
     return this;
@@ -167,11 +167,11 @@ public class Dealer {
    * @return dealerFeatures
   **/
   @Schema(description = "")
-  public List<DealerFeature> getDealerFeatures() {
+  public List<DealerAllowedFeature> getDealerFeatures() {
     return dealerFeatures;
   }
 
-  public void setDealerFeatures(List<DealerFeature> dealerFeatures) {
+  public void setDealerFeatures(List<DealerAllowedFeature> dealerFeatures) {
     this.dealerFeatures = dealerFeatures;
   }
 

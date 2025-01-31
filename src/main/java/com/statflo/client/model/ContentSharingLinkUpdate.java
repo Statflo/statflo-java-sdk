@@ -26,7 +26,7 @@ import org.threeten.bp.OffsetDateTime;
  * ContentSharingLinkUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-14T14:53:34.839132Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-31T17:10:49.902167468Z[Etc/UTC]")
 
 public class ContentSharingLinkUpdate {
   @SerializedName("id")
@@ -105,6 +105,9 @@ public class ContentSharingLinkUpdate {
 
   @SerializedName("url")
   private String url = null;
+
+  @SerializedName("image")
+  private String image = null;
 
   @SerializedName("status")
   private Boolean status = null;
@@ -199,7 +202,7 @@ public class ContentSharingLinkUpdate {
    * Get description
    * @return description
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public String getDescription() {
     return description;
   }
@@ -224,6 +227,24 @@ public class ContentSharingLinkUpdate {
 
   public void setUrl(String url) {
     this.url = url;
+  }
+
+  public ContentSharingLinkUpdate image(String image) {
+    this.image = image;
+    return this;
+  }
+
+   /**
+   * Get image
+   * @return image
+  **/
+  @Schema(description = "")
+  public String getImage() {
+    return image;
+  }
+
+  public void setImage(String image) {
+    this.image = image;
   }
 
   public ContentSharingLinkUpdate status(Boolean status) {
@@ -289,7 +310,7 @@ public class ContentSharingLinkUpdate {
    * Get updatedAt
    * @return updatedAt
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public OffsetDateTime getUpdatedAt() {
     return updatedAt;
   }
@@ -314,6 +335,7 @@ public class ContentSharingLinkUpdate {
         Objects.equals(this.name, contentSharingLinkUpdate.name) &&
         Objects.equals(this.description, contentSharingLinkUpdate.description) &&
         Objects.equals(this.url, contentSharingLinkUpdate.url) &&
+        Objects.equals(this.image, contentSharingLinkUpdate.image) &&
         Objects.equals(this.status, contentSharingLinkUpdate.status) &&
         Objects.equals(this.displayOrder, contentSharingLinkUpdate.displayOrder) &&
         Objects.equals(this.createdAt, contentSharingLinkUpdate.createdAt) &&
@@ -322,7 +344,7 @@ public class ContentSharingLinkUpdate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, categoryId, language, name, description, url, status, displayOrder, createdAt, updatedAt);
+    return Objects.hash(id, categoryId, language, name, description, url, image, status, displayOrder, createdAt, updatedAt);
   }
 
 
@@ -337,6 +359,7 @@ public class ContentSharingLinkUpdate {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    image: ").append(toIndentedString(image)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");

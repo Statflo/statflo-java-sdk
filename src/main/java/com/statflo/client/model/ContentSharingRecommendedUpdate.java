@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * ContentSharingRecommendedUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-14T14:53:34.839132Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-31T17:10:49.902167468Z[Etc/UTC]")
 
 public class ContentSharingRecommendedUpdate {
   @SerializedName("id")
@@ -169,7 +169,7 @@ public class ContentSharingRecommendedUpdate {
    * Get updatedAt
    * @return updatedAt
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public OffsetDateTime getUpdatedAt() {
     return updatedAt;
   }

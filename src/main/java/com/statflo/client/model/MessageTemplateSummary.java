@@ -22,17 +22,14 @@ import com.google.gson.stream.JsonWriter;
 import com.statflo.client.model.CampaignSummary;
 import com.statflo.client.model.Carrier;
 import com.statflo.client.model.Dealer;
-import com.statflo.client.model.MessageTemplateAssignment;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 /**
  * MessageTemplateSummary
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-14T14:53:34.839132Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-31T17:10:49.902167468Z[Etc/UTC]")
 
 public class MessageTemplateSummary {
   @SerializedName("id")
@@ -61,9 +58,6 @@ public class MessageTemplateSummary {
 
   @SerializedName("priority")
   private Integer priority = 100;
-
-  @SerializedName("messageTemplateAssignments")
-  private List<MessageTemplateAssignment> messageTemplateAssignments = null;
 
   @SerializedName("dateCreated")
   private OffsetDateTime dateCreated = null;
@@ -230,32 +224,6 @@ public class MessageTemplateSummary {
     this.priority = priority;
   }
 
-  public MessageTemplateSummary messageTemplateAssignments(List<MessageTemplateAssignment> messageTemplateAssignments) {
-    this.messageTemplateAssignments = messageTemplateAssignments;
-    return this;
-  }
-
-  public MessageTemplateSummary addMessageTemplateAssignmentsItem(MessageTemplateAssignment messageTemplateAssignmentsItem) {
-    if (this.messageTemplateAssignments == null) {
-      this.messageTemplateAssignments = new ArrayList<MessageTemplateAssignment>();
-    }
-    this.messageTemplateAssignments.add(messageTemplateAssignmentsItem);
-    return this;
-  }
-
-   /**
-   * Get messageTemplateAssignments
-   * @return messageTemplateAssignments
-  **/
-  @Schema(description = "")
-  public List<MessageTemplateAssignment> getMessageTemplateAssignments() {
-    return messageTemplateAssignments;
-  }
-
-  public void setMessageTemplateAssignments(List<MessageTemplateAssignment> messageTemplateAssignments) {
-    this.messageTemplateAssignments = messageTemplateAssignments;
-  }
-
   public MessageTemplateSummary dateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
@@ -293,13 +261,12 @@ public class MessageTemplateSummary {
         Objects.equals(this.template, messageTemplateSummary.template) &&
         Objects.equals(this.campaign, messageTemplateSummary.campaign) &&
         Objects.equals(this.priority, messageTemplateSummary.priority) &&
-        Objects.equals(this.messageTemplateAssignments, messageTemplateSummary.messageTemplateAssignments) &&
         Objects.equals(this.dateCreated, messageTemplateSummary.dateCreated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, carrier, dealer, templateName, language, metadata, template, campaign, priority, messageTemplateAssignments, dateCreated);
+    return Objects.hash(id, carrier, dealer, templateName, language, metadata, template, campaign, priority, dateCreated);
   }
 
 
@@ -317,7 +284,6 @@ public class MessageTemplateSummary {
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    campaign: ").append(toIndentedString(campaign)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
-    sb.append("    messageTemplateAssignments: ").append(toIndentedString(messageTemplateAssignments)).append("\n");
     sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("}");
     return sb.toString();

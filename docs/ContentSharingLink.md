@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **description** | **String** |  |  [optional]
 **url** | **String** |  | 
+**image** | **String** |  |  [optional]
 **status** | **Boolean** |  | 
 **displayOrder** | **Integer** |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

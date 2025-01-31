@@ -7,12 +7,13 @@ Name | Type | Description | Notes
 **categoryId** | **Integer** |  | 
 **language** | [**LanguageEnum**](#LanguageEnum) |  | 
 **name** | **String** |  | 
-**description** | **String** |  | 
+**description** | **String** |  |  [optional]
 **url** | **String** |  | 
+**image** | **String** |  |  [optional]
 **status** | **Boolean** |  | 
 **displayOrder** | **Integer** |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 
 <a name="LanguageEnum"></a>
 ## Enum: LanguageEnum

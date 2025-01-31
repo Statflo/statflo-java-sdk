@@ -12,5 +12,4 @@ Name | Type | Description | Notes
 **template** | **Object** |  |  [optional]
 **campaign** | [**CampaignSummary**](CampaignSummary.md) |  |  [optional]
 **priority** | **Integer** |  |  [optional]
-**messageTemplateAssignments** | [**List&lt;MessageTemplateAssignment&gt;**](MessageTemplateAssignment.md) |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

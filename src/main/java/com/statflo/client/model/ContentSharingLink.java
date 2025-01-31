@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
  * ContentSharingLink
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-14T14:53:34.839132Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-31T17:10:49.902167468Z[Etc/UTC]")
 
 public class ContentSharingLink {
   @SerializedName("id")
@@ -51,6 +51,9 @@ public class ContentSharingLink {
 
   @SerializedName("url")
   private String url = null;
+
+  @SerializedName("image")
+  private String image = null;
 
   @SerializedName("status")
   private Boolean status = null;
@@ -190,6 +193,24 @@ public class ContentSharingLink {
     this.url = url;
   }
 
+  public ContentSharingLink image(String image) {
+    this.image = image;
+    return this;
+  }
+
+   /**
+   * Get image
+   * @return image
+  **/
+  @Schema(description = "")
+  public String getImage() {
+    return image;
+  }
+
+  public void setImage(String image) {
+    this.image = image;
+  }
+
   public ContentSharingLink status(Boolean status) {
     this.status = status;
     return this;
@@ -253,7 +274,7 @@ public class ContentSharingLink {
    * Get updatedAt
    * @return updatedAt
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public OffsetDateTime getUpdatedAt() {
     return updatedAt;
   }
@@ -279,6 +300,7 @@ public class ContentSharingLink {
         Objects.equals(this.name, contentSharingLink.name) &&
         Objects.equals(this.description, contentSharingLink.description) &&
         Objects.equals(this.url, contentSharingLink.url) &&
+        Objects.equals(this.image, contentSharingLink.image) &&
         Objects.equals(this.status, contentSharingLink.status) &&
         Objects.equals(this.displayOrder, contentSharingLink.displayOrder) &&
         Objects.equals(this.createdAt, contentSharingLink.createdAt) &&
@@ -287,7 +309,7 @@ public class ContentSharingLink {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, dealer, category, language, name, description, url, status, displayOrder, createdAt, updatedAt);
+    return Objects.hash(id, dealer, category, language, name, description, url, image, status, displayOrder, createdAt, updatedAt);
   }
 
 
@@ -303,6 +325,7 @@ public class ContentSharingLink {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    image: ").append(toIndentedString(image)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");

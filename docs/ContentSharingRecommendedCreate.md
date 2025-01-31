@@ -9,4 +9,4 @@ Name | Type | Description | Notes
 **link** | [**ContentSharingLink**](ContentSharingLink.md) |  |  [optional]
 **contentId** | **Integer** |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

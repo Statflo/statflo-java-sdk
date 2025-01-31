@@ -25,7 +25,7 @@ import java.io.IOException;
  * Feature
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-14T14:53:34.839132Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-01-31T17:10:49.902167468Z[Etc/UTC]")
 
 public class Feature {
   @SerializedName("id")
@@ -36,6 +36,9 @@ public class Feature {
 
   @SerializedName("category")
   private String category = null;
+
+  @SerializedName("defaultPackage")
+  private Integer defaultPackage = null;
 
   public Feature id(Integer id) {
     this.id = id;
@@ -91,6 +94,24 @@ public class Feature {
     this.category = category;
   }
 
+  public Feature defaultPackage(Integer defaultPackage) {
+    this.defaultPackage = defaultPackage;
+    return this;
+  }
+
+   /**
+   * Get defaultPackage
+   * @return defaultPackage
+  **/
+  @Schema(description = "")
+  public Integer getDefaultPackage() {
+    return defaultPackage;
+  }
+
+  public void setDefaultPackage(Integer defaultPackage) {
+    this.defaultPackage = defaultPackage;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -103,12 +124,13 @@ public class Feature {
     Feature feature = (Feature) o;
     return Objects.equals(this.id, feature.id) &&
         Objects.equals(this.name, feature.name) &&
-        Objects.equals(this.category, feature.category);
+        Objects.equals(this.category, feature.category) &&
+        Objects.equals(this.defaultPackage, feature.defaultPackage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, category);
+    return Objects.hash(id, name, category, defaultPackage);
   }
 
 
@@ -120,6 +142,7 @@ public class Feature {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
+    sb.append("    defaultPackage: ").append(toIndentedString(defaultPackage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
