@@ -82,21 +82,6 @@ public class ContactsApiTest {
     /**
      * 
      *
-     * Retrieve a contact.
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void contactGet_0Test() throws Exception {
-        String id = null;
-        Contact response = api.contactGet_0(id);
-
-        // TODO: test validations
-    }
-    /**
-     * 
-     *
      * Search contacts.
      *
      * @throws Exception
@@ -110,25 +95,6 @@ public class ContactsApiTest {
         Integer perPage = null;
         String sort = null;
         ContactPaginationResponse response = api.contactSearch(filter, query, page, perPage, sort);
-
-        // TODO: test validations
-    }
-    /**
-     * 
-     *
-     * Search contacts.
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void contactSearch_0Test() throws Exception {
-        java.util.HashMap filter = null;
-        String query = null;
-        Integer page = null;
-        Integer perPage = null;
-        String sort = null;
-        ContactPaginationResponse response = api.contactSearch_0(filter, query, page, perPage, sort);
 
         // TODO: test validations
     }

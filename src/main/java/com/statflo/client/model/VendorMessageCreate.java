@@ -26,14 +26,14 @@ import org.threeten.bp.OffsetDateTime;
  * VendorMessageCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-24T16:11:33.082930-05:00[America/Toronto]")
 
 public class VendorMessageCreate {
   @SerializedName("id")
   private Integer id = null;
 
   @SerializedName("payload")
-  private OneOfVendorMessageCreatePayload payload = null;
+  private Object payload = null;
 
   @SerializedName("action")
   private String action = null;
@@ -59,7 +59,7 @@ public class VendorMessageCreate {
     this.id = id;
   }
 
-  public VendorMessageCreate payload(OneOfVendorMessageCreatePayload payload) {
+  public VendorMessageCreate payload(Object payload) {
     this.payload = payload;
     return this;
   }
@@ -69,11 +69,11 @@ public class VendorMessageCreate {
    * @return payload
   **/
   @Schema(required = true, description = "")
-  public OneOfVendorMessageCreatePayload getPayload() {
+  public Object getPayload() {
     return payload;
   }
 
-  public void setPayload(OneOfVendorMessageCreatePayload payload) {
+  public void setPayload(Object payload) {
     this.payload = payload;
   }
 

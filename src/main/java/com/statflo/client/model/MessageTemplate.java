@@ -23,6 +23,7 @@ import com.statflo.client.model.CampaignSummary;
 import com.statflo.client.model.Carrier;
 import com.statflo.client.model.Dealer;
 import com.statflo.client.model.MessageTemplateAssignment;
+import com.statflo.client.model.MessageTemplateCategory;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * MessageTemplate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-24T16:11:33.082930-05:00[America/Toronto]")
 
 public class MessageTemplate {
   @SerializedName("id")
@@ -64,6 +65,9 @@ public class MessageTemplate {
 
   @SerializedName("messageTemplateAssignments")
   private List<MessageTemplateAssignment> messageTemplateAssignments = null;
+
+  @SerializedName("categories")
+  private List<MessageTemplateCategory> categories = null;
 
   @SerializedName("dateCreated")
   private OffsetDateTime dateCreated = null;
@@ -256,6 +260,32 @@ public class MessageTemplate {
     this.messageTemplateAssignments = messageTemplateAssignments;
   }
 
+  public MessageTemplate categories(List<MessageTemplateCategory> categories) {
+    this.categories = categories;
+    return this;
+  }
+
+  public MessageTemplate addCategoriesItem(MessageTemplateCategory categoriesItem) {
+    if (this.categories == null) {
+      this.categories = new ArrayList<MessageTemplateCategory>();
+    }
+    this.categories.add(categoriesItem);
+    return this;
+  }
+
+   /**
+   * Get categories
+   * @return categories
+  **/
+  @Schema(description = "")
+  public List<MessageTemplateCategory> getCategories() {
+    return categories;
+  }
+
+  public void setCategories(List<MessageTemplateCategory> categories) {
+    this.categories = categories;
+  }
+
   public MessageTemplate dateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
@@ -294,12 +324,13 @@ public class MessageTemplate {
         Objects.equals(this.campaign, messageTemplate.campaign) &&
         Objects.equals(this.priority, messageTemplate.priority) &&
         Objects.equals(this.messageTemplateAssignments, messageTemplate.messageTemplateAssignments) &&
+        Objects.equals(this.categories, messageTemplate.categories) &&
         Objects.equals(this.dateCreated, messageTemplate.dateCreated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, carrier, dealer, templateName, language, metadata, template, campaign, priority, messageTemplateAssignments, dateCreated);
+    return Objects.hash(id, carrier, dealer, templateName, language, metadata, template, campaign, priority, messageTemplateAssignments, categories, dateCreated);
   }
 
 
@@ -318,6 +349,7 @@ public class MessageTemplate {
     sb.append("    campaign: ").append(toIndentedString(campaign)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    messageTemplateAssignments: ").append(toIndentedString(messageTemplateAssignments)).append("\n");
+    sb.append("    categories: ").append(toIndentedString(categories)).append("\n");
     sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("}");
     return sb.toString();

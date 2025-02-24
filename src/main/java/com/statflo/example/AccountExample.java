@@ -14,12 +14,15 @@ public class AccountExample {
         apiClient.setBasePath(Config.HOST);
         apiClient.setAccessToken(Config.accessToken);
 
-        HashMap<String, String> filter = new HashMap<>();
-        filter.put("accountId", "6075");
+        try {
+            HashMap<String, String> filter = new HashMap<>();
+            filter.put("accountId", "6075");
 
-        AccountsApi accountsApi = new AccountsApi(apiClient);
-        AccountPaginationResponse accountPaginationResponse =
-                accountsApi.accountSearch(filter, "", 1, 1, "");
-        System.out.println(accountPaginationResponse.getItems());
+            AccountsApi accountsApi = new AccountsApi(apiClient);
+            AccountPaginationResponse response = accountsApi.accountSearch(filter, "", 1, 1, "");
+//            System.out.println(response.getItems());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

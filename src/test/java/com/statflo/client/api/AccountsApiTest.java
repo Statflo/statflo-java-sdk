@@ -15,6 +15,7 @@ package com.statflo.client.api;
 import com.statflo.client.model.Account;
 import com.statflo.client.model.AccountCreate;
 import com.statflo.client.model.AccountPaginationResponse;
+import com.statflo.client.model.AccountUpdate;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -108,7 +109,7 @@ public class AccountsApiTest {
     @Test
     public void accountUpdateTest() throws Exception {
         String id = null;
-        Account body = null;
+        AccountUpdate body = null;
         Account response = api.accountUpdate(id, body);
 
         // TODO: test validations

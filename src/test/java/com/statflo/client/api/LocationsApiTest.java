@@ -50,21 +50,6 @@ public class LocationsApiTest {
     /**
      * 
      *
-     * Retrieve a location.
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void locationGet_0Test() throws Exception {
-        String id = null;
-        Location response = api.locationGet_0(id);
-
-        // TODO: test validations
-    }
-    /**
-     * 
-     *
      * Search locations.
      *
      * @throws Exception
@@ -78,25 +63,6 @@ public class LocationsApiTest {
         Integer perPage = null;
         String sort = null;
         LocationPaginationResponse response = api.locationSearch(filter, query, page, perPage, sort);
-
-        // TODO: test validations
-    }
-    /**
-     * 
-     *
-     * Search locations.
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void locationSearch_0Test() throws Exception {
-        java.util.HashMap filter = null;
-        String query = null;
-        Integer page = null;
-        Integer perPage = null;
-        String sort = null;
-        LocationPaginationResponse response = api.locationSearch_0(filter, query, page, perPage, sort);
 
         // TODO: test validations
     }

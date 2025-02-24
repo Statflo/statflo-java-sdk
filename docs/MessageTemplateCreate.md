@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **metadata** | **Object** |  |  [optional]
 **template** | **Object** |  | 
 **priority** | **Integer** |  |  [optional]
+**categoryIds** | **List&lt;Integer&gt;** |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 
 <a name="LanguageEnum"></a>

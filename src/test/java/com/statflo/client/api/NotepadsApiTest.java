@@ -37,6 +37,21 @@ public class NotepadsApiTest {
     /**
      * 
      *
+     * Create a notepad.
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void notepadCreateTest() throws Exception {
+        NotepadCreate body = null;
+        Notepad response = api.notepadCreate(body);
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
      * Retrieve a notepad.
      *
      * @throws Exception
@@ -46,36 +61,6 @@ public class NotepadsApiTest {
     public void notepadGetTest() throws Exception {
         String id = null;
         Notepad response = api.notepadGet(id);
-
-        // TODO: test validations
-    }
-    /**
-     * 
-     *
-     * Retrieve the latest notepad for an account.
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void notepadGetLatestTest() throws Exception {
-        String accountId = null;
-        Notepad response = api.notepadGetLatest(accountId);
-
-        // TODO: test validations
-    }
-    /**
-     * 
-     *
-     * Retrieve the latest notepad for an account.
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void notepadGetLatest_0Test() throws Exception {
-        String accountId = null;
-        Notepad response = api.notepadGetLatest_0(accountId);
 
         // TODO: test validations
     }
@@ -95,36 +80,6 @@ public class NotepadsApiTest {
         Integer perPage = null;
         String sort = null;
         NotepadPaginationResponse response = api.notepadSearch(filter, query, page, perPage, sort);
-
-        // TODO: test validations
-    }
-    /**
-     * 
-     *
-     * Create a notepad.
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void notepadSearch_0Test() throws Exception {
-        NotepadCreate body = null;
-        Notepad response = api.notepadSearch_0(body);
-
-        // TODO: test validations
-    }
-    /**
-     * 
-     *
-     * Create a notepad.
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void notepadSearch_1Test() throws Exception {
-        NotepadCreate body = null;
-        Notepad response = api.notepadSearch_1(body);
 
         // TODO: test validations
     }
