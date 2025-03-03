@@ -7,12 +7,12 @@ Name | Type | Description | Notes
 **accountName** | **String** |  |  [optional]
 **accountId** | **String** |  | 
 **contactName** | **String** |  | 
-**streetNumber** | **String** |  | 
-**streetName** | **String** |  | 
-**city** | **String** |  | 
-**province** | **String** |  | 
-**country** | **String** |  | 
-**zipCode** | **String** |  | 
+**streetNumber** | **String** |  |  [optional]
+**streetName** | **String** |  |  [optional]
+**city** | **String** |  |  [optional]
+**province** | **String** |  |  [optional]
+**country** | **String** |  |  [optional]
+**zipCode** | **String** |  |  [optional]
 **phoneNumber** | **String** |  | 
 **phoneExtension** | **String** |  |  [optional]
 **email** | **String** |  |  [optional]
@@ -25,6 +25,6 @@ Name | Type | Description | Notes
 **oldBan** | **String** |  |  [optional]
 **smsCapable** | **Boolean** |  |  [optional]
 **flag** | **String** |  |  [optional]
-**optedOut** | **List&lt;Object&gt;** |  |  [optional]
+**optedOut** | **Object** |  |  [optional]
 **firstName** | **String** |  |  [optional]
 **preferredLanguage** | **String** |  |  [optional]

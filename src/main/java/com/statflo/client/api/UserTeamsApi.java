@@ -37,7 +37,6 @@ import java.util.Map;
 
 public class UserTeamsApi {
     private ApiClient apiClient;
-    private Map<String, String> headers;
 
     public UserTeamsApi() {
         this(Configuration.getDefaultApiClient());
@@ -53,10 +52,6 @@ public class UserTeamsApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
-    }
-
-    public void setHeadersOverrides(Map<String, String> headers) {
-        this.headers = headers;
     }
 
     /**
@@ -105,9 +100,6 @@ public class UserTeamsApi {
         }
 
         String[] localVarAuthNames = new String[] { "Bearer" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -231,9 +223,6 @@ public class UserTeamsApi {
         }
 
         String[] localVarAuthNames = new String[] { "Bearer" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
         return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     

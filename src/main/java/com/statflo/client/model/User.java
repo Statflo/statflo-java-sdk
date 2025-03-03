@@ -26,11 +26,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.threeten.bp.OffsetDateTime;
 /**
  * User
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-06T16:47:03.436364Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-03T14:30:43.872947-05:00[America/New_York]")
 
 public class User {
   @SerializedName("id")
@@ -49,7 +50,7 @@ public class User {
   private String email = null;
 
   @SerializedName("language")
-  private String language = null;
+  private String language = "en";
 
   @SerializedName("salesRepId")
   private String salesRepId = null;
@@ -63,8 +64,14 @@ public class User {
   @SerializedName("regionId")
   private Integer regionId = null;
 
+  @SerializedName("phoneNumber")
+  private String phoneNumber = null;
+
   @SerializedName("userActive")
   private Boolean userActive = true;
+
+  @SerializedName("inboundAvailable")
+  private Boolean inboundAvailable = false;
 
   @SerializedName("dealer")
   private Dealer dealer = null;
@@ -74,6 +81,9 @@ public class User {
 
   @SerializedName("userTeams")
   private List<UserTeam> userTeams = null;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
 
   @SerializedName("permissions")
   private List<Object> permissions = new ArrayList<Object>();
@@ -258,6 +268,24 @@ public class User {
     this.regionId = regionId;
   }
 
+  public User phoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Get phoneNumber
+   * @return phoneNumber
+  **/
+  @Schema(description = "")
+  public String getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
   public User userActive(Boolean userActive) {
     this.userActive = userActive;
     return this;
@@ -274,6 +302,24 @@ public class User {
 
   public void setUserActive(Boolean userActive) {
     this.userActive = userActive;
+  }
+
+  public User inboundAvailable(Boolean inboundAvailable) {
+    this.inboundAvailable = inboundAvailable;
+    return this;
+  }
+
+   /**
+   * Get inboundAvailable
+   * @return inboundAvailable
+  **/
+  @Schema(description = "")
+  public Boolean isInboundAvailable() {
+    return inboundAvailable;
+  }
+
+  public void setInboundAvailable(Boolean inboundAvailable) {
+    this.inboundAvailable = inboundAvailable;
   }
 
   public User dealer(Dealer dealer) {
@@ -346,6 +392,24 @@ public class User {
     this.userTeams = userTeams;
   }
 
+  public User dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
   public User permissions(List<Object> permissions) {
     this.permissions = permissions;
     return this;
@@ -389,16 +453,19 @@ public class User {
         Objects.equals(this.outletId, user.outletId) &&
         Objects.equals(this.districtId, user.districtId) &&
         Objects.equals(this.regionId, user.regionId) &&
+        Objects.equals(this.phoneNumber, user.phoneNumber) &&
         Objects.equals(this.userActive, user.userActive) &&
+        Objects.equals(this.inboundAvailable, user.inboundAvailable) &&
         Objects.equals(this.dealer, user.dealer) &&
         Objects.equals(this.userPermissions, user.userPermissions) &&
         Objects.equals(this.userTeams, user.userTeams) &&
+        Objects.equals(this.dateAdded, user.dateAdded) &&
         Objects.equals(this.permissions, user.permissions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, userActive, dealer, userPermissions, userTeams, permissions);
+    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, phoneNumber, userActive, inboundAvailable, dealer, userPermissions, userTeams, dateAdded, permissions);
   }
 
 
@@ -417,10 +484,13 @@ public class User {
     sb.append("    outletId: ").append(toIndentedString(outletId)).append("\n");
     sb.append("    districtId: ").append(toIndentedString(districtId)).append("\n");
     sb.append("    regionId: ").append(toIndentedString(regionId)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    userActive: ").append(toIndentedString(userActive)).append("\n");
+    sb.append("    inboundAvailable: ").append(toIndentedString(inboundAvailable)).append("\n");
     sb.append("    dealer: ").append(toIndentedString(dealer)).append("\n");
     sb.append("    userPermissions: ").append(toIndentedString(userPermissions)).append("\n");
     sb.append("    userTeams: ").append(toIndentedString(userTeams)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    permissions: ").append(toIndentedString(permissions)).append("\n");
     sb.append("}");
     return sb.toString();

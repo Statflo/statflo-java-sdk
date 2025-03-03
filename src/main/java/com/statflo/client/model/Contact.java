@@ -22,14 +22,12 @@ import com.google.gson.stream.JsonWriter;
 import com.statflo.client.model.Dealer;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 /**
  * Contact
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-06T16:47:03.436364Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-03T14:30:43.872947-05:00[America/New_York]")
 
 public class Contact {
   @SerializedName("id")
@@ -102,7 +100,7 @@ public class Contact {
   private String flag = null;
 
   @SerializedName("optedOut")
-  private List<Object> optedOut = null;
+  private Object optedOut = null;
 
   @SerializedName("firstName")
   private String firstName = null;
@@ -524,16 +522,8 @@ public class Contact {
     this.flag = flag;
   }
 
-  public Contact optedOut(List<Object> optedOut) {
+  public Contact optedOut(Object optedOut) {
     this.optedOut = optedOut;
-    return this;
-  }
-
-  public Contact addOptedOutItem(Object optedOutItem) {
-    if (this.optedOut == null) {
-      this.optedOut = new ArrayList<Object>();
-    }
-    this.optedOut.add(optedOutItem);
     return this;
   }
 
@@ -542,11 +532,11 @@ public class Contact {
    * @return optedOut
   **/
   @Schema(description = "")
-  public List<Object> getOptedOut() {
+  public Object getOptedOut() {
     return optedOut;
   }
 
-  public void setOptedOut(List<Object> optedOut) {
+  public void setOptedOut(Object optedOut) {
     this.optedOut = optedOut;
   }
 

@@ -23,11 +23,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.threeten.bp.OffsetDateTime;
 /**
  * UserUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2024-12-06T16:47:03.436364Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-03T14:30:43.872947-05:00[America/New_York]")
 
 public class UserUpdate {
   @SerializedName("id")
@@ -46,7 +47,7 @@ public class UserUpdate {
   private String email = null;
 
   @SerializedName("language")
-  private String language = null;
+  private String language = "en";
 
   @SerializedName("salesRepId")
   private String salesRepId = null;
@@ -60,6 +61,9 @@ public class UserUpdate {
   @SerializedName("regionId")
   private Integer regionId = null;
 
+  @SerializedName("phoneNumber")
+  private String phoneNumber = null;
+
   @SerializedName("token")
   private String token = null;
 
@@ -68,6 +72,12 @@ public class UserUpdate {
 
   @SerializedName("userActive")
   private Boolean userActive = true;
+
+  @SerializedName("inboundAvailable")
+  private Boolean inboundAvailable = false;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
 
   @SerializedName("permissions")
   private List<Object> permissions = new ArrayList<Object>();
@@ -252,6 +262,24 @@ public class UserUpdate {
     this.regionId = regionId;
   }
 
+  public UserUpdate phoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Get phoneNumber
+   * @return phoneNumber
+  **/
+  @Schema(description = "")
+  public String getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
   public UserUpdate token(String token) {
     this.token = token;
     return this;
@@ -306,6 +334,42 @@ public class UserUpdate {
     this.userActive = userActive;
   }
 
+  public UserUpdate inboundAvailable(Boolean inboundAvailable) {
+    this.inboundAvailable = inboundAvailable;
+    return this;
+  }
+
+   /**
+   * Get inboundAvailable
+   * @return inboundAvailable
+  **/
+  @Schema(description = "")
+  public Boolean isInboundAvailable() {
+    return inboundAvailable;
+  }
+
+  public void setInboundAvailable(Boolean inboundAvailable) {
+    this.inboundAvailable = inboundAvailable;
+  }
+
+  public UserUpdate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
   public UserUpdate permissions(List<Object> permissions) {
     this.permissions = permissions;
     return this;
@@ -349,15 +413,18 @@ public class UserUpdate {
         Objects.equals(this.outletId, userUpdate.outletId) &&
         Objects.equals(this.districtId, userUpdate.districtId) &&
         Objects.equals(this.regionId, userUpdate.regionId) &&
+        Objects.equals(this.phoneNumber, userUpdate.phoneNumber) &&
         Objects.equals(this.token, userUpdate.token) &&
         Objects.equals(this.tokenParagon, userUpdate.tokenParagon) &&
         Objects.equals(this.userActive, userUpdate.userActive) &&
+        Objects.equals(this.inboundAvailable, userUpdate.inboundAvailable) &&
+        Objects.equals(this.dateAdded, userUpdate.dateAdded) &&
         Objects.equals(this.permissions, userUpdate.permissions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, token, tokenParagon, userActive, permissions);
+    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, phoneNumber, token, tokenParagon, userActive, inboundAvailable, dateAdded, permissions);
   }
 
 
@@ -376,9 +443,12 @@ public class UserUpdate {
     sb.append("    outletId: ").append(toIndentedString(outletId)).append("\n");
     sb.append("    districtId: ").append(toIndentedString(districtId)).append("\n");
     sb.append("    regionId: ").append(toIndentedString(regionId)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    tokenParagon: ").append(toIndentedString(tokenParagon)).append("\n");
     sb.append("    userActive: ").append(toIndentedString(userActive)).append("\n");
+    sb.append("    inboundAvailable: ").append(toIndentedString(inboundAvailable)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    permissions: ").append(toIndentedString(permissions)).append("\n");
     sb.append("}");
     return sb.toString();

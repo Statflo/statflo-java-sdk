@@ -13,5 +13,8 @@ Name | Type | Description | Notes
 **outletId** | **String** |  |  [optional]
 **districtId** | **Integer** |  |  [optional]
 **regionId** | **Integer** |  |  [optional]
+**phoneNumber** | **String** |  |  [optional]
 **userActive** | **Boolean** |  |  [optional]
+**inboundAvailable** | **Boolean** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

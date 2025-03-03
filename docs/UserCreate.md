@@ -13,7 +13,10 @@ Name | Type | Description | Notes
 **outletId** | **String** |  |  [optional]
 **districtId** | **Integer** |  |  [optional]
 **regionId** | **Integer** |  |  [optional]
+**phoneNumber** | **String** |  |  [optional]
 **token** | **String** |  |  [optional]
 **tokenParagon** | **String** |  |  [optional]
 **userActive** | **Boolean** |  |  [optional]
+**inboundAvailable** | **Boolean** |  |  [optional]
+**dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **permissions** | **List&lt;Object&gt;** |  | 

@@ -37,7 +37,6 @@ import java.util.Map;
 
 public class LocationsApi {
     private ApiClient apiClient;
-    private Map<String, String> headers;
 
     public LocationsApi() {
         this(Configuration.getDefaultApiClient());
@@ -53,10 +52,6 @@ public class LocationsApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
-    }
-
-    public void setHeadersOverrides(Map<String, String> headers) {
-        this.headers = headers;
     }
 
     /**
@@ -106,9 +101,6 @@ public class LocationsApi {
         }
 
         String[] localVarAuthNames = new String[] { "Bearer" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -247,9 +239,6 @@ public class LocationsApi {
         }
 
         String[] localVarAuthNames = new String[] { "Bearer" };
-        if (headers != null) {
-            localVarHeaderParams.putAll(headers);
-        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
