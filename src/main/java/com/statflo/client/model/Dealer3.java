@@ -19,25 +19,29 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.statflo.client.model.Carrier;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * CallListVisibilityStatusCreate
+ * Dealer3
  */
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
 
-public class CallListVisibilityStatusCreate {
+public class Dealer3 implements OneOfVendorMessageDealer {
   @SerializedName("id")
   private Integer id = null;
 
-  @SerializedName("visibleTo")
-  private String visibleTo = null;
+  @SerializedName("name")
+  private String name = null;
 
-  @SerializedName("permissionId")
-  private Integer permissionId = null;
+  @SerializedName("countryCode")
+  private String countryCode = null;
 
-  public CallListVisibilityStatusCreate id(Integer id) {
+  @SerializedName("carrier")
+  private Carrier carrier = null;
+
+  public Dealer3 id(Integer id) {
     this.id = id;
     return this;
   }
@@ -55,40 +59,58 @@ public class CallListVisibilityStatusCreate {
     this.id = id;
   }
 
-  public CallListVisibilityStatusCreate visibleTo(String visibleTo) {
-    this.visibleTo = visibleTo;
+  public Dealer3 name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get visibleTo
-   * @return visibleTo
+   * Get name
+   * @return name
   **/
-  @Schema(description = "")
-  public String getVisibleTo() {
-    return visibleTo;
+  @Schema(required = true, description = "")
+  public String getName() {
+    return name;
   }
 
-  public void setVisibleTo(String visibleTo) {
-    this.visibleTo = visibleTo;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public CallListVisibilityStatusCreate permissionId(Integer permissionId) {
-    this.permissionId = permissionId;
+  public Dealer3 countryCode(String countryCode) {
+    this.countryCode = countryCode;
     return this;
   }
 
    /**
-   * Get permissionId
-   * @return permissionId
+   * Get countryCode
+   * @return countryCode
   **/
-  @Schema(description = "")
-  public Integer getPermissionId() {
-    return permissionId;
+  @Schema(required = true, description = "")
+  public String getCountryCode() {
+    return countryCode;
   }
 
-  public void setPermissionId(Integer permissionId) {
-    this.permissionId = permissionId;
+  public void setCountryCode(String countryCode) {
+    this.countryCode = countryCode;
+  }
+
+  public Dealer3 carrier(Carrier carrier) {
+    this.carrier = carrier;
+    return this;
+  }
+
+   /**
+   * Get carrier
+   * @return carrier
+  **/
+  @Schema(description = "")
+  public Carrier getCarrier() {
+    return carrier;
+  }
+
+  public void setCarrier(Carrier carrier) {
+    this.carrier = carrier;
   }
 
 
@@ -100,26 +122,28 @@ public class CallListVisibilityStatusCreate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CallListVisibilityStatusCreate callListVisibilityStatusCreate = (CallListVisibilityStatusCreate) o;
-    return Objects.equals(this.id, callListVisibilityStatusCreate.id) &&
-        Objects.equals(this.visibleTo, callListVisibilityStatusCreate.visibleTo) &&
-        Objects.equals(this.permissionId, callListVisibilityStatusCreate.permissionId);
+    Dealer3 dealer3 = (Dealer3) o;
+    return Objects.equals(this.id, dealer3.id) &&
+        Objects.equals(this.name, dealer3.name) &&
+        Objects.equals(this.countryCode, dealer3.countryCode) &&
+        Objects.equals(this.carrier, dealer3.carrier);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, visibleTo, permissionId);
+    return Objects.hash(id, name, countryCode, carrier);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CallListVisibilityStatusCreate {\n");
+    sb.append("class Dealer3 {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    visibleTo: ").append(toIndentedString(visibleTo)).append("\n");
-    sb.append("    permissionId: ").append(toIndentedString(permissionId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
+    sb.append("    carrier: ").append(toIndentedString(carrier)).append("\n");
     sb.append("}");
     return sb.toString();
   }
