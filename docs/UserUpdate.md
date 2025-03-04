@@ -17,4 +17,6 @@ Name | Type | Description | Notes
 **token** | **String** |  |  [optional]
 **tokenParagon** | **String** |  |  [optional]
 **userActive** | **Boolean** |  |  [optional]
+**inboundAvailable** | **Boolean** |  |  [optional]
+**dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **permissions** | **List&lt;Object&gt;** |  | 

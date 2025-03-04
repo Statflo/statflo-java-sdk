@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**dealer** | **OneOfVendorMessageDealer** |  |  [optional]
-**payload** | **OneOfVendorMessagePayload** |  | 
+**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**payload** | **Object** |  |  [optional]
 **action** | **String** |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
