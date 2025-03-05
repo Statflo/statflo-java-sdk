@@ -50,7 +50,8 @@ jobs:
           --invoker-package com.statflo.client \
           --model-package com.statflo.client.model \
           --api-package com.statflo.client.api \
-          --additional-properties groupId=com.statflo,artifactId=statflo-java-sdk,releaseVersion=${{ env.RELEASE_VERSION }}
+          --additional-properties groupId=com.statflo,artifactId=statflo-java-sdk,releaseVersion=${{ env.RELEASE_VERSION }} \
+          -D dateLibrary=java8
 
       - name: Commit and Push
         run: |
