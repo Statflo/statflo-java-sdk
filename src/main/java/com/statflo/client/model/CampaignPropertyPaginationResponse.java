@@ -29,7 +29,7 @@ import java.util.List;
  * CampaignPropertyPaginationResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class CampaignPropertyPaginationResponse {
   @SerializedName("items")
@@ -45,7 +45,7 @@ public class CampaignPropertyPaginationResponse {
 
   public CampaignPropertyPaginationResponse addItemsItem(CampaignPropertySummary itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<CampaignPropertySummary>();
+      this.items = new ArrayList<>();
     }
     this.items.add(itemsItem);
     return this;

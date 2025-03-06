@@ -29,7 +29,7 @@ import java.util.List;
  * Campaign
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class Campaign {
   @SerializedName("id")
@@ -402,7 +402,7 @@ public class Campaign {
 
   public Campaign addCampaignMetadataItem(CampaignMetadataSummary campaignMetadataItem) {
     if (this.campaignMetadata == null) {
-      this.campaignMetadata = new ArrayList<CampaignMetadataSummary>();
+      this.campaignMetadata = new ArrayList<>();
     }
     this.campaignMetadata.add(campaignMetadataItem);
     return this;
@@ -428,7 +428,7 @@ public class Campaign {
 
   public Campaign addCampaignPropertiesItem(CampaignPropertySummary campaignPropertiesItem) {
     if (this.campaignProperties == null) {
-      this.campaignProperties = new ArrayList<CampaignPropertySummary>();
+      this.campaignProperties = new ArrayList<>();
     }
     this.campaignProperties.add(campaignPropertiesItem);
     return this;

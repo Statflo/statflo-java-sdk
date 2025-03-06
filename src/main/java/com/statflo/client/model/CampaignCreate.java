@@ -25,7 +25,7 @@ import java.io.IOException;
  * CampaignCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class CampaignCreate {
   @SerializedName("id")
@@ -217,8 +217,51 @@ public class CampaignCreate {
   @SerializedName("productTypes")
   private String productTypes = null;
 
-  @SerializedName("source")
-  private String source = "api";
+  /**
+   * Gets or Sets source
+   */
+  @JsonAdapter(SourceEnum.Adapter.class)
+  public enum SourceEnum {
+    @SerializedName("api")
+    API("api"),
+    @SerializedName("uploaded")
+    UPLOADED("uploaded");
+
+    private String value;
+
+    SourceEnum(String value) {
+      this.value = value;
+    }
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+    public static SourceEnum fromValue(String input) {
+      for (SourceEnum b : SourceEnum.values()) {
+        if (b.value.equals(input)) {
+          return b;
+        }
+      }
+      return null;
+    }
+    public static class Adapter extends TypeAdapter<SourceEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final SourceEnum enumeration) throws IOException {
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
+      }
+
+      @Override
+      public SourceEnum read(final JsonReader jsonReader) throws IOException {
+        Object value = jsonReader.nextString();
+        return SourceEnum.fromValue((String)(value));
+      }
+    }
+  }  @SerializedName("source")
+  private SourceEnum source = SourceEnum.API;
 
   public CampaignCreate id(Integer id) {
     this.id = id;
@@ -508,7 +551,7 @@ public class CampaignCreate {
     this.productTypes = productTypes;
   }
 
-  public CampaignCreate source(String source) {
+  public CampaignCreate source(SourceEnum source) {
     this.source = source;
     return this;
   }
@@ -518,11 +561,11 @@ public class CampaignCreate {
    * @return source
   **/
   @Schema(description = "")
-  public String getSource() {
+  public SourceEnum getSource() {
     return source;
   }
 
-  public void setSource(String source) {
+  public void setSource(SourceEnum source) {
     this.source = source;
   }
 

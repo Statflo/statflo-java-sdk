@@ -22,14 +22,14 @@ import com.google.gson.stream.JsonWriter;
 import com.statflo.client.model.Dealer;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
 /**
  * Contact
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class Contact {
   @SerializedName("id")
@@ -531,7 +531,7 @@ public class Contact {
 
   public Contact addOptedOutItem(Object optedOutItem) {
     if (this.optedOut == null) {
-      this.optedOut = new ArrayList<Object>();
+      this.optedOut = new ArrayList<>();
     }
     this.optedOut.add(optedOutItem);
     return this;

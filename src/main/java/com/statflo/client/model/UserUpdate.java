@@ -27,7 +27,7 @@ import java.util.List;
  * UserUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class UserUpdate {
   @SerializedName("id")
@@ -73,7 +73,7 @@ public class UserUpdate {
   private Boolean userActive = true;
 
   @SerializedName("permissions")
-  private List<Object> permissions = new ArrayList<Object>();
+  private List<Object> permissions = new ArrayList<>();
 
   public UserUpdate id(Integer id) {
     this.id = id;

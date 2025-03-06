@@ -30,7 +30,7 @@ import java.util.List;
  * Dealer
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class Dealer {
   @SerializedName("id")
@@ -130,7 +130,7 @@ public class Dealer {
 
   public Dealer addPermissionsItem(Permission permissionsItem) {
     if (this.permissions == null) {
-      this.permissions = new ArrayList<Permission>();
+      this.permissions = new ArrayList<>();
     }
     this.permissions.add(permissionsItem);
     return this;
@@ -156,7 +156,7 @@ public class Dealer {
 
   public Dealer addDealerFeaturesItem(DealerAllowedFeature dealerFeaturesItem) {
     if (this.dealerFeatures == null) {
-      this.dealerFeatures = new ArrayList<DealerAllowedFeature>();
+      this.dealerFeatures = new ArrayList<>();
     }
     this.dealerFeatures.add(dealerFeaturesItem);
     return this;

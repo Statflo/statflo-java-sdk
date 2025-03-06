@@ -25,14 +25,14 @@ import com.statflo.client.model.TeamSummary;
 import com.statflo.client.model.User;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
 /**
  * Team
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class Team {
   @SerializedName("id")
@@ -105,7 +105,7 @@ public class Team {
 
   public Team addChildrenItem(TeamSummary childrenItem) {
     if (this.children == null) {
-      this.children = new ArrayList<TeamSummary>();
+      this.children = new ArrayList<>();
     }
     this.children.add(childrenItem);
     return this;
@@ -149,7 +149,7 @@ public class Team {
 
   public Team addPermissionsItem(Permission permissionsItem) {
     if (this.permissions == null) {
-      this.permissions = new ArrayList<Permission>();
+      this.permissions = new ArrayList<>();
     }
     this.permissions.add(permissionsItem);
     return this;

@@ -30,7 +30,7 @@ import java.util.List;
  * User
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class User {
   @SerializedName("id")
@@ -79,7 +79,7 @@ public class User {
   private List<UserTeam> userTeams = null;
 
   @SerializedName("permissions")
-  private List<Object> permissions = new ArrayList<Object>();
+  private List<Object> permissions = new ArrayList<>();
 
   public User id(Integer id) {
     this.id = id;
@@ -322,7 +322,7 @@ public class User {
 
   public User addUserPermissionsItem(UserPermission userPermissionsItem) {
     if (this.userPermissions == null) {
-      this.userPermissions = new ArrayList<UserPermission>();
+      this.userPermissions = new ArrayList<>();
     }
     this.userPermissions.add(userPermissionsItem);
     return this;
@@ -348,7 +348,7 @@ public class User {
 
   public User addUserTeamsItem(UserTeam userTeamsItem) {
     if (this.userTeams == null) {
-      this.userTeams = new ArrayList<UserTeam>();
+      this.userTeams = new ArrayList<>();
     }
     this.userTeams.add(userTeamsItem);
     return this;

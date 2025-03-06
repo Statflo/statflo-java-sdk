@@ -28,7 +28,7 @@ import java.util.List;
  * Role
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class Role {
   @SerializedName("id")
@@ -188,7 +188,7 @@ public class Role {
 
   public Role addRolePermissionsItem(RolePermission rolePermissionsItem) {
     if (this.rolePermissions == null) {
-      this.rolePermissions = new ArrayList<RolePermission>();
+      this.rolePermissions = new ArrayList<>();
     }
     this.rolePermissions.add(rolePermissionsItem);
     return this;

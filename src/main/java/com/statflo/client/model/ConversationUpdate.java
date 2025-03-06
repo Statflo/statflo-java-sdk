@@ -21,14 +21,14 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
 /**
  * ConversationUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-02-03T19:10:57.619356721Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
 
 public class ConversationUpdate {
   @SerializedName("id")
@@ -217,7 +217,7 @@ public class ConversationUpdate {
 
   public ConversationUpdate addInsightsWidgetPayloadItem(Object insightsWidgetPayloadItem) {
     if (this.insightsWidgetPayload == null) {
-      this.insightsWidgetPayload = new ArrayList<Object>();
+      this.insightsWidgetPayload = new ArrayList<>();
     }
     this.insightsWidgetPayload.add(insightsWidgetPayloadItem);
     return this;
