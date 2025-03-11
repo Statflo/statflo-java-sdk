@@ -18,7 +18,7 @@ public class ContactExample {
         ContactsApi contactsApi = new ContactsApi(apiClient);
         HashMap<String, String> filter = new HashMap<>();
 
-        ContactPaginationResponse contactPaginationResponse = contactsApi.contactSearch(filter, "", 1, 1, "");
+        ContactPaginationResponse contactPaginationResponse = contactsApi.contactSearch(filter, null, 1, 1, null);
         for (ContactSummary contact : contactPaginationResponse.getItems()) {
             System.out.println(contact);
         }

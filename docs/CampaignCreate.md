@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **transactionLatest** | **String** |  |  [optional]
 **productTypes** | **String** |  |  [optional]
 **source** | [**SourceEnum**](#SourceEnum) |  |  [optional]
+**visibilityCrm** | [**VisibilityCrmEnum**](#VisibilityCrmEnum) |  |  [optional]
+**visibilityReport** | [**VisibilityReportEnum**](#VisibilityReportEnum) |  |  [optional]
 
 <a name="TypeEnum"></a>
 ## Enum: TypeEnum
@@ -54,3 +56,19 @@ Name | Value
 ---- | -----
 API | &quot;api&quot;
 UPLOADED | &quot;uploaded&quot;
+
+<a name="VisibilityCrmEnum"></a>
+## Enum: VisibilityCrmEnum
+Name | Value
+---- | -----
+NUMBER_0 | 0
+NUMBER_10 | 10
+NUMBER_30 | 30
+
+<a name="VisibilityReportEnum"></a>
+## Enum: VisibilityReportEnum
+Name | Value
+---- | -----
+NUMBER_0 | 0
+NUMBER_10 | 10
+NUMBER_30 | 30

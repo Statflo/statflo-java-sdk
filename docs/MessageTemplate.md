@@ -13,4 +13,5 @@ Name | Type | Description | Notes
 **campaign** | [**CampaignSummary**](CampaignSummary.md) |  |  [optional]
 **priority** | **Integer** |  |  [optional]
 **messageTemplateAssignments** | [**List&lt;MessageTemplateAssignment&gt;**](MessageTemplateAssignment.md) |  |  [optional]
+**categories** | [**List&lt;MessageTemplateCategory&gt;**](MessageTemplateCategory.md) |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
