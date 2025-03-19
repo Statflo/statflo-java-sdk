@@ -25,14 +25,14 @@ import java.io.IOException;
  * RolePermissionCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class RolePermissionCreate {
   @SerializedName("dealerSpecific")
-  private Boolean dealerSpecific = null;
+  private Boolean dealerSpecific = false;
 
   @SerializedName("dealerBlacklisted")
-  private Boolean dealerBlacklisted = null;
+  private Boolean dealerBlacklisted = false;
 
   public RolePermissionCreate dealerSpecific(Boolean dealerSpecific) {
     this.dealerSpecific = dealerSpecific;
@@ -43,7 +43,7 @@ public class RolePermissionCreate {
    * Get dealerSpecific
    * @return dealerSpecific
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public Boolean isDealerSpecific() {
     return dealerSpecific;
   }
@@ -61,7 +61,7 @@ public class RolePermissionCreate {
    * Get dealerBlacklisted
    * @return dealerBlacklisted
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public Boolean isDealerBlacklisted() {
     return dealerBlacklisted;
   }

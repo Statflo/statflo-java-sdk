@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **transactionLatest** | **String** |  |  [optional]
 **productTypes** | **String** |  |  [optional]
 **source** | [**SourceEnum**](#SourceEnum) |  |  [optional]
+**visibilityCrm** | **Integer** |  |  [optional]
+**visibilityReport** | **Integer** |  |  [optional]
 
 <a name="TypeEnum"></a>
 ## Enum: TypeEnum

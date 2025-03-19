@@ -29,7 +29,7 @@ import java.util.List;
  * AccountContactMetadataPaginationResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class AccountContactMetadataPaginationResponse {
   @SerializedName("items")

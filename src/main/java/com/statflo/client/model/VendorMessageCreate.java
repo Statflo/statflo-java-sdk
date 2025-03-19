@@ -26,14 +26,14 @@ import java.time.OffsetDateTime;
  * VendorMessageCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class VendorMessageCreate {
   @SerializedName("id")
   private Integer id = null;
 
   @SerializedName("payload")
-  private OneOfVendorMessageCreatePayload payload = null;
+  private Object payload = null;
 
   @SerializedName("action")
   private String action = null;
@@ -59,7 +59,7 @@ public class VendorMessageCreate {
     this.id = id;
   }
 
-  public VendorMessageCreate payload(OneOfVendorMessageCreatePayload payload) {
+  public VendorMessageCreate payload(Object payload) {
     this.payload = payload;
     return this;
   }
@@ -69,11 +69,11 @@ public class VendorMessageCreate {
    * @return payload
   **/
   @Schema(required = true, description = "")
-  public OneOfVendorMessageCreatePayload getPayload() {
+  public Object getPayload() {
     return payload;
   }
 
-  public void setPayload(OneOfVendorMessageCreatePayload payload) {
+  public void setPayload(Object payload) {
     this.payload = payload;
   }
 

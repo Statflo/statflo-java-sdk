@@ -21,13 +21,14 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 /**
  * UserCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class UserCreate {
   @SerializedName("id")
@@ -71,6 +72,12 @@ public class UserCreate {
 
   @SerializedName("userActive")
   private Boolean userActive = true;
+
+  @SerializedName("inboundAvailable")
+  private Boolean inboundAvailable = false;
+
+  @SerializedName("dateAdded")
+  private OffsetDateTime dateAdded = null;
 
   @SerializedName("permissions")
   private List<Object> permissions = new ArrayList<>();
@@ -327,6 +334,42 @@ public class UserCreate {
     this.userActive = userActive;
   }
 
+  public UserCreate inboundAvailable(Boolean inboundAvailable) {
+    this.inboundAvailable = inboundAvailable;
+    return this;
+  }
+
+   /**
+   * Get inboundAvailable
+   * @return inboundAvailable
+  **/
+  @Schema(description = "")
+  public Boolean isInboundAvailable() {
+    return inboundAvailable;
+  }
+
+  public void setInboundAvailable(Boolean inboundAvailable) {
+    this.inboundAvailable = inboundAvailable;
+  }
+
+  public UserCreate dateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+    return this;
+  }
+
+   /**
+   * Get dateAdded
+   * @return dateAdded
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getDateAdded() {
+    return dateAdded;
+  }
+
+  public void setDateAdded(OffsetDateTime dateAdded) {
+    this.dateAdded = dateAdded;
+  }
+
   public UserCreate permissions(List<Object> permissions) {
     this.permissions = permissions;
     return this;
@@ -374,12 +417,14 @@ public class UserCreate {
         Objects.equals(this.token, userCreate.token) &&
         Objects.equals(this.tokenParagon, userCreate.tokenParagon) &&
         Objects.equals(this.userActive, userCreate.userActive) &&
+        Objects.equals(this.inboundAvailable, userCreate.inboundAvailable) &&
+        Objects.equals(this.dateAdded, userCreate.dateAdded) &&
         Objects.equals(this.permissions, userCreate.permissions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, phoneNumber, token, tokenParagon, userActive, permissions);
+    return Objects.hash(id, username, firstName, lastName, email, language, salesRepId, outletId, districtId, regionId, phoneNumber, token, tokenParagon, userActive, inboundAvailable, dateAdded, permissions);
   }
 
 
@@ -402,6 +447,8 @@ public class UserCreate {
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    tokenParagon: ").append(toIndentedString(tokenParagon)).append("\n");
     sb.append("    userActive: ").append(toIndentedString(userActive)).append("\n");
+    sb.append("    inboundAvailable: ").append(toIndentedString(inboundAvailable)).append("\n");
+    sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    permissions: ").append(toIndentedString(permissions)).append("\n");
     sb.append("}");
     return sb.toString();

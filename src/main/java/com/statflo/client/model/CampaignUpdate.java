@@ -25,7 +25,7 @@ import java.io.IOException;
  * CampaignUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class CampaignUpdate {
   @SerializedName("id")
@@ -262,6 +262,12 @@ public class CampaignUpdate {
     }
   }  @SerializedName("source")
   private SourceEnum source = SourceEnum.API;
+
+  @SerializedName("visibilityCrm")
+  private Integer visibilityCrm = 10;
+
+  @SerializedName("visibilityReport")
+  private Integer visibilityReport = 10;
 
   public CampaignUpdate id(Integer id) {
     this.id = id;
@@ -569,6 +575,42 @@ public class CampaignUpdate {
     this.source = source;
   }
 
+  public CampaignUpdate visibilityCrm(Integer visibilityCrm) {
+    this.visibilityCrm = visibilityCrm;
+    return this;
+  }
+
+   /**
+   * Get visibilityCrm
+   * @return visibilityCrm
+  **/
+  @Schema(description = "")
+  public Integer getVisibilityCrm() {
+    return visibilityCrm;
+  }
+
+  public void setVisibilityCrm(Integer visibilityCrm) {
+    this.visibilityCrm = visibilityCrm;
+  }
+
+  public CampaignUpdate visibilityReport(Integer visibilityReport) {
+    this.visibilityReport = visibilityReport;
+    return this;
+  }
+
+   /**
+   * Get visibilityReport
+   * @return visibilityReport
+  **/
+  @Schema(description = "")
+  public Integer getVisibilityReport() {
+    return visibilityReport;
+  }
+
+  public void setVisibilityReport(Integer visibilityReport) {
+    this.visibilityReport = visibilityReport;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -595,12 +637,14 @@ public class CampaignUpdate {
         Objects.equals(this.transactionEarliest, campaignUpdate.transactionEarliest) &&
         Objects.equals(this.transactionLatest, campaignUpdate.transactionLatest) &&
         Objects.equals(this.productTypes, campaignUpdate.productTypes) &&
-        Objects.equals(this.source, campaignUpdate.source);
+        Objects.equals(this.source, campaignUpdate.source) &&
+        Objects.equals(this.visibilityCrm, campaignUpdate.visibilityCrm) &&
+        Objects.equals(this.visibilityReport, campaignUpdate.visibilityReport);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, campaignNickname, totangoName, type, frequency, lifetime, method, carrierAllowed, accountType, dncScrub, reportingPeriodType, reportingPeriodBefore, reportingPeriodAfter, transactionEarliest, transactionLatest, productTypes, source);
+    return Objects.hash(id, campaignNickname, totangoName, type, frequency, lifetime, method, carrierAllowed, accountType, dncScrub, reportingPeriodType, reportingPeriodBefore, reportingPeriodAfter, transactionEarliest, transactionLatest, productTypes, source, visibilityCrm, visibilityReport);
   }
 
 
@@ -626,6 +670,8 @@ public class CampaignUpdate {
     sb.append("    transactionLatest: ").append(toIndentedString(transactionLatest)).append("\n");
     sb.append("    productTypes: ").append(toIndentedString(productTypes)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    visibilityCrm: ").append(toIndentedString(visibilityCrm)).append("\n");
+    sb.append("    visibilityReport: ").append(toIndentedString(visibilityReport)).append("\n");
     sb.append("}");
     return sb.toString();
   }

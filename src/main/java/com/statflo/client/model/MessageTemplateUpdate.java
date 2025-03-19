@@ -22,11 +22,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * MessageTemplateUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class MessageTemplateUpdate {
   @SerializedName("id")
@@ -105,6 +107,9 @@ public class MessageTemplateUpdate {
 
   @SerializedName("priority")
   private Integer priority = 100;
+
+  @SerializedName("categoryIds")
+  private List<Integer> categoryIds = null;
 
   @SerializedName("dateCreated")
   private OffsetDateTime dateCreated = null;
@@ -217,6 +222,32 @@ public class MessageTemplateUpdate {
     this.priority = priority;
   }
 
+  public MessageTemplateUpdate categoryIds(List<Integer> categoryIds) {
+    this.categoryIds = categoryIds;
+    return this;
+  }
+
+  public MessageTemplateUpdate addCategoryIdsItem(Integer categoryIdsItem) {
+    if (this.categoryIds == null) {
+      this.categoryIds = new ArrayList<>();
+    }
+    this.categoryIds.add(categoryIdsItem);
+    return this;
+  }
+
+   /**
+   * Get categoryIds
+   * @return categoryIds
+  **/
+  @Schema(description = "")
+  public List<Integer> getCategoryIds() {
+    return categoryIds;
+  }
+
+  public void setCategoryIds(List<Integer> categoryIds) {
+    this.categoryIds = categoryIds;
+  }
+
   public MessageTemplateUpdate dateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
@@ -251,12 +282,13 @@ public class MessageTemplateUpdate {
         Objects.equals(this.metadata, messageTemplateUpdate.metadata) &&
         Objects.equals(this.template, messageTemplateUpdate.template) &&
         Objects.equals(this.priority, messageTemplateUpdate.priority) &&
+        Objects.equals(this.categoryIds, messageTemplateUpdate.categoryIds) &&
         Objects.equals(this.dateCreated, messageTemplateUpdate.dateCreated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, templateName, language, metadata, template, priority, dateCreated);
+    return Objects.hash(id, templateName, language, metadata, template, priority, categoryIds, dateCreated);
   }
 
 
@@ -271,6 +303,7 @@ public class MessageTemplateUpdate {
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    sb.append("    categoryIds: ").append(toIndentedString(categoryIds)).append("\n");
     sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("}");
     return sb.toString();

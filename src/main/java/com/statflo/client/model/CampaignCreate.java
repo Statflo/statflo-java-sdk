@@ -25,7 +25,7 @@ import java.io.IOException;
  * CampaignCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class CampaignCreate {
   @SerializedName("id")
@@ -262,6 +262,102 @@ public class CampaignCreate {
     }
   }  @SerializedName("source")
   private SourceEnum source = SourceEnum.API;
+
+  /**
+   * Gets or Sets visibilityCrm
+   */
+  @JsonAdapter(VisibilityCrmEnum.Adapter.class)
+  public enum VisibilityCrmEnum {
+    @SerializedName("0")
+    NUMBER_0(0),
+    @SerializedName("10")
+    NUMBER_10(10),
+    @SerializedName("30")
+    NUMBER_30(30);
+
+    private Integer value;
+
+    VisibilityCrmEnum(Integer value) {
+      this.value = value;
+    }
+    public Integer getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+    public static VisibilityCrmEnum fromValue(Integer input) {
+      for (VisibilityCrmEnum b : VisibilityCrmEnum.values()) {
+        if (b.value.equals(input)) {
+          return b;
+        }
+      }
+      return null;
+    }
+    public static class Adapter extends TypeAdapter<VisibilityCrmEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final VisibilityCrmEnum enumeration) throws IOException {
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
+      }
+
+      @Override
+      public VisibilityCrmEnum read(final JsonReader jsonReader) throws IOException {
+        Object value = jsonReader.nextInt();
+        return VisibilityCrmEnum.fromValue((Integer)(value));
+      }
+    }
+  }  @SerializedName("visibilityCrm")
+  private VisibilityCrmEnum visibilityCrm = VisibilityCrmEnum.NUMBER_10;
+
+  /**
+   * Gets or Sets visibilityReport
+   */
+  @JsonAdapter(VisibilityReportEnum.Adapter.class)
+  public enum VisibilityReportEnum {
+    @SerializedName("0")
+    NUMBER_0(0),
+    @SerializedName("10")
+    NUMBER_10(10),
+    @SerializedName("30")
+    NUMBER_30(30);
+
+    private Integer value;
+
+    VisibilityReportEnum(Integer value) {
+      this.value = value;
+    }
+    public Integer getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+    public static VisibilityReportEnum fromValue(Integer input) {
+      for (VisibilityReportEnum b : VisibilityReportEnum.values()) {
+        if (b.value.equals(input)) {
+          return b;
+        }
+      }
+      return null;
+    }
+    public static class Adapter extends TypeAdapter<VisibilityReportEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final VisibilityReportEnum enumeration) throws IOException {
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
+      }
+
+      @Override
+      public VisibilityReportEnum read(final JsonReader jsonReader) throws IOException {
+        Object value = jsonReader.nextInt();
+        return VisibilityReportEnum.fromValue((Integer)(value));
+      }
+    }
+  }  @SerializedName("visibilityReport")
+  private VisibilityReportEnum visibilityReport = VisibilityReportEnum.NUMBER_10;
 
   public CampaignCreate id(Integer id) {
     this.id = id;
@@ -569,6 +665,42 @@ public class CampaignCreate {
     this.source = source;
   }
 
+  public CampaignCreate visibilityCrm(VisibilityCrmEnum visibilityCrm) {
+    this.visibilityCrm = visibilityCrm;
+    return this;
+  }
+
+   /**
+   * Get visibilityCrm
+   * @return visibilityCrm
+  **/
+  @Schema(description = "")
+  public VisibilityCrmEnum getVisibilityCrm() {
+    return visibilityCrm;
+  }
+
+  public void setVisibilityCrm(VisibilityCrmEnum visibilityCrm) {
+    this.visibilityCrm = visibilityCrm;
+  }
+
+  public CampaignCreate visibilityReport(VisibilityReportEnum visibilityReport) {
+    this.visibilityReport = visibilityReport;
+    return this;
+  }
+
+   /**
+   * Get visibilityReport
+   * @return visibilityReport
+  **/
+  @Schema(description = "")
+  public VisibilityReportEnum getVisibilityReport() {
+    return visibilityReport;
+  }
+
+  public void setVisibilityReport(VisibilityReportEnum visibilityReport) {
+    this.visibilityReport = visibilityReport;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -595,12 +727,14 @@ public class CampaignCreate {
         Objects.equals(this.transactionEarliest, campaignCreate.transactionEarliest) &&
         Objects.equals(this.transactionLatest, campaignCreate.transactionLatest) &&
         Objects.equals(this.productTypes, campaignCreate.productTypes) &&
-        Objects.equals(this.source, campaignCreate.source);
+        Objects.equals(this.source, campaignCreate.source) &&
+        Objects.equals(this.visibilityCrm, campaignCreate.visibilityCrm) &&
+        Objects.equals(this.visibilityReport, campaignCreate.visibilityReport);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, campaignNickname, totangoName, type, frequency, lifetime, method, carrierAllowed, accountType, dncScrub, reportingPeriodType, reportingPeriodBefore, reportingPeriodAfter, transactionEarliest, transactionLatest, productTypes, source);
+    return Objects.hash(id, campaignNickname, totangoName, type, frequency, lifetime, method, carrierAllowed, accountType, dncScrub, reportingPeriodType, reportingPeriodBefore, reportingPeriodAfter, transactionEarliest, transactionLatest, productTypes, source, visibilityCrm, visibilityReport);
   }
 
 
@@ -626,6 +760,8 @@ public class CampaignCreate {
     sb.append("    transactionLatest: ").append(toIndentedString(transactionLatest)).append("\n");
     sb.append("    productTypes: ").append(toIndentedString(productTypes)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    visibilityCrm: ").append(toIndentedString(visibilityCrm)).append("\n");
+    sb.append("    visibilityReport: ").append(toIndentedString(visibilityReport)).append("\n");
     sb.append("}");
     return sb.toString();
   }

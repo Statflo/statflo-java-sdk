@@ -23,13 +23,11 @@ import com.statflo.client.model.Dealer;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.List;
 /**
  * Contact
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class Contact {
   @SerializedName("id")
@@ -102,7 +100,7 @@ public class Contact {
   private String flag = null;
 
   @SerializedName("optedOut")
-  private List<Object> optedOut = null;
+  private Object optedOut = null;
 
   @SerializedName("firstName")
   private String firstName = null;
@@ -524,16 +522,8 @@ public class Contact {
     this.flag = flag;
   }
 
-  public Contact optedOut(List<Object> optedOut) {
+  public Contact optedOut(Object optedOut) {
     this.optedOut = optedOut;
-    return this;
-  }
-
-  public Contact addOptedOutItem(Object optedOutItem) {
-    if (this.optedOut == null) {
-      this.optedOut = new ArrayList<>();
-    }
-    this.optedOut.add(optedOutItem);
     return this;
   }
 
@@ -542,11 +532,11 @@ public class Contact {
    * @return optedOut
   **/
   @Schema(description = "")
-  public List<Object> getOptedOut() {
+  public Object getOptedOut() {
     return optedOut;
   }
 
-  public void setOptedOut(List<Object> optedOut) {
+  public void setOptedOut(Object optedOut) {
     this.optedOut = optedOut;
   }
 

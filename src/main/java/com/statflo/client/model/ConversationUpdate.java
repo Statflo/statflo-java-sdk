@@ -22,13 +22,11 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.List;
 /**
  * ConversationUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-06T21:27:39.883551916Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-19T01:25:09.456925409Z[Etc/UTC]")
 
 public class ConversationUpdate {
   @SerializedName("id")
@@ -95,7 +93,7 @@ public class ConversationUpdate {
   private Integer opportunityScore = 0;
 
   @SerializedName("insightsWidgetPayload")
-  private List<Object> insightsWidgetPayload = null;
+  private Object insightsWidgetPayload = null;
 
   @SerializedName("dateAdded")
   private OffsetDateTime dateAdded = null;
@@ -210,16 +208,8 @@ public class ConversationUpdate {
     this.opportunityScore = opportunityScore;
   }
 
-  public ConversationUpdate insightsWidgetPayload(List<Object> insightsWidgetPayload) {
+  public ConversationUpdate insightsWidgetPayload(Object insightsWidgetPayload) {
     this.insightsWidgetPayload = insightsWidgetPayload;
-    return this;
-  }
-
-  public ConversationUpdate addInsightsWidgetPayloadItem(Object insightsWidgetPayloadItem) {
-    if (this.insightsWidgetPayload == null) {
-      this.insightsWidgetPayload = new ArrayList<>();
-    }
-    this.insightsWidgetPayload.add(insightsWidgetPayloadItem);
     return this;
   }
 
@@ -228,11 +218,11 @@ public class ConversationUpdate {
    * @return insightsWidgetPayload
   **/
   @Schema(description = "")
-  public List<Object> getInsightsWidgetPayload() {
+  public Object getInsightsWidgetPayload() {
     return insightsWidgetPayload;
   }
 
-  public void setInsightsWidgetPayload(List<Object> insightsWidgetPayload) {
+  public void setInsightsWidgetPayload(Object insightsWidgetPayload) {
     this.insightsWidgetPayload = insightsWidgetPayload;
   }
 
