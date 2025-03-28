@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **locationId** | **Integer** |  | 
 **deliveryStatus** | [**DeliveryStatusEnum**](#DeliveryStatusEnum) |  |  [optional]
 **provider** | [**ProviderEnum**](#ProviderEnum) |  |  [optional]
-**content** | **String** |  | 
+**content** | **String** |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 
 <a name="DeliveryStatusEnum"></a>

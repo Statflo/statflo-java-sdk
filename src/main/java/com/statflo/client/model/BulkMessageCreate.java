@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * BulkMessageCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-28T10:12:06.710821-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-28T11:04:44.576146-04:00[America/Toronto]")
 
 public class BulkMessageCreate {
   @SerializedName("id")
@@ -279,7 +279,7 @@ public class BulkMessageCreate {
    * Get content
    * @return content
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public String getContent() {
     return content;
   }

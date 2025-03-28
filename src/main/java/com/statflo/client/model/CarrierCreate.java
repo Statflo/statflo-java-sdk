@@ -25,7 +25,7 @@ import java.io.IOException;
  * CarrierCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-28T10:12:06.710821-04:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-28T11:04:44.576146-04:00[America/Toronto]")
 
 public class CarrierCreate {
   @SerializedName("id")
