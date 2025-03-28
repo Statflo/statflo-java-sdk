@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**userId** | **Integer** |  |  [optional]
+**userId** | **Integer** |  | 
 **templateId** | **String** |  | 
 **campaignId** | **Integer** |  | 
 **locationId** | **Integer** |  | 
