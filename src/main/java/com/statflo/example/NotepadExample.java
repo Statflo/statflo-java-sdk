@@ -3,6 +3,7 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.NotepadsApi;
+import com.statflo.client.model.Notepad;
 import com.statflo.client.model.NotepadPaginationResponse;
 import com.statflo.client.model.NotepadSummary;
 
@@ -18,7 +19,7 @@ public class NotepadExample {
         HashMap<String, String> filter = new HashMap<>();
 
         NotepadPaginationResponse notepadPaginationResponse = notepadsApi.notepadSearch(filter, "", 1, 10, "");
-        for (NotepadSummary item : notepadPaginationResponse.getItems()) {
+        for (Notepad item : notepadPaginationResponse.getItems()) {
             System.out.println(item);
         }
     }

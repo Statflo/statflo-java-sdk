@@ -4,6 +4,7 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.RegionsApi;
+import com.statflo.client.model.Region;
 import com.statflo.client.model.RegionPaginationResponse;
 import com.statflo.client.model.RegionSummary;
 
@@ -19,7 +20,7 @@ public class RegionExample {
         HashMap<String, String> filter = new HashMap<>();
 
         RegionPaginationResponse regionPaginationResponse = regionsApi.regionSearch(filter, "", 1, 10, "");
-        for (RegionSummary item : regionPaginationResponse.getItems()) {
+        for (Region item : regionPaginationResponse.getItems()) {
             System.out.println(item);
         }
     }

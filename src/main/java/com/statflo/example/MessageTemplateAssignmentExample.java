@@ -4,6 +4,7 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.MessageTemplateAssignmentsApi;
+import com.statflo.client.model.MessageTemplateAssignment;
 import com.statflo.client.model.MessageTemplateAssignmentPaginationResponse;
 import com.statflo.client.model.MessageTemplateAssignmentSummary;
 
@@ -20,7 +21,7 @@ public class MessageTemplateAssignmentExample {
 
         MessageTemplateAssignmentPaginationResponse messageTemplateAssignmentPaginationResponse =
                 messageTemplateAssignmentsApi.messageTemplateAssignmentSearch(filter, "", 1, 10, "");
-        for (MessageTemplateAssignmentSummary item : messageTemplateAssignmentPaginationResponse.getItems()) {
+        for (MessageTemplateAssignment item : messageTemplateAssignmentPaginationResponse.getItems()) {
             System.out.println(item);
         }
     }

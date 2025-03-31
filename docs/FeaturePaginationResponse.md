@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;FeatureSummary&gt;**](FeatureSummary.md) |  |  [optional]
+**items** | [**List&lt;Feature&gt;**](Feature.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

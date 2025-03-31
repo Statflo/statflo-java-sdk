@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;NotepadSummary&gt;**](NotepadSummary.md) |  |  [optional]
+**items** | [**List&lt;Notepad&gt;**](Notepad.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

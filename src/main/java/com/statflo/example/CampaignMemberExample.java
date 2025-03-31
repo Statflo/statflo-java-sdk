@@ -4,6 +4,7 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.CampaignMemberApi;
+import com.statflo.client.model.CampaignMember;
 import com.statflo.client.model.CampaignMemberPaginationResponse;
 import com.statflo.client.model.CampaignMemberSummary;
 
@@ -19,7 +20,7 @@ public class CampaignMemberExample {
         HashMap<String, String> filter = new HashMap<>();
 
         CampaignMemberPaginationResponse campaignMemberPaginationResponse = campaignMemberApi.campaignMemberSearch(filter, "", 1, 10, "");
-        for (CampaignMemberSummary campaignMember : campaignMemberPaginationResponse.getItems()) {
+        for (CampaignMember campaignMember : campaignMemberPaginationResponse.getItems()) {
             System.out.println(campaignMember);
         }
     }

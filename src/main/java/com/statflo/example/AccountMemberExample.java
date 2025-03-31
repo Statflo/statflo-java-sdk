@@ -21,7 +21,7 @@ public class AccountMemberExample {
         HashMap<String, String> filter = new HashMap<>();
 
         AccountMemberPaginationResponse accountMemberPaginationResponse = accountMembersApi.accountMemberSearch(filter, "", 1, 10, "");
-        for (AccountMemberSummary item : accountMemberPaginationResponse.getItems()) {
+        for (AccountMember item : accountMemberPaginationResponse.getItems()) {
             System.out.println(item);
 
             AccountMember accountMember = accountMembersApi.accountMemberGet(String.valueOf(item.getId()));

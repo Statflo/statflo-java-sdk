@@ -4,6 +4,7 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.CampaignPropertiesApi;
+import com.statflo.client.model.CampaignProperty;
 import com.statflo.client.model.CampaignPropertyPaginationResponse;
 import com.statflo.client.model.CampaignPropertySummary;
 
@@ -19,7 +20,7 @@ public class CampaignPropertyExample {
         HashMap<String, String> filter = new HashMap<>();
 
         CampaignPropertyPaginationResponse campaignPropertyPaginationResponse = campaignPropertiesApi.campaignPropertySearch(filter, "", 1, 1, "");
-        for (CampaignPropertySummary item : campaignPropertyPaginationResponse.getItems()) {
+        for (CampaignProperty item : campaignPropertyPaginationResponse.getItems()) {
             System.out.println(item);
         }
     }

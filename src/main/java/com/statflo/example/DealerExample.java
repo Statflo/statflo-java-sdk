@@ -4,6 +4,7 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.DealersApi;
+import com.statflo.client.model.Dealer;
 import com.statflo.client.model.DealerPaginationResponse;
 import com.statflo.client.model.DealerSummary;
 
@@ -20,7 +21,7 @@ public class DealerExample {
         HashMap<String, String> filter = new HashMap<>();
 
         DealerPaginationResponse dealerPaginationResponse = dealersApi.dealerSearch(filter, "", 1, 10, "");
-        for (DealerSummary item : dealerPaginationResponse.getItems()) {
+        for (Dealer item : dealerPaginationResponse.getItems()) {
             System.out.println(item);
         }
     }

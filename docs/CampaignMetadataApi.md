@@ -1,6 +1,6 @@
 # CampaignMetadataApi
 
-All URIs are relative to *https://app.test.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

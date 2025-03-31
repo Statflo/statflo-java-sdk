@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;ConversationSummary&gt;**](ConversationSummary.md) |  |  [optional]
+**items** | [**List&lt;Conversation&gt;**](Conversation.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

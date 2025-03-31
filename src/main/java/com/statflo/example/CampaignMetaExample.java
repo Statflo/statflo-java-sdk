@@ -20,7 +20,7 @@ public class CampaignMetaExample {
         HashMap<String, String> filter = new HashMap<>();
 
         CampaignMetadataPaginationResponse campaignMetadataPaginationResponse = campaignMetadataApi.campaignMetadataSearch(filter, "", 1, 1, "");
-        for (CampaignMetadataSummary item : campaignMetadataPaginationResponse.getItems()) {
+        for (CampaignMetadata item : campaignMetadataPaginationResponse.getItems()) {
             System.out.println(item);
         }
 

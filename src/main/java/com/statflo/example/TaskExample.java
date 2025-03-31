@@ -4,6 +4,7 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.TasksApi;
+import com.statflo.client.model.Task;
 import com.statflo.client.model.TaskPaginationResponse;
 import com.statflo.client.model.TaskSummary;
 
@@ -19,7 +20,7 @@ public class TaskExample {
         HashMap<String, String> filter = new HashMap<>();
 
         TaskPaginationResponse taskPaginationResponse = tasksApi.taskSearch(filter, "", 1, 10, "");
-        for (TaskSummary item : taskPaginationResponse.getItems()) {
+        for (Task item : taskPaginationResponse.getItems()) {
             System.out.println(item);
         }
     }
