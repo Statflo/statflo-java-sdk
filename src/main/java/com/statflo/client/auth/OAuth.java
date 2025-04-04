@@ -17,7 +17,7 @@ import com.statflo.client.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-03-20T20:15:05.814297111Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-04-04T17:47:52.442804164Z[Etc/UTC]")
 public class OAuth implements Authentication {
   private String accessToken;
 
