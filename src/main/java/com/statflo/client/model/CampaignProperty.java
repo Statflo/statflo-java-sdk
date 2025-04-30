@@ -31,7 +31,7 @@ import java.util.List;
  * CampaignProperty
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-04-04T17:47:52.442804164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-04-30T00:27:58.451319462Z[Etc/UTC]")
 
 public class CampaignProperty {
   @SerializedName("id")
