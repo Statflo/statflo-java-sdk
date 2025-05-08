@@ -31,7 +31,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 MessageTemplateAssignmentsApi apiInstance = new MessageTemplateAssignmentsApi();
-MessageTemplateAssignment body = new MessageTemplateAssignment(); // MessageTemplateAssignment | 
+MessageTemplateAssignmentCreate body = new MessageTemplateAssignmentCreate(); // MessageTemplateAssignmentCreate | 
 try {
     MessageTemplateAssignment result = apiInstance.messageTemplateAssignmentCreate(body);
     System.out.println(result);
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**MessageTemplateAssignment**](MessageTemplateAssignment.md)|  | [optional]
+ **body** | [**MessageTemplateAssignmentCreate**](MessageTemplateAssignmentCreate.md)|  | [optional]
 
 ### Return type
 
@@ -239,7 +239,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 MessageTemplateAssignmentsApi apiInstance = new MessageTemplateAssignmentsApi();
 String id = "id_example"; // String | 
-MessageTemplateAssignment body = new MessageTemplateAssignment(); // MessageTemplateAssignment | 
+MessageTemplateAssignmentUpdate body = new MessageTemplateAssignmentUpdate(); // MessageTemplateAssignmentUpdate | 
 try {
     MessageTemplateAssignment result = apiInstance.messageTemplateAssignmentUpdate(id, body);
     System.out.println(result);
@@ -254,7 +254,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
- **body** | [**MessageTemplateAssignment**](MessageTemplateAssignment.md)|  | [optional]
+ **body** | [**MessageTemplateAssignmentUpdate**](MessageTemplateAssignmentUpdate.md)|  | [optional]
 
 ### Return type
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="contactCreate"></a>
 # **contactCreate**
-> ContactCreate contactCreate(body)
+> Contact contactCreate(body)
 
 
 
@@ -31,9 +31,9 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 ContactsApi apiInstance = new ContactsApi();
-Contact body = new Contact(); // Contact | 
+ContactCreate body = new ContactCreate(); // ContactCreate | 
 try {
-    ContactCreate result = apiInstance.contactCreate(body);
+    Contact result = apiInstance.contactCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#contactCreate");
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Contact**](Contact.md)|  | [optional]
+ **body** | [**ContactCreate**](ContactCreate.md)|  | [optional]
 
 ### Return type
 
-[**ContactCreate**](ContactCreate.md)
+[**Contact**](Contact.md)
 
 ### Authorization
 

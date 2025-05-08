@@ -189,7 +189,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 AccountCredentialsApi apiInstance = new AccountCredentialsApi();
 String id = "id_example"; // String | 
-AccountCredential body = new AccountCredential(); // AccountCredential | 
+AccountCredentialUpdate body = new AccountCredentialUpdate(); // AccountCredentialUpdate | 
 try {
     AccountCredential result = apiInstance.accountCredentialUpdate(id, body);
     System.out.println(result);
@@ -204,7 +204,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
- **body** | [**AccountCredential**](AccountCredential.md)|  | [optional]
+ **body** | [**AccountCredentialUpdate**](AccountCredentialUpdate.md)|  | [optional]
 
 ### Return type
 

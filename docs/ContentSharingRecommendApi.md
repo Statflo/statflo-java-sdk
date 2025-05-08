@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contentSharingRecommendCreate**](ContentSharingRecommendApi.md#contentSharingRecommendCreate) | **POST** /v4/api/content-sharing-recommend | 
+[**contentSharingRecommendedCreate**](ContentSharingRecommendApi.md#contentSharingRecommendedCreate) | **POST** /v4/api/content-sharing-recommend | 
 [**contentSharingRecommendedDelete**](ContentSharingRecommendApi.md#contentSharingRecommendedDelete) | **DELETE** /v4/api/content-sharing-recommend/{id} | 
 [**contentSharingRecommendedGet**](ContentSharingRecommendApi.md#contentSharingRecommendedGet) | **GET** /v4/api/content-sharing-recommend/{id} | 
 [**contentSharingRecommendedSearch**](ContentSharingRecommendApi.md#contentSharingRecommendedSearch) | **GET** /v4/api/content-sharing-recommend | 
 [**contentSharingRecommendedUpdate**](ContentSharingRecommendApi.md#contentSharingRecommendedUpdate) | **PUT** /v4/api/content-sharing-recommend/{id} | 
 
-<a name="contentSharingRecommendCreate"></a>
-# **contentSharingRecommendCreate**
-> ContentSharingRecommended contentSharingRecommendCreate(body)
+<a name="contentSharingRecommendedCreate"></a>
+# **contentSharingRecommendedCreate**
+> ContentSharingRecommended contentSharingRecommendedCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 ContentSharingRecommendApi apiInstance = new ContentSharingRecommendApi();
 ContentSharingRecommendedCreate body = new ContentSharingRecommendedCreate(); // ContentSharingRecommendedCreate | 
 try {
-    ContentSharingRecommended result = apiInstance.contentSharingRecommendCreate(body);
+    ContentSharingRecommended result = apiInstance.contentSharingRecommendedCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ContentSharingRecommendApi#contentSharingRecommendCreate");
+    System.err.println("Exception when calling ContentSharingRecommendApi#contentSharingRecommendedCreate");
     e.printStackTrace();
 }
 ```

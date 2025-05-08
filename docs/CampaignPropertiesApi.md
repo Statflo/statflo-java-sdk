@@ -31,7 +31,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 CampaignPropertiesApi apiInstance = new CampaignPropertiesApi();
-CampaignProperty body = new CampaignProperty(); // CampaignProperty | 
+CampaignPropertyCreate body = new CampaignPropertyCreate(); // CampaignPropertyCreate | 
 try {
     CampaignProperty result = apiInstance.campaignPropertyCreate(body);
     System.out.println(result);
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CampaignProperty**](CampaignProperty.md)|  | [optional]
+ **body** | [**CampaignPropertyCreate**](CampaignPropertyCreate.md)|  | [optional]
 
 ### Return type
 
@@ -239,7 +239,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 CampaignPropertiesApi apiInstance = new CampaignPropertiesApi();
 String id = "id_example"; // String | 
-CampaignProperty body = new CampaignProperty(); // CampaignProperty | 
+CampaignPropertyUpdate body = new CampaignPropertyUpdate(); // CampaignPropertyUpdate | 
 try {
     CampaignProperty result = apiInstance.campaignPropertyUpdate(id, body);
     System.out.println(result);
@@ -254,7 +254,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
- **body** | [**CampaignProperty**](CampaignProperty.md)|  | [optional]
+ **body** | [**CampaignPropertyUpdate**](CampaignPropertyUpdate.md)|  | [optional]
 
 ### Return type
 
