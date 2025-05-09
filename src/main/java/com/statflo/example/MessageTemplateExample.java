@@ -4,8 +4,8 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.MessageTemplatesApi;
+import com.statflo.client.model.MessageTemplate;
 import com.statflo.client.model.MessageTemplatePaginationResponse;
-import com.statflo.client.model.MessageTemplateSummary;
 
 import java.util.HashMap;
 
@@ -19,7 +19,7 @@ public class MessageTemplateExample {
         HashMap<String, String> filter = new HashMap<>();
 
         MessageTemplatePaginationResponse messageTemplatePaginationResponse = messageTemplatesApi.messageTemplateSearch(filter, "", 1, 10, "");
-        for (MessageTemplateSummary item : messageTemplatePaginationResponse.getItems()) {
+        for (MessageTemplate item : messageTemplatePaginationResponse.getItems()) {
             System.out.println(item);
         }
     }

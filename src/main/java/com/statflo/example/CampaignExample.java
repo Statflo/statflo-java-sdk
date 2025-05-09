@@ -4,8 +4,8 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.CampaignsApi;
+import com.statflo.client.model.Campaign;
 import com.statflo.client.model.CampaignPaginationResponse;
-import com.statflo.client.model.CampaignSummary;
 
 import java.util.HashMap;
 
@@ -19,8 +19,8 @@ public class CampaignExample {
         HashMap<String, String> filter = new HashMap<>();
 
         CampaignPaginationResponse campaignPaginationResponse = campaignsApi.campaignSearch(filter, "", 1, 10, "");
-        for (CampaignSummary campaignSummary : campaignPaginationResponse.getItems()) {
-            System.out.println(campaignSummary);
+        for (Campaign campaign : campaignPaginationResponse.getItems()) {
+            System.out.println(campaign);
         }
     }
 }
