@@ -4,8 +4,8 @@ package com.statflo.example;
 import com.statflo.client.ApiClient;
 import com.statflo.client.ApiException;
 import com.statflo.client.api.ContactsApi;
+import com.statflo.client.model.Contact;
 import com.statflo.client.model.ContactPaginationResponse;
-import com.statflo.client.model.ContactSummary;
 
 import java.util.HashMap;
 
@@ -19,7 +19,7 @@ public class ContactExample {
         HashMap<String, String> filter = new HashMap<>();
 
         ContactPaginationResponse contactPaginationResponse = contactsApi.contactSearch(filter, "", 1, 1, "");
-        for (ContactSummary contact : contactPaginationResponse.getItems()) {
+        for (Contact contact : contactPaginationResponse.getItems()) {
             System.out.println(contact);
         }
 
