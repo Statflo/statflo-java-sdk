@@ -33,7 +33,7 @@ import java.util.List;
  * MessageTemplate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-05-20T14:40:15.161398518Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-05-20T14:51:57.684743987Z[Etc/UTC]")
 
 public class MessageTemplate {
   @SerializedName("id")
