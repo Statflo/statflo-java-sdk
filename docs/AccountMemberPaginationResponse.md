@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;AccountMemberSummary&gt;**](AccountMemberSummary.md) |  |  [optional]
+**items** | [**List&lt;AccountMember&gt;**](AccountMember.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

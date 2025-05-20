@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;MessageSummary&gt;**](MessageSummary.md) |  |  [optional]
+**items** | [**List&lt;Message&gt;**](Message.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;TaskSummary&gt;**](TaskSummary.md) |  |  [optional]
+**items** | [**List&lt;Task&gt;**](Task.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

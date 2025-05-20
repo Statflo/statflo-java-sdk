@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **endDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **secondaryDealerId** | **String** |  |  [optional]
 **campaignNickname** | **String** |  |  [optional]
-**source** | **String** |  |  [optional]
+**source** | [**SourceEnum**](#SourceEnum) |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **excludeDnc** | **String** |  |  [optional]
 **excludeDncDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
@@ -24,3 +24,11 @@ Name | Type | Description | Notes
 **excludeNoDealerMatch** | **String** |  |  [optional]
 **excludeArchived** | **String** |  |  [optional]
 **excludeLegacy** | **String** |  |  [optional]
+
+<a name="SourceEnum"></a>
+## Enum: SourceEnum
+Name | Value
+---- | -----
+API | &quot;api&quot;
+SALESFORCE | &quot;salesforce&quot;
+ADDTOCAMPAIGN | &quot;addToCampaign&quot;

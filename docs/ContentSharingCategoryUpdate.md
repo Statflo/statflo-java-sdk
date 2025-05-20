@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **description** | **String** |  |  [optional]
 **displayOrder** | **Integer** |  | 
+**dealerId** | **Integer** |  |  [optional]
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

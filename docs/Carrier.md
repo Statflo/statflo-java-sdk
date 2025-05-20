@@ -7,4 +7,4 @@ Name | Type | Description | Notes
 **name** | **String** |  |  [optional]
 **country** | **String** |  |  [optional]
 **logo** | **String** |  |  [optional]
-**dealers** | [**List&lt;DealerSummary&gt;**](DealerSummary.md) |  |  [optional]
+**dealers** | [**List&lt;Dealer&gt;**](Dealer.md) |  |  [optional]

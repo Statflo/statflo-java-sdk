@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;AccountCredentialSummary&gt;**](AccountCredentialSummary.md) |  |  [optional]
+**items** | [**List&lt;AccountCredential&gt;**](AccountCredential.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

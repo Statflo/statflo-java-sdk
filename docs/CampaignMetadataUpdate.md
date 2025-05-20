@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
+**dealerId** | **Integer** |  |  [optional]
 **campaignId** | **Integer** |  |  [optional]
 **metadata** | [**MetadataEnum**](#MetadataEnum) |  |  [optional]
 **value** | **Object** |  |  [optional]

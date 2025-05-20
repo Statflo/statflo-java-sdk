@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;CampaignMetadataSummary&gt;**](CampaignMetadataSummary.md) |  |  [optional]
+**items** | [**List&lt;CampaignMetadata&gt;**](CampaignMetadata.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

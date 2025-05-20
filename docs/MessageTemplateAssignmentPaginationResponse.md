@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;MessageTemplateAssignmentSummary&gt;**](MessageTemplateAssignmentSummary.md) |  |  [optional]
+**items** | [**List&lt;MessageTemplateAssignment&gt;**](MessageTemplateAssignment.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

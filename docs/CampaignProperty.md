@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**campaign** | [**CampaignSummary**](CampaignSummary.md) |  |  [optional]
+**campaign** | [**Campaign**](Campaign.md) |  |  [optional]
 **campaignPriority** | **Integer** |  |  [optional]
 **displayPriority** | **Integer** |  |  [optional]
 **carryoverUnattempted** | **Boolean** |  |  [optional]

@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List&lt;VendorMessageSummary&gt;**](VendorMessageSummary.md) |  |  [optional]
+**items** | [**List&lt;VendorMessage&gt;**](VendorMessage.md) |  |  [optional]
 **pagination** | [**Pagination**](Pagination.md) |  |  [optional]

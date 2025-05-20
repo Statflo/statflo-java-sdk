@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **language** | **String** |  |  [optional]
 **metadata** | **Object** |  |  [optional]
 **template** | **Object** |  |  [optional]
-**campaign** | [**CampaignSummary**](CampaignSummary.md) |  |  [optional]
+**campaign** | [**Campaign**](Campaign.md) |  |  [optional]
 **priority** | **Integer** |  |  [optional]
 **messageTemplateAssignments** | [**List&lt;MessageTemplateAssignment&gt;**](MessageTemplateAssignment.md) |  |  [optional]
 **categories** | [**List&lt;MessageTemplateCategory&gt;**](MessageTemplateCategory.md) |  |  [optional]
