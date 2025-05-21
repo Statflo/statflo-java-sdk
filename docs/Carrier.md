@@ -8,3 +8,4 @@ Name | Type | Description | Notes
 **country** | **String** |  |  [optional]
 **logo** | **String** |  |  [optional]
 **dealers** | [**List&lt;Dealer&gt;**](Dealer.md) |  |  [optional]
+**brands** | [**List&lt;Brand&gt;**](Brand.md) |  |  [optional]

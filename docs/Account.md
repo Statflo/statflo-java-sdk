@@ -53,3 +53,4 @@ Name | Type | Description | Notes
 **accountSubtype** | **String** |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **dateUpdated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**brand** | [**Brand**](Brand.md) |  |  [optional]

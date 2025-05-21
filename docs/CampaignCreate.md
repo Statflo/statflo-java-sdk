@@ -44,11 +44,12 @@ DAILY | &quot;daily&quot;
 ## Enum: AccountTypeEnum
 Name | Value
 ---- | -----
-I | &quot;I&quot;
-D | &quot;D&quot;
-C | &quot;C&quot;
 B | &quot;B&quot;
+I | &quot;I&quot;
 L | &quot;L&quot;
+C | &quot;C&quot;
+D | &quot;D&quot;
+IB | &quot;IB&quot;
 
 <a name="SourceEnum"></a>
 ## Enum: SourceEnum

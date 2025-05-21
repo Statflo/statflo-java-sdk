@@ -19,67 +19,77 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.statflo.client.model.Pagination;
-import com.statflo.client.model.Team;
+import com.statflo.client.model.Carrier;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 /**
- * TeamPaginationResponse
+ * Brand
  */
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-05-21T13:48:15.743418469Z[Etc/UTC]")
 
-public class TeamPaginationResponse {
-  @SerializedName("items")
-  private List<Team> items = null;
+public class Brand {
+  @SerializedName("id")
+  private Integer id = null;
 
-  @SerializedName("pagination")
-  private Pagination pagination = null;
+  @SerializedName("name")
+  private String name = null;
 
-  public TeamPaginationResponse items(List<Team> items) {
-    this.items = items;
-    return this;
-  }
+  @SerializedName("carrier")
+  private Carrier carrier = null;
 
-  public TeamPaginationResponse addItemsItem(Team itemsItem) {
-    if (this.items == null) {
-      this.items = new ArrayList<>();
-    }
-    this.items.add(itemsItem);
+  public Brand id(Integer id) {
+    this.id = id;
     return this;
   }
 
    /**
-   * Get items
-   * @return items
+   * Get id
+   * @return id
   **/
-  @Schema(description = "")
-  public List<Team> getItems() {
-    return items;
+  @Schema(required = true, description = "")
+  public Integer getId() {
+    return id;
   }
 
-  public void setItems(List<Team> items) {
-    this.items = items;
+  public void setId(Integer id) {
+    this.id = id;
   }
 
-  public TeamPaginationResponse pagination(Pagination pagination) {
-    this.pagination = pagination;
+  public Brand name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get pagination
-   * @return pagination
+   * Get name
+   * @return name
   **/
-  @Schema(description = "")
-  public Pagination getPagination() {
-    return pagination;
+  @Schema(required = true, description = "")
+  public String getName() {
+    return name;
   }
 
-  public void setPagination(Pagination pagination) {
-    this.pagination = pagination;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Brand carrier(Carrier carrier) {
+    this.carrier = carrier;
+    return this;
+  }
+
+   /**
+   * Get carrier
+   * @return carrier
+  **/
+  @Schema(description = "")
+  public Carrier getCarrier() {
+    return carrier;
+  }
+
+  public void setCarrier(Carrier carrier) {
+    this.carrier = carrier;
   }
 
 
@@ -91,24 +101,26 @@ public class TeamPaginationResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TeamPaginationResponse teamPaginationResponse = (TeamPaginationResponse) o;
-    return Objects.equals(this.items, teamPaginationResponse.items) &&
-        Objects.equals(this.pagination, teamPaginationResponse.pagination);
+    Brand brand = (Brand) o;
+    return Objects.equals(this.id, brand.id) &&
+        Objects.equals(this.name, brand.name) &&
+        Objects.equals(this.carrier, brand.carrier);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(items, pagination);
+    return Objects.hash(id, name, carrier);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TeamPaginationResponse {\n");
+    sb.append("class Brand {\n");
     
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
-    sb.append("    pagination: ").append(toIndentedString(pagination)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    carrier: ").append(toIndentedString(carrier)).append("\n");
     sb.append("}");
     return sb.toString();
   }
