@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **districtId** | **Integer** |  |  [optional]
 **regionId** | **Integer** |  |  [optional]
 **phoneNumber** | **String** |  |  [optional]
+**timezone** | **String** |  |  [optional]
+**theme** | **Integer** |  |  [optional]
 **token** | **String** |  |  [optional]
 **tokenParagon** | **String** |  |  [optional]
 **userActive** | **Boolean** |  |  [optional]

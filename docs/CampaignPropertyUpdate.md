@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **campaignId** | **Integer** |  | 
 **campaignPriority** | **Integer** |  |  [optional]
 **displayPriority** | **Integer** |  |  [optional]
-**carryoverUnattempted** | **Boolean** |  |  [optional]
+**carryoverUnattempted** | **Integer** |  |  [optional]
 **visibilityCrm** | [**VisibilityCrmEnum**](#VisibilityCrmEnum) |  |  [optional]
 **visibilityReport** | [**VisibilityReportEnum**](#VisibilityReportEnum) |  |  [optional]
 

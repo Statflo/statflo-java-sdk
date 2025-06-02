@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **type** | [**TypeEnum**](#TypeEnum) |  | 
 **frequency** | [**FrequencyEnum**](#FrequencyEnum) |  | 
 **lifetime** | **String** |  |  [optional]
-**method** | **String** |  |  [optional]
+**method** | [**MethodEnum**](#MethodEnum) |  |  [optional]
 **carrierAllowed** | **Boolean** |  |  [optional]
 **accountType** | [**AccountTypeEnum**](#AccountTypeEnum) |  |  [optional]
 **dncScrub** | **Boolean** |  |  [optional]
@@ -40,6 +40,13 @@ MONTHLY | &quot;monthly&quot;
 ONCE | &quot;once&quot;
 DAILY | &quot;daily&quot;
 
+<a name="MethodEnum"></a>
+## Enum: MethodEnum
+Name | Value
+---- | -----
+PROVIDED | &quot;provided&quot;
+GENERATED | &quot;generated&quot;
+
 <a name="AccountTypeEnum"></a>
 ## Enum: AccountTypeEnum
 Name | Value
@@ -57,6 +64,7 @@ Name | Value
 ---- | -----
 API | &quot;api&quot;
 UPLOADED | &quot;uploaded&quot;
+GENERATED | &quot;generated&quot;
 
 <a name="VisibilityCrmEnum"></a>
 ## Enum: VisibilityCrmEnum

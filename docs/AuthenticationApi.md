@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**login**](AuthenticationApi.md#login) | **POST** /v4/api/auth/login | 
 [**logout**](AuthenticationApi.md#logout) | **GET** /v4/api/auth/logout | 
 [**switchDealer**](AuthenticationApi.md#switchDealer) | **GET** /v4/api/auth/switch | 
+[**switchDealerPost**](AuthenticationApi.md#switchDealerPost) | **POST** /v4/api/auth/switch | 
 
 <a name="authMe"></a>
 # **authMe**
@@ -200,4 +201,54 @@ null (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+<a name="switchDealerPost"></a>
+# **switchDealerPost**
+> User switchDealerPost(body)
+
+
+
+Switch active dealer.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AuthenticationApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AuthenticationApi apiInstance = new AuthenticationApi();
+AuthSwitchBody body = new AuthSwitchBody(); // AuthSwitchBody | 
+try {
+    User result = apiInstance.switchDealerPost(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AuthenticationApi#switchDealerPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AuthSwitchBody**](AuthSwitchBody.md)|  | [optional]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

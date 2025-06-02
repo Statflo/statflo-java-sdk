@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **districtId** | **Integer** |  |  [optional]
 **regionId** | **Integer** |  |  [optional]
 **phoneNumber** | **String** |  |  [optional]
+**timezone** | **String** |  |  [optional]
+**theme** | **Integer** |  |  [optional]
 **userActive** | **Boolean** |  |  [optional]
 **inboundAvailable** | **Boolean** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]

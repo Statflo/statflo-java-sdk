@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
+**dealerId** | **Integer** |  |  [optional]
 **templateName** | **String** |  | 
 **language** | [**LanguageEnum**](#LanguageEnum) |  |  [optional]
 **metadata** | **Object** |  |  [optional]
