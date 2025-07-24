@@ -71,6 +71,7 @@ I | &quot;I&quot;
 L | &quot;L&quot;
 C | &quot;C&quot;
 D | &quot;D&quot;
+IB | &quot;IB&quot;
 
 <a name="LanguageEnum"></a>
 ## Enum: LanguageEnum
