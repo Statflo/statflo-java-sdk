@@ -27,5 +27,6 @@ Name | Type | Description | Notes
 **smsCapable** | **Boolean** |  |  [optional]
 **flag** | **String** |  |  [optional]
 **optedOut** | **Object** |  |  [optional]
+**communicationMethods** | **Object** |  |  [optional]
 **firstName** | **String** |  |  [optional]
 **preferredLanguage** | **String** |  |  [optional]
