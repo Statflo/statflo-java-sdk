@@ -29,7 +29,7 @@ import java.time.OffsetDateTime;
  * Message
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-09-05T16:53:45.261425165Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-09-05T16:58:19.463465145Z[Etc/UTC]")
 
 public class Message {
   @SerializedName("id")
