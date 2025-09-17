@@ -1,4 +1,4 @@
-# DealerMetaDataUpdate
+# DealerMetadataUpdate
 
 ## Properties
 Name | Type | Description | Notes

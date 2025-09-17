@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **accountName** | **String** |  | 
 **accountId** | **String** |  | 
-**contactName** | **String** |  | 
+**contactName** | **String** |  |  [optional]
 **streetNumber** | **String** |  |  [optional]
 **streetName** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]

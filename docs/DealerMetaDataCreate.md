@@ -1,4 +1,4 @@
-# DealerMetaDataCreate
+# DealerMetadataCreate
 
 ## Properties
 Name | Type | Description | Notes
