@@ -4,8 +4,60 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**userCreate**](UsersApi.md#userCreate) | **POST** /v4/api/user | 
 [**userGet**](UsersApi.md#userGet) | **GET** /v4/api/user/{id} | 
 [**userSearch**](UsersApi.md#userSearch) | **GET** /v4/api/user | 
+[**userUpdate**](UsersApi.md#userUpdate) | **PUT** /v4/api/user/{id} | 
+
+<a name="userCreate"></a>
+# **userCreate**
+> User userCreate(body)
+
+
+
+Create a user.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.UsersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+UsersApi apiInstance = new UsersApi();
+UserCreate body = new UserCreate(); // UserCreate | 
+try {
+    User result = apiInstance.userCreate(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UsersApi#userCreate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**UserCreate**](UserCreate.md)|  | [optional]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="userGet"></a>
 # **userGet**
@@ -113,5 +165,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="userUpdate"></a>
+# **userUpdate**
+> User userUpdate(id, body)
+
+
+
+Update a user.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.UsersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+UsersApi apiInstance = new UsersApi();
+String id = "id_example"; // String | 
+UserUpdate body = new UserUpdate(); // UserUpdate | 
+try {
+    User result = apiInstance.userUpdate(id, body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UsersApi#userUpdate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **body** | [**UserUpdate**](UserUpdate.md)|  | [optional]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
