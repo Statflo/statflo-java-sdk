@@ -25,7 +25,7 @@ import java.io.IOException;
  * AuthSwitchBody
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-10-01T19:11:44.699805095Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-10-01T19:13:13.440424108Z[Etc/UTC]")
 
 public class AuthSwitchBody {
   @SerializedName("dealerId")
