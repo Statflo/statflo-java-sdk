@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
 **accountName** | **String** |  |  [optional]
-**accountId** | **String** |  | 
-**contactName** | **String** |  | 
+**accountId** | **String** |  |  [optional]
+**contactName** | **String** |  |  [optional]
 **streetNumber** | **String** |  |  [optional]
 **streetName** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]

@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
 **userPermissions** | [**List&lt;UserPermission&gt;**](UserPermission.md) |  |  [optional]
 **userTeams** | [**List&lt;UserTeam&gt;**](UserTeam.md) |  |  [optional]
+**userMetadata** | [**List&lt;UserMetadata&gt;**](UserMetadata.md) |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **permissions** | **List&lt;Object&gt;** |  | 
 **outletId** | **String** |  |  [optional]

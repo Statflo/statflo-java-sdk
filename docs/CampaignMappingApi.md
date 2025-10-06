@@ -1,6 +1,6 @@
 # CampaignMappingApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *https://app.test.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
