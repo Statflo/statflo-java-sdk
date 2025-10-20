@@ -28,7 +28,7 @@ import java.util.List;
  * Role
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-10-20T19:08:04.794115153Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2025-10-20T19:09:20.266558164Z[Etc/UTC]")
 
 public class Role {
   @SerializedName("id")
