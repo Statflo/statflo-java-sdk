@@ -1,6 +1,6 @@
 # AccountContactMetadataApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *https://app.test.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -165,7 +165,7 @@ null (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="accountContactMetadataGet"></a>
 # **accountContactMetadataGet**
