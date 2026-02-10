@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **id** | **Integer** |  | 
+**type** | [**TypeEnum**](#TypeEnum) |  | 
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
@@ -24,3 +25,14 @@ TO_DO | &quot;To Do&quot;
 IN_PROGRESS | &quot;In Progress&quot;
 BLOCKED | &quot;Blocked&quot;
 COMPLETED | &quot;Completed&quot;
+
+<a name="TypeEnum"></a>
+## Enum: TypeEnum
+Name | Value
+---- | -----
+NUMBER_4 | 4
+NUMBER_5 | 5
+NUMBER_7 | 7
+NUMBER_38 | 38
+NUMBER_40 | 40
+NUMBER_41 | 41

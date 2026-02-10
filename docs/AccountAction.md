@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **assignedTo** | **String** |  |  [optional]
 **assignedFrom** | **String** |  |  [optional]
 **id** | **Integer** |  | 
+**type** | **Integer** |  | 
 **user** | [**User**](User.md) |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
 **accountId** | **String** |  | 
