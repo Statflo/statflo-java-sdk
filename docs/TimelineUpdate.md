@@ -16,3 +16,6 @@ Name | Type | Description | Notes
 **recordOwned** | **Boolean** |  |  [optional]
 **description** | **String** |  |  [optional]
 **actionTaken** | **String** |  |  [optional]
+**subject** | **String** |  |  [optional]
+**assignedFrom** | **String** |  |  [optional]
+**assignedTo** | **String** |  |  [optional]

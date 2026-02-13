@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * TimelineUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T10:19:17.966672-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T14:32:08.582075-05:00[America/Toronto]")
 
 public class TimelineUpdate {
   @SerializedName("id")
@@ -67,6 +67,15 @@ public class TimelineUpdate {
 
   @SerializedName("actionTaken")
   private String actionTaken = null;
+
+  @SerializedName("subject")
+  private String subject = null;
+
+  @SerializedName("assignedFrom")
+  private String assignedFrom = null;
+
+  @SerializedName("assignedTo")
+  private String assignedTo = null;
 
   public TimelineUpdate id(Integer id) {
     this.id = id;
@@ -302,6 +311,60 @@ public class TimelineUpdate {
     this.actionTaken = actionTaken;
   }
 
+  public TimelineUpdate subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+   /**
+   * Get subject
+   * @return subject
+  **/
+  @Schema(description = "")
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
+  }
+
+  public TimelineUpdate assignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+    return this;
+  }
+
+   /**
+   * Get assignedFrom
+   * @return assignedFrom
+  **/
+  @Schema(description = "")
+  public String getAssignedFrom() {
+    return assignedFrom;
+  }
+
+  public void setAssignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+  }
+
+  public TimelineUpdate assignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+    return this;
+  }
+
+   /**
+   * Get assignedTo
+   * @return assignedTo
+  **/
+  @Schema(description = "")
+  public String getAssignedTo() {
+    return assignedTo;
+  }
+
+  public void setAssignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -324,12 +387,15 @@ public class TimelineUpdate {
         Objects.equals(this.sourceId, timelineUpdate.sourceId) &&
         Objects.equals(this.recordOwned, timelineUpdate.recordOwned) &&
         Objects.equals(this.description, timelineUpdate.description) &&
-        Objects.equals(this.actionTaken, timelineUpdate.actionTaken);
+        Objects.equals(this.actionTaken, timelineUpdate.actionTaken) &&
+        Objects.equals(this.subject, timelineUpdate.subject) &&
+        Objects.equals(this.assignedFrom, timelineUpdate.assignedFrom) &&
+        Objects.equals(this.assignedTo, timelineUpdate.assignedTo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken);
+    return Objects.hash(id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo);
   }
 
 
@@ -351,6 +417,9 @@ public class TimelineUpdate {
     sb.append("    recordOwned: ").append(toIndentedString(recordOwned)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    actionTaken: ").append(toIndentedString(actionTaken)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
+    sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

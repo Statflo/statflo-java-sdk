@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
 **userIdAssigned** | **Integer** |  |  [optional]
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
@@ -20,6 +19,10 @@ Name | Type | Description | Notes
 **recordOwned** | **Boolean** |  |  [optional]
 **description** | **String** |  | 
 **actionTaken** | **String** |  |  [optional]
+**subject** | **String** |  |  [optional]
+**assignedFrom** | **String** |  |  [optional]
+**assignedTo** | **String** |  |  [optional]
+**name** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
 
 <a name="StatusEnum"></a>

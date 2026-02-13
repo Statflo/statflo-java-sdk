@@ -28,12 +28,9 @@ import java.time.OffsetDateTime;
  * Notepad
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T10:19:17.966672-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T14:32:08.582075-05:00[America/Toronto]")
 
 public class Notepad {
-  @SerializedName("subject")
-  private String subject = null;
-
   @SerializedName("id")
   private Integer id = null;
 
@@ -79,26 +76,17 @@ public class Notepad {
   @SerializedName("actionTaken")
   private String actionTaken = null;
 
+  @SerializedName("subject")
+  private String subject = null;
+
+  @SerializedName("assignedFrom")
+  private String assignedFrom = null;
+
+  @SerializedName("assignedTo")
+  private String assignedTo = null;
+
   @SerializedName("message")
   private String message = null;
-
-  public Notepad subject(String subject) {
-    this.subject = subject;
-    return this;
-  }
-
-   /**
-   * Get subject
-   * @return subject
-  **/
-  @Schema(description = "")
-  public String getSubject() {
-    return subject;
-  }
-
-  public void setSubject(String subject) {
-    this.subject = subject;
-  }
 
   public Notepad id(Integer id) {
     this.id = id;
@@ -370,6 +358,60 @@ public class Notepad {
     this.actionTaken = actionTaken;
   }
 
+  public Notepad subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+   /**
+   * Get subject
+   * @return subject
+  **/
+  @Schema(description = "")
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
+  }
+
+  public Notepad assignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+    return this;
+  }
+
+   /**
+   * Get assignedFrom
+   * @return assignedFrom
+  **/
+  @Schema(description = "")
+  public String getAssignedFrom() {
+    return assignedFrom;
+  }
+
+  public void setAssignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+  }
+
+  public Notepad assignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+    return this;
+  }
+
+   /**
+   * Get assignedTo
+   * @return assignedTo
+  **/
+  @Schema(description = "")
+  public String getAssignedTo() {
+    return assignedTo;
+  }
+
+  public void setAssignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+  }
+
   public Notepad message(String message) {
     this.message = message;
     return this;
@@ -398,8 +440,7 @@ public class Notepad {
       return false;
     }
     Notepad notepad = (Notepad) o;
-    return Objects.equals(this.subject, notepad.subject) &&
-        Objects.equals(this.id, notepad.id) &&
+    return Objects.equals(this.id, notepad.id) &&
         Objects.equals(this.type, notepad.type) &&
         Objects.equals(this.user, notepad.user) &&
         Objects.equals(this.userId, notepad.userId) &&
@@ -414,12 +455,15 @@ public class Notepad {
         Objects.equals(this.recordOwned, notepad.recordOwned) &&
         Objects.equals(this.description, notepad.description) &&
         Objects.equals(this.actionTaken, notepad.actionTaken) &&
+        Objects.equals(this.subject, notepad.subject) &&
+        Objects.equals(this.assignedFrom, notepad.assignedFrom) &&
+        Objects.equals(this.assignedTo, notepad.assignedTo) &&
         Objects.equals(this.message, notepad.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subject, id, type, user, userId, dealer, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, message);
+    return Objects.hash(id, type, user, userId, dealer, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
   }
 
 
@@ -428,7 +472,6 @@ public class Notepad {
     StringBuilder sb = new StringBuilder();
     sb.append("class Notepad {\n");
     
-    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
@@ -444,6 +487,9 @@ public class Notepad {
     sb.append("    recordOwned: ").append(toIndentedString(recordOwned)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    actionTaken: ").append(toIndentedString(actionTaken)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
+    sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
     return sb.toString();

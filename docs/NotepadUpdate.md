@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**subject** | **String** |  |  [optional]
 **id** | **Integer** |  | 
 **type** | **Integer** |  | 
 **userId** | **Integer** |  |  [optional]
@@ -17,4 +16,7 @@ Name | Type | Description | Notes
 **recordOwned** | **Boolean** |  |  [optional]
 **description** | **String** |  |  [optional]
 **actionTaken** | **String** |  |  [optional]
+**subject** | **String** |  |  [optional]
+**assignedFrom** | **String** |  |  [optional]
+**assignedTo** | **String** |  |  [optional]
 **message** | **String** |  |  [optional]

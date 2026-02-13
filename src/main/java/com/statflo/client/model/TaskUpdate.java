@@ -26,12 +26,9 @@ import java.time.OffsetDateTime;
  * TaskUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T10:19:17.966672-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T14:32:08.582075-05:00[America/Toronto]")
 
 public class TaskUpdate {
-  @SerializedName("name")
-  private String name = null;
-
   @SerializedName("userIdAssigned")
   private Integer userIdAssigned = null;
 
@@ -79,6 +76,18 @@ public class TaskUpdate {
 
   @SerializedName("actionTaken")
   private String actionTaken = null;
+
+  @SerializedName("subject")
+  private String subject = null;
+
+  @SerializedName("assignedFrom")
+  private String assignedFrom = null;
+
+  @SerializedName("assignedTo")
+  private String assignedTo = null;
+
+  @SerializedName("name")
+  private String name = null;
 
   /**
    * Gets or Sets status
@@ -129,24 +138,6 @@ public class TaskUpdate {
     }
   }  @SerializedName("status")
   private StatusEnum status = null;
-
-  public TaskUpdate name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @Schema(required = true, description = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
 
   public TaskUpdate userIdAssigned(Integer userIdAssigned) {
     this.userIdAssigned = userIdAssigned;
@@ -438,6 +429,78 @@ public class TaskUpdate {
     this.actionTaken = actionTaken;
   }
 
+  public TaskUpdate subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+   /**
+   * Get subject
+   * @return subject
+  **/
+  @Schema(description = "")
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
+  }
+
+  public TaskUpdate assignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+    return this;
+  }
+
+   /**
+   * Get assignedFrom
+   * @return assignedFrom
+  **/
+  @Schema(description = "")
+  public String getAssignedFrom() {
+    return assignedFrom;
+  }
+
+  public void setAssignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+  }
+
+  public TaskUpdate assignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+    return this;
+  }
+
+   /**
+   * Get assignedTo
+   * @return assignedTo
+  **/
+  @Schema(description = "")
+  public String getAssignedTo() {
+    return assignedTo;
+  }
+
+  public void setAssignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+  }
+
+  public TaskUpdate name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @Schema(required = true, description = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
   public TaskUpdate status(StatusEnum status) {
     this.status = status;
     return this;
@@ -466,8 +529,7 @@ public class TaskUpdate {
       return false;
     }
     TaskUpdate taskUpdate = (TaskUpdate) o;
-    return Objects.equals(this.name, taskUpdate.name) &&
-        Objects.equals(this.userIdAssigned, taskUpdate.userIdAssigned) &&
+    return Objects.equals(this.userIdAssigned, taskUpdate.userIdAssigned) &&
         Objects.equals(this.priority, taskUpdate.priority) &&
         Objects.equals(this.dueDate, taskUpdate.dueDate) &&
         Objects.equals(this.id, taskUpdate.id) &&
@@ -483,12 +545,16 @@ public class TaskUpdate {
         Objects.equals(this.recordOwned, taskUpdate.recordOwned) &&
         Objects.equals(this.description, taskUpdate.description) &&
         Objects.equals(this.actionTaken, taskUpdate.actionTaken) &&
+        Objects.equals(this.subject, taskUpdate.subject) &&
+        Objects.equals(this.assignedFrom, taskUpdate.assignedFrom) &&
+        Objects.equals(this.assignedTo, taskUpdate.assignedTo) &&
+        Objects.equals(this.name, taskUpdate.name) &&
         Objects.equals(this.status, taskUpdate.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, userIdAssigned, priority, dueDate, id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, status);
+    return Objects.hash(userIdAssigned, priority, dueDate, id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, name, status);
   }
 
 
@@ -497,7 +563,6 @@ public class TaskUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class TaskUpdate {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    userIdAssigned: ").append(toIndentedString(userIdAssigned)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
@@ -514,6 +579,10 @@ public class TaskUpdate {
     sb.append("    recordOwned: ").append(toIndentedString(recordOwned)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    actionTaken: ").append(toIndentedString(actionTaken)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
+    sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();

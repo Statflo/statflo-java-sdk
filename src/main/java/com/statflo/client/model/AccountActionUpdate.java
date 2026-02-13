@@ -26,15 +26,9 @@ import java.time.OffsetDateTime;
  * AccountActionUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T10:19:17.966672-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T14:32:08.582075-05:00[America/Toronto]")
 
 public class AccountActionUpdate {
-  @SerializedName("assignedTo")
-  private String assignedTo = null;
-
-  @SerializedName("assignedFrom")
-  private String assignedFrom = null;
-
   @SerializedName("id")
   private Integer id = null;
 
@@ -74,41 +68,14 @@ public class AccountActionUpdate {
   @SerializedName("actionTaken")
   private String actionTaken = null;
 
-  public AccountActionUpdate assignedTo(String assignedTo) {
-    this.assignedTo = assignedTo;
-    return this;
-  }
+  @SerializedName("subject")
+  private String subject = null;
 
-   /**
-   * Get assignedTo
-   * @return assignedTo
-  **/
-  @Schema(description = "")
-  public String getAssignedTo() {
-    return assignedTo;
-  }
+  @SerializedName("assignedFrom")
+  private String assignedFrom = null;
 
-  public void setAssignedTo(String assignedTo) {
-    this.assignedTo = assignedTo;
-  }
-
-  public AccountActionUpdate assignedFrom(String assignedFrom) {
-    this.assignedFrom = assignedFrom;
-    return this;
-  }
-
-   /**
-   * Get assignedFrom
-   * @return assignedFrom
-  **/
-  @Schema(description = "")
-  public String getAssignedFrom() {
-    return assignedFrom;
-  }
-
-  public void setAssignedFrom(String assignedFrom) {
-    this.assignedFrom = assignedFrom;
-  }
+  @SerializedName("assignedTo")
+  private String assignedTo = null;
 
   public AccountActionUpdate id(Integer id) {
     this.id = id;
@@ -344,6 +311,60 @@ public class AccountActionUpdate {
     this.actionTaken = actionTaken;
   }
 
+  public AccountActionUpdate subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+   /**
+   * Get subject
+   * @return subject
+  **/
+  @Schema(description = "")
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
+  }
+
+  public AccountActionUpdate assignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+    return this;
+  }
+
+   /**
+   * Get assignedFrom
+   * @return assignedFrom
+  **/
+  @Schema(description = "")
+  public String getAssignedFrom() {
+    return assignedFrom;
+  }
+
+  public void setAssignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+  }
+
+  public AccountActionUpdate assignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+    return this;
+  }
+
+   /**
+   * Get assignedTo
+   * @return assignedTo
+  **/
+  @Schema(description = "")
+  public String getAssignedTo() {
+    return assignedTo;
+  }
+
+  public void setAssignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -354,9 +375,7 @@ public class AccountActionUpdate {
       return false;
     }
     AccountActionUpdate accountActionUpdate = (AccountActionUpdate) o;
-    return Objects.equals(this.assignedTo, accountActionUpdate.assignedTo) &&
-        Objects.equals(this.assignedFrom, accountActionUpdate.assignedFrom) &&
-        Objects.equals(this.id, accountActionUpdate.id) &&
+    return Objects.equals(this.id, accountActionUpdate.id) &&
         Objects.equals(this.type, accountActionUpdate.type) &&
         Objects.equals(this.userId, accountActionUpdate.userId) &&
         Objects.equals(this.dealerId, accountActionUpdate.dealerId) &&
@@ -368,12 +387,15 @@ public class AccountActionUpdate {
         Objects.equals(this.sourceId, accountActionUpdate.sourceId) &&
         Objects.equals(this.recordOwned, accountActionUpdate.recordOwned) &&
         Objects.equals(this.description, accountActionUpdate.description) &&
-        Objects.equals(this.actionTaken, accountActionUpdate.actionTaken);
+        Objects.equals(this.actionTaken, accountActionUpdate.actionTaken) &&
+        Objects.equals(this.subject, accountActionUpdate.subject) &&
+        Objects.equals(this.assignedFrom, accountActionUpdate.assignedFrom) &&
+        Objects.equals(this.assignedTo, accountActionUpdate.assignedTo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(assignedTo, assignedFrom, id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken);
+    return Objects.hash(id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo);
   }
 
 
@@ -382,8 +404,6 @@ public class AccountActionUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountActionUpdate {\n");
     
-    sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
-    sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -397,6 +417,9 @@ public class AccountActionUpdate {
     sb.append("    recordOwned: ").append(toIndentedString(recordOwned)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    actionTaken: ").append(toIndentedString(actionTaken)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
+    sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

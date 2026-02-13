@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
 **userAssigned** | [**User**](User.md) |  |  [optional]
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
@@ -22,4 +21,8 @@ Name | Type | Description | Notes
 **recordOwned** | **Boolean** |  |  [optional]
 **description** | **String** |  |  [optional]
 **actionTaken** | **String** |  |  [optional]
+**subject** | **String** |  |  [optional]
+**assignedFrom** | **String** |  |  [optional]
+**assignedTo** | **String** |  |  [optional]
+**name** | **String** |  |  [optional]
 **status** | **String** |  |  [optional]

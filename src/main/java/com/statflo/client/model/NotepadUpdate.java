@@ -26,12 +26,9 @@ import java.time.OffsetDateTime;
  * NotepadUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T10:19:17.966672-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T14:32:08.582075-05:00[America/Toronto]")
 
 public class NotepadUpdate {
-  @SerializedName("subject")
-  private String subject = null;
-
   @SerializedName("id")
   private Integer id = null;
 
@@ -71,26 +68,17 @@ public class NotepadUpdate {
   @SerializedName("actionTaken")
   private String actionTaken = null;
 
+  @SerializedName("subject")
+  private String subject = null;
+
+  @SerializedName("assignedFrom")
+  private String assignedFrom = null;
+
+  @SerializedName("assignedTo")
+  private String assignedTo = null;
+
   @SerializedName("message")
   private String message = null;
-
-  public NotepadUpdate subject(String subject) {
-    this.subject = subject;
-    return this;
-  }
-
-   /**
-   * Get subject
-   * @return subject
-  **/
-  @Schema(description = "")
-  public String getSubject() {
-    return subject;
-  }
-
-  public void setSubject(String subject) {
-    this.subject = subject;
-  }
 
   public NotepadUpdate id(Integer id) {
     this.id = id;
@@ -326,6 +314,60 @@ public class NotepadUpdate {
     this.actionTaken = actionTaken;
   }
 
+  public NotepadUpdate subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+   /**
+   * Get subject
+   * @return subject
+  **/
+  @Schema(description = "")
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
+  }
+
+  public NotepadUpdate assignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+    return this;
+  }
+
+   /**
+   * Get assignedFrom
+   * @return assignedFrom
+  **/
+  @Schema(description = "")
+  public String getAssignedFrom() {
+    return assignedFrom;
+  }
+
+  public void setAssignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+  }
+
+  public NotepadUpdate assignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+    return this;
+  }
+
+   /**
+   * Get assignedTo
+   * @return assignedTo
+  **/
+  @Schema(description = "")
+  public String getAssignedTo() {
+    return assignedTo;
+  }
+
+  public void setAssignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+  }
+
   public NotepadUpdate message(String message) {
     this.message = message;
     return this;
@@ -354,8 +396,7 @@ public class NotepadUpdate {
       return false;
     }
     NotepadUpdate notepadUpdate = (NotepadUpdate) o;
-    return Objects.equals(this.subject, notepadUpdate.subject) &&
-        Objects.equals(this.id, notepadUpdate.id) &&
+    return Objects.equals(this.id, notepadUpdate.id) &&
         Objects.equals(this.type, notepadUpdate.type) &&
         Objects.equals(this.userId, notepadUpdate.userId) &&
         Objects.equals(this.dealerId, notepadUpdate.dealerId) &&
@@ -368,12 +409,15 @@ public class NotepadUpdate {
         Objects.equals(this.recordOwned, notepadUpdate.recordOwned) &&
         Objects.equals(this.description, notepadUpdate.description) &&
         Objects.equals(this.actionTaken, notepadUpdate.actionTaken) &&
+        Objects.equals(this.subject, notepadUpdate.subject) &&
+        Objects.equals(this.assignedFrom, notepadUpdate.assignedFrom) &&
+        Objects.equals(this.assignedTo, notepadUpdate.assignedTo) &&
         Objects.equals(this.message, notepadUpdate.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subject, id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, message);
+    return Objects.hash(id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
   }
 
 
@@ -382,7 +426,6 @@ public class NotepadUpdate {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotepadUpdate {\n");
     
-    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -396,6 +439,9 @@ public class NotepadUpdate {
     sb.append("    recordOwned: ").append(toIndentedString(recordOwned)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    actionTaken: ").append(toIndentedString(actionTaken)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
+    sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**assignedTo** | **String** |  |  [optional]
-**assignedFrom** | **String** |  |  [optional]
 **id** | **Integer** |  | 
 **type** | [**TypeEnum**](#TypeEnum) |  | 
 **userId** | **Integer** |  |  [optional]
@@ -18,6 +16,9 @@ Name | Type | Description | Notes
 **recordOwned** | **Boolean** |  |  [optional]
 **description** | **String** |  |  [optional]
 **actionTaken** | **String** |  |  [optional]
+**subject** | **String** |  |  [optional]
+**assignedFrom** | **String** |  |  [optional]
+**assignedTo** | **String** |  |  [optional]
 
 <a name="TypeEnum"></a>
 ## Enum: TypeEnum

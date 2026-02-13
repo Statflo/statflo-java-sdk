@@ -26,12 +26,9 @@ import java.time.OffsetDateTime;
  * NotepadCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T10:19:17.966672-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-13T14:32:08.582075-05:00[America/Toronto]")
 
 public class NotepadCreate {
-  @SerializedName("subject")
-  private String subject = null;
-
   @SerializedName("id")
   private Integer id = null;
 
@@ -122,26 +119,17 @@ public class NotepadCreate {
   @SerializedName("actionTaken")
   private String actionTaken = null;
 
+  @SerializedName("subject")
+  private String subject = null;
+
+  @SerializedName("assignedFrom")
+  private String assignedFrom = null;
+
+  @SerializedName("assignedTo")
+  private String assignedTo = null;
+
   @SerializedName("message")
   private String message = null;
-
-  public NotepadCreate subject(String subject) {
-    this.subject = subject;
-    return this;
-  }
-
-   /**
-   * Get subject
-   * @return subject
-  **/
-  @Schema(description = "")
-  public String getSubject() {
-    return subject;
-  }
-
-  public void setSubject(String subject) {
-    this.subject = subject;
-  }
 
   public NotepadCreate id(Integer id) {
     this.id = id;
@@ -377,6 +365,60 @@ public class NotepadCreate {
     this.actionTaken = actionTaken;
   }
 
+  public NotepadCreate subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+   /**
+   * Get subject
+   * @return subject
+  **/
+  @Schema(description = "")
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
+  }
+
+  public NotepadCreate assignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+    return this;
+  }
+
+   /**
+   * Get assignedFrom
+   * @return assignedFrom
+  **/
+  @Schema(description = "")
+  public String getAssignedFrom() {
+    return assignedFrom;
+  }
+
+  public void setAssignedFrom(String assignedFrom) {
+    this.assignedFrom = assignedFrom;
+  }
+
+  public NotepadCreate assignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+    return this;
+  }
+
+   /**
+   * Get assignedTo
+   * @return assignedTo
+  **/
+  @Schema(description = "")
+  public String getAssignedTo() {
+    return assignedTo;
+  }
+
+  public void setAssignedTo(String assignedTo) {
+    this.assignedTo = assignedTo;
+  }
+
   public NotepadCreate message(String message) {
     this.message = message;
     return this;
@@ -405,8 +447,7 @@ public class NotepadCreate {
       return false;
     }
     NotepadCreate notepadCreate = (NotepadCreate) o;
-    return Objects.equals(this.subject, notepadCreate.subject) &&
-        Objects.equals(this.id, notepadCreate.id) &&
+    return Objects.equals(this.id, notepadCreate.id) &&
         Objects.equals(this.type, notepadCreate.type) &&
         Objects.equals(this.userId, notepadCreate.userId) &&
         Objects.equals(this.dealerId, notepadCreate.dealerId) &&
@@ -419,12 +460,15 @@ public class NotepadCreate {
         Objects.equals(this.recordOwned, notepadCreate.recordOwned) &&
         Objects.equals(this.description, notepadCreate.description) &&
         Objects.equals(this.actionTaken, notepadCreate.actionTaken) &&
+        Objects.equals(this.subject, notepadCreate.subject) &&
+        Objects.equals(this.assignedFrom, notepadCreate.assignedFrom) &&
+        Objects.equals(this.assignedTo, notepadCreate.assignedTo) &&
         Objects.equals(this.message, notepadCreate.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(subject, id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, message);
+    return Objects.hash(id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
   }
 
 
@@ -433,7 +477,6 @@ public class NotepadCreate {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotepadCreate {\n");
     
-    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -447,6 +490,9 @@ public class NotepadCreate {
     sb.append("    recordOwned: ").append(toIndentedString(recordOwned)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    actionTaken: ").append(toIndentedString(actionTaken)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    assignedFrom: ").append(toIndentedString(assignedFrom)).append("\n");
+    sb.append("    assignedTo: ").append(toIndentedString(assignedTo)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
     return sb.toString();
