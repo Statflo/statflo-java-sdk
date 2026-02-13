@@ -4,17 +4,23 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | 
-**description** | **String** |  | 
-**status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
 **userIdAssigned** | **Integer** |  |  [optional]
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **id** | **Integer** |  | 
+**type** | **Integer** |  | 
+**userId** | **Integer** |  |  [optional]
+**dealerId** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **recordSource** | **String** |  |  [optional]
+**sourceId** | **String** |  |  [optional]
+**recordOwned** | **Boolean** |  |  [optional]
+**description** | **String** |  | 
+**actionTaken** | **String** |  |  [optional]
+**status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
 
 <a name="StatusEnum"></a>
 ## Enum: StatusEnum

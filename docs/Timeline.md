@@ -11,3 +11,7 @@ Name | Type | Description | Notes
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **recordSource** | **String** |  |  [optional]
+**sourceId** | **String** |  |  [optional]
+**recordOwned** | **Boolean** |  |  [optional]
+**description** | **String** |  |  [optional]
+**actionTaken** | **String** |  |  [optional]
