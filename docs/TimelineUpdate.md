@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**type** | **Integer** |  | 
+**type** | **Integer** |  |  [optional]
 **userId** | **Integer** |  |  [optional]
 **dealerId** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 

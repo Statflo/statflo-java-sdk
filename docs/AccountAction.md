@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**type** | **Integer** |  | 
+**type** | **Integer** |  |  [optional]
 **user** | [**User**](User.md) |  |  [optional]
 **userId** | **Integer** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]

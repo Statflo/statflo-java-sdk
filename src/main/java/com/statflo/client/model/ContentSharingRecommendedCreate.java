@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
  * ContentSharingRecommendedCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T15:29:20.904438-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T16:03:43.808301-05:00[America/Toronto]")
 
 public class ContentSharingRecommendedCreate {
   @SerializedName("id")

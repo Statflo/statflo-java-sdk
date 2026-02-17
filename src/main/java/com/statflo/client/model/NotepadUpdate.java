@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * NotepadUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T15:29:20.904438-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T16:03:43.808301-05:00[America/Toronto]")
 
 public class NotepadUpdate {
   @SerializedName("id")
@@ -107,7 +107,7 @@ public class NotepadUpdate {
    * Get type
    * @return type
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public Integer getType() {
     return type;
   }
