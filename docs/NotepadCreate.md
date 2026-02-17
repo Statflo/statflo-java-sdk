@@ -3,15 +3,23 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **String** |  |  [optional]
-**subject** | **String** |  |  [optional]
 **id** | **Integer** |  | 
-**type** | [**TypeEnum**](#TypeEnum) |  | 
+**type** | [**TypeEnum**](#TypeEnum) | Timeline type | 
+**userId** | **Integer** |  |  [optional]
+**dealerId** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **recordSource** | **String** |  |  [optional]
+**sourceId** | **String** |  |  [optional]
+**recordOwned** | **Boolean** |  |  [optional]
+**description** | **String** |  |  [optional]
+**actionTaken** | **String** |  |  [optional]
+**subject** | **String** |  |  [optional]
+**assignedFrom** | **String** |  |  [optional]
+**assignedTo** | **String** |  |  [optional]
+**message** | **String** |  |  [optional]
 
 <a name="TypeEnum"></a>
 ## Enum: TypeEnum
