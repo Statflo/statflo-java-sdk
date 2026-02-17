@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **id** | **Integer** |  | 
+**type** | **Integer** |  | 
 **user** | [**User**](User.md) |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
 **accountId** | **String** |  | 

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **assignedTo** | **String** |  |  [optional]
 **assignedFrom** | **String** |  |  [optional]
 **id** | **Integer** |  | 
+**type** | **Integer** |  | 
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

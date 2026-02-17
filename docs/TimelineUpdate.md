@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
+**type** | **Integer** |  | 
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
