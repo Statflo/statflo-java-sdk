@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * TaskCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T13:08:49.647114-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T15:29:20.904438-05:00[America/Toronto]")
 
 public class TaskCreate {
   @SerializedName("userIdAssigned")
@@ -42,7 +42,7 @@ public class TaskCreate {
   private Integer id = null;
 
   /**
-   * Timeline type
+   * Gets or Sets type
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
@@ -270,10 +270,10 @@ public class TaskCreate {
   }
 
    /**
-   * Timeline type
+   * Get type
    * @return type
   **/
-  @Schema(required = true, description = "Timeline type")
+  @Schema(required = true, description = "")
   public TypeEnum getType() {
     return type;
   }

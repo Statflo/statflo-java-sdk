@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **id** | **Integer** |  | 
-**type** | **Integer** | Timeline type |  [optional]
+**type** | **Integer** |  | 
 **userId** | **Integer** |  |  [optional]
 **dealerId** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 

@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
  * Task
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T13:08:49.647114-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T15:29:20.904438-05:00[America/Toronto]")
 
 public class Task {
   @SerializedName("userAssigned")
@@ -178,10 +178,10 @@ public class Task {
   }
 
    /**
-   * Timeline type
+   * Get type
    * @return type
   **/
-  @Schema(description = "Timeline type")
+  @Schema(required = true, description = "")
   public Integer getType() {
     return type;
   }

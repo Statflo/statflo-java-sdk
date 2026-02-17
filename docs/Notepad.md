@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**type** | **Integer** | Timeline type |  [optional]
+**type** | **Integer** |  | 
 **user** | [**User**](User.md) |  |  [optional]
 **userId** | **Integer** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]

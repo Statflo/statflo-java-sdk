@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**type** | [**TypeEnum**](#TypeEnum) | Timeline type | 
+**type** | [**TypeEnum**](#TypeEnum) |  | 
 **userId** | **Integer** |  |  [optional]
 **dealerId** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
