@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * TimelineCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-17T16:03:43.808301-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T14:08:16.931472-05:00[America/Toronto]")
 
 public class TimelineCreate {
   @SerializedName("id")
@@ -48,7 +48,19 @@ public class TimelineCreate {
     @SerializedName("40")
     NUMBER_40(40),
     @SerializedName("41")
-    NUMBER_41(41);
+    NUMBER_41(41),
+    @SerializedName("4")
+    NUMBER_4_6(4),
+    @SerializedName("5")
+    NUMBER_5_7(5),
+    @SerializedName("7")
+    NUMBER_7_8(7),
+    @SerializedName("38")
+    NUMBER_38_9(38),
+    @SerializedName("40")
+    NUMBER_40_10(40),
+    @SerializedName("41")
+    NUMBER_41_11(41);
 
     private Integer value;
 
