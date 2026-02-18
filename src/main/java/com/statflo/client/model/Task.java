@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
  * Task
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T14:08:16.931472-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T16:06:54.488056-05:00[America/Toronto]")
 
 public class Task {
   @SerializedName("userAssigned")
@@ -49,14 +49,8 @@ public class Task {
   @SerializedName("user")
   private User user = null;
 
-  @SerializedName("userId")
-  private Integer userId = null;
-
   @SerializedName("dealer")
   private Dealer dealer = null;
-
-  @SerializedName("dealerId")
-  private Integer dealerId = null;
 
   @SerializedName("accountId")
   private String accountId = null;
@@ -208,24 +202,6 @@ public class Task {
     this.user = user;
   }
 
-  public Task userId(Integer userId) {
-    this.userId = userId;
-    return this;
-  }
-
-   /**
-   * Get userId
-   * @return userId
-  **/
-  @Schema(description = "")
-  public Integer getUserId() {
-    return userId;
-  }
-
-  public void setUserId(Integer userId) {
-    this.userId = userId;
-  }
-
   public Task dealer(Dealer dealer) {
     this.dealer = dealer;
     return this;
@@ -242,24 +218,6 @@ public class Task {
 
   public void setDealer(Dealer dealer) {
     this.dealer = dealer;
-  }
-
-  public Task dealerId(Integer dealerId) {
-    this.dealerId = dealerId;
-    return this;
-  }
-
-   /**
-   * Get dealerId
-   * @return dealerId
-  **/
-  @Schema(description = "")
-  public Integer getDealerId() {
-    return dealerId;
-  }
-
-  public void setDealerId(Integer dealerId) {
-    this.dealerId = dealerId;
   }
 
   public Task accountId(String accountId) {
@@ -530,9 +488,7 @@ public class Task {
         Objects.equals(this.id, task.id) &&
         Objects.equals(this.type, task.type) &&
         Objects.equals(this.user, task.user) &&
-        Objects.equals(this.userId, task.userId) &&
         Objects.equals(this.dealer, task.dealer) &&
-        Objects.equals(this.dealerId, task.dealerId) &&
         Objects.equals(this.accountId, task.accountId) &&
         Objects.equals(this.dateAdded, task.dateAdded) &&
         Objects.equals(this.createdAt, task.createdAt) &&
@@ -551,7 +507,7 @@ public class Task {
 
   @Override
   public int hashCode() {
-    return Objects.hash(userAssigned, priority, dueDate, id, type, user, userId, dealer, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, name, status);
+    return Objects.hash(userAssigned, priority, dueDate, id, type, user, dealer, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, name, status);
   }
 
 
@@ -566,9 +522,7 @@ public class Task {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    dealer: ").append(toIndentedString(dealer)).append("\n");
-    sb.append("    dealerId: ").append(toIndentedString(dealerId)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");

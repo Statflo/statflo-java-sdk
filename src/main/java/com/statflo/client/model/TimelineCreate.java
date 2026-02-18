@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * TimelineCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T14:08:16.931472-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T16:06:54.488056-05:00[America/Toronto]")
 
 public class TimelineCreate {
   @SerializedName("id")
@@ -98,12 +98,6 @@ public class TimelineCreate {
   }  @SerializedName("type")
   private TypeEnum type = null;
 
-  @SerializedName("userId")
-  private Integer userId = null;
-
-  @SerializedName("dealerId")
-  private Integer dealerId = null;
-
   @SerializedName("accountId")
   private String accountId = null;
 
@@ -174,42 +168,6 @@ public class TimelineCreate {
 
   public void setType(TypeEnum type) {
     this.type = type;
-  }
-
-  public TimelineCreate userId(Integer userId) {
-    this.userId = userId;
-    return this;
-  }
-
-   /**
-   * Get userId
-   * @return userId
-  **/
-  @Schema(description = "")
-  public Integer getUserId() {
-    return userId;
-  }
-
-  public void setUserId(Integer userId) {
-    this.userId = userId;
-  }
-
-  public TimelineCreate dealerId(Integer dealerId) {
-    this.dealerId = dealerId;
-    return this;
-  }
-
-   /**
-   * Get dealerId
-   * @return dealerId
-  **/
-  @Schema(description = "")
-  public Integer getDealerId() {
-    return dealerId;
-  }
-
-  public void setDealerId(Integer dealerId) {
-    this.dealerId = dealerId;
   }
 
   public TimelineCreate accountId(String accountId) {
@@ -440,8 +398,6 @@ public class TimelineCreate {
     TimelineCreate timelineCreate = (TimelineCreate) o;
     return Objects.equals(this.id, timelineCreate.id) &&
         Objects.equals(this.type, timelineCreate.type) &&
-        Objects.equals(this.userId, timelineCreate.userId) &&
-        Objects.equals(this.dealerId, timelineCreate.dealerId) &&
         Objects.equals(this.accountId, timelineCreate.accountId) &&
         Objects.equals(this.dateAdded, timelineCreate.dateAdded) &&
         Objects.equals(this.createdAt, timelineCreate.createdAt) &&
@@ -458,7 +414,7 @@ public class TimelineCreate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo);
+    return Objects.hash(id, type, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo);
   }
 
 
@@ -469,8 +425,6 @@ public class TimelineCreate {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    dealerId: ").append(toIndentedString(dealerId)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
