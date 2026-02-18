@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * NotepadUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T16:06:54.488056-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T18:55:53.165263-05:00[America/Toronto]")
 
 public class NotepadUpdate {
   @SerializedName("id")
@@ -34,6 +34,12 @@ public class NotepadUpdate {
 
   @SerializedName("type")
   private Integer type = null;
+
+  @SerializedName("userId")
+  private Integer userId = null;
+
+  @SerializedName("dealerId")
+  private Integer dealerId = null;
 
   @SerializedName("accountId")
   private String accountId = null;
@@ -108,6 +114,42 @@ public class NotepadUpdate {
 
   public void setType(Integer type) {
     this.type = type;
+  }
+
+  public NotepadUpdate userId(Integer userId) {
+    this.userId = userId;
+    return this;
+  }
+
+   /**
+   * Get userId
+   * @return userId
+  **/
+  @Schema(description = "")
+  public Integer getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Integer userId) {
+    this.userId = userId;
+  }
+
+  public NotepadUpdate dealerId(Integer dealerId) {
+    this.dealerId = dealerId;
+    return this;
+  }
+
+   /**
+   * Get dealerId
+   * @return dealerId
+  **/
+  @Schema(description = "")
+  public Integer getDealerId() {
+    return dealerId;
+  }
+
+  public void setDealerId(Integer dealerId) {
+    this.dealerId = dealerId;
   }
 
   public NotepadUpdate accountId(String accountId) {
@@ -356,6 +398,8 @@ public class NotepadUpdate {
     NotepadUpdate notepadUpdate = (NotepadUpdate) o;
     return Objects.equals(this.id, notepadUpdate.id) &&
         Objects.equals(this.type, notepadUpdate.type) &&
+        Objects.equals(this.userId, notepadUpdate.userId) &&
+        Objects.equals(this.dealerId, notepadUpdate.dealerId) &&
         Objects.equals(this.accountId, notepadUpdate.accountId) &&
         Objects.equals(this.dateAdded, notepadUpdate.dateAdded) &&
         Objects.equals(this.createdAt, notepadUpdate.createdAt) &&
@@ -373,7 +417,7 @@ public class NotepadUpdate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, type, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
+    return Objects.hash(id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
   }
 
 
@@ -384,6 +428,8 @@ public class NotepadUpdate {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    dealerId: ").append(toIndentedString(dealerId)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");

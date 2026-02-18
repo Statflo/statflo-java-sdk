@@ -28,7 +28,7 @@ import java.util.List;
  * UserCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T16:06:54.488056-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T18:55:53.165263-05:00[America/Toronto]")
 
 public class UserCreate {
   @SerializedName("id")
