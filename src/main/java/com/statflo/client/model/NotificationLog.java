@@ -29,7 +29,7 @@ import java.time.OffsetDateTime;
  * NotificationLog
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-18T20:11:23.998702-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-19T09:23:30.870791-05:00[America/Toronto]")
 
 public class NotificationLog {
   @SerializedName("id")
