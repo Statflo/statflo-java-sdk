@@ -34,7 +34,7 @@ jobs:
         uses: dawidd6/action-download-artifact@v6
         with:
           repo: ${{ secrets.REPO }}
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           run_id: ${{ github.event.inputs.run_id || '' }}
           workflow: statflo-webapp-deploy.yaml
           name: webapp-artifact
