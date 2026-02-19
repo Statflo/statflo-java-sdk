@@ -1,0 +1,66 @@
+name: Cleanup Stale Branches
+
+on:
+  schedule:
+    - cron: "0 0 1 * *" # Run on the first day of every month at midnight
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    env:
+      RETENTION_DAYS: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Delete stale branches
+        id: cleanup
+        run: |
+          git fetch --prune origin +refs/heads/*:refs/remotes/origin/*
+          
+          CUTOFF_DATE=$(date -d "$RETENTION_DAYS days ago" +%s)
+
+          > branch_report.txt
+          deleted_count=0
+          
+          # Iterate over all remote branches except main
+          for remote_branch in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin/ | grep -v '^origin/main$'); do
+            branch_name=${remote_branch#origin/}
+          
+            commit_timestamp=$(git log -1 --format=%ct origin/$branch_name)
+            commit_date=$(date -d @$commit_timestamp +"%Y-%m-%d")
+          
+            if [ "$commit_timestamp" -lt "$CUTOFF_DATE" ]; then
+              git push origin --delete $branch_name
+              echo "$branch_name|$commit_date|Deleted" >> branch_report.txt
+              deleted_count=$((deleted_count+1))
+            fi
+          done
+          
+          echo "deleted_count=$deleted_count" >> $GITHUB_OUTPUT
+
+
+      - name: Cleanup Summary
+        if: always()
+        run: |
+          echo "## 🧹 Branch Cleanup Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ ! -s branch_report.txt ]; then
+            echo "No stale branches were deleted." >> $GITHUB_STEP_SUMMARY
+            exit 0
+          fi
+
+          echo "| Branch | Last Commit |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|------------|" >> $GITHUB_STEP_SUMMARY
+
+          while IFS="|" read -r branch date status; do
+            echo "| $branch | $date |" >> $GITHUB_STEP_SUMMARY
+          done < branch_report.txt
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Total Deleted:** ${{ steps.cleanup.outputs.deleted_count }}" >> $GITHUB_STEP_SUMMARY
