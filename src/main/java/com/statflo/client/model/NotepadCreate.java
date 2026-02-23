@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * NotepadCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-19T09:23:30.870791-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-23T15:16:00.414001-05:00[America/Toronto]")
 
 public class NotepadCreate {
   @SerializedName("id")
@@ -48,19 +48,7 @@ public class NotepadCreate {
     @SerializedName("40")
     NUMBER_40(40),
     @SerializedName("41")
-    NUMBER_41(41),
-    @SerializedName("4")
-    NUMBER_4_6(4),
-    @SerializedName("5")
-    NUMBER_5_7(5),
-    @SerializedName("7")
-    NUMBER_7_8(7),
-    @SerializedName("38")
-    NUMBER_38_9(38),
-    @SerializedName("40")
-    NUMBER_40_10(40),
-    @SerializedName("41")
-    NUMBER_41_11(41);
+    NUMBER_41(41);
 
     private Integer value;
 
@@ -97,12 +85,6 @@ public class NotepadCreate {
     }
   }  @SerializedName("type")
   private TypeEnum type = null;
-
-  @SerializedName("userId")
-  private Integer userId = null;
-
-  @SerializedName("dealerId")
-  private Integer dealerId = null;
 
   @SerializedName("accountId")
   private String accountId = null;
@@ -177,42 +159,6 @@ public class NotepadCreate {
 
   public void setType(TypeEnum type) {
     this.type = type;
-  }
-
-  public NotepadCreate userId(Integer userId) {
-    this.userId = userId;
-    return this;
-  }
-
-   /**
-   * Get userId
-   * @return userId
-  **/
-  @Schema(description = "")
-  public Integer getUserId() {
-    return userId;
-  }
-
-  public void setUserId(Integer userId) {
-    this.userId = userId;
-  }
-
-  public NotepadCreate dealerId(Integer dealerId) {
-    this.dealerId = dealerId;
-    return this;
-  }
-
-   /**
-   * Get dealerId
-   * @return dealerId
-  **/
-  @Schema(description = "")
-  public Integer getDealerId() {
-    return dealerId;
-  }
-
-  public void setDealerId(Integer dealerId) {
-    this.dealerId = dealerId;
   }
 
   public NotepadCreate accountId(String accountId) {
@@ -461,8 +407,6 @@ public class NotepadCreate {
     NotepadCreate notepadCreate = (NotepadCreate) o;
     return Objects.equals(this.id, notepadCreate.id) &&
         Objects.equals(this.type, notepadCreate.type) &&
-        Objects.equals(this.userId, notepadCreate.userId) &&
-        Objects.equals(this.dealerId, notepadCreate.dealerId) &&
         Objects.equals(this.accountId, notepadCreate.accountId) &&
         Objects.equals(this.dateAdded, notepadCreate.dateAdded) &&
         Objects.equals(this.createdAt, notepadCreate.createdAt) &&
@@ -480,7 +424,7 @@ public class NotepadCreate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, type, userId, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
+    return Objects.hash(id, type, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
   }
 
 
@@ -491,8 +435,6 @@ public class NotepadCreate {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    dealerId: ").append(toIndentedString(dealerId)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");

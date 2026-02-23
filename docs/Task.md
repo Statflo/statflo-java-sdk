@@ -9,9 +9,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **type** | **Integer** |  |  [optional]
 **user** | [**User**](User.md) |  |  [optional]
-**userId** | **Integer** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**dealerId** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

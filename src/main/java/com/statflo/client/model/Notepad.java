@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
  * Notepad
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-19T09:23:30.870791-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-23T15:16:00.414001-05:00[America/Toronto]")
 
 public class Notepad {
   @SerializedName("id")
@@ -40,14 +40,8 @@ public class Notepad {
   @SerializedName("user")
   private User user = null;
 
-  @SerializedName("userId")
-  private Integer userId = null;
-
   @SerializedName("dealer")
   private Dealer dealer = null;
-
-  @SerializedName("dealerId")
-  private Integer dealerId = null;
 
   @SerializedName("accountId")
   private String accountId = null;
@@ -142,24 +136,6 @@ public class Notepad {
     this.user = user;
   }
 
-  public Notepad userId(Integer userId) {
-    this.userId = userId;
-    return this;
-  }
-
-   /**
-   * Get userId
-   * @return userId
-  **/
-  @Schema(description = "")
-  public Integer getUserId() {
-    return userId;
-  }
-
-  public void setUserId(Integer userId) {
-    this.userId = userId;
-  }
-
   public Notepad dealer(Dealer dealer) {
     this.dealer = dealer;
     return this;
@@ -176,24 +152,6 @@ public class Notepad {
 
   public void setDealer(Dealer dealer) {
     this.dealer = dealer;
-  }
-
-  public Notepad dealerId(Integer dealerId) {
-    this.dealerId = dealerId;
-    return this;
-  }
-
-   /**
-   * Get dealerId
-   * @return dealerId
-  **/
-  @Schema(description = "")
-  public Integer getDealerId() {
-    return dealerId;
-  }
-
-  public void setDealerId(Integer dealerId) {
-    this.dealerId = dealerId;
   }
 
   public Notepad accountId(String accountId) {
@@ -443,9 +401,7 @@ public class Notepad {
     return Objects.equals(this.id, notepad.id) &&
         Objects.equals(this.type, notepad.type) &&
         Objects.equals(this.user, notepad.user) &&
-        Objects.equals(this.userId, notepad.userId) &&
         Objects.equals(this.dealer, notepad.dealer) &&
-        Objects.equals(this.dealerId, notepad.dealerId) &&
         Objects.equals(this.accountId, notepad.accountId) &&
         Objects.equals(this.dateAdded, notepad.dateAdded) &&
         Objects.equals(this.createdAt, notepad.createdAt) &&
@@ -463,7 +419,7 @@ public class Notepad {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, type, user, userId, dealer, dealerId, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
+    return Objects.hash(id, type, user, dealer, accountId, dateAdded, createdAt, updatedAt, recordSource, sourceId, recordOwned, description, actionTaken, subject, assignedFrom, assignedTo, message);
   }
 
 
@@ -475,9 +431,7 @@ public class Notepad {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    dealer: ").append(toIndentedString(dealer)).append("\n");
-    sb.append("    dealerId: ").append(toIndentedString(dealerId)).append("\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    dateAdded: ").append(toIndentedString(dateAdded)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");

@@ -5,8 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
 **type** | [**TypeEnum**](#TypeEnum) |  | 
-**userId** | **Integer** |  |  [optional]
-**dealerId** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
@@ -30,9 +28,3 @@ NUMBER_7 | 7
 NUMBER_38 | 38
 NUMBER_40 | 40
 NUMBER_41 | 41
-NUMBER_4_6 | 4
-NUMBER_5_7 | 5
-NUMBER_7_8 | 7
-NUMBER_38_9 | 38
-NUMBER_40_10 | 40
-NUMBER_41_11 | 41
