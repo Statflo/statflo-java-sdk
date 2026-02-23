@@ -62,14 +62,14 @@ jobs:
           git push origin ${{ env.BRANCH_NAME }}
 
       - name: Deployment Summary
-        if: always()
+        if: success()
         run: |
           cat <<EOF >> $GITHUB_STEP_SUMMARY
           ## 🚀 Deployment Summary
           
           | Property | Value |
           |----------|--------|
-          | Version | ${{ env.RELEASE_VERSION }} |
+          | Version | ${{ env.RELEASE_VERSION }}-SNAPSHOT |
           
           ### 📦 Maven Dependency
           
@@ -77,7 +77,7 @@ jobs:
           <dependency>
             <groupId>com.github.Statflo</groupId>
             <artifactId>statflo-java-sdk</artifactId>
-            <version>${{ env.RELEASE_VERSION }}</version>
+            <version>${{ env.RELEASE_VERSION }}-SNAPSHOT</version>
           </dependency>
           \`\`\`
           EOF
