@@ -1,0 +1,83 @@
+name: Codegen generation For Dev
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Optional Run ID for specific artifact. Leave blank to use from the latest webapp deployment."
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate unique branch name
+        run: |
+          BRANCH_NAME="dev_$(date +'%Y%m%d%H%M%S')"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          echo "RELEASE_VERSION=$BRANCH_NAME" >> $GITHUB_ENV
+
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Create and checkout unique branch
+        run: |
+          git checkout -b ${{ env.BRANCH_NAME }}
+
+      - name: Download the swagger spec
+        uses: dawidd6/action-download-artifact@v6
+        with:
+          repo: ${{ secrets.REPO }}
+          github_token: ${{ secrets.ARTIFACT_READ_ONLY }}
+          run_id: ${{ github.event.inputs.run_id || '' }}
+          workflow: statflo-webapp-deploy.yaml
+          name: webapp-artifact
+          path: ./webapp-artifact/
+          workflow_conclusion: success
+
+      - name: Generate code from Swagger file
+        run: |
+          rm -f README.md
+
+          java -jar ./bin/swagger-codegen-cli-3.0.62.jar generate \
+          -i ./webapp-artifact/nelmio-spec.json \
+          -l java \
+          -o . \
+          -t ./templates \
+          --invoker-package com.statflo.client \
+          --model-package com.statflo.client.model \
+          --api-package com.statflo.client.api \
+          --additional-properties groupId=com.statflo,artifactId=statflo-java-sdk,releaseVersion=${{ env.RELEASE_VERSION }} \
+          -D dateLibrary=java8
+
+      - name: Commit and Push to unique branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Generate SDK for Dev (version: ${{ env.RELEASE_VERSION }})"
+          git push origin ${{ env.BRANCH_NAME }}
+
+      - name: Deployment Summary
+        if: always()
+        run: |
+          cat <<EOF >> $GITHUB_STEP_SUMMARY
+          ## 🚀 Deployment Summary
+          
+          | Property | Value |
+          |----------|--------|
+          | Version | ${{ env.RELEASE_VERSION }} |
+          
+          ### 📦 Maven Dependency
+          
+          \`\`\`xml
+          <dependency>
+            <groupId>com.github.Statflo</groupId>
+            <artifactId>statflo-java-sdk</artifactId>
+            <version>${{ env.RELEASE_VERSION }}</version>
+          </dependency>
+          \`\`\`
+          EOF
