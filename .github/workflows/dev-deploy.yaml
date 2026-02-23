@@ -19,16 +19,13 @@ jobs:
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
           echo "RELEASE_VERSION=$BRANCH_NAME" >> $GITHUB_ENV
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Create and checkout unique branch
         run: |
           git checkout -b ${{ env.BRANCH_NAME }}
-
-      - name: Install GitHub CLI
-        run: sudo apt-get install -y gh
 
       - name: Download the swagger spec
         uses: dawidd6/action-download-artifact@v6
