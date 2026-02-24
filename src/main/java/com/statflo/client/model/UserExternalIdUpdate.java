@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * UserExternalIdUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-23T15:16:00.414001-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-24T12:22:28.862496-05:00[America/Toronto]")
 
 public class UserExternalIdUpdate {
   @SerializedName("id")
