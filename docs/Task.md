@@ -3,11 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**name** | **String** |  | 
+**description** | **String** |  | 
+**status** | **String** |  |  [optional]
 **userAssigned** | [**User**](User.md) |  |  [optional]
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **id** | **Integer** |  | 
-**type** | **Integer** |  |  [optional]
+**type** | **Integer** |  | 
 **user** | [**User**](User.md) |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
 **accountId** | **String** |  | 
@@ -15,12 +18,3 @@ Name | Type | Description | Notes
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **recordSource** | **String** |  |  [optional]
-**sourceId** | **String** |  |  [optional]
-**recordOwned** | **Boolean** |  |  [optional]
-**description** | **String** |  |  [optional]
-**actionTaken** | **String** |  |  [optional]
-**subject** | **String** |  |  [optional]
-**assignedFrom** | **String** |  |  [optional]
-**assignedTo** | **String** |  |  [optional]
-**name** | **String** |  |  [optional]
-**status** | **String** |  |  [optional]
