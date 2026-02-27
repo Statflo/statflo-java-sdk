@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **message** | **String** |  |  [optional]
 **subject** | **String** |  |  [optional]
 **id** | **Integer** |  | 
-**type** | **Integer** |  | 
+**type** | **Integer** |  |  [optional]
 **user** | [**User**](User.md) |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
 **accountId** | **String** |  | 

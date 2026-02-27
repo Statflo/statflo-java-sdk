@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **message** | **String** |  |  [optional]
 **subject** | **String** |  |  [optional]
 **id** | **Integer** |  | 
-**type** | **Integer** |  | 
+**type** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

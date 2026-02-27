@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **actionTaken** | **String** |  |  [optional]
 **subject** | **String** |  | 
 **id** | **Integer** |  | 
-**type** | **Integer** |  | 
+**type** | **Integer** |  |  [optional]
 **user** | [**User**](User.md) |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  |  [optional]
 **accountId** | **String** |  | 

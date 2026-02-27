@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * TaskUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-26T16:29:28.478698-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-27T12:11:22.499844-05:00[America/Toronto]")
 
 public class TaskUpdate {
   @SerializedName("name")
@@ -252,7 +252,7 @@ public class TaskUpdate {
    * Get type
    * @return type
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public Integer getType() {
     return type;
   }

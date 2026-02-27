@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **actionTaken** | **String** |  |  [optional]
 **subject** | **String** |  | 
 **id** | **Integer** |  | 
-**type** | **Integer** |  | 
+**type** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
