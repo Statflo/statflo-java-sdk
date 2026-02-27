@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * ContactUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-27T12:11:22.499844-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-02-27T14:02:38.547915-05:00[America/Toronto]")
 
 public class ContactUpdate {
   @SerializedName("id")
