@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **String** |  | 
-**assignedTo** | **String** |  |  [optional]
+**assignedTo** | **String** |  | 
 **assignedFrom** | **String** |  |  [optional]
 **actionTaken** | **String** |  |  [optional]
 **subject** | **String** |  | 

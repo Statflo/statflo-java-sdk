@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **String** |  | 
 **subject** | **String** |  |  [optional]
-**assignedTo** | **String** |  |  [optional]
+**assignedTo** | **String** |  | 
 **assignedFrom** | **String** |  |  [optional]
 **actionTaken** | **String** |  |  [optional]
 **id** | **Integer** |  | 

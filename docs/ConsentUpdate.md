@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **String** |  |  [optional]
+**message** | **String** |  | 
 **subject** | **String** |  |  [optional]
 **assignedTo** | **String** |  |  [optional]
 **assignedFrom** | **String** |  |  [optional]

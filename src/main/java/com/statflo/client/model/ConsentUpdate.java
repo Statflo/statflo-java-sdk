@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * ConsentUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-03-02T11:43:18.053683-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-03-03T16:11:02.914432-05:00[America/Toronto]")
 
 public class ConsentUpdate {
   @SerializedName("message")
@@ -74,7 +74,7 @@ public class ConsentUpdate {
    * Get message
    * @return message
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public String getMessage() {
     return message;
   }

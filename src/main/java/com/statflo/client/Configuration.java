@@ -12,7 +12,7 @@
 
 package com.statflo.client;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-03-02T11:43:18.053683-05:00[America/Toronto]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-03-03T16:11:02.914432-05:00[America/Toronto]")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 
