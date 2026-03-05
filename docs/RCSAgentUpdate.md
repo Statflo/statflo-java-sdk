@@ -1,0 +1,25 @@
+# RCSAgentUpdate
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Integer** |  | 
+**applicationName** | **String** |  | 
+**senderId** | **String** |  | 
+**name** | **String** |  | 
+**description** | **String** |  | 
+**logoUrl** | **String** |  | 
+**bannerUrl** | **String** |  | 
+**privacyUrl** | **String** |  | 
+**termsOfServiceUrl** | **String** |  | 
+**accentColor** | **String** |  | 
+**callbackUrl** | **String** |  | 
+**callbackMethod** | **String** |  | 
+**fallbackUrl** | **String** |  | 
+**fallbackMethod** | **String** |  | 
+**statusCallbackUrl** | **String** |  | 
+**status** | **String** |  | 
+**repUserId** | **Integer** |  | 
+**sid** | **String** |  |  [optional]
+**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
