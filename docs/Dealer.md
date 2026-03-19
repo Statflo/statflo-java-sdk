@@ -7,6 +7,12 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **countryCode** | **String** |  | 
 **status** | [**DealerStatus**](DealerStatus.md) |  |  [optional]
+**website** | **String** |  |  [optional]
+**addressLine1** | **String** |  |  [optional]
+**addressLine2** | **String** |  |  [optional]
+**city** | **String** |  |  [optional]
+**province** | **String** |  |  [optional]
+**postalCode** | **String** |  |  [optional]
 **carrier** | [**Carrier**](Carrier.md) |  |  [optional]
 **permissions** | [**List&lt;Permission&gt;**](Permission.md) |  |  [optional]
 **dealerFeatures** | [**List&lt;DealerAllowedFeature&gt;**](DealerAllowedFeature.md) |  |  [optional]

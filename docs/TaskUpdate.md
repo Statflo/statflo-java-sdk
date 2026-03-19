@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **id** | **Integer** |  | 
-**type** | **Integer** |  | 
+**type** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
