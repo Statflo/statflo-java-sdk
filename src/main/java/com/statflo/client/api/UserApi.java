@@ -26,7 +26,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.statflo.client.model.BulkSubRequest;
 import com.statflo.client.model.ErrorResponse;
 
 import java.lang.reflect.Type;
@@ -35,15 +34,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BulkRequestsApi {
+public class UserApi {
     private ApiClient apiClient;
     private Map<String, String> headers;
 
-    public BulkRequestsApi() {
+    public UserApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public BulkRequestsApi(ApiClient apiClient) {
+    public UserApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 
@@ -60,18 +59,19 @@ public class BulkRequestsApi {
     }
 
     /**
-     * Build call for bulkRequest
-     * @param body  (required)
+     * Build call for userDelete
+     * @param id  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call bulkRequestCall(List<BulkSubRequest> body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = body;
+    public com.squareup.okhttp.Call userDeleteCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
         
         // create path and map variables
-        String localVarPath = "/v4/api/bulk";
+        String localVarPath = "/v4/api/user/{id}"
+            .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -87,7 +87,7 @@ public class BulkRequestsApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/json"
+            
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -108,17 +108,17 @@ public class BulkRequestsApi {
         if (headers != null) {
             localVarHeaderParams.putAll(headers);
         }
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call bulkRequestValidateBeforeCall(List<BulkSubRequest> body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'body' is set
-        if (body == null) {
-            throw new ApiException("Missing the required parameter 'body' when calling bulkRequest(Async)");
+    private com.squareup.okhttp.Call userDeleteValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling userDelete(Async)");
         }
         
-        com.squareup.okhttp.Call call = bulkRequestCall(body, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = userDeleteCall(id, progressListener, progressRequestListener);
         return call;
 
         
@@ -129,38 +129,35 @@ public class BulkRequestsApi {
 
     /**
      * 
-     * Submit multiple requests in bulk.
-     * @param body  (required)
-     * @return List&lt;Object&gt;
+     * Remove a user.
+     * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<Object> bulkRequest(List<BulkSubRequest> body) throws ApiException {
-        ApiResponse<List<Object>> resp = bulkRequestWithHttpInfo(body);
-        return resp.getData();
+    public void userDelete(String id) throws ApiException {
+        userDeleteWithHttpInfo(id);
     }
 
     /**
      * 
-     * Submit multiple requests in bulk.
-     * @param body  (required)
-     * @return ApiResponse&lt;List&lt;Object&gt;&gt;
+     * Remove a user.
+     * @param id  (required)
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<Object>> bulkRequestWithHttpInfo(List<BulkSubRequest> body) throws ApiException {
-        com.squareup.okhttp.Call call = bulkRequestValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
-        return apiClient.execute(call, localVarReturnType);
+    public ApiResponse<Void> userDeleteWithHttpInfo(String id) throws ApiException {
+        com.squareup.okhttp.Call call = userDeleteValidateBeforeCall(id, null, null);
+        return apiClient.execute(call);
     }
 
     /**
      *  (asynchronously)
-     * Submit multiple requests in bulk.
-     * @param body  (required)
+     * Remove a user.
+     * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call bulkRequestAsync(List<BulkSubRequest> body, final ApiCallback<List<Object>> callback) throws ApiException {
+    public com.squareup.okhttp.Call userDeleteAsync(String id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -181,9 +178,8 @@ public class BulkRequestsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = bulkRequestValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
-        apiClient.executeAsync(call, localVarReturnType, callback);
+        com.squareup.okhttp.Call call = userDeleteValidateBeforeCall(id, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
         return call;
     }
 }
