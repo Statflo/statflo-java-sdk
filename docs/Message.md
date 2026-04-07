@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**user** | [**User**](User.md) |  |  [optional]
-**conversation** | [**Conversation**](Conversation.md) |  |  [optional]
+**user** | [**User**](User.md) |  | 
+**conversation** | [**Conversation**](Conversation.md) |  | 
 **content** | **String** |  | 
 **action** | **String** |  |  [optional]
 **provider** | **String** |  |  [optional]
@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **ipAddress** | **String** |  |  [optional]
 **associatedAppPhoneNumber** | **String** |  |  [optional]
 **associatedAppPhoneNumberType** | **String** |  |  [optional]
-**messageTemplate** | [**MessageTemplate**](MessageTemplate.md) |  |  [optional]
+**messageTemplate** | [**MessageTemplate**](MessageTemplate.md) |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **dateSent** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

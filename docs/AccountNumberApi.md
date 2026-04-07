@@ -1,11 +1,59 @@
 # AccountNumberApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**accountNumberCreate**](AccountNumberApi.md#accountNumberCreate) | **POST** /v4/api/account-number | 
 [**accountNumberGet**](AccountNumberApi.md#accountNumberGet) | **GET** /v4/api/account-number/{id} | 
 [**accountNumberSearch**](AccountNumberApi.md#accountNumberSearch) | **GET** /v4/api/account-number | 
+[**accountNumberUpdate**](AccountNumberApi.md#accountNumberUpdate) | **PUT** /v4/api/account-number/{id} | 
+
+<a name="accountNumberCreate"></a>
+# **accountNumberCreate**
+> AccountNumber accountNumberCreate()
+
+
+
+Create a account number.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountNumberApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountNumberApi apiInstance = new AccountNumberApi();
+try {
+    AccountNumber result = apiInstance.accountNumberCreate();
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountNumberApi#accountNumberCreate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AccountNumber**](AccountNumber.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="accountNumberGet"></a>
 # **accountNumberGet**
@@ -113,5 +161,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="accountNumberUpdate"></a>
+# **accountNumberUpdate**
+> AccountNumber accountNumberUpdate(id)
+
+
+
+Update a account number.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountNumberApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountNumberApi apiInstance = new AccountNumberApi();
+String id = "id_example"; // String | 
+try {
+    AccountNumber result = apiInstance.accountNumberUpdate(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountNumberApi#accountNumberUpdate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**AccountNumber**](AccountNumber.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

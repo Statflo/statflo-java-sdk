@@ -27,8 +27,9 @@ Name | Type | Description | Notes
 **acceptedTermsConditions** | **Boolean** |  |  [optional]
 **appointmentReminderEmail** | **Boolean** |  |  [optional]
 **dealerId** | **Integer** |  | 
-**roleId** | **Integer** |  | 
+**roleId** | **Integer** |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**campaignVisibility** | **Integer** |  |  [optional]
 **permissions** | **List&lt;Object&gt;** |  | 
 **outletId** | **String** |  |  [optional]
 
