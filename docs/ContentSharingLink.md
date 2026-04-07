@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**category** | [**ContentSharingCategory**](ContentSharingCategory.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**category** | [**ContentSharingCategory**](ContentSharingCategory.md) |  | 
 **language** | **String** |  | 
 **name** | **String** |  | 
 **description** | **String** |  |  [optional]

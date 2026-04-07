@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **provider** | **String** |  | 
 **fieldName** | **String** |  | 
 **fieldValue** | **String** |  | 
-**recordSource** | **String** |  | 
+**recordSource** | **String** |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
