@@ -1,14 +1,14 @@
 # WidgetsApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v4ApiWidgetsCampaignsAccountIdGet**](WidgetsApi.md#v4ApiWidgetsCampaignsAccountIdGet) | **GET** /v4/api/widgets/campaigns/{accountId} | 
+[**getV4ApiWidgetsCampaigns**](WidgetsApi.md#getV4ApiWidgetsCampaigns) | **GET** /v4/api/widgets/campaigns/{accountId} | 
 
-<a name="v4ApiWidgetsCampaignsAccountIdGet"></a>
-# **v4ApiWidgetsCampaignsAccountIdGet**
-> v4ApiWidgetsCampaignsAccountIdGet(accountId)
+<a name="getV4ApiWidgetsCampaigns"></a>
+# **getV4ApiWidgetsCampaigns**
+> getV4ApiWidgetsCampaigns(accountId)
 
 
 
@@ -27,9 +27,9 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 WidgetsApi apiInstance = new WidgetsApi();
 String accountId = "accountId_example"; // String | 
 try {
-    apiInstance.v4ApiWidgetsCampaignsAccountIdGet(accountId);
+    apiInstance.getV4ApiWidgetsCampaigns(accountId);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WidgetsApi#v4ApiWidgetsCampaignsAccountIdGet");
+    System.err.println("Exception when calling WidgetsApi#getV4ApiWidgetsCampaigns");
     e.printStackTrace();
 }
 ```

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**user** | [**User**](User.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**user** | [**User**](User.md) |  | 
 **provider** | **String** |  | 
 **fieldName** | **String** |  | 
 **fieldValue** | **String** |  | 
