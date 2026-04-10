@@ -28,5 +28,6 @@ Name | Type | Description | Notes
 **userTeams** | [**List&lt;UserTeam&gt;**](UserTeam.md) |  |  [optional]
 **userMetadata** | [**List&lt;UserMetadata&gt;**](UserMetadata.md) |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**campaignVisibility** | **Integer** |  |  [optional]
 **permissions** | **List&lt;Object&gt;** |  | 
 **outletId** | **String** |  |  [optional]

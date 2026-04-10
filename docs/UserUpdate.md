@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **dealerId** | **Integer** |  | 
 **roleId** | **Integer** |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**campaignVisibility** | **Integer** |  |  [optional]
 **permissions** | **List&lt;Object&gt;** |  | 
 **outletId** | **String** |  |  [optional]
 
