@@ -22,3 +22,4 @@ OVERRIDE_DEFAULT_VISIBILITY | &quot;override_default_visibility&quot;
 VISIBILITY_LEAD_SELECTION | &quot;visibility_lead_selection&quot;
 DEFAULT_START_END_DATE | &quot;default_start_end_date&quot;
 SALESFORCE_CAMPAIGN_ID | &quot;salesforce_campaign_id&quot;
+GENERATED_LIST_PARAMETERS | &quot;generated_list_parameters&quot;
