@@ -42,6 +42,7 @@ OK | &quot;ok&quot;
 ERROR | &quot;error&quot;
 REJECTED | &quot;rejected&quot;
 FAILED | &quot;failed&quot;
+DELIVERED | &quot;delivered&quot;
 AUTO | &quot;auto&quot;
 
 <a name="AssociatedAppPhoneNumberTypeEnum"></a>
@@ -52,3 +53,4 @@ MASQUERADE | &quot;masquerade&quot;
 PRIMARY | &quot;primary&quot;
 PRIVATE | &quot;private&quot;
 OUTLET | &quot;outlet&quot;
+RCS | &quot;rcs&quot;
