@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **phoneExtension** | **String** |  |  [optional]
 **email** | **String** |  |  [optional]
 **primaryContact** | **Boolean** |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **jobTitle** | **String** |  |  [optional]
 **source** | **String** |  |  [optional]
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **oldBan** | **String** |  |  [optional]
 **smsCapable** | **Boolean** |  |  [optional]
 **flag** | **String** |  |  [optional]
-**optedOut** | **Object** |  |  [optional]
-**communicationMethods** | **Object** |  |  [optional]
+**optedOut** | **List&lt;Object&gt;** |  | 
+**communicationMethods** | **List&lt;Object&gt;** |  | 
 **firstName** | **String** |  |  [optional]
 **preferredLanguage** | **String** |  |  [optional]

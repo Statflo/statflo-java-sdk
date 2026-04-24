@@ -17,11 +17,11 @@ Name | Type | Description | Notes
 **accessInstructions** | **String** |  |  [optional]
 **optInDescription** | **String** |  |  [optional]
 **optOutDescription** | **String** |  |  [optional]
-**screenshotUrls** | **List&lt;String&gt;** |  |  [optional]
+**screenshotUrls** | **List&lt;String&gt;** |  | 
 **triggerEventDescription** | **String** |  |  [optional]
 **description** | **String** |  |  [optional]
-**videoUrls** | **List&lt;String&gt;** |  |  [optional]
-**carrier** | [**Carrier**](Carrier.md) |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**videoUrls** | **List&lt;String&gt;** |  | 
+**carrier** | [**Carrier**](Carrier.md) |  | 
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
