@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**carrier** | [**Carrier**](Carrier.md) |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**campaign** | [**Campaign**](Campaign.md) |  |  [optional]
+**carrier** | [**Carrier**](Carrier.md) |  | 
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**campaign** | [**Campaign**](Campaign.md) |  | 
 **metadata** | **String** |  |  [optional]
 **value** | **Object** |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

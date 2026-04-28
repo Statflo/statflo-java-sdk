@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **externalUserId** | **String** |  |  [optional]
 **externalLocationId** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **numberOfCampaignMembers** | **Integer** |  |  [optional]
 **dealValue** | **String** |  |  [optional]
 **potentialRenewals** | **Integer** |  |  [optional]
@@ -53,4 +53,4 @@ Name | Type | Description | Notes
 **accountSubtype** | **String** |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **dateUpdated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**brand** | [**Brand**](Brand.md) |  |  [optional]
+**brand** | [**Brand**](Brand.md) |  | 
