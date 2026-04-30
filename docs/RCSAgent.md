@@ -15,10 +15,10 @@ Name | Type | Description | Notes
 **accentColor** | **String** |  | 
 **callbackUrl** | **String** |  | 
 **callbackMethod** | **String** |  | 
-**fallbackUrl** | **String** |  | 
-**fallbackMethod** | **String** |  | 
+**fallbackUrl** | **String** |  |  [optional]
+**fallbackMethod** | **String** |  |  [optional]
 **status** | **String** |  | 
-**repUser** | [**User**](User.md) |  |  [optional]
+**repUser** | [**User**](User.md) |  | 
 **website** | **List&lt;Object&gt;** |  | 
 **email** | **List&lt;Object&gt;** |  | 
 **phoneNumber** | **List&lt;Object&gt;** |  | 
@@ -34,10 +34,10 @@ Name | Type | Description | Notes
 **registrationSid** | **String** |  |  [optional]
 **googleRegistrationSid** | **String** |  |  [optional]
 **addressSid** | **String** |  |  [optional]
-**user** | [**User**](User.md) |  |  [optional]
-**carrier** | [**Carrier**](Carrier.md) |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**rcsAgentUseCase** | [**RCSAgentUseCase**](RCSAgentUseCase.md) |  |  [optional]
-**rcsAgentBusiness** | [**RCSAgentBusiness**](RCSAgentBusiness.md) |  |  [optional]
+**user** | [**User**](User.md) |  | 
+**carrier** | [**Carrier**](Carrier.md) |  | 
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**rcsAgentUseCase** | [**RCSAgentUseCase**](RCSAgentUseCase.md) |  | 
+**rcsAgentBusiness** | [**RCSAgentBusiness**](RCSAgentBusiness.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

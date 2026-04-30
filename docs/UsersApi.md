@@ -1,10 +1,11 @@
 # UsersApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**userCreate**](UsersApi.md#userCreate) | **POST** /v4/api/user | 
+[**userDelete**](UsersApi.md#userDelete) | **DELETE** /v4/api/user/{id} | 
 [**userGet**](UsersApi.md#userGet) | **GET** /v4/api/user/{id} | 
 [**userSearch**](UsersApi.md#userSearch) | **GET** /v4/api/user | 
 [**userUpdate**](UsersApi.md#userUpdate) | **PUT** /v4/api/user/{id} | 
@@ -57,6 +58,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="userDelete"></a>
+# **userDelete**
+> userDelete(id)
+
+
+
+Remove a user.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.UsersApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+UsersApi apiInstance = new UsersApi();
+String id = "id_example"; // String | 
+try {
+    apiInstance.userDelete(id);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UsersApi#userDelete");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="userGet"></a>

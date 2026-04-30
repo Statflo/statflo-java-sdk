@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **name** | **String** |  | 
 **accountId** | **String** |  | 
-**accountType** | [**AccountTypeEnum**](#AccountTypeEnum) |  | 
+**accountType** | [**AccountTypeEnum**](#AccountTypeEnum) |  |  [optional]
 **externalUserId** | **String** |  |  [optional]
 **externalLocationId** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]
@@ -27,8 +27,8 @@ Name | Type | Description | Notes
 **prevExternalUserId** | **String** |  |  [optional]
 **carrierStatistics** | **Integer** |  |  [optional]
 **notClient** | **Integer** |  |  [optional]
-**status** | **Integer** |  | 
-**attempt** | **Integer** |  | 
+**status** | **Integer** |  |  [optional]
+**attempt** | **Integer** |  |  [optional]
 **callType** | **Integer** |  |  [optional]
 **callDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **originalExternalUserId** | **String** |  |  [optional]
@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 **businessHours** | **String** |  |  [optional]
 **vertical** | **String** |  |  [optional]
 **sourceId** | **Integer** |  |  [optional]
-**source** | **String** |  | 
+**source** | **String** |  |  [optional]
 **customerExternalId** | **String** |  |  [optional]
 **couponCode** | **String** |  |  [optional]
 **currentCarrierId** | **Integer** |  |  [optional]
