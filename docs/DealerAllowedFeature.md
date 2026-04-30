@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**feature** | [**Feature**](Feature.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**feature** | [**Feature**](Feature.md) |  | 

@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **subject** | **String** |  |  [optional]
 **sourceId** | **String** |  | 
 **id** | **Integer** |  | 
-**type** | **Integer** |  |  [optional]
-**user** | [**User**](User.md) |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**type** | **Integer** |  | 
+**user** | [**User**](User.md) |  | 
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
