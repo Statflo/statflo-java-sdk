@@ -41,7 +41,8 @@ jobs:
       - name: Generate code from Swagger file
         run: |
           rm -f README.md
-
+          rm -rf src/main/java/com/statflo/client
+          
           java -jar ./bin/swagger-codegen-cli-3.0.62.jar generate \
           -i ./webapp-artifact/nelmio-spec.json \
           -l java \
