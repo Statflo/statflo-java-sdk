@@ -1,18 +1,18 @@
 # RcsAgentMetadataApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**rCSAgentMetadataCreate**](RcsAgentMetadataApi.md#rCSAgentMetadataCreate) | **POST** /v4/api/rcs-agent-metadata | 
-[**rCSAgentMetadataDelete**](RcsAgentMetadataApi.md#rCSAgentMetadataDelete) | **DELETE** /v4/api/rcs-agent-metadata/{id} | 
-[**rCSAgentMetadataGet**](RcsAgentMetadataApi.md#rCSAgentMetadataGet) | **GET** /v4/api/rcs-agent-metadata/{id} | 
-[**rCSAgentMetadataSearch**](RcsAgentMetadataApi.md#rCSAgentMetadataSearch) | **GET** /v4/api/rcs-agent-metadata | 
-[**rCSAgentMetadataUpdate**](RcsAgentMetadataApi.md#rCSAgentMetadataUpdate) | **PUT** /v4/api/rcs-agent-metadata/{id} | 
+[**rcsAgentMetadataCreate**](RcsAgentMetadataApi.md#rcsAgentMetadataCreate) | **POST** /v4/api/rcs-agent-metadata | 
+[**rcsAgentMetadataDelete**](RcsAgentMetadataApi.md#rcsAgentMetadataDelete) | **DELETE** /v4/api/rcs-agent-metadata/{id} | 
+[**rcsAgentMetadataGet**](RcsAgentMetadataApi.md#rcsAgentMetadataGet) | **GET** /v4/api/rcs-agent-metadata/{id} | 
+[**rcsAgentMetadataSearch**](RcsAgentMetadataApi.md#rcsAgentMetadataSearch) | **GET** /v4/api/rcs-agent-metadata | 
+[**rcsAgentMetadataUpdate**](RcsAgentMetadataApi.md#rcsAgentMetadataUpdate) | **PUT** /v4/api/rcs-agent-metadata/{id} | 
 
-<a name="rCSAgentMetadataCreate"></a>
-# **rCSAgentMetadataCreate**
-> RCSAgentMetadata rCSAgentMetadataCreate(body)
+<a name="rcsAgentMetadataCreate"></a>
+# **rcsAgentMetadataCreate**
+> RcsAgentMetadata rcsAgentMetadataCreate(body)
 
 
 
@@ -31,12 +31,12 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 
 RcsAgentMetadataApi apiInstance = new RcsAgentMetadataApi();
-RCSAgentMetadataCreate body = new RCSAgentMetadataCreate(); // RCSAgentMetadataCreate | 
+RcsAgentMetadataCreate body = new RcsAgentMetadataCreate(); // RcsAgentMetadataCreate | 
 try {
-    RCSAgentMetadata result = apiInstance.rCSAgentMetadataCreate(body);
+    RcsAgentMetadata result = apiInstance.rcsAgentMetadataCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentMetadataApi#rCSAgentMetadataCreate");
+    System.err.println("Exception when calling RcsAgentMetadataApi#rcsAgentMetadataCreate");
     e.printStackTrace();
 }
 ```
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RCSAgentMetadataCreate**](RCSAgentMetadataCreate.md)|  | [optional]
+ **body** | [**RcsAgentMetadataCreate**](RcsAgentMetadataCreate.md)|  | [optional]
 
 ### Return type
 
-[**RCSAgentMetadata**](RCSAgentMetadata.md)
+[**RcsAgentMetadata**](RcsAgentMetadata.md)
 
 ### Authorization
 
@@ -60,9 +60,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="rCSAgentMetadataDelete"></a>
-# **rCSAgentMetadataDelete**
-> rCSAgentMetadataDelete(id)
+<a name="rcsAgentMetadataDelete"></a>
+# **rcsAgentMetadataDelete**
+> rcsAgentMetadataDelete(id)
 
 
 
@@ -83,9 +83,9 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 RcsAgentMetadataApi apiInstance = new RcsAgentMetadataApi();
 String id = "id_example"; // String | 
 try {
-    apiInstance.rCSAgentMetadataDelete(id);
+    apiInstance.rcsAgentMetadataDelete(id);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentMetadataApi#rCSAgentMetadataDelete");
+    System.err.println("Exception when calling RcsAgentMetadataApi#rcsAgentMetadataDelete");
     e.printStackTrace();
 }
 ```
@@ -109,9 +109,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="rCSAgentMetadataGet"></a>
-# **rCSAgentMetadataGet**
-> RCSAgentMetadata rCSAgentMetadataGet(id)
+<a name="rcsAgentMetadataGet"></a>
+# **rcsAgentMetadataGet**
+> RcsAgentMetadata rcsAgentMetadataGet(id)
 
 
 
@@ -132,10 +132,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 RcsAgentMetadataApi apiInstance = new RcsAgentMetadataApi();
 String id = "id_example"; // String | 
 try {
-    RCSAgentMetadata result = apiInstance.rCSAgentMetadataGet(id);
+    RcsAgentMetadata result = apiInstance.rcsAgentMetadataGet(id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentMetadataApi#rCSAgentMetadataGet");
+    System.err.println("Exception when calling RcsAgentMetadataApi#rcsAgentMetadataGet");
     e.printStackTrace();
 }
 ```
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RCSAgentMetadata**](RCSAgentMetadata.md)
+[**RcsAgentMetadata**](RcsAgentMetadata.md)
 
 ### Authorization
 
@@ -159,9 +159,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="rCSAgentMetadataSearch"></a>
-# **rCSAgentMetadataSearch**
-> RCSAgentMetadataPaginationResponse rCSAgentMetadataSearch(filter, query, page, perPage, sort)
+<a name="rcsAgentMetadataSearch"></a>
+# **rcsAgentMetadataSearch**
+> RcsAgentMetadataPaginationResponse rcsAgentMetadataSearch(filter, query, page, perPage, sort)
 
 
 
@@ -186,10 +186,10 @@ Integer page = 56; // Integer |
 Integer perPage = 56; // Integer | 
 String sort = "sort_example"; // String | 
 try {
-    RCSAgentMetadataPaginationResponse result = apiInstance.rCSAgentMetadataSearch(filter, query, page, perPage, sort);
+    RcsAgentMetadataPaginationResponse result = apiInstance.rcsAgentMetadataSearch(filter, query, page, perPage, sort);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentMetadataApi#rCSAgentMetadataSearch");
+    System.err.println("Exception when calling RcsAgentMetadataApi#rcsAgentMetadataSearch");
     e.printStackTrace();
 }
 ```
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RCSAgentMetadataPaginationResponse**](RCSAgentMetadataPaginationResponse.md)
+[**RcsAgentMetadataPaginationResponse**](RcsAgentMetadataPaginationResponse.md)
 
 ### Authorization
 
@@ -217,9 +217,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="rCSAgentMetadataUpdate"></a>
-# **rCSAgentMetadataUpdate**
-> RCSAgentMetadata rCSAgentMetadataUpdate(id, body)
+<a name="rcsAgentMetadataUpdate"></a>
+# **rcsAgentMetadataUpdate**
+> RcsAgentMetadata rcsAgentMetadataUpdate(id, body)
 
 
 
@@ -239,12 +239,12 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 
 RcsAgentMetadataApi apiInstance = new RcsAgentMetadataApi();
 String id = "id_example"; // String | 
-RCSAgentMetadataUpdate body = new RCSAgentMetadataUpdate(); // RCSAgentMetadataUpdate | 
+RcsAgentMetadataUpdate body = new RcsAgentMetadataUpdate(); // RcsAgentMetadataUpdate | 
 try {
-    RCSAgentMetadata result = apiInstance.rCSAgentMetadataUpdate(id, body);
+    RcsAgentMetadata result = apiInstance.rcsAgentMetadataUpdate(id, body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentMetadataApi#rCSAgentMetadataUpdate");
+    System.err.println("Exception when calling RcsAgentMetadataApi#rcsAgentMetadataUpdate");
     e.printStackTrace();
 }
 ```
@@ -254,11 +254,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
- **body** | [**RCSAgentMetadataUpdate**](RCSAgentMetadataUpdate.md)|  | [optional]
+ **body** | [**RcsAgentMetadataUpdate**](RcsAgentMetadataUpdate.md)|  | [optional]
 
 ### Return type
 
-[**RCSAgentMetadata**](RCSAgentMetadata.md)
+[**RcsAgentMetadata**](RcsAgentMetadata.md)
 
 ### Authorization
 
