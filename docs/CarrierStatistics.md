@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **callListId** | **Integer** |  |  [optional]
 **accountId** | **String** |  |  [optional]
 **clientName** | **String** |  |  [optional]
