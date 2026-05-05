@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**user** | [**User**](User.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**user** | [**User**](User.md) |  | 
 **newExternalUserId** | **String** |  |  [optional]
 **oldExternalUserId** | **String** |  |  [optional]
 **newExternalLocationId** | **String** |  |  [optional]

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
+**contactId** | **Integer** |  |  [optional]
 **accountId** | **String** |  | 
 **lastReadMessageId** | **Integer** |  |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
