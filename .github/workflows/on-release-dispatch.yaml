@@ -42,8 +42,9 @@ jobs:
 
       - name: Generate code from Swagger file
         run: |
-          # Delete README.md to allow swagger-codegen generate it automatically 
+          # Delete README.md and client to allow swagger-codegen generate the fresh files
           rm -f README.md
+          rm -rf src/main/java/com/statflo/client
 
           # Generate code from Swagger file
           java -jar ./bin/swagger-codegen-cli-3.0.62.jar generate -i $SWAGGER_URL -l java -o . -t ./templates \
