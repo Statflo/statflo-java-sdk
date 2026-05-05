@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **phoneExtension** | **String** |  |  [optional]
 **email** | **String** |  |  [optional]
 **primaryContact** | **Boolean** |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **jobTitle** | **String** |  |  [optional]
 **source** | **String** |  |  [optional]
