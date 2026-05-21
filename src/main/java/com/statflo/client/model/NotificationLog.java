@@ -29,7 +29,7 @@ import java.time.OffsetDateTime;
  * NotificationLog
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-21T20:20:15.963219411Z[Etc/UTC]")
 
 public class NotificationLog {
   @SerializedName("id")
@@ -89,7 +89,7 @@ public class NotificationLog {
    * Get carrier
    * @return carrier
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Carrier getCarrier() {
     return carrier;
   }
@@ -107,7 +107,7 @@ public class NotificationLog {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }
@@ -125,7 +125,7 @@ public class NotificationLog {
    * Get user
    * @return user
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public User getUser() {
     return user;
   }
@@ -143,7 +143,7 @@ public class NotificationLog {
    * Get payload
    * @return payload
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Object getPayload() {
     return payload;
   }

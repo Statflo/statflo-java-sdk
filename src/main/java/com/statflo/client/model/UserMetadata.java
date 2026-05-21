@@ -27,7 +27,7 @@ import java.time.OffsetDateTime;
  * UserMetadata
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-21T20:20:15.963219411Z[Etc/UTC]")
 
 public class UserMetadata {
   @SerializedName("id")
@@ -75,7 +75,7 @@ public class UserMetadata {
    * Get user
    * @return user
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public User getUser() {
     return user;
   }

@@ -28,7 +28,7 @@ import java.util.List;
  * Role
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-21T20:20:15.963219411Z[Etc/UTC]")
 
 public class Role {
   @SerializedName("id")
@@ -53,7 +53,7 @@ public class Role {
   private Boolean restrictByDistrictId = null;
 
   @SerializedName("rolePermissions")
-  private List<RolePermission> rolePermissions = null;
+  private List<RolePermission> rolePermissions = new ArrayList<>();
 
   public Role id(Integer id) {
     this.id = id;
@@ -187,9 +187,6 @@ public class Role {
   }
 
   public Role addRolePermissionsItem(RolePermission rolePermissionsItem) {
-    if (this.rolePermissions == null) {
-      this.rolePermissions = new ArrayList<>();
-    }
     this.rolePermissions.add(rolePermissionsItem);
     return this;
   }
@@ -198,7 +195,7 @@ public class Role {
    * Get rolePermissions
    * @return rolePermissions
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<RolePermission> getRolePermissions() {
     return rolePermissions;
   }

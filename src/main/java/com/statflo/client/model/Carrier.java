@@ -29,7 +29,7 @@ import java.util.List;
  * Carrier
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-21T20:20:15.963219411Z[Etc/UTC]")
 
 public class Carrier {
   @SerializedName("id")
@@ -45,10 +45,10 @@ public class Carrier {
   private String logo = null;
 
   @SerializedName("dealers")
-  private List<Dealer> dealers = null;
+  private List<Dealer> dealers = new ArrayList<>();
 
   @SerializedName("brands")
-  private List<Brand> brands = null;
+  private List<Brand> brands = new ArrayList<>();
 
   public Carrier id(Integer id) {
     this.id = id;
@@ -128,9 +128,6 @@ public class Carrier {
   }
 
   public Carrier addDealersItem(Dealer dealersItem) {
-    if (this.dealers == null) {
-      this.dealers = new ArrayList<>();
-    }
     this.dealers.add(dealersItem);
     return this;
   }
@@ -139,7 +136,7 @@ public class Carrier {
    * Get dealers
    * @return dealers
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<Dealer> getDealers() {
     return dealers;
   }
@@ -154,9 +151,6 @@ public class Carrier {
   }
 
   public Carrier addBrandsItem(Brand brandsItem) {
-    if (this.brands == null) {
-      this.brands = new ArrayList<>();
-    }
     this.brands.add(brandsItem);
     return this;
   }
@@ -165,7 +159,7 @@ public class Carrier {
    * Get brands
    * @return brands
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<Brand> getBrands() {
     return brands;
   }

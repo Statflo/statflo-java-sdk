@@ -31,7 +31,7 @@ import java.time.OffsetDateTime;
  * BulkMessage
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-21T20:20:15.963219411Z[Etc/UTC]")
 
 public class BulkMessage {
   @SerializedName("id")
@@ -91,7 +91,7 @@ public class BulkMessage {
    * Get user
    * @return user
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public User getUser() {
     return user;
   }
@@ -109,7 +109,7 @@ public class BulkMessage {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }
@@ -127,7 +127,7 @@ public class BulkMessage {
    * Get template
    * @return template
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public MessageTemplate getTemplate() {
     return template;
   }
@@ -145,7 +145,7 @@ public class BulkMessage {
    * Get campaign
    * @return campaign
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Campaign getCampaign() {
     return campaign;
   }
@@ -163,7 +163,7 @@ public class BulkMessage {
    * Get location
    * @return location
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Location getLocation() {
     return location;
   }

@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * TaskCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-21T20:20:15.963219411Z[Etc/UTC]")
 
 public class TaskCreate {
   @SerializedName("name")
@@ -113,7 +113,9 @@ public class TaskCreate {
     @SerializedName("40")
     NUMBER_40(40),
     @SerializedName("41")
-    NUMBER_41(41);
+    NUMBER_41(41),
+    @SerializedName("42")
+    NUMBER_42(42);
 
     private Integer value;
 

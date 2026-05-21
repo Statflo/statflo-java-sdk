@@ -27,7 +27,7 @@ import java.time.OffsetDateTime;
  * VendorMessage
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-21T20:20:15.963219411Z[Etc/UTC]")
 
 public class VendorMessage {
   @SerializedName("id")
@@ -72,7 +72,7 @@ public class VendorMessage {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }
@@ -90,7 +90,7 @@ public class VendorMessage {
    * Get payload
    * @return payload
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Object getPayload() {
     return payload;
   }

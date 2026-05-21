@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * AccountCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-21T20:20:15.963219411Z[Etc/UTC]")
 
 public class AccountCreate {
   @SerializedName("id")
@@ -290,7 +290,7 @@ public class AccountCreate {
    * Get accountType
    * @return accountType
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public AccountTypeEnum getAccountType() {
     return accountType;
   }
@@ -668,7 +668,7 @@ public class AccountCreate {
    * Get status
    * @return status
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public Integer getStatus() {
     return status;
   }
@@ -687,7 +687,7 @@ public class AccountCreate {
    * minimum: 0
    * @return attempt
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public Integer getAttempt() {
     return attempt;
   }
@@ -867,7 +867,7 @@ public class AccountCreate {
    * Get source
    * @return source
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
