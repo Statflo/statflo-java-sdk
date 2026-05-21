@@ -10,4 +10,4 @@ Name | Type | Description | Notes
 **restrictByOutletId** | **Boolean** |  | 
 **restrictByRegionId** | **Boolean** |  | 
 **restrictByDistrictId** | **Boolean** |  | 
-**rolePermissions** | [**List&lt;RolePermission&gt;**](RolePermission.md) |  |  [optional]
+**rolePermissions** | [**List&lt;RolePermission&gt;**](RolePermission.md) |  | 

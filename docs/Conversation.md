@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**contact** | [**Contact**](Contact.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**contact** | [**Contact**](Contact.md) |  | 
 **accountId** | **String** |  | 
 **lastReadMessageId** | **Integer** |  |  [optional]
 **status** | **Integer** |  |  [optional]

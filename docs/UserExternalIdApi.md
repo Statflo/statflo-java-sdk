@@ -1,72 +1,14 @@
 # UserExternalIdApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userExternalId**](UserExternalIdApi.md#userExternalId) | **GET** /v4/api/user-external-id | 
 [**userExternalIdCreate**](UserExternalIdApi.md#userExternalIdCreate) | **POST** /v4/api/user-external-id | 
 [**userExternalIdDelete**](UserExternalIdApi.md#userExternalIdDelete) | **DELETE** /v4/api/user-external-id/{id} | 
 [**userExternalIdGet**](UserExternalIdApi.md#userExternalIdGet) | **GET** /v4/api/user-external-id/{id} | 
+[**userExternalIdSearch**](UserExternalIdApi.md#userExternalIdSearch) | **GET** /v4/api/user-external-id | 
 [**userExternalIdUpdate**](UserExternalIdApi.md#userExternalIdUpdate) | **PUT** /v4/api/user-external-id/{id} | 
-
-<a name="userExternalId"></a>
-# **userExternalId**
-> UserExternalIdPaginationResponse userExternalId(filter, query, page, perPage, sort)
-
-
-
-Search user external ids.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.UserExternalIdApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-UserExternalIdApi apiInstance = new UserExternalIdApi();
-java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
-String query = "query_example"; // String | 
-Integer page = 56; // Integer | 
-Integer perPage = 56; // Integer | 
-String sort = "sort_example"; // String | 
-try {
-    UserExternalIdPaginationResponse result = apiInstance.userExternalId(filter, query, page, perPage, sort);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling UserExternalIdApi#userExternalId");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filter** | [**java.util.HashMap**](.md)|  | [optional]
- **query** | **String**|  | [optional]
- **page** | **Integer**|  | [optional]
- **perPage** | **Integer**|  | [optional]
- **sort** | **String**|  | [optional]
-
-### Return type
-
-[**UserExternalIdPaginationResponse**](UserExternalIdPaginationResponse.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 <a name="userExternalIdCreate"></a>
 # **userExternalIdCreate**
@@ -207,6 +149,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserExternalId**](UserExternalId.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="userExternalIdSearch"></a>
+# **userExternalIdSearch**
+> UserExternalIdPaginationResponse userExternalIdSearch(filter, query, page, perPage, sort)
+
+
+
+Search user external ids.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.UserExternalIdApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+UserExternalIdApi apiInstance = new UserExternalIdApi();
+java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
+String query = "query_example"; // String | 
+Integer page = 56; // Integer | 
+Integer perPage = 56; // Integer | 
+String sort = "sort_example"; // String | 
+try {
+    UserExternalIdPaginationResponse result = apiInstance.userExternalIdSearch(filter, query, page, perPage, sort);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UserExternalIdApi#userExternalIdSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**java.util.HashMap**](.md)|  | [optional]
+ **query** | **String**|  | [optional]
+ **page** | **Integer**|  | [optional]
+ **perPage** | **Integer**|  | [optional]
+ **sort** | **String**|  | [optional]
+
+### Return type
+
+[**UserExternalIdPaginationResponse**](UserExternalIdPaginationResponse.md)
 
 ### Authorization
 

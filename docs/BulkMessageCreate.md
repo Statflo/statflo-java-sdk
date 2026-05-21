@@ -19,7 +19,7 @@ Name | Value
 ---- | -----
 SENDING | &quot;sending&quot;
 FAILED | &quot;failed&quot;
-COMPLETE | &quot;complete&quot;
+COMPLETED | &quot;completed&quot;
 
 <a name="ProviderEnum"></a>
 ## Enum: ProviderEnum

@@ -1,0 +1,168 @@
+# AccountActionApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**accountActionCreate**](AccountActionApi.md#accountActionCreate) | **POST** /v4/api/account-action | 
+[**accountActionGet**](AccountActionApi.md#accountActionGet) | **GET** /v4/api/account-action/{id} | 
+[**accountActionSearch**](AccountActionApi.md#accountActionSearch) | **GET** /v4/api/account-action | 
+
+<a name="accountActionCreate"></a>
+# **accountActionCreate**
+> AccountAction accountActionCreate(body)
+
+
+
+Create account action
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountActionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountActionApi apiInstance = new AccountActionApi();
+AccountActionCreate body = new AccountActionCreate(); // AccountActionCreate | 
+try {
+    AccountAction result = apiInstance.accountActionCreate(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountActionApi#accountActionCreate");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccountActionCreate**](AccountActionCreate.md)|  | [optional]
+
+### Return type
+
+[**AccountAction**](AccountAction.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="accountActionGet"></a>
+# **accountActionGet**
+> AccountAction accountActionGet(id)
+
+
+
+Retrieve an account action
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountActionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountActionApi apiInstance = new AccountActionApi();
+String id = "id_example"; // String | 
+try {
+    AccountAction result = apiInstance.accountActionGet(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountActionApi#accountActionGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**AccountAction**](AccountAction.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="accountActionSearch"></a>
+# **accountActionSearch**
+> AccountActionPaginationResponse accountActionSearch(filter, query, page, perPage, sort)
+
+
+
+Search account actions
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountActionApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountActionApi apiInstance = new AccountActionApi();
+java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
+String query = "query_example"; // String | 
+Integer page = 56; // Integer | 
+Integer perPage = 56; // Integer | 
+String sort = "sort_example"; // String | 
+try {
+    AccountActionPaginationResponse result = apiInstance.accountActionSearch(filter, query, page, perPage, sort);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountActionApi#accountActionSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**java.util.HashMap**](.md)|  | [optional]
+ **query** | **String**|  | [optional]
+ **page** | **Integer**|  | [optional]
+ **perPage** | **Integer**|  | [optional]
+ **sort** | **String**|  | [optional]
+
+### Return type
+
+[**AccountActionPaginationResponse**](AccountActionPaginationResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
