@@ -1,6 +1,6 @@
 # AuthenticationApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -58,7 +58,7 @@ This endpoint does not need any parameter.
 
 <a name="login"></a>
 # **login**
-> InlineResponse200 login(body)
+> InlineResponse2001 login(body)
 
 
 
@@ -79,7 +79,7 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 AuthenticationApi apiInstance = new AuthenticationApi();
 AuthLoginBody body = new AuthLoginBody(); // AuthLoginBody | 
 try {
-    InlineResponse200 result = apiInstance.login(body);
+    InlineResponse2001 result = apiInstance.login(body);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthenticationApi#login");
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
