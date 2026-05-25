@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**campaign** | [**Campaign**](Campaign.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**campaign** | [**Campaign**](Campaign.md) |  | 
 **campaignPriority** | **Integer** |  |  [optional]
 **displayPriority** | **Integer** |  |  [optional]
 **carryoverUnattempted** | **Integer** |  |  [optional]
-**visibilityCrmStatus** | [**CampaignVisibility**](CampaignVisibility.md) |  |  [optional]
-**visibilityReportStatus** | [**CampaignVisibility**](CampaignVisibility.md) |  |  [optional]
-**messageTemplateAssignments** | [**List&lt;MessageTemplateAssignment&gt;**](MessageTemplateAssignment.md) |  |  [optional]
+**visibilityCrmStatus** | [**CampaignVisibility**](CampaignVisibility.md) |  | 
+**visibilityReportStatus** | [**CampaignVisibility**](CampaignVisibility.md) |  | 
+**messageTemplateAssignments** | [**List&lt;MessageTemplateAssignment&gt;**](MessageTemplateAssignment.md) |  | 

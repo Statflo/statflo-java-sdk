@@ -1,14 +1,62 @@
 # WidgetApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getV4ApiWidgetsCampaigns**](WidgetApi.md#getV4ApiWidgetsCampaigns) | **GET** /v4/api/widgets/campaigns/{accountId} | 
 [**widgetCreate**](WidgetApi.md#widgetCreate) | **POST** /v4/api/widget | 
 [**widgetDelete**](WidgetApi.md#widgetDelete) | **DELETE** /v4/api/widget/{id} | 
 [**widgetGet**](WidgetApi.md#widgetGet) | **GET** /v4/api/widget/{id} | 
 [**widgetSearch**](WidgetApi.md#widgetSearch) | **GET** /v4/api/widget | 
 [**widgetUpdate**](WidgetApi.md#widgetUpdate) | **PUT** /v4/api/widget/{id} | 
+
+<a name="getV4ApiWidgetsCampaigns"></a>
+# **getV4ApiWidgetsCampaigns**
+> getV4ApiWidgetsCampaigns(accountId)
+
+
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.WidgetApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+WidgetApi apiInstance = new WidgetApi();
+String accountId = "accountId_example"; // String | 
+try {
+    apiInstance.getV4ApiWidgetsCampaigns(accountId);
+} catch (ApiException e) {
+    System.err.println("Exception when calling WidgetApi#getV4ApiWidgetsCampaigns");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 <a name="widgetCreate"></a>
 # **widgetCreate**
