@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **product** | **String** |  |  [optional]
 **serviceStartDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **serviceEndDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **locationId** | **String** |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **tradeIn** | **String** |  |  [optional]

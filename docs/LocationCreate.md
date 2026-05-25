@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **externalDealerId** | **String** |  |  [optional]
 **districtId** | **Integer** |  | 
-**externalLocationId** | **String** |  | 
+**externalLocationId** | **String** |  |  [optional]
 **salesforceLocationId** | **String** |  |  [optional]
 **name** | **String** |  | 
 **addressLine1** | **String** |  | 

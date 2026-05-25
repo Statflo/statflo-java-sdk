@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **name** | **String** |  | 
 **accountId** | **String** |  | 
-**accountType** | [**AccountTypeEnum**](#AccountTypeEnum) |  | 
+**accountType** | [**AccountTypeEnum**](#AccountTypeEnum) |  |  [optional]
 **externalUserId** | **String** |  |  [optional]
 **externalLocationId** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]
