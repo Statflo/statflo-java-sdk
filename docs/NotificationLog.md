@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**carrier** | [**Carrier**](Carrier.md) |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**user** | [**User**](User.md) |  |  [optional]
-**payload** | **Object** |  |  [optional]
+**carrier** | [**Carrier**](Carrier.md) |  | 
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**user** | [**User**](User.md) |  | 
+**payload** | **Object** |  | 
 **channel** | **String** |  |  [optional]
 **type** | **String** |  |  [optional]
 **recordSource** | **String** |  |  [optional]

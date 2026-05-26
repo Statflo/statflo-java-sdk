@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **campaignNickname** | **String** |  | 
 **totangoName** | **String** |  |  [optional]
-**type** | [**TypeEnum**](#TypeEnum) |  | 
-**frequency** | [**FrequencyEnum**](#FrequencyEnum) |  | 
+**type** | [**TypeEnum**](#TypeEnum) |  |  [optional]
+**frequency** | [**FrequencyEnum**](#FrequencyEnum) |  |  [optional]
 **lifetime** | **String** |  |  [optional]
 **method** | [**MethodEnum**](#MethodEnum) |  |  [optional]
 **carrierAllowed** | **Boolean** |  |  [optional]
