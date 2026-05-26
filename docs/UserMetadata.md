@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**user** | [**User**](User.md) |  |  [optional]
+**user** | [**User**](User.md) |  | 
 **metadata** | **String** |  |  [optional]
 **value** | **String** |  |  [optional]
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

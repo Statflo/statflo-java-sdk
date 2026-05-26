@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
  * AccountAction
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class AccountAction {
   @SerializedName("description")
@@ -169,7 +169,7 @@ public class AccountAction {
    * Get type
    * @return type
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Integer getType() {
     return type;
   }
@@ -187,7 +187,7 @@ public class AccountAction {
    * Get user
    * @return user
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public User getUser() {
     return user;
   }
@@ -205,7 +205,7 @@ public class AccountAction {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }

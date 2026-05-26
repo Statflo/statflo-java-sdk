@@ -28,7 +28,7 @@ import java.util.List;
  * RCSAgentUseCaseUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class RCSAgentUseCaseUpdate {
   @SerializedName("id")
@@ -157,7 +157,7 @@ public class RCSAgentUseCaseUpdate {
   private String optOutDescription = null;
 
   @SerializedName("screenshotUrls")
-  private List<String> screenshotUrls = null;
+  private List<String> screenshotUrls = new ArrayList<>();
 
   @SerializedName("triggerEventDescription")
   private String triggerEventDescription = null;
@@ -166,7 +166,7 @@ public class RCSAgentUseCaseUpdate {
   private String description = null;
 
   @SerializedName("videoUrls")
-  private List<String> videoUrls = null;
+  private List<String> videoUrls = new ArrayList<>();
 
   @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
@@ -432,9 +432,6 @@ public class RCSAgentUseCaseUpdate {
   }
 
   public RCSAgentUseCaseUpdate addScreenshotUrlsItem(String screenshotUrlsItem) {
-    if (this.screenshotUrls == null) {
-      this.screenshotUrls = new ArrayList<>();
-    }
     this.screenshotUrls.add(screenshotUrlsItem);
     return this;
   }
@@ -443,7 +440,7 @@ public class RCSAgentUseCaseUpdate {
    * Get screenshotUrls
    * @return screenshotUrls
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<String> getScreenshotUrls() {
     return screenshotUrls;
   }
@@ -494,9 +491,6 @@ public class RCSAgentUseCaseUpdate {
   }
 
   public RCSAgentUseCaseUpdate addVideoUrlsItem(String videoUrlsItem) {
-    if (this.videoUrls == null) {
-      this.videoUrls = new ArrayList<>();
-    }
     this.videoUrls.add(videoUrlsItem);
     return this;
   }
@@ -505,7 +499,7 @@ public class RCSAgentUseCaseUpdate {
    * Get videoUrls
    * @return videoUrls
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<String> getVideoUrls() {
     return videoUrls;
   }

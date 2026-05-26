@@ -25,7 +25,7 @@ import java.io.IOException;
  * CampaignCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class CampaignCreate {
   @SerializedName("id")
@@ -469,7 +469,7 @@ public class CampaignCreate {
    * Get type
    * @return type
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public TypeEnum getType() {
     return type;
   }
@@ -487,7 +487,7 @@ public class CampaignCreate {
    * Get frequency
    * @return frequency
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public FrequencyEnum getFrequency() {
     return frequency;
   }

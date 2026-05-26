@@ -30,7 +30,7 @@ import java.util.List;
  * ContentSharingCategory
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class ContentSharingCategory {
   @SerializedName("id")
@@ -55,7 +55,7 @@ public class ContentSharingCategory {
   private OffsetDateTime updatedAt = null;
 
   @SerializedName("links")
-  private List<ContentSharingLink> links = null;
+  private List<ContentSharingLink> links = new ArrayList<>();
 
   public ContentSharingCategory id(Integer id) {
     this.id = id;
@@ -138,7 +138,7 @@ public class ContentSharingCategory {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }
@@ -189,9 +189,6 @@ public class ContentSharingCategory {
   }
 
   public ContentSharingCategory addLinksItem(ContentSharingLink linksItem) {
-    if (this.links == null) {
-      this.links = new ArrayList<>();
-    }
     this.links.add(linksItem);
     return this;
   }
@@ -200,7 +197,7 @@ public class ContentSharingCategory {
    * Get links
    * @return links
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<ContentSharingLink> getLinks() {
     return links;
   }

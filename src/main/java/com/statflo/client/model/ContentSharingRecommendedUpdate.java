@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
  * ContentSharingRecommendedUpdate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class ContentSharingRecommendedUpdate {
   @SerializedName("id")
@@ -79,7 +79,7 @@ public class ContentSharingRecommendedUpdate {
    * Get campaign
    * @return campaign
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Campaign getCampaign() {
     return campaign;
   }
@@ -115,7 +115,7 @@ public class ContentSharingRecommendedUpdate {
    * Get link
    * @return link
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public ContentSharingLink getLink() {
     return link;
   }

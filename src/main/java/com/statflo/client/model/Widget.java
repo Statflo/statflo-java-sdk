@@ -30,7 +30,7 @@ import java.util.List;
  * Widget
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class Widget {
   @SerializedName("id")
@@ -58,7 +58,7 @@ public class Widget {
   private Integer priority = 0;
 
   @SerializedName("metadata")
-  private List<WidgetMetadata> metadata = null;
+  private List<WidgetMetadata> metadata = new ArrayList<>();
 
   public Widget id(Integer id) {
     this.id = id;
@@ -87,7 +87,7 @@ public class Widget {
    * Get carrier
    * @return carrier
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Carrier getCarrier() {
     return carrier;
   }
@@ -105,7 +105,7 @@ public class Widget {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }
@@ -210,9 +210,6 @@ public class Widget {
   }
 
   public Widget addMetadataItem(WidgetMetadata metadataItem) {
-    if (this.metadata == null) {
-      this.metadata = new ArrayList<>();
-    }
     this.metadata.add(metadataItem);
     return this;
   }
@@ -221,7 +218,7 @@ public class Widget {
    * Get metadata
    * @return metadata
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<WidgetMetadata> getMetadata() {
     return metadata;
   }

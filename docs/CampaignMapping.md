@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
-**carrier** | [**Carrier**](Carrier.md) |  |  [optional]
-**campaign** | [**Campaign**](Campaign.md) |  |  [optional]
+**carrier** | [**Carrier**](Carrier.md) |  | 
+**campaign** | [**Campaign**](Campaign.md) |  | 
 **fileName** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

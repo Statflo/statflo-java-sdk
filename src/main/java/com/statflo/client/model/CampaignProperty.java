@@ -31,7 +31,7 @@ import java.util.List;
  * CampaignProperty
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class CampaignProperty {
   @SerializedName("id")
@@ -59,7 +59,7 @@ public class CampaignProperty {
   private CampaignVisibility visibilityReportStatus = null;
 
   @SerializedName("messageTemplateAssignments")
-  private List<MessageTemplateAssignment> messageTemplateAssignments = null;
+  private List<MessageTemplateAssignment> messageTemplateAssignments = new ArrayList<>();
 
   public CampaignProperty id(Integer id) {
     this.id = id;
@@ -88,7 +88,7 @@ public class CampaignProperty {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }
@@ -106,7 +106,7 @@ public class CampaignProperty {
    * Get campaign
    * @return campaign
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Campaign getCampaign() {
     return campaign;
   }
@@ -178,7 +178,7 @@ public class CampaignProperty {
    * Get visibilityCrmStatus
    * @return visibilityCrmStatus
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public CampaignVisibility getVisibilityCrmStatus() {
     return visibilityCrmStatus;
   }
@@ -196,7 +196,7 @@ public class CampaignProperty {
    * Get visibilityReportStatus
    * @return visibilityReportStatus
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public CampaignVisibility getVisibilityReportStatus() {
     return visibilityReportStatus;
   }
@@ -211,9 +211,6 @@ public class CampaignProperty {
   }
 
   public CampaignProperty addMessageTemplateAssignmentsItem(MessageTemplateAssignment messageTemplateAssignmentsItem) {
-    if (this.messageTemplateAssignments == null) {
-      this.messageTemplateAssignments = new ArrayList<>();
-    }
     this.messageTemplateAssignments.add(messageTemplateAssignmentsItem);
     return this;
   }
@@ -222,7 +219,7 @@ public class CampaignProperty {
    * Get messageTemplateAssignments
    * @return messageTemplateAssignments
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<MessageTemplateAssignment> getMessageTemplateAssignments() {
     return messageTemplateAssignments;
   }

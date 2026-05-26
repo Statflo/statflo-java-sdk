@@ -29,7 +29,7 @@ import java.time.OffsetDateTime;
  * RCSAgentMetadata
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class RCSAgentMetadata {
   @SerializedName("id")
@@ -83,7 +83,7 @@ public class RCSAgentMetadata {
    * Get rcsAgent
    * @return rcsAgent
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public RCSAgent getRcsAgent() {
     return rcsAgent;
   }
@@ -137,7 +137,7 @@ public class RCSAgentMetadata {
    * Get carrier
    * @return carrier
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Carrier getCarrier() {
     return carrier;
   }
@@ -155,7 +155,7 @@ public class RCSAgentMetadata {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }

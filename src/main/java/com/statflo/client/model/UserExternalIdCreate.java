@@ -26,7 +26,7 @@ import java.time.OffsetDateTime;
  * UserExternalIdCreate
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class UserExternalIdCreate {
   @SerializedName("id")
@@ -152,7 +152,7 @@ public class UserExternalIdCreate {
    * Get recordSource
    * @return recordSource
   **/
-  @Schema(required = true, description = "")
+  @Schema(description = "")
   public String getRecordSource() {
     return recordSource;
   }

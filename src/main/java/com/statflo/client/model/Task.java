@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
  * Task
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class Task {
   @SerializedName("name")
@@ -139,7 +139,7 @@ public class Task {
    * Get userAssigned
    * @return userAssigned
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public User getUserAssigned() {
     return userAssigned;
   }
@@ -211,7 +211,7 @@ public class Task {
    * Get type
    * @return type
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Integer getType() {
     return type;
   }
@@ -229,7 +229,7 @@ public class Task {
    * Get user
    * @return user
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public User getUser() {
     return user;
   }
@@ -247,7 +247,7 @@ public class Task {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }

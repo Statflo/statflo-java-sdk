@@ -27,7 +27,7 @@ import java.io.IOException;
  * UserPermission
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class UserPermission {
   @SerializedName("user")
@@ -48,7 +48,7 @@ public class UserPermission {
    * Get user
    * @return user
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public User getUser() {
     return user;
   }
@@ -66,7 +66,7 @@ public class UserPermission {
    * Get permission
    * @return permission
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Permission getPermission() {
     return permission;
   }

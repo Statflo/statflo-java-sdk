@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **accentColor** | **String** |  | 
 **callbackUrl** | **String** |  | 
 **callbackMethod** | **String** |  | 
-**fallbackUrl** | **String** |  | 
-**fallbackMethod** | **String** |  | 
+**fallbackUrl** | **String** |  |  [optional]
+**fallbackMethod** | **String** |  |  [optional]
 **status** | **String** |  | 
 **repUserId** | **Integer** |  | 
 **website** | **List&lt;Object&gt;** |  | 

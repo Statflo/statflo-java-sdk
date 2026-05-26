@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **accountId** | **String** |  | 
 **phoneNumber** | **String** |  | 
-**accountType** | [**AccountTypeEnum**](#AccountTypeEnum) |  | 
+**accountType** | [**AccountTypeEnum**](#AccountTypeEnum) |  |  [optional]
 **language** | [**LanguageEnum**](#LanguageEnum) |  |  [optional]
 **accountName** | **String** |  |  [optional]
 **accountMemberName** | **String** |  |  [optional]

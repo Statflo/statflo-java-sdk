@@ -29,7 +29,7 @@ import java.time.OffsetDateTime;
  * Message
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class Message {
   @SerializedName("id")
@@ -101,7 +101,7 @@ public class Message {
    * Get user
    * @return user
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public User getUser() {
     return user;
   }
@@ -119,7 +119,7 @@ public class Message {
    * Get conversation
    * @return conversation
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Conversation getConversation() {
     return conversation;
   }
@@ -281,7 +281,7 @@ public class Message {
    * Get messageTemplate
    * @return messageTemplate
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public MessageTemplate getMessageTemplate() {
     return messageTemplate;
   }

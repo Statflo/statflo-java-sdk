@@ -27,7 +27,7 @@ import java.io.IOException;
  * DealerAllowedFeature
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class DealerAllowedFeature {
   @SerializedName("dealer")
@@ -45,7 +45,7 @@ public class DealerAllowedFeature {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }
@@ -63,7 +63,7 @@ public class DealerAllowedFeature {
    * Get feature
    * @return feature
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Feature getFeature() {
     return feature;
   }

@@ -30,7 +30,7 @@ import java.util.List;
  * RCSAgentUseCase
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-19T16:03:34.467887459Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-05-26T13:42:22.633961274Z[Etc/UTC]")
 
 public class RCSAgentUseCase {
   @SerializedName("id")
@@ -76,7 +76,7 @@ public class RCSAgentUseCase {
   private String optOutDescription = null;
 
   @SerializedName("screenshotUrls")
-  private List<String> screenshotUrls = null;
+  private List<String> screenshotUrls = new ArrayList<>();
 
   @SerializedName("triggerEventDescription")
   private String triggerEventDescription = null;
@@ -85,7 +85,7 @@ public class RCSAgentUseCase {
   private String description = null;
 
   @SerializedName("videoUrls")
-  private List<String> videoUrls = null;
+  private List<String> videoUrls = new ArrayList<>();
 
   @SerializedName("carrier")
   private Carrier carrier = null;
@@ -357,9 +357,6 @@ public class RCSAgentUseCase {
   }
 
   public RCSAgentUseCase addScreenshotUrlsItem(String screenshotUrlsItem) {
-    if (this.screenshotUrls == null) {
-      this.screenshotUrls = new ArrayList<>();
-    }
     this.screenshotUrls.add(screenshotUrlsItem);
     return this;
   }
@@ -368,7 +365,7 @@ public class RCSAgentUseCase {
    * Get screenshotUrls
    * @return screenshotUrls
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<String> getScreenshotUrls() {
     return screenshotUrls;
   }
@@ -419,9 +416,6 @@ public class RCSAgentUseCase {
   }
 
   public RCSAgentUseCase addVideoUrlsItem(String videoUrlsItem) {
-    if (this.videoUrls == null) {
-      this.videoUrls = new ArrayList<>();
-    }
     this.videoUrls.add(videoUrlsItem);
     return this;
   }
@@ -430,7 +424,7 @@ public class RCSAgentUseCase {
    * Get videoUrls
    * @return videoUrls
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public List<String> getVideoUrls() {
     return videoUrls;
   }
@@ -448,7 +442,7 @@ public class RCSAgentUseCase {
    * Get carrier
    * @return carrier
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Carrier getCarrier() {
     return carrier;
   }
@@ -466,7 +460,7 @@ public class RCSAgentUseCase {
    * Get dealer
    * @return dealer
   **/
-  @Schema(description = "")
+  @Schema(required = true, description = "")
   public Dealer getDealer() {
     return dealer;
   }
