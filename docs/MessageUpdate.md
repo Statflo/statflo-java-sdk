@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **associatedAppPhoneNumber** | **String** |  |  [optional]
 **associatedAppPhoneNumberType** | [**AssociatedAppPhoneNumberTypeEnum**](#AssociatedAppPhoneNumberTypeEnum) |  |  [optional]
 **messageTemplateId** | **String** |  |  [optional]
+**bulkMessageId** | **Integer** |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **dateSent** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 
@@ -27,6 +28,7 @@ OK | &quot;ok&quot;
 ERROR | &quot;error&quot;
 REJECTED | &quot;rejected&quot;
 FAILED | &quot;failed&quot;
+DONE | &quot;done&quot;
 AUTO | &quot;auto&quot;
 
 <a name="AssociatedAppPhoneNumberTypeEnum"></a>
@@ -37,3 +39,4 @@ MASQUERADE | &quot;masquerade&quot;
 PRIMARY | &quot;primary&quot;
 PRIVATE | &quot;private&quot;
 OUTLET | &quot;outlet&quot;
+RCS | &quot;rcs&quot;

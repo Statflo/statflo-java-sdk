@@ -5,9 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Integer** |  | 
 **externalDealerId** | **String** |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**districtId** | **Integer** |  | 
-**district** | [**District**](District.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**district** | [**District**](District.md) |  | 
 **externalLocationId** | **String** |  |  [optional]
 **salesforceLocationId** | **String** |  |  [optional]
 **name** | **String** |  |  [optional]

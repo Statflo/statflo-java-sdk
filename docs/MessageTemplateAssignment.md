@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**property** | [**CampaignProperty**](CampaignProperty.md) |  |  [optional]
-**template** | [**MessageTemplate**](MessageTemplate.md) |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**property** | [**CampaignProperty**](CampaignProperty.md) |  | 
+**template** | [**MessageTemplate**](MessageTemplate.md) |  | 
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **priority** | **Integer** |  |  [optional]
 **assignDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **dateUpdate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
