@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | [**User**](User.md) |  |  [optional]
-**permission** | [**Permission**](Permission.md) |  |  [optional]
+**user** | [**User**](User.md) |  | 
+**permission** | [**Permission**](Permission.md) |  | 
 **blacklisted** | **Boolean** |  |  [optional]

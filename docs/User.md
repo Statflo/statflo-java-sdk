@@ -23,10 +23,11 @@ Name | Type | Description | Notes
 **jobTitle** | **String** |  |  [optional]
 **acceptedTermsConditions** | **Boolean** |  |  [optional]
 **appointmentReminderEmail** | **Boolean** |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
-**userPermissions** | [**List&lt;UserPermission&gt;**](UserPermission.md) |  |  [optional]
-**userTeams** | [**List&lt;UserTeam&gt;**](UserTeam.md) |  |  [optional]
-**userMetadata** | [**List&lt;UserMetadata&gt;**](UserMetadata.md) |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
+**role** | [**Role**](Role.md) |  | 
+**userPermissions** | [**List&lt;UserPermission&gt;**](UserPermission.md) |  | 
+**userTeams** | [**List&lt;UserTeam&gt;**](UserTeam.md) |  | 
+**userMetadata** | [**List&lt;UserMetadata&gt;**](UserMetadata.md) |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **campaignVisibility** | **Integer** |  |  [optional]
 **permissions** | **List&lt;Object&gt;** |  | 

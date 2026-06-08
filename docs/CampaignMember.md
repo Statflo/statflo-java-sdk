@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **accountId** | **String** |  |  [optional]
 **phoneNumber** | **String** |  |  [optional]
 **accountName** | **String** |  |  [optional]
-**campaign** | [**Campaign**](Campaign.md) |  |  [optional]
+**campaign** | [**Campaign**](Campaign.md) |  | 
 **campaignId** | **Integer** |  | 
 **startDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **endDate** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **secondaryDealerId** | **String** |  |  [optional]
-**carrier** | [**Carrier**](Carrier.md) |  |  [optional]
-**dealer** | [**Dealer**](Dealer.md) |  |  [optional]
+**carrier** | [**Carrier**](Carrier.md) |  | 
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **campaignNickname** | **String** |  |  [optional]
 **source** | **String** |  |  [optional]
 **dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 

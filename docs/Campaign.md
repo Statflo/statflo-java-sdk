@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **transactionLatest** | **String** |  |  [optional]
 **productTypes** | **String** |  |  [optional]
 **source** | **String** |  |  [optional]
-**campaignMetadata** | [**List&lt;CampaignMetadata&gt;**](CampaignMetadata.md) |  |  [optional]
-**campaignMappings** | [**List&lt;CampaignMapping&gt;**](CampaignMapping.md) |  |  [optional]
-**campaignProperties** | [**List&lt;CampaignProperty&gt;**](CampaignProperty.md) |  |  [optional]
+**campaignMetadata** | [**List&lt;CampaignMetadata&gt;**](CampaignMetadata.md) |  | 
+**campaignMappings** | [**List&lt;CampaignMapping&gt;**](CampaignMapping.md) |  | 
+**campaignProperties** | [**List&lt;CampaignProperty&gt;**](CampaignProperty.md) |  | 

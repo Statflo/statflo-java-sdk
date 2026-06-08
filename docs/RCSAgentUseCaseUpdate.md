@@ -17,10 +17,10 @@ Name | Type | Description | Notes
 **accessInstructions** | **String** |  |  [optional]
 **optInDescription** | **String** |  |  [optional]
 **optOutDescription** | **String** |  |  [optional]
-**screenshotUrls** | **List&lt;String&gt;** |  |  [optional]
+**screenshotUrls** | **List&lt;String&gt;** |  | 
 **triggerEventDescription** | **String** |  |  [optional]
 **description** | **String** |  |  [optional]
-**videoUrls** | **List&lt;String&gt;** |  |  [optional]
+**videoUrls** | **List&lt;String&gt;** |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 

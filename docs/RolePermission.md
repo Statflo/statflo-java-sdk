@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**role** | [**Role**](Role.md) |  |  [optional]
-**permission** | [**Permission**](Permission.md) |  |  [optional]
+**role** | [**Role**](Role.md) |  | 
+**permission** | [**Permission**](Permission.md) |  | 
 **dealerSpecific** | **Boolean** |  |  [optional]
 **dealerBlacklisted** | **Boolean** |  |  [optional]
