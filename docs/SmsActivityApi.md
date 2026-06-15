@@ -1,18 +1,18 @@
 # SmsActivityApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**smsActivityCreate**](SmsActivityApi.md#smsActivityCreate) | **POST** /v4/api/sms-activity | 
+[**postV4ApiSmsActivitySearch**](SmsActivityApi.md#postV4ApiSmsActivitySearch) | **POST** /v4/api/sms-activity | 
 [**smsActivityDelete**](SmsActivityApi.md#smsActivityDelete) | **DELETE** /v4/api/sms-activity/{id} | 
 [**smsActivityGet**](SmsActivityApi.md#smsActivityGet) | **GET** /v4/api/sms-activity/{id} | 
 [**smsActivitySearch**](SmsActivityApi.md#smsActivitySearch) | **GET** /v4/api/sms-activity | 
 [**smsActivityUpdate**](SmsActivityApi.md#smsActivityUpdate) | **PUT** /v4/api/sms-activity/{id} | 
 
-<a name="smsActivityCreate"></a>
-# **smsActivityCreate**
-> SmsActivity smsActivityCreate(body)
+<a name="postV4ApiSmsActivitySearch"></a>
+# **postV4ApiSmsActivitySearch**
+> SmsActivity postV4ApiSmsActivitySearch(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 SmsActivityApi apiInstance = new SmsActivityApi();
 SmsActivityCreate body = new SmsActivityCreate(); // SmsActivityCreate | 
 try {
-    SmsActivity result = apiInstance.smsActivityCreate(body);
+    SmsActivity result = apiInstance.postV4ApiSmsActivitySearch(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SmsActivityApi#smsActivityCreate");
+    System.err.println("Exception when calling SmsActivityApi#postV4ApiSmsActivitySearch");
     e.printStackTrace();
 }
 ```

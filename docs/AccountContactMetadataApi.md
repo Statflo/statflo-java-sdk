@@ -1,14 +1,14 @@
 # AccountContactMetadataApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**accountContactMetadata**](AccountContactMetadataApi.md#accountContactMetadata) | **GET** /v4/api/account-contact-metadata | 
-[**accountContactMetadataCreate**](AccountContactMetadataApi.md#accountContactMetadataCreate) | **POST** /v4/api/account-contact-metadata | 
 [**accountContactMetadataDelete**](AccountContactMetadataApi.md#accountContactMetadataDelete) | **DELETE** /v4/api/account-contact-metadata/{id} | 
 [**accountContactMetadataGet**](AccountContactMetadataApi.md#accountContactMetadataGet) | **GET** /v4/api/account-contact-metadata/{id} | 
 [**accountContactMetadataUpdate**](AccountContactMetadataApi.md#accountContactMetadataUpdate) | **PUT** /v4/api/account-contact-metadata/{id} | 
+[**postV4ApiAccountContactMetadataSearch**](AccountContactMetadataApi.md#postV4ApiAccountContactMetadataSearch) | **POST** /v4/api/account-contact-metadata | 
 
 <a name="accountContactMetadata"></a>
 # **accountContactMetadata**
@@ -66,56 +66,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="accountContactMetadataCreate"></a>
-# **accountContactMetadataCreate**
-> AccountContactMetadata accountContactMetadataCreate(body)
-
-
-
-Create a account contact metadata.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.AccountContactMetadataApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-AccountContactMetadataApi apiInstance = new AccountContactMetadataApi();
-AccountContactMetadataCreate body = new AccountContactMetadataCreate(); // AccountContactMetadataCreate | 
-try {
-    AccountContactMetadata result = apiInstance.accountContactMetadataCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountContactMetadataApi#accountContactMetadataCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**AccountContactMetadataCreate**](AccountContactMetadataCreate.md)|  | [optional]
-
-### Return type
-
-[**AccountContactMetadata**](AccountContactMetadata.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="accountContactMetadataDelete"></a>
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**AccountContactMetadataUpdate**](AccountContactMetadataUpdate.md)|  | [optional]
+
+### Return type
+
+[**AccountContactMetadata**](AccountContactMetadata.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiAccountContactMetadataSearch"></a>
+# **postV4ApiAccountContactMetadataSearch**
+> AccountContactMetadata postV4ApiAccountContactMetadataSearch(body)
+
+
+
+Create a account contact metadata.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountContactMetadataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountContactMetadataApi apiInstance = new AccountContactMetadataApi();
+AccountContactMetadataCreate body = new AccountContactMetadataCreate(); // AccountContactMetadataCreate | 
+try {
+    AccountContactMetadata result = apiInstance.postV4ApiAccountContactMetadataSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountContactMetadataApi#postV4ApiAccountContactMetadataSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccountContactMetadataCreate**](AccountContactMetadataCreate.md)|  | [optional]
 
 ### Return type
 

@@ -1,64 +1,14 @@
 # CampaignMetadataApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**campaignMetadataCreate**](CampaignMetadataApi.md#campaignMetadataCreate) | **POST** /v4/api/campaign-metadata | 
 [**campaignMetadataDelete**](CampaignMetadataApi.md#campaignMetadataDelete) | **DELETE** /v4/api/campaign-metadata/{id} | 
 [**campaignMetadataGet**](CampaignMetadataApi.md#campaignMetadataGet) | **GET** /v4/api/campaign-metadata/{id} | 
 [**campaignMetadataSearch**](CampaignMetadataApi.md#campaignMetadataSearch) | **GET** /v4/api/campaign-metadata | 
 [**campaignMetadataUpdate**](CampaignMetadataApi.md#campaignMetadataUpdate) | **PUT** /v4/api/campaign-metadata/{id} | 
-
-<a name="campaignMetadataCreate"></a>
-# **campaignMetadataCreate**
-> CampaignMetadata campaignMetadataCreate(body)
-
-
-
-Create a campaign metadata.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.CampaignMetadataApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-CampaignMetadataApi apiInstance = new CampaignMetadataApi();
-CampaignMetadataCreate body = new CampaignMetadataCreate(); // CampaignMetadataCreate | 
-try {
-    CampaignMetadata result = apiInstance.campaignMetadataCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CampaignMetadataApi#campaignMetadataCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CampaignMetadataCreate**](CampaignMetadataCreate.md)|  | [optional]
-
-### Return type
-
-[**CampaignMetadata**](CampaignMetadata.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiCampaignMetadataSearch**](CampaignMetadataApi.md#postV4ApiCampaignMetadataSearch) | **POST** /v4/api/campaign-metadata | 
 
 <a name="campaignMetadataDelete"></a>
 # **campaignMetadataDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**CampaignMetadataUpdate**](CampaignMetadataUpdate.md)|  | [optional]
+
+### Return type
+
+[**CampaignMetadata**](CampaignMetadata.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiCampaignMetadataSearch"></a>
+# **postV4ApiCampaignMetadataSearch**
+> CampaignMetadata postV4ApiCampaignMetadataSearch(body)
+
+
+
+Create a campaign metadata.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.CampaignMetadataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+CampaignMetadataApi apiInstance = new CampaignMetadataApi();
+CampaignMetadataCreate body = new CampaignMetadataCreate(); // CampaignMetadataCreate | 
+try {
+    CampaignMetadata result = apiInstance.postV4ApiCampaignMetadataSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CampaignMetadataApi#postV4ApiCampaignMetadataSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CampaignMetadataCreate**](CampaignMetadataCreate.md)|  | [optional]
 
 ### Return type
 

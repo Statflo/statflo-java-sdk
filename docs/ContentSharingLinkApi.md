@@ -1,64 +1,14 @@
 # ContentSharingLinkApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contentSharingLinkCreate**](ContentSharingLinkApi.md#contentSharingLinkCreate) | **POST** /v4/api/content-sharing-link | 
 [**contentSharingLinkDelete**](ContentSharingLinkApi.md#contentSharingLinkDelete) | **DELETE** /v4/api/content-sharing-link/{id} | 
 [**contentSharingLinkGet**](ContentSharingLinkApi.md#contentSharingLinkGet) | **GET** /v4/api/content-sharing-link/{id} | 
 [**contentSharingLinkSearch**](ContentSharingLinkApi.md#contentSharingLinkSearch) | **GET** /v4/api/content-sharing-link | 
 [**contentSharingLinkUpdate**](ContentSharingLinkApi.md#contentSharingLinkUpdate) | **PUT** /v4/api/content-sharing-link/{id} | 
-
-<a name="contentSharingLinkCreate"></a>
-# **contentSharingLinkCreate**
-> ContentSharingLink contentSharingLinkCreate(body)
-
-
-
-Create a content sharing link.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.ContentSharingLinkApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-ContentSharingLinkApi apiInstance = new ContentSharingLinkApi();
-ContentSharingLinkCreate body = new ContentSharingLinkCreate(); // ContentSharingLinkCreate | 
-try {
-    ContentSharingLink result = apiInstance.contentSharingLinkCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ContentSharingLinkApi#contentSharingLinkCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ContentSharingLinkCreate**](ContentSharingLinkCreate.md)|  | [optional]
-
-### Return type
-
-[**ContentSharingLink**](ContentSharingLink.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiContentSharingLinkSearch**](ContentSharingLinkApi.md#postV4ApiContentSharingLinkSearch) | **POST** /v4/api/content-sharing-link | 
 
 <a name="contentSharingLinkDelete"></a>
 # **contentSharingLinkDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**ContentSharingLinkUpdate**](ContentSharingLinkUpdate.md)|  | [optional]
+
+### Return type
+
+[**ContentSharingLink**](ContentSharingLink.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiContentSharingLinkSearch"></a>
+# **postV4ApiContentSharingLinkSearch**
+> ContentSharingLink postV4ApiContentSharingLinkSearch(body)
+
+
+
+Create a content sharing link.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.ContentSharingLinkApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+ContentSharingLinkApi apiInstance = new ContentSharingLinkApi();
+ContentSharingLinkCreate body = new ContentSharingLinkCreate(); // ContentSharingLinkCreate | 
+try {
+    ContentSharingLink result = apiInstance.postV4ApiContentSharingLinkSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContentSharingLinkApi#postV4ApiContentSharingLinkSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ContentSharingLinkCreate**](ContentSharingLinkCreate.md)|  | [optional]
 
 ### Return type
 

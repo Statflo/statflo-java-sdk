@@ -1,64 +1,14 @@
 # ContentSharingCategoryApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contentSharingCategoryCreate**](ContentSharingCategoryApi.md#contentSharingCategoryCreate) | **POST** /v4/api/content-sharing-category | 
 [**contentSharingCategoryDelete**](ContentSharingCategoryApi.md#contentSharingCategoryDelete) | **DELETE** /v4/api/content-sharing-category/{id} | 
 [**contentSharingCategoryGet**](ContentSharingCategoryApi.md#contentSharingCategoryGet) | **GET** /v4/api/content-sharing-category/{id} | 
 [**contentSharingCategorySearch**](ContentSharingCategoryApi.md#contentSharingCategorySearch) | **GET** /v4/api/content-sharing-category | 
 [**contentSharingCategoryUpdate**](ContentSharingCategoryApi.md#contentSharingCategoryUpdate) | **PUT** /v4/api/content-sharing-category/{id} | 
-
-<a name="contentSharingCategoryCreate"></a>
-# **contentSharingCategoryCreate**
-> ContentSharingCategory contentSharingCategoryCreate(body)
-
-
-
-Create a content sharing category.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.ContentSharingCategoryApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-ContentSharingCategoryApi apiInstance = new ContentSharingCategoryApi();
-ContentSharingCategoryCreate body = new ContentSharingCategoryCreate(); // ContentSharingCategoryCreate | 
-try {
-    ContentSharingCategory result = apiInstance.contentSharingCategoryCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ContentSharingCategoryApi#contentSharingCategoryCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ContentSharingCategoryCreate**](ContentSharingCategoryCreate.md)|  | [optional]
-
-### Return type
-
-[**ContentSharingCategory**](ContentSharingCategory.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiContentSharingCategorySearch**](ContentSharingCategoryApi.md#postV4ApiContentSharingCategorySearch) | **POST** /v4/api/content-sharing-category | 
 
 <a name="contentSharingCategoryDelete"></a>
 # **contentSharingCategoryDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**ContentSharingCategoryUpdate**](ContentSharingCategoryUpdate.md)|  | [optional]
+
+### Return type
+
+[**ContentSharingCategory**](ContentSharingCategory.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiContentSharingCategorySearch"></a>
+# **postV4ApiContentSharingCategorySearch**
+> ContentSharingCategory postV4ApiContentSharingCategorySearch(body)
+
+
+
+Create a content sharing category.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.ContentSharingCategoryApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+ContentSharingCategoryApi apiInstance = new ContentSharingCategoryApi();
+ContentSharingCategoryCreate body = new ContentSharingCategoryCreate(); // ContentSharingCategoryCreate | 
+try {
+    ContentSharingCategory result = apiInstance.postV4ApiContentSharingCategorySearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContentSharingCategoryApi#postV4ApiContentSharingCategorySearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ContentSharingCategoryCreate**](ContentSharingCategoryCreate.md)|  | [optional]
 
 ### Return type
 

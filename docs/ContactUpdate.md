@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **accountName** | **String** |  |  [optional]
 **accountId** | **String** |  |  [optional]
-**contactName** | **String** |  |  [optional]
+**contactName** | **String** |  | 
 **streetNumber** | **String** |  |  [optional]
 **streetName** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]
-**province** | **String** |  |  [optional]
+**province** | **String** |  | 
 **country** | **String** |  |  [optional]
 **zipCode** | **String** |  |  [optional]
 **phoneNumber** | **String** |  | 

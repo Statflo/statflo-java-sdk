@@ -1,64 +1,14 @@
 # ConsentApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**consentCreate**](ConsentApi.md#consentCreate) | **POST** /v4/api/consent | 
 [**consentDelete**](ConsentApi.md#consentDelete) | **DELETE** /v4/api/consent/{id} | 
 [**consentGet**](ConsentApi.md#consentGet) | **GET** /v4/api/consent/{id} | 
 [**consentSearch**](ConsentApi.md#consentSearch) | **GET** /v4/api/consent | 
 [**consentUpdate**](ConsentApi.md#consentUpdate) | **PUT** /v4/api/consent/{id} | 
-
-<a name="consentCreate"></a>
-# **consentCreate**
-> Consent consentCreate(body)
-
-
-
-Create consent
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.ConsentApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-ConsentApi apiInstance = new ConsentApi();
-ConsentCreate body = new ConsentCreate(); // ConsentCreate | 
-try {
-    Consent result = apiInstance.consentCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ConsentApi#consentCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ConsentCreate**](ConsentCreate.md)|  | [optional]
-
-### Return type
-
-[**Consent**](Consent.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiConsentSearch**](ConsentApi.md#postV4ApiConsentSearch) | **POST** /v4/api/consent | 
 
 <a name="consentDelete"></a>
 # **consentDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**ConsentUpdate**](ConsentUpdate.md)|  | [optional]
+
+### Return type
+
+[**Consent**](Consent.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiConsentSearch"></a>
+# **postV4ApiConsentSearch**
+> Consent postV4ApiConsentSearch(body)
+
+
+
+Create consent
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.ConsentApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+ConsentApi apiInstance = new ConsentApi();
+ConsentCreate body = new ConsentCreate(); // ConsentCreate | 
+try {
+    Consent result = apiInstance.postV4ApiConsentSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ConsentApi#postV4ApiConsentSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ConsentCreate**](ConsentCreate.md)|  | [optional]
 
 ### Return type
 
