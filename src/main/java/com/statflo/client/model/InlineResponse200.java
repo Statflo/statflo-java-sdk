@@ -25,7 +25,7 @@ import java.io.IOException;
  * InlineResponse200
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-06-24T18:31:07.014253137Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-06-24T18:33:53.135598835Z[Etc/UTC]")
 
 public class InlineResponse200 {
   @SerializedName("token")
