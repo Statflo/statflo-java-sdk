@@ -30,7 +30,7 @@ import java.util.List;
  * ContentSharingCategory
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-06-29T18:12:28.946076517Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-06-29T18:15:37.755577144Z[Etc/UTC]")
 
 public class ContentSharingCategory {
   @SerializedName("id")
