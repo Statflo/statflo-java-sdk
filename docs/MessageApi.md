@@ -4,60 +4,10 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**messageCreate**](MessageApi.md#messageCreate) | **POST** /v4/api/message | 
 [**messageGet**](MessageApi.md#messageGet) | **GET** /v4/api/message/{id} | 
 [**messageSearch**](MessageApi.md#messageSearch) | **GET** /v4/api/message | 
 [**messageUpdate**](MessageApi.md#messageUpdate) | **PUT** /v4/api/message/{id} | 
-
-<a name="messageCreate"></a>
-# **messageCreate**
-> Message messageCreate(body)
-
-
-
-Create a message.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.MessageApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-MessageApi apiInstance = new MessageApi();
-MessageCreate body = new MessageCreate(); // MessageCreate | 
-try {
-    Message result = apiInstance.messageCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MessageApi#messageCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**MessageCreate**](MessageCreate.md)|  | [optional]
-
-### Return type
-
-[**Message**](Message.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiMessageSearch**](MessageApi.md#postV4ApiMessageSearch) | **POST** /v4/api/message | 
 
 <a name="messageGet"></a>
 # **messageGet**
@@ -205,6 +155,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**MessageUpdate**](MessageUpdate.md)|  | [optional]
+
+### Return type
+
+[**Message**](Message.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiMessageSearch"></a>
+# **postV4ApiMessageSearch**
+> Message postV4ApiMessageSearch(body)
+
+
+
+Create a message.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+MessageApi apiInstance = new MessageApi();
+MessageCreate body = new MessageCreate(); // MessageCreate | 
+try {
+    Message result = apiInstance.postV4ApiMessageSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MessageApi#postV4ApiMessageSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MessageCreate**](MessageCreate.md)|  | [optional]
 
 ### Return type
 

@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**locationCreate**](LocationApi.md#locationCreate) | **POST** /v4/api/location | 
 [**locationDelete**](LocationApi.md#locationDelete) | **DELETE** /v4/api/location/{id} | 
 [**locationGet**](LocationApi.md#locationGet) | **GET** /v4/api/location/{id} | 
 [**locationSearch**](LocationApi.md#locationSearch) | **GET** /v4/api/location | 
 [**locationUpdate**](LocationApi.md#locationUpdate) | **PUT** /v4/api/location/{id} | 
-
-<a name="locationCreate"></a>
-# **locationCreate**
-> Location locationCreate(body)
-
-
-
-Create a location.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.LocationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-LocationApi apiInstance = new LocationApi();
-LocationCreate body = new LocationCreate(); // LocationCreate | 
-try {
-    Location result = apiInstance.locationCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling LocationApi#locationCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**LocationCreate**](LocationCreate.md)|  | [optional]
-
-### Return type
-
-[**Location**](Location.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiLocationSearch**](LocationApi.md#postV4ApiLocationSearch) | **POST** /v4/api/location | 
 
 <a name="locationDelete"></a>
 # **locationDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**LocationUpdate**](LocationUpdate.md)|  | [optional]
+
+### Return type
+
+[**Location**](Location.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiLocationSearch"></a>
+# **postV4ApiLocationSearch**
+> Location postV4ApiLocationSearch(body)
+
+
+
+Create a location.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.LocationApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+LocationApi apiInstance = new LocationApi();
+LocationCreate body = new LocationCreate(); // LocationCreate | 
+try {
+    Location result = apiInstance.postV4ApiLocationSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling LocationApi#postV4ApiLocationSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**LocationCreate**](LocationCreate.md)|  | [optional]
 
 ### Return type
 

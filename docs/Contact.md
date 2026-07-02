@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **accountName** | **String** |  |  [optional]
 **accountId** | **String** |  |  [optional]
-**contactName** | **String** |  | 
-**streetNumber** | **String** |  | 
-**streetName** | **String** |  | 
-**city** | **String** |  | 
-**province** | **String** |  | 
-**country** | **String** |  | 
-**zipCode** | **String** |  | 
+**contactName** | **String** |  |  [optional]
+**streetNumber** | **String** |  |  [optional]
+**streetName** | **String** |  |  [optional]
+**city** | **String** |  |  [optional]
+**province** | **String** |  |  [optional]
+**country** | **String** |  |  [optional]
+**zipCode** | **String** |  |  [optional]
 **phoneNumber** | **String** |  |  [optional]
 **phoneExtension** | **String** |  |  [optional]
 **email** | **String** |  |  [optional]

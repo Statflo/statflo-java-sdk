@@ -4,60 +4,10 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**notificationLogCreate**](NotificationLogApi.md#notificationLogCreate) | **POST** /v4/api/notification-log | 
 [**notificationLogDelete**](NotificationLogApi.md#notificationLogDelete) | **DELETE** /v4/api/notification-log/{id} | 
 [**notificationLogGet**](NotificationLogApi.md#notificationLogGet) | **GET** /v4/api/notification-log/{id} | 
 [**notificationLogSearch**](NotificationLogApi.md#notificationLogSearch) | **GET** /v4/api/notification-log | 
-
-<a name="notificationLogCreate"></a>
-# **notificationLogCreate**
-> NotificationLog notificationLogCreate(body)
-
-
-
-Create notification log.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.NotificationLogApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-NotificationLogApi apiInstance = new NotificationLogApi();
-NotificationLogCreate body = new NotificationLogCreate(); // NotificationLogCreate | 
-try {
-    NotificationLog result = apiInstance.notificationLogCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling NotificationLogApi#notificationLogCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**NotificationLogCreate**](NotificationLogCreate.md)|  | [optional]
-
-### Return type
-
-[**NotificationLog**](NotificationLog.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiNotificationLogSearch**](NotificationLogApi.md#postV4ApiNotificationLogSearch) | **POST** /v4/api/notification-log | 
 
 <a name="notificationLogDelete"></a>
 # **notificationLogDelete**
@@ -214,5 +164,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="postV4ApiNotificationLogSearch"></a>
+# **postV4ApiNotificationLogSearch**
+> NotificationLog postV4ApiNotificationLogSearch(body)
+
+
+
+Create notification log.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.NotificationLogApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+NotificationLogApi apiInstance = new NotificationLogApi();
+NotificationLogCreate body = new NotificationLogCreate(); // NotificationLogCreate | 
+try {
+    NotificationLog result = apiInstance.postV4ApiNotificationLogSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling NotificationLogApi#postV4ApiNotificationLogSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**NotificationLogCreate**](NotificationLogCreate.md)|  | [optional]
+
+### Return type
+
+[**NotificationLog**](NotificationLog.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

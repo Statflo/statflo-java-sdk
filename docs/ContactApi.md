@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contactCreate**](ContactApi.md#contactCreate) | **POST** /v4/api/contact | 
 [**contactDelete**](ContactApi.md#contactDelete) | **DELETE** /v4/api/contact/{id} | 
 [**contactGet**](ContactApi.md#contactGet) | **GET** /v4/api/contact/{id} | 
 [**contactSearch**](ContactApi.md#contactSearch) | **GET** /v4/api/contact | 
 [**contactUpdate**](ContactApi.md#contactUpdate) | **PUT** /v4/api/contact/{id} | 
-
-<a name="contactCreate"></a>
-# **contactCreate**
-> Contact contactCreate(body)
-
-
-
-Create a contact.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.ContactApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-ContactApi apiInstance = new ContactApi();
-ContactCreate body = new ContactCreate(); // ContactCreate | 
-try {
-    Contact result = apiInstance.contactCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ContactApi#contactCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ContactCreate**](ContactCreate.md)|  | [optional]
-
-### Return type
-
-[**Contact**](Contact.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiContactSearch**](ContactApi.md#postV4ApiContactSearch) | **POST** /v4/api/contact | 
 
 <a name="contactDelete"></a>
 # **contactDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**ContactUpdate**](ContactUpdate.md)|  | [optional]
+
+### Return type
+
+[**Contact**](Contact.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiContactSearch"></a>
+# **postV4ApiContactSearch**
+> Contact postV4ApiContactSearch(body)
+
+
+
+Create a contact.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.ContactApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+ContactApi apiInstance = new ContactApi();
+ContactCreate body = new ContactCreate(); // ContactCreate | 
+try {
+    Contact result = apiInstance.postV4ApiContactSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContactApi#postV4ApiContactSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ContactCreate**](ContactCreate.md)|  | [optional]
 
 ### Return type
 

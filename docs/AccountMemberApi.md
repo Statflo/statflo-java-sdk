@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountMemberCreate**](AccountMemberApi.md#accountMemberCreate) | **POST** /v4/api/account-member | 
 [**accountMemberDelete**](AccountMemberApi.md#accountMemberDelete) | **DELETE** /v4/api/account-member/{id} | 
 [**accountMemberGet**](AccountMemberApi.md#accountMemberGet) | **GET** /v4/api/account-member/{id} | 
 [**accountMemberSearch**](AccountMemberApi.md#accountMemberSearch) | **GET** /v4/api/account-member | 
 [**accountMemberUpdate**](AccountMemberApi.md#accountMemberUpdate) | **PUT** /v4/api/account-member/{id} | 
-
-<a name="accountMemberCreate"></a>
-# **accountMemberCreate**
-> AccountMember accountMemberCreate(body)
-
-
-
-Create an account.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.AccountMemberApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-AccountMemberApi apiInstance = new AccountMemberApi();
-AccountMemberCreate body = new AccountMemberCreate(); // AccountMemberCreate | 
-try {
-    AccountMember result = apiInstance.accountMemberCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountMemberApi#accountMemberCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**AccountMemberCreate**](AccountMemberCreate.md)|  | [optional]
-
-### Return type
-
-[**AccountMember**](AccountMember.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiAccountMemberSearch**](AccountMemberApi.md#postV4ApiAccountMemberSearch) | **POST** /v4/api/account-member | 
 
 <a name="accountMemberDelete"></a>
 # **accountMemberDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**AccountMemberUpdate**](AccountMemberUpdate.md)|  | [optional]
+
+### Return type
+
+[**AccountMember**](AccountMember.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiAccountMemberSearch"></a>
+# **postV4ApiAccountMemberSearch**
+> AccountMember postV4ApiAccountMemberSearch(body)
+
+
+
+Create an account.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountMemberApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountMemberApi apiInstance = new AccountMemberApi();
+AccountMemberCreate body = new AccountMemberCreate(); // AccountMemberCreate | 
+try {
+    AccountMember result = apiInstance.postV4ApiAccountMemberSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountMemberApi#postV4ApiAccountMemberSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccountMemberCreate**](AccountMemberCreate.md)|  | [optional]
 
 ### Return type
 

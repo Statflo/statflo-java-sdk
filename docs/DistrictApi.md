@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**districtCreate**](DistrictApi.md#districtCreate) | **POST** /v4/api/district | 
 [**districtDelete**](DistrictApi.md#districtDelete) | **DELETE** /v4/api/district/{id} | 
 [**districtGet**](DistrictApi.md#districtGet) | **GET** /v4/api/district/{id} | 
 [**districtSearch**](DistrictApi.md#districtSearch) | **GET** /v4/api/district | 
 [**districtUpdate**](DistrictApi.md#districtUpdate) | **PUT** /v4/api/district/{id} | 
-
-<a name="districtCreate"></a>
-# **districtCreate**
-> District districtCreate(body)
-
-
-
-Create a district.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.DistrictApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-DistrictApi apiInstance = new DistrictApi();
-DistrictCreate body = new DistrictCreate(); // DistrictCreate | 
-try {
-    District result = apiInstance.districtCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DistrictApi#districtCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DistrictCreate**](DistrictCreate.md)|  | [optional]
-
-### Return type
-
-[**District**](District.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiDistrictSearch**](DistrictApi.md#postV4ApiDistrictSearch) | **POST** /v4/api/district | 
 
 <a name="districtDelete"></a>
 # **districtDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**DistrictUpdate**](DistrictUpdate.md)|  | [optional]
+
+### Return type
+
+[**District**](District.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiDistrictSearch"></a>
+# **postV4ApiDistrictSearch**
+> District postV4ApiDistrictSearch(body)
+
+
+
+Create a district.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.DistrictApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+DistrictApi apiInstance = new DistrictApi();
+DistrictCreate body = new DistrictCreate(); // DistrictCreate | 
+try {
+    District result = apiInstance.postV4ApiDistrictSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DistrictApi#postV4ApiDistrictSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DistrictCreate**](DistrictCreate.md)|  | [optional]
 
 ### Return type
 

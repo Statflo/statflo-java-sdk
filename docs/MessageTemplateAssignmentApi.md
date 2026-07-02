@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**messageTemplateAssignmentCreate**](MessageTemplateAssignmentApi.md#messageTemplateAssignmentCreate) | **POST** /v4/api/message-template-assignment | 
 [**messageTemplateAssignmentDelete**](MessageTemplateAssignmentApi.md#messageTemplateAssignmentDelete) | **DELETE** /v4/api/message-template-assignment/{id} | 
 [**messageTemplateAssignmentGet**](MessageTemplateAssignmentApi.md#messageTemplateAssignmentGet) | **GET** /v4/api/message-template-assignment/{id} | 
 [**messageTemplateAssignmentSearch**](MessageTemplateAssignmentApi.md#messageTemplateAssignmentSearch) | **GET** /v4/api/message-template-assignment | 
 [**messageTemplateAssignmentUpdate**](MessageTemplateAssignmentApi.md#messageTemplateAssignmentUpdate) | **PUT** /v4/api/message-template-assignment/{id} | 
-
-<a name="messageTemplateAssignmentCreate"></a>
-# **messageTemplateAssignmentCreate**
-> MessageTemplateAssignment messageTemplateAssignmentCreate(body)
-
-
-
-Create a message template assignment.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.MessageTemplateAssignmentApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-MessageTemplateAssignmentApi apiInstance = new MessageTemplateAssignmentApi();
-MessageTemplateAssignmentCreate body = new MessageTemplateAssignmentCreate(); // MessageTemplateAssignmentCreate | 
-try {
-    MessageTemplateAssignment result = apiInstance.messageTemplateAssignmentCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MessageTemplateAssignmentApi#messageTemplateAssignmentCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**MessageTemplateAssignmentCreate**](MessageTemplateAssignmentCreate.md)|  | [optional]
-
-### Return type
-
-[**MessageTemplateAssignment**](MessageTemplateAssignment.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiMessageTemplateAssignmentSearch**](MessageTemplateAssignmentApi.md#postV4ApiMessageTemplateAssignmentSearch) | **POST** /v4/api/message-template-assignment | 
 
 <a name="messageTemplateAssignmentDelete"></a>
 # **messageTemplateAssignmentDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**MessageTemplateAssignmentUpdate**](MessageTemplateAssignmentUpdate.md)|  | [optional]
+
+### Return type
+
+[**MessageTemplateAssignment**](MessageTemplateAssignment.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiMessageTemplateAssignmentSearch"></a>
+# **postV4ApiMessageTemplateAssignmentSearch**
+> MessageTemplateAssignment postV4ApiMessageTemplateAssignmentSearch(body)
+
+
+
+Create a message template assignment.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageTemplateAssignmentApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+MessageTemplateAssignmentApi apiInstance = new MessageTemplateAssignmentApi();
+MessageTemplateAssignmentCreate body = new MessageTemplateAssignmentCreate(); // MessageTemplateAssignmentCreate | 
+try {
+    MessageTemplateAssignment result = apiInstance.postV4ApiMessageTemplateAssignmentSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MessageTemplateAssignmentApi#postV4ApiMessageTemplateAssignmentSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MessageTemplateAssignmentCreate**](MessageTemplateAssignmentCreate.md)|  | [optional]
 
 ### Return type
 

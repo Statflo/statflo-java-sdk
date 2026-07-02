@@ -5,7 +5,7 @@ All URIs are relative to *https://app.statflo.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getV4ApiWidgetsCampaigns**](WidgetApi.md#getV4ApiWidgetsCampaigns) | **GET** /v4/api/widgets/campaigns/{accountId} | 
-[**widgetCreate**](WidgetApi.md#widgetCreate) | **POST** /v4/api/widget | 
+[**postV4ApiWidgetSearch**](WidgetApi.md#postV4ApiWidgetSearch) | **POST** /v4/api/widget | 
 [**widgetDelete**](WidgetApi.md#widgetDelete) | **DELETE** /v4/api/widget/{id} | 
 [**widgetGet**](WidgetApi.md#widgetGet) | **GET** /v4/api/widget/{id} | 
 [**widgetSearch**](WidgetApi.md#widgetSearch) | **GET** /v4/api/widget | 
@@ -58,9 +58,9 @@ null (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="widgetCreate"></a>
-# **widgetCreate**
-> Widget widgetCreate(body)
+<a name="postV4ApiWidgetSearch"></a>
+# **postV4ApiWidgetSearch**
+> Widget postV4ApiWidgetSearch(body)
 
 
 
@@ -81,10 +81,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 WidgetApi apiInstance = new WidgetApi();
 WidgetCreate body = new WidgetCreate(); // WidgetCreate | 
 try {
-    Widget result = apiInstance.widgetCreate(body);
+    Widget result = apiInstance.postV4ApiWidgetSearch(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WidgetApi#widgetCreate");
+    System.err.println("Exception when calling WidgetApi#postV4ApiWidgetSearch");
     e.printStackTrace();
 }
 ```

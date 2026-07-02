@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**rcsAgentBusinessCreate**](RcsAgentBusinessApi.md#rcsAgentBusinessCreate) | **POST** /v4/api/rcs-agent-business | 
+[**postV4ApiRcsAgentBusinessSearch**](RcsAgentBusinessApi.md#postV4ApiRcsAgentBusinessSearch) | **POST** /v4/api/rcs-agent-business | 
 [**rcsAgentBusinessDelete**](RcsAgentBusinessApi.md#rcsAgentBusinessDelete) | **DELETE** /v4/api/rcs-agent-business/{id} | 
 [**rcsAgentBusinessGet**](RcsAgentBusinessApi.md#rcsAgentBusinessGet) | **GET** /v4/api/rcs-agent-business/{id} | 
 [**rcsAgentBusinessSearch**](RcsAgentBusinessApi.md#rcsAgentBusinessSearch) | **GET** /v4/api/rcs-agent-business | 
 [**rcsAgentBusinessUpdate**](RcsAgentBusinessApi.md#rcsAgentBusinessUpdate) | **PUT** /v4/api/rcs-agent-business/{id} | 
 
-<a name="rcsAgentBusinessCreate"></a>
-# **rcsAgentBusinessCreate**
-> RcsAgentBusiness rcsAgentBusinessCreate(body)
+<a name="postV4ApiRcsAgentBusinessSearch"></a>
+# **postV4ApiRcsAgentBusinessSearch**
+> RcsAgentBusiness postV4ApiRcsAgentBusinessSearch(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 RcsAgentBusinessApi apiInstance = new RcsAgentBusinessApi();
 RcsAgentBusinessCreate body = new RcsAgentBusinessCreate(); // RcsAgentBusinessCreate | 
 try {
-    RcsAgentBusiness result = apiInstance.rcsAgentBusinessCreate(body);
+    RcsAgentBusiness result = apiInstance.postV4ApiRcsAgentBusinessSearch(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentBusinessApi#rcsAgentBusinessCreate");
+    System.err.println("Exception when calling RcsAgentBusinessApi#postV4ApiRcsAgentBusinessSearch");
     e.printStackTrace();
 }
 ```

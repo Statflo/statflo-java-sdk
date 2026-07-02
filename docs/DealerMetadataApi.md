@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dealerMetadataCreate**](DealerMetadataApi.md#dealerMetadataCreate) | **POST** /v4/api/dealer-metadata | 
 [**dealerMetadataDelete**](DealerMetadataApi.md#dealerMetadataDelete) | **DELETE** /v4/api/dealer-metadata/{id} | 
 [**dealerMetadataGet**](DealerMetadataApi.md#dealerMetadataGet) | **GET** /v4/api/dealer-metadata/{id} | 
 [**dealerMetadataSearch**](DealerMetadataApi.md#dealerMetadataSearch) | **GET** /v4/api/dealer-metadata | 
 [**dealerMetadataUpdate**](DealerMetadataApi.md#dealerMetadataUpdate) | **PUT** /v4/api/dealer-metadata/{id} | 
-
-<a name="dealerMetadataCreate"></a>
-# **dealerMetadataCreate**
-> DealerMetadata dealerMetadataCreate(body)
-
-
-
-Create a dealer metadata.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.DealerMetadataApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-DealerMetadataApi apiInstance = new DealerMetadataApi();
-DealerMetadataCreate body = new DealerMetadataCreate(); // DealerMetadataCreate | 
-try {
-    DealerMetadata result = apiInstance.dealerMetadataCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DealerMetadataApi#dealerMetadataCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DealerMetadataCreate**](DealerMetadataCreate.md)|  | [optional]
-
-### Return type
-
-[**DealerMetadata**](DealerMetadata.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiDealerMetadataSearch**](DealerMetadataApi.md#postV4ApiDealerMetadataSearch) | **POST** /v4/api/dealer-metadata | 
 
 <a name="dealerMetadataDelete"></a>
 # **dealerMetadataDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**DealerMetadataUpdate**](DealerMetadataUpdate.md)|  | [optional]
+
+### Return type
+
+[**DealerMetadata**](DealerMetadata.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiDealerMetadataSearch"></a>
+# **postV4ApiDealerMetadataSearch**
+> DealerMetadata postV4ApiDealerMetadataSearch(body)
+
+
+
+Create a dealer metadata.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.DealerMetadataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+DealerMetadataApi apiInstance = new DealerMetadataApi();
+DealerMetadataCreate body = new DealerMetadataCreate(); // DealerMetadataCreate | 
+try {
+    DealerMetadata result = apiInstance.postV4ApiDealerMetadataSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DealerMetadataApi#postV4ApiDealerMetadataSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DealerMetadataCreate**](DealerMetadataCreate.md)|  | [optional]
 
 ### Return type
 

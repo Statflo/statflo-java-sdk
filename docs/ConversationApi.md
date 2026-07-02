@@ -4,60 +4,10 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**conversationCreate**](ConversationApi.md#conversationCreate) | **POST** /v4/api/conversation | 
 [**conversationGet**](ConversationApi.md#conversationGet) | **GET** /v4/api/conversation/{id} | 
 [**conversationSearch**](ConversationApi.md#conversationSearch) | **GET** /v4/api/conversation | 
 [**conversationUpdate**](ConversationApi.md#conversationUpdate) | **PUT** /v4/api/conversation/{id} | 
-
-<a name="conversationCreate"></a>
-# **conversationCreate**
-> Conversation conversationCreate(body)
-
-
-
-Create a conversation.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.ConversationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-ConversationApi apiInstance = new ConversationApi();
-ConversationCreate body = new ConversationCreate(); // ConversationCreate | 
-try {
-    Conversation result = apiInstance.conversationCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ConversationApi#conversationCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ConversationCreate**](ConversationCreate.md)|  | [optional]
-
-### Return type
-
-[**Conversation**](Conversation.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiConversationSearch**](ConversationApi.md#postV4ApiConversationSearch) | **POST** /v4/api/conversation | 
 
 <a name="conversationGet"></a>
 # **conversationGet**
@@ -205,6 +155,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**ConversationUpdate**](ConversationUpdate.md)|  | [optional]
+
+### Return type
+
+[**Conversation**](Conversation.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiConversationSearch"></a>
+# **postV4ApiConversationSearch**
+> Conversation postV4ApiConversationSearch(body)
+
+
+
+Create a conversation.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.ConversationApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+ConversationApi apiInstance = new ConversationApi();
+ConversationCreate body = new ConversationCreate(); // ConversationCreate | 
+try {
+    Conversation result = apiInstance.postV4ApiConversationSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ConversationApi#postV4ApiConversationSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ConversationCreate**](ConversationCreate.md)|  | [optional]
 
 ### Return type
 

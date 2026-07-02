@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contentSharingRecommendedCreate**](ContentSharingRecommendApi.md#contentSharingRecommendedCreate) | **POST** /v4/api/content-sharing-recommend | 
 [**contentSharingRecommendedDelete**](ContentSharingRecommendApi.md#contentSharingRecommendedDelete) | **DELETE** /v4/api/content-sharing-recommend/{id} | 
 [**contentSharingRecommendedGet**](ContentSharingRecommendApi.md#contentSharingRecommendedGet) | **GET** /v4/api/content-sharing-recommend/{id} | 
 [**contentSharingRecommendedSearch**](ContentSharingRecommendApi.md#contentSharingRecommendedSearch) | **GET** /v4/api/content-sharing-recommend | 
 [**contentSharingRecommendedUpdate**](ContentSharingRecommendApi.md#contentSharingRecommendedUpdate) | **PUT** /v4/api/content-sharing-recommend/{id} | 
-
-<a name="contentSharingRecommendedCreate"></a>
-# **contentSharingRecommendedCreate**
-> ContentSharingRecommended contentSharingRecommendedCreate(body)
-
-
-
-Create a content sharing recommendation.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.ContentSharingRecommendApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-ContentSharingRecommendApi apiInstance = new ContentSharingRecommendApi();
-ContentSharingRecommendedCreate body = new ContentSharingRecommendedCreate(); // ContentSharingRecommendedCreate | 
-try {
-    ContentSharingRecommended result = apiInstance.contentSharingRecommendedCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ContentSharingRecommendApi#contentSharingRecommendedCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ContentSharingRecommendedCreate**](ContentSharingRecommendedCreate.md)|  | [optional]
-
-### Return type
-
-[**ContentSharingRecommended**](ContentSharingRecommended.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiContentSharingRecommendSearch**](ContentSharingRecommendApi.md#postV4ApiContentSharingRecommendSearch) | **POST** /v4/api/content-sharing-recommend | 
 
 <a name="contentSharingRecommendedDelete"></a>
 # **contentSharingRecommendedDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**ContentSharingRecommendedUpdate**](ContentSharingRecommendedUpdate.md)|  | [optional]
+
+### Return type
+
+[**ContentSharingRecommended**](ContentSharingRecommended.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiContentSharingRecommendSearch"></a>
+# **postV4ApiContentSharingRecommendSearch**
+> ContentSharingRecommended postV4ApiContentSharingRecommendSearch(body)
+
+
+
+Create a content sharing recommendation.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.ContentSharingRecommendApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+ContentSharingRecommendApi apiInstance = new ContentSharingRecommendApi();
+ContentSharingRecommendedCreate body = new ContentSharingRecommendedCreate(); // ContentSharingRecommendedCreate | 
+try {
+    ContentSharingRecommended result = apiInstance.postV4ApiContentSharingRecommendSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContentSharingRecommendApi#postV4ApiContentSharingRecommendSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ContentSharingRecommendedCreate**](ContentSharingRecommendedCreate.md)|  | [optional]
 
 ### Return type
 

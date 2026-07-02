@@ -4,60 +4,10 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**notepadCreate**](NotepadApi.md#notepadCreate) | **POST** /v4/api/notepad | 
 [**notepadGet**](NotepadApi.md#notepadGet) | **GET** /v4/api/notepad/{id} | 
 [**notepadSearch**](NotepadApi.md#notepadSearch) | **GET** /v4/api/notepad | 
 [**notepadUpdate**](NotepadApi.md#notepadUpdate) | **PUT** /v4/api/notepad/{id} | 
-
-<a name="notepadCreate"></a>
-# **notepadCreate**
-> Notepad notepadCreate(body)
-
-
-
-Create a notepad.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.NotepadApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-NotepadApi apiInstance = new NotepadApi();
-NotepadCreate body = new NotepadCreate(); // NotepadCreate | 
-try {
-    Notepad result = apiInstance.notepadCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling NotepadApi#notepadCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**NotepadCreate**](NotepadCreate.md)|  | [optional]
-
-### Return type
-
-[**Notepad**](Notepad.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiNotepadSearch**](NotepadApi.md#postV4ApiNotepadSearch) | **POST** /v4/api/notepad | 
 
 <a name="notepadGet"></a>
 # **notepadGet**
@@ -205,6 +155,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**NotepadUpdate**](NotepadUpdate.md)|  | [optional]
+
+### Return type
+
+[**Notepad**](Notepad.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiNotepadSearch"></a>
+# **postV4ApiNotepadSearch**
+> Notepad postV4ApiNotepadSearch(body)
+
+
+
+Create a notepad.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.NotepadApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+NotepadApi apiInstance = new NotepadApi();
+NotepadCreate body = new NotepadCreate(); // NotepadCreate | 
+try {
+    Notepad result = apiInstance.postV4ApiNotepadSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling NotepadApi#postV4ApiNotepadSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**NotepadCreate**](NotepadCreate.md)|  | [optional]
 
 ### Return type
 

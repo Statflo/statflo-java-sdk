@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**teamCreate**](TeamApi.md#teamCreate) | **POST** /v4/api/team | 
+[**postV4ApiTeamSearch**](TeamApi.md#postV4ApiTeamSearch) | **POST** /v4/api/team | 
 [**teamDelete**](TeamApi.md#teamDelete) | **DELETE** /v4/api/team/{id} | 
 [**teamGet**](TeamApi.md#teamGet) | **GET** /v4/api/team/{id} | 
 [**teamSearch**](TeamApi.md#teamSearch) | **GET** /v4/api/team | 
 [**teamUpdate**](TeamApi.md#teamUpdate) | **PUT** /v4/api/team/{id} | 
 
-<a name="teamCreate"></a>
-# **teamCreate**
-> Team teamCreate(body)
+<a name="postV4ApiTeamSearch"></a>
+# **postV4ApiTeamSearch**
+> Team postV4ApiTeamSearch(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 TeamApi apiInstance = new TeamApi();
 TeamCreate body = new TeamCreate(); // TeamCreate | 
 try {
-    Team result = apiInstance.teamCreate(body);
+    Team result = apiInstance.postV4ApiTeamSearch(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling TeamApi#teamCreate");
+    System.err.println("Exception when calling TeamApi#postV4ApiTeamSearch");
     e.printStackTrace();
 }
 ```

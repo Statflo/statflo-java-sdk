@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**campaignMemberCreate**](CampaignMemberApi.md#campaignMemberCreate) | **POST** /v4/api/campaign-member | 
 [**campaignMemberDelete**](CampaignMemberApi.md#campaignMemberDelete) | **DELETE** /v4/api/campaign-member/{id} | 
 [**campaignMemberGet**](CampaignMemberApi.md#campaignMemberGet) | **GET** /v4/api/campaign-member/{id} | 
 [**campaignMemberSearch**](CampaignMemberApi.md#campaignMemberSearch) | **GET** /v4/api/campaign-member | 
 [**campaignMemberUpdate**](CampaignMemberApi.md#campaignMemberUpdate) | **PUT** /v4/api/campaign-member/{id} | 
-
-<a name="campaignMemberCreate"></a>
-# **campaignMemberCreate**
-> CampaignMember campaignMemberCreate(body)
-
-
-
-Create a campaign member.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.CampaignMemberApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-CampaignMemberApi apiInstance = new CampaignMemberApi();
-CampaignMemberCreate body = new CampaignMemberCreate(); // CampaignMemberCreate | 
-try {
-    CampaignMember result = apiInstance.campaignMemberCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CampaignMemberApi#campaignMemberCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CampaignMemberCreate**](CampaignMemberCreate.md)|  | [optional]
-
-### Return type
-
-[**CampaignMember**](CampaignMember.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiCampaignMemberSearch**](CampaignMemberApi.md#postV4ApiCampaignMemberSearch) | **POST** /v4/api/campaign-member | 
 
 <a name="campaignMemberDelete"></a>
 # **campaignMemberDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**CampaignMemberUpdate**](CampaignMemberUpdate.md)|  | [optional]
+
+### Return type
+
+[**CampaignMember**](CampaignMember.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiCampaignMemberSearch"></a>
+# **postV4ApiCampaignMemberSearch**
+> CampaignMember postV4ApiCampaignMemberSearch(body)
+
+
+
+Create a campaign member.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.CampaignMemberApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+CampaignMemberApi apiInstance = new CampaignMemberApi();
+CampaignMemberCreate body = new CampaignMemberCreate(); // CampaignMemberCreate | 
+try {
+    CampaignMember result = apiInstance.postV4ApiCampaignMemberSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CampaignMemberApi#postV4ApiCampaignMemberSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CampaignMemberCreate**](CampaignMemberCreate.md)|  | [optional]
 
 ### Return type
 

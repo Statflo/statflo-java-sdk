@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**campaignCreate**](CampaignApi.md#campaignCreate) | **POST** /v4/api/campaign | 
 [**campaignDelete**](CampaignApi.md#campaignDelete) | **DELETE** /v4/api/campaign/{id} | 
 [**campaignGet**](CampaignApi.md#campaignGet) | **GET** /v4/api/campaign/{id} | 
 [**campaignSearch**](CampaignApi.md#campaignSearch) | **GET** /v4/api/campaign | 
 [**campaignUpdate**](CampaignApi.md#campaignUpdate) | **PUT** /v4/api/campaign/{id} | 
-
-<a name="campaignCreate"></a>
-# **campaignCreate**
-> Campaign campaignCreate(body)
-
-
-
-Create a campaign.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.CampaignApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-CampaignApi apiInstance = new CampaignApi();
-CampaignCreate body = new CampaignCreate(); // CampaignCreate | 
-try {
-    Campaign result = apiInstance.campaignCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CampaignApi#campaignCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CampaignCreate**](CampaignCreate.md)|  | [optional]
-
-### Return type
-
-[**Campaign**](Campaign.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiCampaignsSearch**](CampaignApi.md#postV4ApiCampaignsSearch) | **POST** /v4/api/campaign | 
 
 <a name="campaignDelete"></a>
 # **campaignDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**CampaignUpdate**](CampaignUpdate.md)|  | [optional]
+
+### Return type
+
+[**Campaign**](Campaign.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiCampaignsSearch"></a>
+# **postV4ApiCampaignsSearch**
+> Campaign postV4ApiCampaignsSearch(body)
+
+
+
+Create a campaign.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.CampaignApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+CampaignApi apiInstance = new CampaignApi();
+CampaignCreate body = new CampaignCreate(); // CampaignCreate | 
+try {
+    Campaign result = apiInstance.postV4ApiCampaignsSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CampaignApi#postV4ApiCampaignsSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CampaignCreate**](CampaignCreate.md)|  | [optional]
 
 ### Return type
 

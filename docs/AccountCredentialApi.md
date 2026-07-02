@@ -4,60 +4,10 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountCredentialCreate**](AccountCredentialApi.md#accountCredentialCreate) | **POST** /v4/api/account-credential | 
 [**accountCredentialGet**](AccountCredentialApi.md#accountCredentialGet) | **GET** /v4/api/account-credential/{id} | 
 [**accountCredentialSearch**](AccountCredentialApi.md#accountCredentialSearch) | **GET** /v4/api/account-credential | 
 [**accountCredentialUpdate**](AccountCredentialApi.md#accountCredentialUpdate) | **PUT** /v4/api/account-credential/{id} | 
-
-<a name="accountCredentialCreate"></a>
-# **accountCredentialCreate**
-> AccountCredential accountCredentialCreate(body)
-
-
-
-Create a account credential.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.AccountCredentialApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-AccountCredentialApi apiInstance = new AccountCredentialApi();
-AccountCredentialCreate body = new AccountCredentialCreate(); // AccountCredentialCreate | 
-try {
-    AccountCredential result = apiInstance.accountCredentialCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountCredentialApi#accountCredentialCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**AccountCredentialCreate**](AccountCredentialCreate.md)|  | [optional]
-
-### Return type
-
-[**AccountCredential**](AccountCredential.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiAccountCredentialSearch**](AccountCredentialApi.md#postV4ApiAccountCredentialSearch) | **POST** /v4/api/account-credential | 
 
 <a name="accountCredentialGet"></a>
 # **accountCredentialGet**
@@ -205,6 +155,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**AccountCredentialUpdate**](AccountCredentialUpdate.md)|  | [optional]
+
+### Return type
+
+[**AccountCredential**](AccountCredential.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiAccountCredentialSearch"></a>
+# **postV4ApiAccountCredentialSearch**
+> AccountCredential postV4ApiAccountCredentialSearch(body)
+
+
+
+Create a account credential.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountCredentialApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountCredentialApi apiInstance = new AccountCredentialApi();
+AccountCredentialCreate body = new AccountCredentialCreate(); // AccountCredentialCreate | 
+try {
+    AccountCredential result = apiInstance.postV4ApiAccountCredentialSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountCredentialApi#postV4ApiAccountCredentialSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccountCredentialCreate**](AccountCredentialCreate.md)|  | [optional]
 
 ### Return type
 

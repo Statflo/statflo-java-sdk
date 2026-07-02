@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dealerExternalIdCreate**](DealerExternalIdApi.md#dealerExternalIdCreate) | **POST** /v4/api/dealer-external-id | 
 [**dealerExternalIdDelete**](DealerExternalIdApi.md#dealerExternalIdDelete) | **DELETE** /v4/api/dealer-external-id/{id} | 
 [**dealerExternalIdGet**](DealerExternalIdApi.md#dealerExternalIdGet) | **GET** /v4/api/dealer-external-id/{id} | 
 [**dealerExternalIdSearch**](DealerExternalIdApi.md#dealerExternalIdSearch) | **GET** /v4/api/dealer-external-id | 
 [**dealerExternalIdUpdate**](DealerExternalIdApi.md#dealerExternalIdUpdate) | **PUT** /v4/api/dealer-external-id/{id} | 
-
-<a name="dealerExternalIdCreate"></a>
-# **dealerExternalIdCreate**
-> DealerExternalId dealerExternalIdCreate(body)
-
-
-
-Create a Dealer External id.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.DealerExternalIdApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-DealerExternalIdApi apiInstance = new DealerExternalIdApi();
-DealerExternalIdCreate body = new DealerExternalIdCreate(); // DealerExternalIdCreate | 
-try {
-    DealerExternalId result = apiInstance.dealerExternalIdCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DealerExternalIdApi#dealerExternalIdCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DealerExternalIdCreate**](DealerExternalIdCreate.md)|  | [optional]
-
-### Return type
-
-[**DealerExternalId**](DealerExternalId.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiDealerExternalIdSearch**](DealerExternalIdApi.md#postV4ApiDealerExternalIdSearch) | **POST** /v4/api/dealer-external-id | 
 
 <a name="dealerExternalIdDelete"></a>
 # **dealerExternalIdDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**DealerExternalIdUpdate**](DealerExternalIdUpdate.md)|  | [optional]
+
+### Return type
+
+[**DealerExternalId**](DealerExternalId.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiDealerExternalIdSearch"></a>
+# **postV4ApiDealerExternalIdSearch**
+> DealerExternalId postV4ApiDealerExternalIdSearch(body)
+
+
+
+Create a Dealer External id.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.DealerExternalIdApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+DealerExternalIdApi apiInstance = new DealerExternalIdApi();
+DealerExternalIdCreate body = new DealerExternalIdCreate(); // DealerExternalIdCreate | 
+try {
+    DealerExternalId result = apiInstance.postV4ApiDealerExternalIdSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DealerExternalIdApi#postV4ApiDealerExternalIdSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DealerExternalIdCreate**](DealerExternalIdCreate.md)|  | [optional]
 
 ### Return type
 

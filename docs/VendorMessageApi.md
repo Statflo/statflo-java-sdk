@@ -4,13 +4,13 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**vendorMessageCreate**](VendorMessageApi.md#vendorMessageCreate) | **POST** /v4/api/vendor-message | 
+[**postV4ApiVendorMessageSearch**](VendorMessageApi.md#postV4ApiVendorMessageSearch) | **POST** /v4/api/vendor-message | 
 [**vendorMessageGet**](VendorMessageApi.md#vendorMessageGet) | **GET** /v4/api/vendor-message/{id} | 
 [**vendorMessageSearch**](VendorMessageApi.md#vendorMessageSearch) | **GET** /v4/api/vendor-message | 
 
-<a name="vendorMessageCreate"></a>
-# **vendorMessageCreate**
-> VendorMessage vendorMessageCreate(body)
+<a name="postV4ApiVendorMessageSearch"></a>
+# **postV4ApiVendorMessageSearch**
+> VendorMessage postV4ApiVendorMessageSearch(body)
 
 
 
@@ -31,10 +31,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 VendorMessageApi apiInstance = new VendorMessageApi();
 VendorMessageCreate body = new VendorMessageCreate(); // VendorMessageCreate | 
 try {
-    VendorMessage result = apiInstance.vendorMessageCreate(body);
+    VendorMessage result = apiInstance.postV4ApiVendorMessageSearch(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling VendorMessageApi#vendorMessageCreate");
+    System.err.println("Exception when calling VendorMessageApi#postV4ApiVendorMessageSearch");
     e.printStackTrace();
 }
 ```

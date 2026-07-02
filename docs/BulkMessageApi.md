@@ -4,60 +4,10 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bulkMessageCreate**](BulkMessageApi.md#bulkMessageCreate) | **POST** /v4/api/bulk-message | 
 [**bulkMessageGet**](BulkMessageApi.md#bulkMessageGet) | **GET** /v4/api/bulk-message/{id} | 
 [**bulkMessageSearch**](BulkMessageApi.md#bulkMessageSearch) | **GET** /v4/api/bulk-message | 
 [**bulkMessageUpdate**](BulkMessageApi.md#bulkMessageUpdate) | **PUT** /v4/api/bulk-message/{id} | 
-
-<a name="bulkMessageCreate"></a>
-# **bulkMessageCreate**
-> BulkMessage bulkMessageCreate(body)
-
-
-
-Create a Bulk Message.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.BulkMessageApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-BulkMessageApi apiInstance = new BulkMessageApi();
-BulkMessageCreate body = new BulkMessageCreate(); // BulkMessageCreate | 
-try {
-    BulkMessage result = apiInstance.bulkMessageCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling BulkMessageApi#bulkMessageCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**BulkMessageCreate**](BulkMessageCreate.md)|  | [optional]
-
-### Return type
-
-[**BulkMessage**](BulkMessage.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiBulkMessageSearch**](BulkMessageApi.md#postV4ApiBulkMessageSearch) | **POST** /v4/api/bulk-message | 
 
 <a name="bulkMessageGet"></a>
 # **bulkMessageGet**
@@ -205,6 +155,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**BulkMessageUpdate**](BulkMessageUpdate.md)|  | [optional]
+
+### Return type
+
+[**BulkMessage**](BulkMessage.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiBulkMessageSearch"></a>
+# **postV4ApiBulkMessageSearch**
+> BulkMessage postV4ApiBulkMessageSearch(body)
+
+
+
+Create a Bulk Message.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.BulkMessageApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+BulkMessageApi apiInstance = new BulkMessageApi();
+BulkMessageCreate body = new BulkMessageCreate(); // BulkMessageCreate | 
+try {
+    BulkMessage result = apiInstance.postV4ApiBulkMessageSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling BulkMessageApi#postV4ApiBulkMessageSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**BulkMessageCreate**](BulkMessageCreate.md)|  | [optional]
 
 ### Return type
 

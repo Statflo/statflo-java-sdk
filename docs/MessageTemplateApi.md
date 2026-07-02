@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**messageTemplateCreate**](MessageTemplateApi.md#messageTemplateCreate) | **POST** /v4/api/message-template | 
 [**messageTemplateDelete**](MessageTemplateApi.md#messageTemplateDelete) | **DELETE** /v4/api/message-template/{id} | 
 [**messageTemplateGet**](MessageTemplateApi.md#messageTemplateGet) | **GET** /v4/api/message-template/{id} | 
 [**messageTemplateSearch**](MessageTemplateApi.md#messageTemplateSearch) | **GET** /v4/api/message-template | 
 [**messageTemplateUpdate**](MessageTemplateApi.md#messageTemplateUpdate) | **PUT** /v4/api/message-template/{id} | 
-
-<a name="messageTemplateCreate"></a>
-# **messageTemplateCreate**
-> MessageTemplate messageTemplateCreate(body)
-
-
-
-Create an message template.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.MessageTemplateApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-MessageTemplateApi apiInstance = new MessageTemplateApi();
-MessageTemplateCreate body = new MessageTemplateCreate(); // MessageTemplateCreate | 
-try {
-    MessageTemplate result = apiInstance.messageTemplateCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MessageTemplateApi#messageTemplateCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**MessageTemplateCreate**](MessageTemplateCreate.md)|  | [optional]
-
-### Return type
-
-[**MessageTemplate**](MessageTemplate.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiMessageTemplateSearch**](MessageTemplateApi.md#postV4ApiMessageTemplateSearch) | **POST** /v4/api/message-template | 
 
 <a name="messageTemplateDelete"></a>
 # **messageTemplateDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**MessageTemplateUpdate**](MessageTemplateUpdate.md)|  | [optional]
+
+### Return type
+
+[**MessageTemplate**](MessageTemplate.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiMessageTemplateSearch"></a>
+# **postV4ApiMessageTemplateSearch**
+> MessageTemplate postV4ApiMessageTemplateSearch(body)
+
+
+
+Create an message template.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageTemplateApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+MessageTemplateApi apiInstance = new MessageTemplateApi();
+MessageTemplateCreate body = new MessageTemplateCreate(); // MessageTemplateCreate | 
+try {
+    MessageTemplate result = apiInstance.postV4ApiMessageTemplateSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MessageTemplateApi#postV4ApiMessageTemplateSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MessageTemplateCreate**](MessageTemplateCreate.md)|  | [optional]
 
 ### Return type
 

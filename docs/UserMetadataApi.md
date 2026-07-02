@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userMetadataCreate**](UserMetadataApi.md#userMetadataCreate) | **POST** /v4/api/user-metadata | 
+[**postV4ApiUserMetadataSearch**](UserMetadataApi.md#postV4ApiUserMetadataSearch) | **POST** /v4/api/user-metadata | 
 [**userMetadataDelete**](UserMetadataApi.md#userMetadataDelete) | **DELETE** /v4/api/user-metadata/{id} | 
 [**userMetadataGet**](UserMetadataApi.md#userMetadataGet) | **GET** /v4/api/user-metadata/{id} | 
 [**userMetadataSearch**](UserMetadataApi.md#userMetadataSearch) | **GET** /v4/api/user-metadata | 
 [**userMetadataUpdate**](UserMetadataApi.md#userMetadataUpdate) | **PUT** /v4/api/user-metadata/{id} | 
 
-<a name="userMetadataCreate"></a>
-# **userMetadataCreate**
-> UserMetadata userMetadataCreate(body)
+<a name="postV4ApiUserMetadataSearch"></a>
+# **postV4ApiUserMetadataSearch**
+> UserMetadata postV4ApiUserMetadataSearch(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 UserMetadataApi apiInstance = new UserMetadataApi();
 UserMetadataCreate body = new UserMetadataCreate(); // UserMetadataCreate | 
 try {
-    UserMetadata result = apiInstance.userMetadataCreate(body);
+    UserMetadata result = apiInstance.postV4ApiUserMetadataSearch(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UserMetadataApi#userMetadataCreate");
+    System.err.println("Exception when calling UserMetadataApi#postV4ApiUserMetadataSearch");
     e.printStackTrace();
 }
 ```

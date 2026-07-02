@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userExternalIdCreate**](UserExternalIdApi.md#userExternalIdCreate) | **POST** /v4/api/user-external-id | 
+[**postV4ApiUserExternalIdSearch**](UserExternalIdApi.md#postV4ApiUserExternalIdSearch) | **POST** /v4/api/user-external-id | 
 [**userExternalIdDelete**](UserExternalIdApi.md#userExternalIdDelete) | **DELETE** /v4/api/user-external-id/{id} | 
 [**userExternalIdGet**](UserExternalIdApi.md#userExternalIdGet) | **GET** /v4/api/user-external-id/{id} | 
 [**userExternalIdSearch**](UserExternalIdApi.md#userExternalIdSearch) | **GET** /v4/api/user-external-id | 
 [**userExternalIdUpdate**](UserExternalIdApi.md#userExternalIdUpdate) | **PUT** /v4/api/user-external-id/{id} | 
 
-<a name="userExternalIdCreate"></a>
-# **userExternalIdCreate**
-> UserExternalId userExternalIdCreate(body)
+<a name="postV4ApiUserExternalIdSearch"></a>
+# **postV4ApiUserExternalIdSearch**
+> UserExternalId postV4ApiUserExternalIdSearch(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 UserExternalIdApi apiInstance = new UserExternalIdApi();
 UserExternalIdCreate body = new UserExternalIdCreate(); // UserExternalIdCreate | 
 try {
-    UserExternalId result = apiInstance.userExternalIdCreate(body);
+    UserExternalId result = apiInstance.postV4ApiUserExternalIdSearch(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UserExternalIdApi#userExternalIdCreate");
+    System.err.println("Exception when calling UserExternalIdApi#postV4ApiUserExternalIdSearch");
     e.printStackTrace();
 }
 ```

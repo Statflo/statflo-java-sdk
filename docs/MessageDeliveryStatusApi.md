@@ -4,61 +4,11 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**messageDeliveryStatusCreate**](MessageDeliveryStatusApi.md#messageDeliveryStatusCreate) | **POST** /v4/api/message-delivery-status | 
 [**messageDeliveryStatusDelete**](MessageDeliveryStatusApi.md#messageDeliveryStatusDelete) | **DELETE** /v4/api/message-delivery-status/{id} | 
 [**messageDeliveryStatusGet**](MessageDeliveryStatusApi.md#messageDeliveryStatusGet) | **GET** /v4/api/message-delivery-status/{id} | 
 [**messageDeliveryStatusSearch**](MessageDeliveryStatusApi.md#messageDeliveryStatusSearch) | **GET** /v4/api/message-delivery-status | 
 [**messageDeliveryStatusUpdate**](MessageDeliveryStatusApi.md#messageDeliveryStatusUpdate) | **PUT** /v4/api/message-delivery-status/{id} | 
-
-<a name="messageDeliveryStatusCreate"></a>
-# **messageDeliveryStatusCreate**
-> MessageDeliveryStatus messageDeliveryStatusCreate(body)
-
-
-
-Create a message delivery status.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.MessageDeliveryStatusApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-MessageDeliveryStatusApi apiInstance = new MessageDeliveryStatusApi();
-MessageDeliveryStatusCreate body = new MessageDeliveryStatusCreate(); // MessageDeliveryStatusCreate | 
-try {
-    MessageDeliveryStatus result = apiInstance.messageDeliveryStatusCreate(body);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling MessageDeliveryStatusApi#messageDeliveryStatusCreate");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**MessageDeliveryStatusCreate**](MessageDeliveryStatusCreate.md)|  | [optional]
-
-### Return type
-
-[**MessageDeliveryStatus**](MessageDeliveryStatus.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+[**postV4ApiMessageDeliveryStatusSearch**](MessageDeliveryStatusApi.md#postV4ApiMessageDeliveryStatusSearch) | **POST** /v4/api/message-delivery-status | 
 
 <a name="messageDeliveryStatusDelete"></a>
 # **messageDeliveryStatusDelete**
@@ -255,6 +205,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
  **body** | [**MessageDeliveryStatusUpdate**](MessageDeliveryStatusUpdate.md)|  | [optional]
+
+### Return type
+
+[**MessageDeliveryStatus**](MessageDeliveryStatus.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="postV4ApiMessageDeliveryStatusSearch"></a>
+# **postV4ApiMessageDeliveryStatusSearch**
+> MessageDeliveryStatus postV4ApiMessageDeliveryStatusSearch(body)
+
+
+
+Create a message delivery status.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.MessageDeliveryStatusApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+MessageDeliveryStatusApi apiInstance = new MessageDeliveryStatusApi();
+MessageDeliveryStatusCreate body = new MessageDeliveryStatusCreate(); // MessageDeliveryStatusCreate | 
+try {
+    MessageDeliveryStatus result = apiInstance.postV4ApiMessageDeliveryStatusSearch(body);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MessageDeliveryStatusApi#postV4ApiMessageDeliveryStatusSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MessageDeliveryStatusCreate**](MessageDeliveryStatusCreate.md)|  | [optional]
 
 ### Return type
 
