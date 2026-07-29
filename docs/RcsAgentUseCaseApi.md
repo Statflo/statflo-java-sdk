@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postV4ApiRcsAgentUseCaseSearch**](RcsAgentUseCaseApi.md#postV4ApiRcsAgentUseCaseSearch) | **POST** /v4/api/rcs-agent-use-case | 
+[**rcsAgentUseCaseCreate**](RcsAgentUseCaseApi.md#rcsAgentUseCaseCreate) | **POST** /v4/api/rcs-agent-use-case | 
 [**rcsAgentUseCaseDelete**](RcsAgentUseCaseApi.md#rcsAgentUseCaseDelete) | **DELETE** /v4/api/rcs-agent-use-case/{id} | 
 [**rcsAgentUseCaseGet**](RcsAgentUseCaseApi.md#rcsAgentUseCaseGet) | **GET** /v4/api/rcs-agent-use-case/{id} | 
 [**rcsAgentUseCaseSearch**](RcsAgentUseCaseApi.md#rcsAgentUseCaseSearch) | **GET** /v4/api/rcs-agent-use-case | 
 [**rcsAgentUseCaseUpdate**](RcsAgentUseCaseApi.md#rcsAgentUseCaseUpdate) | **PUT** /v4/api/rcs-agent-use-case/{id} | 
 
-<a name="postV4ApiRcsAgentUseCaseSearch"></a>
-# **postV4ApiRcsAgentUseCaseSearch**
-> RcsAgentUseCase postV4ApiRcsAgentUseCaseSearch(body)
+<a name="rcsAgentUseCaseCreate"></a>
+# **rcsAgentUseCaseCreate**
+> RcsAgentUseCase rcsAgentUseCaseCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 RcsAgentUseCaseApi apiInstance = new RcsAgentUseCaseApi();
 RcsAgentUseCaseCreate body = new RcsAgentUseCaseCreate(); // RcsAgentUseCaseCreate | 
 try {
-    RcsAgentUseCase result = apiInstance.postV4ApiRcsAgentUseCaseSearch(body);
+    RcsAgentUseCase result = apiInstance.rcsAgentUseCaseCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentUseCaseApi#postV4ApiRcsAgentUseCaseSearch");
+    System.err.println("Exception when calling RcsAgentUseCaseApi#rcsAgentUseCaseCreate");
     e.printStackTrace();
 }
 ```

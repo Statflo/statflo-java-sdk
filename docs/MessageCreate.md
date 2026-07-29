@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **userId** | **Integer** |  | 
 **conversationId** | **Integer** |  | 
-**content** | **String** |  | 
+**content** | **String** |  |  [optional]
 **action** | [**ActionEnum**](#ActionEnum) |  | 
 **provider** | [**ProviderEnum**](#ProviderEnum) |  |  [optional]
 **referenceId** | **String** |  |  [optional]

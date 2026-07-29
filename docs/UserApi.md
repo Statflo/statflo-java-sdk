@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postV4ApiUserSearch**](UserApi.md#postV4ApiUserSearch) | **POST** /v4/api/user | 
+[**userCreate**](UserApi.md#userCreate) | **POST** /v4/api/user | 
 [**userDelete**](UserApi.md#userDelete) | **DELETE** /v4/api/user/{id} | 
 [**userGet**](UserApi.md#userGet) | **GET** /v4/api/user/{id} | 
 [**userSearch**](UserApi.md#userSearch) | **GET** /v4/api/user | 
 [**userUpdate**](UserApi.md#userUpdate) | **PUT** /v4/api/user/{id} | 
 
-<a name="postV4ApiUserSearch"></a>
-# **postV4ApiUserSearch**
-> User postV4ApiUserSearch(body)
+<a name="userCreate"></a>
+# **userCreate**
+> User userCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 UserApi apiInstance = new UserApi();
 UserCreate body = new UserCreate(); // UserCreate | 
 try {
-    User result = apiInstance.postV4ApiUserSearch(body);
+    User result = apiInstance.userCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UserApi#postV4ApiUserSearch");
+    System.err.println("Exception when calling UserApi#userCreate");
     e.printStackTrace();
 }
 ```

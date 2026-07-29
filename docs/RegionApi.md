@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postV4ApiRegionSearch**](RegionApi.md#postV4ApiRegionSearch) | **POST** /v4/api/region | 
+[**regionCreate**](RegionApi.md#regionCreate) | **POST** /v4/api/region | 
 [**regionDelete**](RegionApi.md#regionDelete) | **DELETE** /v4/api/region/{id} | 
 [**regionGet**](RegionApi.md#regionGet) | **GET** /v4/api/region/{id} | 
 [**regionSearch**](RegionApi.md#regionSearch) | **GET** /v4/api/region | 
 [**regionUpdate**](RegionApi.md#regionUpdate) | **PUT** /v4/api/region/{id} | 
 
-<a name="postV4ApiRegionSearch"></a>
-# **postV4ApiRegionSearch**
-> Region postV4ApiRegionSearch(body)
+<a name="regionCreate"></a>
+# **regionCreate**
+> Region regionCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 RegionApi apiInstance = new RegionApi();
 RegionCreate body = new RegionCreate(); // RegionCreate | 
 try {
-    Region result = apiInstance.postV4ApiRegionSearch(body);
+    Region result = apiInstance.regionCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RegionApi#postV4ApiRegionSearch");
+    System.err.println("Exception when calling RegionApi#regionCreate");
     e.printStackTrace();
 }
 ```

@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postV4ApiWidgetMetadataSearch**](WidgetMetadataApi.md#postV4ApiWidgetMetadataSearch) | **POST** /v4/api/widget-metadata | 
+[**widgetMetadataCreate**](WidgetMetadataApi.md#widgetMetadataCreate) | **POST** /v4/api/widget-metadata | 
 [**widgetMetadataDelete**](WidgetMetadataApi.md#widgetMetadataDelete) | **DELETE** /v4/api/widget-metadata/{id} | 
 [**widgetMetadataGet**](WidgetMetadataApi.md#widgetMetadataGet) | **GET** /v4/api/widget-metadata/{id} | 
 [**widgetMetadataSearch**](WidgetMetadataApi.md#widgetMetadataSearch) | **GET** /v4/api/widget-metadata | 
 [**widgetMetadataUpdate**](WidgetMetadataApi.md#widgetMetadataUpdate) | **PUT** /v4/api/widget-metadata/{id} | 
 
-<a name="postV4ApiWidgetMetadataSearch"></a>
-# **postV4ApiWidgetMetadataSearch**
-> WidgetMetadata postV4ApiWidgetMetadataSearch(body)
+<a name="widgetMetadataCreate"></a>
+# **widgetMetadataCreate**
+> WidgetMetadata widgetMetadataCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 WidgetMetadataApi apiInstance = new WidgetMetadataApi();
 WidgetMetadataCreate body = new WidgetMetadataCreate(); // WidgetMetadataCreate | 
 try {
-    WidgetMetadata result = apiInstance.postV4ApiWidgetMetadataSearch(body);
+    WidgetMetadata result = apiInstance.widgetMetadataCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling WidgetMetadataApi#postV4ApiWidgetMetadataSearch");
+    System.err.println("Exception when calling WidgetMetadataApi#widgetMetadataCreate");
     e.printStackTrace();
 }
 ```

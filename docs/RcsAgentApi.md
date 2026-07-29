@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postV4ApiRcsAgentSearch**](RcsAgentApi.md#postV4ApiRcsAgentSearch) | **POST** /v4/api/rcs-agent | 
+[**rcsAgentCreate**](RcsAgentApi.md#rcsAgentCreate) | **POST** /v4/api/rcs-agent | 
 [**rcsAgentDelete**](RcsAgentApi.md#rcsAgentDelete) | **DELETE** /v4/api/rcs-agent/{id} | 
 [**rcsAgentGet**](RcsAgentApi.md#rcsAgentGet) | **GET** /v4/api/rcs-agent/{id} | 
 [**rcsAgentSearch**](RcsAgentApi.md#rcsAgentSearch) | **GET** /v4/api/rcs-agent | 
 [**rcsAgentUpdate**](RcsAgentApi.md#rcsAgentUpdate) | **PUT** /v4/api/rcs-agent/{id} | 
 
-<a name="postV4ApiRcsAgentSearch"></a>
-# **postV4ApiRcsAgentSearch**
-> RcsAgent postV4ApiRcsAgentSearch(body)
+<a name="rcsAgentCreate"></a>
+# **rcsAgentCreate**
+> RcsAgent rcsAgentCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 RcsAgentApi apiInstance = new RcsAgentApi();
 RcsAgentCreate body = new RcsAgentCreate(); // RcsAgentCreate | 
 try {
-    RcsAgent result = apiInstance.postV4ApiRcsAgentSearch(body);
+    RcsAgent result = apiInstance.rcsAgentCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentApi#postV4ApiRcsAgentSearch");
+    System.err.println("Exception when calling RcsAgentApi#rcsAgentCreate");
     e.printStackTrace();
 }
 ```

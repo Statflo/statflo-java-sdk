@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postV4ApiTimelineSearch**](TimelineApi.md#postV4ApiTimelineSearch) | **POST** /v4/api/timeline | 
+[**timelineCreate**](TimelineApi.md#timelineCreate) | **POST** /v4/api/timeline | 
 [**timelineDelete**](TimelineApi.md#timelineDelete) | **DELETE** /v4/api/timeline/{id} | 
 [**timelineGet**](TimelineApi.md#timelineGet) | **GET** /v4/api/timeline/{id} | 
 [**timelineSearch**](TimelineApi.md#timelineSearch) | **GET** /v4/api/timeline | 
 [**timelineUpdate**](TimelineApi.md#timelineUpdate) | **PUT** /v4/api/timeline/{id} | 
 
-<a name="postV4ApiTimelineSearch"></a>
-# **postV4ApiTimelineSearch**
-> Timeline postV4ApiTimelineSearch(body)
+<a name="timelineCreate"></a>
+# **timelineCreate**
+> Timeline timelineCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 TimelineApi apiInstance = new TimelineApi();
 TimelineCreate body = new TimelineCreate(); // TimelineCreate | 
 try {
-    Timeline result = apiInstance.postV4ApiTimelineSearch(body);
+    Timeline result = apiInstance.timelineCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling TimelineApi#postV4ApiTimelineSearch");
+    System.err.println("Exception when calling TimelineApi#timelineCreate");
     e.printStackTrace();
 }
 ```

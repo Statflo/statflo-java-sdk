@@ -39,5 +39,6 @@ Name | Type | Description | Notes
 **dealer** | [**Dealer**](Dealer.md) |  | 
 **rcsAgentUseCase** | [**RcsAgentUseCase**](RcsAgentUseCase.md) |  | 
 **rcsAgentBusiness** | [**RcsAgentBusiness**](RcsAgentBusiness.md) |  | 
+**rcsAgentMetadata** | [**List&lt;RcsAgentMetadata&gt;**](RcsAgentMetadata.md) |  | 
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]

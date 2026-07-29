@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postV4ApiRcsAgentMetadataSearch**](RcsAgentMetadataApi.md#postV4ApiRcsAgentMetadataSearch) | **POST** /v4/api/rcs-agent-metadata | 
+[**rcsAgentMetadataCreate**](RcsAgentMetadataApi.md#rcsAgentMetadataCreate) | **POST** /v4/api/rcs-agent-metadata | 
 [**rcsAgentMetadataDelete**](RcsAgentMetadataApi.md#rcsAgentMetadataDelete) | **DELETE** /v4/api/rcs-agent-metadata/{id} | 
 [**rcsAgentMetadataGet**](RcsAgentMetadataApi.md#rcsAgentMetadataGet) | **GET** /v4/api/rcs-agent-metadata/{id} | 
 [**rcsAgentMetadataSearch**](RcsAgentMetadataApi.md#rcsAgentMetadataSearch) | **GET** /v4/api/rcs-agent-metadata | 
 [**rcsAgentMetadataUpdate**](RcsAgentMetadataApi.md#rcsAgentMetadataUpdate) | **PUT** /v4/api/rcs-agent-metadata/{id} | 
 
-<a name="postV4ApiRcsAgentMetadataSearch"></a>
-# **postV4ApiRcsAgentMetadataSearch**
-> RcsAgentMetadata postV4ApiRcsAgentMetadataSearch(body)
+<a name="rcsAgentMetadataCreate"></a>
+# **rcsAgentMetadataCreate**
+> RcsAgentMetadata rcsAgentMetadataCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 RcsAgentMetadataApi apiInstance = new RcsAgentMetadataApi();
 RcsAgentMetadataCreate body = new RcsAgentMetadataCreate(); // RcsAgentMetadataCreate | 
 try {
-    RcsAgentMetadata result = apiInstance.postV4ApiRcsAgentMetadataSearch(body);
+    RcsAgentMetadata result = apiInstance.rcsAgentMetadataCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling RcsAgentMetadataApi#postV4ApiRcsAgentMetadataSearch");
+    System.err.println("Exception when calling RcsAgentMetadataApi#rcsAgentMetadataCreate");
     e.printStackTrace();
 }
 ```

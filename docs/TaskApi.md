@@ -4,15 +4,15 @@ All URIs are relative to *https://app.statflo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postV4ApiTaskSearch**](TaskApi.md#postV4ApiTaskSearch) | **POST** /v4/api/task | 
+[**taskCreate**](TaskApi.md#taskCreate) | **POST** /v4/api/task | 
 [**taskDelete**](TaskApi.md#taskDelete) | **DELETE** /v4/api/task/{id} | 
 [**taskGet**](TaskApi.md#taskGet) | **GET** /v4/api/task/{id} | 
 [**taskSearch**](TaskApi.md#taskSearch) | **GET** /v4/api/task | 
 [**taskUpdate**](TaskApi.md#taskUpdate) | **PUT** /v4/api/task/{id} | 
 
-<a name="postV4ApiTaskSearch"></a>
-# **postV4ApiTaskSearch**
-> Task postV4ApiTaskSearch(body)
+<a name="taskCreate"></a>
+# **taskCreate**
+> Task taskCreate(body)
 
 
 
@@ -33,10 +33,10 @@ ApiClient defaultClient = Configuration.getDefaultApiClient();
 TaskApi apiInstance = new TaskApi();
 TaskCreate body = new TaskCreate(); // TaskCreate | 
 try {
-    Task result = apiInstance.postV4ApiTaskSearch(body);
+    Task result = apiInstance.taskCreate(body);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling TaskApi#postV4ApiTaskSearch");
+    System.err.println("Exception when calling TaskApi#taskCreate");
     e.printStackTrace();
 }
 ```
