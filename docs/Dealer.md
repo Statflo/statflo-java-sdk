@@ -16,3 +16,4 @@ Name | Type | Description | Notes
 **carrier** | [**Carrier**](Carrier.md) |  | 
 **permissions** | [**List&lt;Permission&gt;**](Permission.md) |  | 
 **dealerFeatures** | [**List&lt;DealerAllowedFeature&gt;**](DealerAllowedFeature.md) |  | 
+**features** | **List&lt;Integer&gt;** |  | 

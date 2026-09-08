@@ -10,6 +10,9 @@ Name | Type | Description | Notes
 **channel** | [**ChannelEnum**](#ChannelEnum) |  |  [optional]
 **type** | [**TypeEnum**](#TypeEnum) |  |  [optional]
 **recordSource** | **String** |  |  [optional]
+**entity** | **String** |  |  [optional]
+**entityId** | **Object** |  |  [optional]
+**externalId** | **String** |  |  [optional]
 **deliveredAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 
@@ -27,3 +30,4 @@ Name | Value
 ---- | -----
 INBOUND | &quot;inbound&quot;
 APPOINTMENT | &quot;appointment&quot;
+TASK | &quot;task&quot;

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **dealer** | [**Dealer**](Dealer.md) |  | 
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**dateUpdated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **recordSource** | **String** |  |  [optional]
+**recordOwned** | **Integer** |  |  [optional]

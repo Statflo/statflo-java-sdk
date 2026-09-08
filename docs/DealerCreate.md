@@ -12,3 +12,4 @@ Name | Type | Description | Notes
 **city** | **String** |  |  [optional]
 **province** | **String** |  |  [optional]
 **postalCode** | **String** |  |  [optional]
+**features** | **List&lt;Integer&gt;** |  | 

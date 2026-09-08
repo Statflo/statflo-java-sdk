@@ -30,8 +30,7 @@ Name | Type | Description | Notes
 **roleId** | **Integer** |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **campaignVisibility** | **Integer** |  |  [optional]
-**permissions** | **List&lt;Object&gt;** |  | 
-**outletId** | **String** |  |  [optional]
+**permissions** | **List&lt;Integer&gt;** |  | 
 
 <a name="LanguageEnum"></a>
 ## Enum: LanguageEnum

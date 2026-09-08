@@ -5,6 +5,7 @@ All URIs are relative to *https://app.statflo.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**notepadCreate**](NotepadApi.md#notepadCreate) | **POST** /v4/api/notepad | 
+[**notepadDelete**](NotepadApi.md#notepadDelete) | **DELETE** /v4/api/notepad/{id} | 
 [**notepadGet**](NotepadApi.md#notepadGet) | **GET** /v4/api/notepad/{id} | 
 [**notepadSearch**](NotepadApi.md#notepadSearch) | **GET** /v4/api/notepad | 
 [**notepadUpdate**](NotepadApi.md#notepadUpdate) | **PUT** /v4/api/notepad/{id} | 
@@ -57,6 +58,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="notepadDelete"></a>
+# **notepadDelete**
+> notepadDelete(id)
+
+
+
+Remove a notepad.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.NotepadApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+NotepadApi apiInstance = new NotepadApi();
+String id = "id_example"; // String | 
+try {
+    apiInstance.notepadDelete(id);
+} catch (ApiException e) {
+    System.err.println("Exception when calling NotepadApi#notepadDelete");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="notepadGet"></a>

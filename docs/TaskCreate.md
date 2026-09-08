@@ -6,16 +6,17 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **description** | **String** |  | 
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
-**userIdAssigned** | **Integer** |  | 
+**userIdAssigned** | **Integer** |  |  [optional]
 **priority** | **Integer** |  |  [optional]
 **dueDate** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **id** | **Integer** |  | 
 **type** | [**TypeEnum**](#TypeEnum) |  | 
 **accountId** | **String** |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**dateUpdated** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **recordSource** | **String** |  |  [optional]
+**recordOwned** | **Integer** |  |  [optional]
 
 <a name="StatusEnum"></a>
 ## Enum: StatusEnum
@@ -30,6 +31,8 @@ COMPLETED | &quot;Completed&quot;
 ## Enum: TypeEnum
 Name | Value
 ---- | -----
+NUMBER_2 | 2
+NUMBER_3 | 3
 NUMBER_4 | 4
 NUMBER_5 | 5
 NUMBER_7 | 7
@@ -37,3 +40,4 @@ NUMBER_38 | 38
 NUMBER_40 | 40
 NUMBER_41 | 41
 NUMBER_42 | 42
+NUMBER_43 | 43

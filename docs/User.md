@@ -24,11 +24,11 @@ Name | Type | Description | Notes
 **acceptedTermsConditions** | **Boolean** |  |  [optional]
 **appointmentReminderEmail** | **Boolean** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  | 
+**carrier** | [**Carrier**](Carrier.md) |  | 
 **role** | [**Role**](Role.md) |  | 
 **userPermissions** | [**List&lt;UserPermission&gt;**](UserPermission.md) |  | 
 **userTeams** | [**List&lt;UserTeam&gt;**](UserTeam.md) |  | 
 **userMetadata** | [**List&lt;UserMetadata&gt;**](UserMetadata.md) |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **campaignVisibility** | **Integer** |  |  [optional]
-**permissions** | **List&lt;Object&gt;** |  | 
-**outletId** | **String** |  |  [optional]
+**permissions** | **List&lt;Integer&gt;** |  | 

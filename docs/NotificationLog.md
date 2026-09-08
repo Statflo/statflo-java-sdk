@@ -11,5 +11,8 @@ Name | Type | Description | Notes
 **channel** | **String** |  |  [optional]
 **type** | **String** |  |  [optional]
 **recordSource** | **String** |  |  [optional]
+**entity** | **String** |  |  [optional]
+**entityId** | **Object** |  |  [optional]
+**externalId** | **String** |  |  [optional]
 **deliveredAt** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
