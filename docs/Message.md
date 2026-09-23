@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **associatedAppPhoneNumber** | **String** |  |  [optional]
 **associatedAppPhoneNumberType** | **String** |  |  [optional]
 **messageTemplate** | [**MessageTemplate**](MessageTemplate.md) |  | 
+**bulkMessage** | [**BulkMessage**](BulkMessage.md) |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **dateSent** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **media** | [**List&lt;MessageMedia&gt;**](MessageMedia.md) |  | 
