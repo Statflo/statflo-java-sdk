@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **content** | **String** |  |  [optional]
 **title** | **String** |  |  [optional]
+**actionTaken** | **String** |  |  [optional]
 **id** | **Integer** |  | 
 **type** | **Integer** |  | 
 **accountId** | **String** |  | 

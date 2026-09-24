@@ -13,3 +13,4 @@ Name | Type | Description | Notes
 **restrictByDistrictId** | **Boolean** |  |  [optional]
 **linkedFeatureFlag** | **Integer** |  |  [optional]
 **rolePermissions** | [**List&lt;RolePermission&gt;**](RolePermission.md) |  | 
+**rolePermissionOverrides** | [**List&lt;RolePermissionOverride&gt;**](RolePermissionOverride.md) |  | 
