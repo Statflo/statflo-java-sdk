@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **name** | **String** |  | 
 **countryCode** | **String** |  | 
+**calendarFormat** | **Integer** |  |  [optional]
 **status** | [**DealerStatus**](DealerStatus.md) |  | 
 **website** | **String** |  |  [optional]
 **addressLine1** | **String** |  |  [optional]
