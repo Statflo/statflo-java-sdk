@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **manager** | **String** |  |  [optional]
 **managerPhone** | **String** |  |  [optional]
 **managerEmail** | **String** |  |  [optional]
-**locator** | **String** |  | 
+**locator** | **String** |  |  [optional]
 **address** | **String** |  |  [optional]
 **outlet** | **String** |  |  [optional]
 **fullAddress** | **String** |  | 

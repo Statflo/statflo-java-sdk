@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **type** | **Integer** |  | 
 **accountId** | **String** |  | 
 **accountName** | **String** |  |  [optional]
-**approach** | **String** |  | 
+**approach** | **String** |  |  [optional]
 **phoneNumber** | **String** |  | 
 **contactName** | **String** |  |  [optional]
 **totalSubscriber** | **Integer** |  |  [optional]

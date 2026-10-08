@@ -1,72 +1,14 @@
 # AccountContactMetadataApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountContactMetadata**](AccountContactMetadataApi.md#accountContactMetadata) | **GET** /v4/api/account-contact-metadata | 
 [**accountContactMetadataCreate**](AccountContactMetadataApi.md#accountContactMetadataCreate) | **POST** /v4/api/account-contact-metadata | 
 [**accountContactMetadataDelete**](AccountContactMetadataApi.md#accountContactMetadataDelete) | **DELETE** /v4/api/account-contact-metadata/{id} | 
 [**accountContactMetadataGet**](AccountContactMetadataApi.md#accountContactMetadataGet) | **GET** /v4/api/account-contact-metadata/{id} | 
+[**accountContactMetadataSearch**](AccountContactMetadataApi.md#accountContactMetadataSearch) | **GET** /v4/api/account-contact-metadata | 
 [**accountContactMetadataUpdate**](AccountContactMetadataApi.md#accountContactMetadataUpdate) | **PUT** /v4/api/account-contact-metadata/{id} | 
-
-<a name="accountContactMetadata"></a>
-# **accountContactMetadata**
-> AccountContactMetadataPaginationResponse accountContactMetadata(filter, query, page, perPage, sort)
-
-
-
-Search account contact metadata.
-
-### Example
-```java
-// Import classes:
-//import com.statflo.client.ApiClient;
-//import com.statflo.client.ApiException;
-//import com.statflo.client.Configuration;
-//import com.statflo.client.auth.*;
-//import com.statflo.client.api.AccountContactMetadataApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-
-AccountContactMetadataApi apiInstance = new AccountContactMetadataApi();
-java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
-String query = "query_example"; // String | 
-Integer page = 56; // Integer | 
-Integer perPage = 56; // Integer | 
-String sort = "sort_example"; // String | 
-try {
-    AccountContactMetadataPaginationResponse result = apiInstance.accountContactMetadata(filter, query, page, perPage, sort);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling AccountContactMetadataApi#accountContactMetadata");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filter** | [**java.util.HashMap**](.md)|  | [optional]
- **query** | **String**|  | [optional]
- **page** | **Integer**|  | [optional]
- **perPage** | **Integer**|  | [optional]
- **sort** | **String**|  | [optional]
-
-### Return type
-
-[**AccountContactMetadataPaginationResponse**](AccountContactMetadataPaginationResponse.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 <a name="accountContactMetadataCreate"></a>
 # **accountContactMetadataCreate**
@@ -207,6 +149,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AccountContactMetadata**](AccountContactMetadata.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="accountContactMetadataSearch"></a>
+# **accountContactMetadataSearch**
+> AccountContactMetadataPaginationResponse accountContactMetadataSearch(filter, query, page, perPage, sort)
+
+
+
+Search account contact metadata.
+
+### Example
+```java
+// Import classes:
+//import com.statflo.client.ApiClient;
+//import com.statflo.client.ApiException;
+//import com.statflo.client.Configuration;
+//import com.statflo.client.auth.*;
+//import com.statflo.client.api.AccountContactMetadataApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+
+AccountContactMetadataApi apiInstance = new AccountContactMetadataApi();
+java.util.HashMap filter = new java.util.HashMap(); // java.util.HashMap | 
+String query = "query_example"; // String | 
+Integer page = 56; // Integer | 
+Integer perPage = 56; // Integer | 
+String sort = "sort_example"; // String | 
+try {
+    AccountContactMetadataPaginationResponse result = apiInstance.accountContactMetadataSearch(filter, query, page, perPage, sort);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountContactMetadataApi#accountContactMetadataSearch");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**java.util.HashMap**](.md)|  | [optional]
+ **query** | **String**|  | [optional]
+ **page** | **Integer**|  | [optional]
+ **perPage** | **Integer**|  | [optional]
+ **sort** | **String**|  | [optional]
+
+### Return type
+
+[**AccountContactMetadataPaginationResponse**](AccountContactMetadataPaginationResponse.md)
 
 ### Authorization
 

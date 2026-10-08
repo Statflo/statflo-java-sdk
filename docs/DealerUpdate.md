@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **Integer** |  | 
 **name** | **String** |  | 
 **countryCode** | **String** |  | 
+**calendarFormat** | **Integer** |  |  [optional]
 **website** | **String** |  |  [optional]
 **addressLine1** | **String** |  |  [optional]
 **addressLine2** | **String** |  |  [optional]
