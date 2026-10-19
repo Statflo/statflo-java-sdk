@@ -29,7 +29,7 @@ import java.util.List;
  * AppointmentLocationPaginationResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-10-19T14:11:45.959089811Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-10-19T14:13:44.307810537Z[Etc/UTC]")
 
 public class AppointmentLocationPaginationResponse {
   @SerializedName("items")
