@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **String** |  |  [optional]
+**messageContent** | **Object** |  |  [optional]
 **actionTaken** | **String** |  |  [optional]
-**assignedTo** | **String** |  |  [optional]
-**assignedFrom** | **String** |  |  [optional]
+**messageTo** | **String** |  |  [optional]
+**messageFrom** | **String** |  |  [optional]
 **id** | **Integer** |  | 
 **type** | **Integer** |  | 
 **accountId** | **String** |  | 
