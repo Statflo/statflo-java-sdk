@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **streetNumber** | **String** |  |  [optional]
 **streetName** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]
-**province** | **String** |  | 
+**province** | **String** |  |  [optional]
 **country** | **String** |  |  [optional]
 **zipCode** | **String** |  |  [optional]
 **phoneNumber** | **String** |  | 
@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **email** | **String** |  |  [optional]
 **primaryContact** | **Boolean** |  |  [optional]
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**dateUpdated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **jobTitle** | **String** |  |  [optional]
 **source** | **String** |  |  [optional]
 **sourceId** | **Integer** |  |  [optional]

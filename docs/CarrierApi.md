@@ -1,6 +1,6 @@
 # CarrierApi
 
-All URIs are relative to *https://app.statflo.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
