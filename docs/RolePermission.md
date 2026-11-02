@@ -5,5 +5,5 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **role** | [**Role**](Role.md) |  | 
 **permission** | [**Permission**](Permission.md) |  | 
-**dealerSpecific** | **Boolean** |  |  [optional]
+**dealer** | [**Dealer**](Dealer.md) |  | 
 **dealerBlacklisted** | **Boolean** |  |  [optional]

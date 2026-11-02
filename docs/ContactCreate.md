@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **streetNumber** | **String** |  |  [optional]
 **streetName** | **String** |  |  [optional]
 **city** | **String** |  |  [optional]
-**province** | **String** |  | 
+**province** | **String** |  |  [optional]
 **country** | **String** |  |  [optional]
 **zipCode** | **String** |  |  [optional]
 **phoneNumber** | **String** |  | 
