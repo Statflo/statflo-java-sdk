@@ -29,7 +29,7 @@ import java.util.List;
  * BulkMessagePaginationResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-11-02T20:06:01.334655164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-11-02T20:08:05.323584717Z[Etc/UTC]")
 
 public class BulkMessagePaginationResponse {
   @SerializedName("items")
