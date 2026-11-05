@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **primaryContact** | **Boolean** |  |  [optional]
 **dealer** | [**Dealer**](Dealer.md) |  | 
 **dateAdded** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**dateCreated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
+**dateUpdated** | [**OffsetDateTime**](OffsetDateTime.md) |  |  [optional]
 **jobTitle** | **String** |  |  [optional]
 **source** | **String** |  |  [optional]
 **sourceId** | **Integer** |  |  [optional]
