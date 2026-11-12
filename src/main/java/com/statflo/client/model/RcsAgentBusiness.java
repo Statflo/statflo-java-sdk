@@ -28,7 +28,7 @@ import java.time.OffsetDateTime;
  * RcsAgentBusiness
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-11-12T17:03:07.059411806Z[Etc/UTC]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2026-11-12T17:09:35.302994827Z[Etc/UTC]")
 
 public class RcsAgentBusiness {
   @SerializedName("id")
